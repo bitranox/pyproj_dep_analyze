@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "diagrams"
+version = "0.25.1"
+description = "Diagram as Code"
+authors = [{ name = "mingrammer", email = "mingrammer@gmail.com" }]
+requires-python = "~=3.9"
+readme = "README.md"
+license = "MIT"
+dependencies = [
+    "graphviz>=0.13.2,<0.21.0",
+    "jinja2>=2.10,<4.0",
+    "typed-ast>=1.5.5,<2 ; python_version<'3.8'",
+]
+
+[project.scripts]
+diagrams = "diagrams.cli:main"
+
+[project.urls]
+Homepage = "https://diagrams.mingrammer.com"
+Repository = "https://github.com/mingrammer/diagrams"
+
+[dependency-groups]
+dev = [
+    "pytest~=8.3",
+    "pylint~=3.3",
+    "rope~=1.13",
+    "isort~=6.0",
+    "black~=24.4",
+    "pre-commit~=4.0",
+]
+
+[tool.hatch.build]
+only-include = ["diagrams", "resources"]
+
+[tool.black]
+line-length=120

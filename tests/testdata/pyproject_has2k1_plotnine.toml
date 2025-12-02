@@ -1,0 +1,250 @@
+########## Project ##########
+[project]
+name = "plotnine"
+description = "A Grammar of Graphics for Python"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Hassan Kibirige", email = "has2k1@gmail.com"},
+]
+dynamic = ["version"]
+readme = "README.md"
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: Matplotlib",
+    "Topic :: Scientific/Engineering :: Visualization"
+]
+dependencies = [
+    "matplotlib>=3.8.0",
+    "pandas>=2.2.0",
+    "mizani~=0.14.0",
+    "numpy>=1.23.5",
+    "scipy>=1.8.0",
+    "statsmodels>=0.14.5",
+]
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+all = [
+    "plotnine[extra]",
+    "plotnine[doc]",
+    "plotnine[lint]",
+    "plotnine[test]",
+    "plotnine[build]",
+    "plotnine[dev]",
+]
+
+# These should include all packages that we use in the tests and in the
+# examples
+extra = [
+    "adjustText>=1.2.0",
+    "geopandas>=1.0.0",
+    "geodatasets>=2024.8.0",
+    "scikit-learn>=1.3.0",
+    "scikit-misc>=0.5.1",
+    "polars>=1.24.0",
+    "pyarrow>=19.0.1",
+]
+
+doc = [
+    "jupyter",
+    "click",
+    "numpydoc>=0.9.1",
+    "quartodoc>=0.7.2",
+]
+
+lint = [
+    "ruff",
+]
+
+test = [
+    "pytest-cov>=4.0.0"
+]
+
+build = [
+    "build",
+    "wheel",
+]
+
+dev = [
+    "twine",
+    "plotnine[typing]",
+    "pre-commit",
+]
+
+typing = [
+    "pyright==1.1.404",
+    "ipython",
+    "pandas-stubs",
+]
+
+[project.urls]
+homepage = "https://plotnine.readthedocs.io/en/stable"
+repository = "https://github.com/has2k1/plotnine"
+changelog = "https://plotnine.readthedocs.io/en/stable/changelog.html"
+ci = "https://github.com/has2k1/plotnine/actions"
+
+########## Build System ##########
+# Reference https://github.com/pydata/xarray/blob/main/pyproject.toml
+[build-system]
+requires = [
+    "setuptools>=59",
+    "setuptools_scm[toml]>=6.4",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+########## Tool - Setuptools ##########
+# If you only specify the top-level package (=plotnine) setuptools complains
+# about not listing the sub-packages. Since we want every sub-package in the
+# plotnine package, it is easier to use find directive.
+[tool.setuptools.packages.find]
+include = ["plotnine*"]
+
+[tool.setuptools_scm]
+fallback_version = "999"
+version_scheme = 'post-release'
+
+########## Tool - Pytest ##########
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+doctest_optionflags = "ALLOW_BYTES NORMALIZE_WHITESPACE"
+addopts = "--pyargs --cov=plotnine --cov-report=xml --import-mode=importlib"
+
+########## Tool - Coverage ##########
+# Coverage.py
+[tool.coverage.run]
+branch = true
+source = ["plotnine"]
+include = [
+    "plotnine/*"
+]
+omit = [
+    "tests/*",
+    "plotnine/typing.py",
+    "plotnine/_utils/dev.py",
+]
+
+disable_warnings = ["include-ignored"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "^def test_",
+    "if __name__ == .__main__.:",
+    "raise NotImplementedError('Not Implemented')",
+    "if typing.TYPE_CHECKING:",
+    "if TYPE_CHECKING:",
+    "except ImportError:",
+    "except PackageNotFoundError:",
+]
+precision = 1
+
+
+########## Tool - Pyright ##########
+[tool.pyright]
+# Paths of directories or files that should be included. If no paths
+# are specified, pyright defaults to the directory that contains the
+# config file. Paths may contain wildcard characters ** (a directory or
+# multiple levels of directories), * (a sequence of zero or more
+# characters), or ? (a single character). If no include paths are
+# specified, the root path for the workspace is assumed.
+include = [
+    "plotnine/"
+]
+
+# Paths of directories or files whose diagnostic output (errors and
+# warnings) should be suppressed even if they are an included file or
+# within the transitive closure of an included file. Paths may contain
+# wildcard characters ** (a directory or multiple levels of
+# directories), * (a sequence of zero or more characters), or ? (a
+# single character).
+ignore = []
+
+# Set of identifiers that should be assumed to contain a constant
+# value wherever used within this program. For example, { "DEBUG": true
+# } indicates that pyright should assume that the identifier DEBUG will
+# always be equal to True. If this identifier is used within a
+# conditional expression (such as if not DEBUG:) pyright will use the
+# indicated value to determine whether the guarded block is reachable
+# or not. Member expressions that reference one of these constants
+# (e.g. my_module.DEBUG) are also supported.
+defineConstant = { DEBUG = true }
+
+# typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+reportUnnecessaryTypeIgnoreComment = true
+
+
+# Specifies a list of execution environments (see below). Execution
+# environments are searched from start to finish by comparing the path
+# of a source file with the root path specified in the execution
+# environment.
+executionEnvironments = []
+
+stubPath = ""
+
+########## Tool - Ruff ##########
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = [
+   "E",
+   "F",
+   "I",
+   "TCH",
+   "Q",
+   "PIE",
+   "PTH",
+   "PD",
+   "PYI",
+   "RSE",
+   "SIM",
+   "B904",
+   "FLY",
+   "NPY",
+   "PERF102"
+]
+ignore = [
+    "E741",  # Ambiguous l
+    "E743",  # Ambiguous I
+    # .reset_index, .rename, .replace
+    # This will remain the correct choice until we enable copy-on-write
+    "PD002",
+    # Use specific rule codes when ignoring type issues and
+    # not # type: ignore
+    "PGH003"
+]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    "plotnine/themes/seaborn_rcmod.py",
+    "**/__pycache__",
+    "node_modules"
+]
+
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.per-file-ignores]
+"plotnine/__init__.py" = ["F403", "F405"]
+"plotnine/typing.py" = ["F401", "TCH001"]
+"doc/_renderers/numpydoc.py" = ["F811"]
+"doc/_renderers/format.py" = ["F811"]
+"doc/_renderer.py" = ["F811"]

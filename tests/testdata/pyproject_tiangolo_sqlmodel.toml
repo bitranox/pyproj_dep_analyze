@@ -1,0 +1,136 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "sqlmodel"
+dynamic = ["version"]
+description = "SQLModel, SQL databases in Python, designed for simplicity, compatibility, and robustness."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Sebastián Ramírez", email = "tiangolo@gmail.com" },
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: System Administrators",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Database",
+    "Topic :: Database :: Database Engines/Servers",
+    "Topic :: Internet",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Internet :: WWW/HTTP",
+    "Typing :: Typed",
+]
+
+dependencies = [
+    "SQLAlchemy >=2.0.14,<2.1.0",
+    "pydantic >=1.10.13,<3.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/fastapi/sqlmodel"
+Documentation = "https://sqlmodel.tiangolo.com"
+Repository = "https://github.com/fastapi/sqlmodel"
+Issues = "https://github.com/fastapi/sqlmodel/issues"
+Changelog = "https://sqlmodel.tiangolo.com/release-notes/"
+
+[tool.pdm]
+version = { source = "file", path = "sqlmodel/__init__.py" }
+distribution = true
+
+[tool.pdm.build]
+source-includes = [
+    "tests/",
+    "docs_src/",
+    "requirements*.txt",
+    "scripts/",
+    "sqlmodel/sql/expression.py.jinja2",
+    ]
+
+[tool.tiangolo._internal-slim-build.packages.sqlmodel-slim.project]
+name = "sqlmodel-slim"
+
+[tool.tiangolo._internal-slim-build.packages.sqlmodel]
+# include-optional-dependencies = ["standard"]
+
+[tool.tiangolo._internal-slim-build.packages.sqlmodel.project]
+optional-dependencies = {}
+
+# [tool.tiangolo._internal-slim-build.packages.sqlmodel.project.scripts]
+# sqlmodel = "sqlmodel.cli:main"
+
+[tool.coverage.run]
+parallel = true
+data_file = "coverage/.coverage"
+source = [
+    "docs_src",
+    "tests",
+    "sqlmodel"
+]
+context = '${CONTEXT}'
+dynamic_context = "test_function"
+relative_files = true
+
+[tool.coverage.report]
+show_missing = true
+sort = "-Cover"
+exclude_lines = [
+    "pragma: no cover",
+    "@overload",
+    'if __name__ == "__main__":',
+    "if TYPE_CHECKING:",
+]
+
+[tool.coverage.html]
+show_contexts = true
+
+[tool.mypy]
+strict = true
+exclude = "sqlmodel.sql._expression_select_gen"
+
+[[tool.mypy.overrides]]
+module = "docs_src.*"
+disallow_incomplete_defs = false
+disallow_untyped_defs = false
+disallow_untyped_calls = false
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "B",  # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP", # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "W191", # indentation contains tabs
+]
+
+[tool.ruff.lint.per-file-ignores]
+# "__init__.py" = ["F401"]
+
+[tool.ruff.lint.isort]
+known-third-party = ["sqlmodel", "sqlalchemy", "pydantic", "fastapi"]
+
+[tool.ruff.lint.pyupgrade]
+# Preserve types, even if a file imports `from __future__ import annotations`.
+keep-runtime-typing = true

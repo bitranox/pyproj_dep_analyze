@@ -1,0 +1,112 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bump-pydantic"
+dynamic = ["version"]
+description = "Convert Pydantic from V1 to V2 ♻"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [{ name = "Marcelo Trylesinski", email = "marcelotryle@gmail.com" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "License :: OSI Approved :: MIT License",
+  "Framework :: Pydantic",
+  "Environment :: Console",
+  "Topic :: Software Development :: Code Generators",
+]
+dependencies = ["typer>=0.7.0", "libcst>=0.4.2", "rich", "typing_extensions"]
+
+[project.urls]
+Documentation = "https://github.com/pydantic/bump-pydantic#readme"
+Issues = "https://github.com/pydantic/bump-pydantic/issues"
+Source = "https://github.com/pydantic/bump-pydantic"
+
+[project.scripts]
+bump-pydantic = "bump_pydantic.main:entrypoint"
+
+[tool.hatch.version]
+path = "bump_pydantic/__init__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "black==23.12.1",
+  "coverage[toml]>=6.5",
+  "mypy==1.8.0",
+  "pydantic",
+  "pytest",
+  "rich",
+  "rtoml",
+  "ruff==0.3.4",
+]
+
+[tool.hatch.envs.default.scripts]
+cov = ["test-cov", "cov-report"]
+cov-report = ["- coverage combine", "coverage report"]
+lint = ["ruff format {args:.}", "ruff check --fix --exit-non-zero-on-fix {args:.}", "mypy {args:bump_pydantic tests}"]
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 120
+target-version = 'py38'
+
+[tool.ruff.lint]
+extend-select = [
+  'A',
+  'B',
+  'C4',
+  'C90',
+  'E501',
+  'I',
+  'Q',
+  'PERF',
+  'PT',
+  'RUF100',
+  'UP',
+  'W',
+]
+ignore = ['B008'] # That's how Typer works.
+isort = { known-first-party = ['bump_pydantic', 'tests'] }
+mccabe = { max-complexity = 14 }
+
+[tool.pytest.ini_options]
+xfail_strict = true
+filterwarnings = [
+  # Turn warnings that aren't filtered into exceptions
+  "error",
+  "ignore::pytest.PytestUnraisableExceptionWarning",
+]
+
+[tool.coverage.run]
+branch = true
+source_pkgs = ["bump_pydantic"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+  "pragma: no cover",
+  "pragma: nocover",
+]
+show_missing = true
+skip_covered = true

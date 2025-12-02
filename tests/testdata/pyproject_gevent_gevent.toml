@@ -1,0 +1,45 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+# Build dependencies. Remember to change these in make-manylinux and appveyor.yml
+# if you add/remove/change them.
+requires = [
+     "setuptools >= 40.8.0",
+
+     # Python 3.7 requires at least Cython 0.27.3.
+     # 0.28 is faster, and (important!) lets us specify the target module
+     # name to be created so that we can have both foo.py and _foo.so
+     # at the same time. 0.29 fixes some issues with Python 3.7,
+     # and adds the 3str mode for transition to Python 3. 0.29.14+ is
+     # required for Python 3.8. 3.0a2 introduced a change that prevented
+     # us from compiling (https://github.com/gevent/gevent/issues/1599)
+     # but once that was fixed, 3.0a4 led to all of our leak tests
+     # failing in Python 2 (https://travis-ci.org/github/gevent/gevent/jobs/683782800);
+     # This was fixed in 3.0a5 (https://github.com/cython/cython/issues/3578)
+     # 3.0a6 fixes an issue cythonizing source on 32-bit platforms.
+     # 3.0a9 is needed for Python 3.10.
+     # Python 3.12 requires at least 3.0rc2.
+     "Cython >= 3.0.11",
+     # See version requirements in setup.py
+     "cffi >= 1.17.1 ; platform_python_implementation == 'CPython'",
+     # Python 3.7 requires at least 0.4.14, which is ABI incompatible with earlier
+     # releases. Python 3.9 and 3.10 require 0.4.16;
+     # 0.4.17 is ABI incompatible with earlier releases, but compatible with 1.0
+     # 1.1.3 is needed for CPython 3.11.
+     # 2.0 is not ABI compatible with earlier releases, but with luck it won't
+     # have to break the ABI again.
+     # 3.0 is ABI compatible with earlier releases, so we can switch back and
+     # forth between 2 and 3 without recompiling. 3.0 is required for
+     # Python 3.12, and it fixes some serious bugs in Python 3.11.
+     # 3.2 is the first to support Python 3.14a7.
+     # 3.2.2 is needed for Python 3.14b1.
+     "greenlet >= 3.2.2 ; platform_python_implementation == 'CPython'",
+]
+
+[tool.towncrier]
+directory = "docs/changes"
+filename = "CHANGES.rst"
+package = "gevent"
+package_dir = "src"
+issue_format = "See :issue:`{issue}`."
+title_format = false
+template = "docs/_templates/hr-between-versions.rst.tmpl"
