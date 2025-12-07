@@ -1,10 +1,18 @@
 # pyproj_dep_analyze
 
+<!-- Badges -->
 [![CI](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/ci.yml/badge.svg)](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/codeql.yml/badge.svg)](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/codeql.yml)
 [![codecov](https://codecov.io/gh/bitranox/pyproj_dep_analyze/graph/badge.svg?token=UFBaUDIgRk)](https://codecov.io/gh/bitranox/pyproj_dep_analyze)
 [![PyPI](https://img.shields.io/pypi/v/pyproj_dep_analyze.svg)](https://pypi.org/project/pyproj_dep_analyze/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/pyproj_dep_analyze.svg)](https://pypi.org/project/pyproj_dep_analyze/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![Open in Codespaces](https://img.shields.io/badge/Codespaces-Open-blue?logo=github&logoColor=white&style=flat-square)](https://codespaces.new/bitranox/pyproj_dep_analyze?quickstart=1)
+[![Code Style: Ruff](https://img.shields.io/badge/Code%20Style-Ruff-46A3FF?logo=ruff&labelColor=000)](https://docs.astral.sh/ruff/)
+[![Maintainability](https://qlty.sh/badges/041ba2c1-37d6-40bb-85a0-ec5a8a0aca0c/maintainability.svg)](https://qlty.sh/gh/bitranox/projects/pyproj_dep_analyze)
+[![Known Vulnerabilities](https://snyk.io/test/github/bitranox/pyproj_dep_analyze/badge.svg)](https://snyk.io/test/github/bitranox/pyproj_dep_analyze)
+[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 
 **Parses `pyproject.toml` to generate actionable dependency data for security audits, update automation, and LLM-powered code review.**
 
