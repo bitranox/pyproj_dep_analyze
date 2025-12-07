@@ -35,6 +35,7 @@ from .models import (
     Action,
     AnalysisResult,
     DependencyInfo,
+    DownloadStats,
     EnrichedAnalysisResult,
     EnrichedEntry,
     IndexInfo,
@@ -43,7 +44,9 @@ from .models import (
     PyPIMetadata,
     PythonVersion,
     RepoMetadata,
+    VersionMetrics,
 )
+from .stats_resolver import StatsResolver
 from .repo_resolver import (
     ParsedRepoUrl,
     ProjectUrlKey,
@@ -59,6 +62,7 @@ __all__ = [
     "AnalysisResult",
     "CANONICAL_GREETING",
     "DependencyInfo",
+    "DownloadStats",
     "EnrichedAnalysisResult",
     "EnrichedEntry",
     "IndexInfo",
@@ -72,6 +76,8 @@ __all__ = [
     "PythonVersion",
     "RepoMetadata",
     "RepoResolver",
+    "StatsResolver",
+    "VersionMetrics",
     "analyze_pyproject",
     "detect_configured_indexes",
     "detect_repo_url",

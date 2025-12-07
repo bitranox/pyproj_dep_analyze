@@ -24,7 +24,7 @@ name = "pyproj_dep_analyze"
 #: Human-readable summary shown in CLI help output.
 title = "Python project dependency analyzer"
 #: Current release version pulled from ``pyproject.toml`` by automation.
-version = "2.0.0"
+version = "3.0.0"
 #: Repository homepage presented to users.
 homepage = "https://github.com/bitranox/pyproj_dep_analyze"
 #: Author attribution surfaced in CLI output.

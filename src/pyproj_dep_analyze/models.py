@@ -218,6 +218,57 @@ def _empty_str_dict() -> dict[str, str]:
     return {}
 
 
+class VersionMetrics(BaseModel):
+    """Computed metrics from version history for quality assessment.
+
+    These metrics help detect abandoned packages and unusual release patterns.
+
+    Attributes:
+        release_count: Total number of releases.
+        latest_release_age_days: Days since the latest release.
+        first_release_age_days: Days since the first release (project age).
+        avg_days_between_releases: Average days between consecutive releases.
+        min_days_between_releases: Minimum gap between releases (detect rapid-fire releases).
+        max_days_between_releases: Maximum gap between releases (detect abandonment periods).
+        releases_last_year: Number of releases in the last 365 days.
+        release_dates: List of ISO timestamps for all releases (sorted oldest first).
+    """
+
+    model_config = ConfigDict(frozen=True, extra="ignore")
+
+    release_count: int = 0
+    latest_release_age_days: int | None = None
+    first_release_age_days: int | None = None
+    avg_days_between_releases: float | None = None
+    min_days_between_releases: int | None = None
+    max_days_between_releases: int | None = None
+    releases_last_year: int = 0
+    release_dates: list[str] = Field(default_factory=_empty_str_list)
+
+
+class DownloadStats(BaseModel):
+    """Download statistics from PyPI.
+
+    Note: PyPI BigQuery data is not directly accessible via API.
+    These stats come from pypistats.org API or similar services.
+
+    Attributes:
+        total_downloads: Total downloads across all time (if available).
+        last_month_downloads: Downloads in the last 30 days.
+        last_week_downloads: Downloads in the last 7 days.
+        last_day_downloads: Downloads in the last 24 hours.
+        fetched_at: ISO timestamp when stats were retrieved.
+    """
+
+    model_config = ConfigDict(frozen=True, extra="ignore")
+
+    total_downloads: int | None = None
+    last_month_downloads: int | None = None
+    last_week_downloads: int | None = None
+    last_day_downloads: int | None = None
+    fetched_at: str | None = None
+
+
 class PyPIMetadata(BaseModel):
     """Enriched metadata from PyPI API response.
 
@@ -235,6 +286,8 @@ class PyPIMetadata(BaseModel):
         latest_release_date: ISO timestamp of latest release.
         requires_python: Python version constraint from package.
         requires_dist: List of dependency specifications.
+        version_metrics: Computed release pattern metrics.
+        download_stats: Download statistics (requires separate API call).
     """
 
     model_config = ConfigDict(frozen=True, extra="ignore")
@@ -252,6 +305,8 @@ class PyPIMetadata(BaseModel):
     latest_release_date: str | None = None
     requires_python: str | None = None
     requires_dist: list[str] = Field(default_factory=_empty_str_list)
+    version_metrics: VersionMetrics | None = None
+    download_stats: DownloadStats | None = None
 
 
 class RepoMetadata(BaseModel):
@@ -611,6 +666,7 @@ __all__ = [
     "DependencyInfo",
     "DependencyMarker",
     "DeploymentTarget",
+    "DownloadStats",
     "EnrichedAnalysisResult",
     "EnrichedEntry",
     "EnrichedSummary",
@@ -627,5 +683,6 @@ __all__ = [
     "PythonVersion",
     "RepoMetadata",
     "RepoType",
+    "VersionMetrics",
     "VersionStatus",
 ]

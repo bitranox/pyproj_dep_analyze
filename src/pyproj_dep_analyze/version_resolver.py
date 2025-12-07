@@ -29,7 +29,7 @@ from functools import lru_cache
 import httpx
 from pydantic import TypeAdapter
 
-from .models import DependencyInfo, PyPIMetadata, PythonVersion
+from .models import DependencyInfo, PyPIMetadata, PythonVersion, VersionMetrics
 from .python_version_parser import parse_requires_python
 from .schemas import GitHubReleaseSchema, GitHubTagSchema, PyPIFullResponseSchema
 
@@ -387,6 +387,7 @@ class VersionResolver:
         return dict(results)
 
 
+@lru_cache(maxsize=512)
 def _extract_version_from_tag(tag: str) -> str | None:
     """Extract a version number from a git tag.
 
@@ -476,6 +477,7 @@ def _version_sort_key(version: str) -> tuple[int, ...]:
     return tuple(int(p) for p in parts) if parts else (0,)
 
 
+@lru_cache(maxsize=256)
 def _parse_github_url(url: str) -> tuple[str | None, str | None]:
     """Parse GitHub owner and repo from a git URL.
 
@@ -486,12 +488,12 @@ def _parse_github_url(url: str) -> tuple[str | None, str | None]:
         Tuple of (owner, repo) or (None, None) if not parseable.
     """
     # Remove git+ prefix
-    url = _RE_GIT_PREFIX.sub("", url)
+    cleaned = _RE_GIT_PREFIX.sub("", url)
     # Remove .git suffix (can be before @ref or at end)
-    url = _RE_GIT_SUFFIX.sub("", url)
+    cleaned = _RE_GIT_SUFFIX.sub("", cleaned)
 
     # Parse GitHub URL
-    match = _RE_GITHUB_URL.search(url)
+    match = _RE_GITHUB_URL.search(cleaned)
     if match:
         return match.group(1), match.group(2)
 
@@ -576,6 +578,10 @@ def _extract_pypi_metadata(parsed_response: PyPIFullResponseSchema) -> PyPIMetad
         # Find first and latest release dates
         first_date, latest_date = _extract_release_dates(parsed_response)
 
+        # Extract all release dates and compute metrics
+        all_release_dates = _extract_all_release_dates(parsed_response)
+        version_metrics = _compute_version_metrics(all_release_dates)
+
         return PyPIMetadata(
             summary=info.summary,
             license=info.license,
@@ -590,6 +596,7 @@ def _extract_pypi_metadata(parsed_response: PyPIFullResponseSchema) -> PyPIMetad
             latest_release_date=latest_date,
             requires_python=info.requires_python,
             requires_dist=info.requires_dist or [],
+            version_metrics=version_metrics,
         )
     except Exception as e:
         logger.debug("Failed to extract PyPI metadata: %s", e)
@@ -618,6 +625,98 @@ def _extract_release_dates(
 
     dates.sort()
     return dates[0], dates[-1]
+
+
+def _extract_all_release_dates(response: PyPIFullResponseSchema) -> list[str]:
+    """Extract all unique release dates from PyPI response.
+
+    Returns one date per release version (the earliest upload for that version).
+
+    Args:
+        response: Full PyPI API response schema.
+
+    Returns:
+        List of ISO timestamps sorted oldest first.
+    """
+    version_dates: dict[str, str] = {}
+    for version, files in response.releases.items():
+        # Get earliest upload date for this version
+        dates_for_version = [f.upload_time_iso_8601 for f in files if f.upload_time_iso_8601]
+        if dates_for_version:
+            dates_for_version.sort()
+            version_dates[version] = dates_for_version[0]
+
+    # Sort by date and return
+    sorted_dates = sorted(version_dates.values())
+    return sorted_dates
+
+
+def _compute_version_metrics(release_dates: list[str]) -> VersionMetrics:
+    """Compute version metrics from release dates.
+
+    Args:
+        release_dates: List of ISO timestamps sorted oldest first.
+
+    Returns:
+        Computed VersionMetrics.
+    """
+    from datetime import datetime, timezone
+
+    if not release_dates:
+        return VersionMetrics(release_count=0, release_dates=[])
+
+    now = datetime.now(timezone.utc)
+    release_count = len(release_dates)
+
+    # Parse dates
+    parsed_dates: list[datetime] = []
+    for date_str in release_dates:
+        try:
+            # Handle ISO format with optional timezone
+            dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            parsed_dates.append(dt)
+        except (ValueError, TypeError):
+            continue
+
+    if not parsed_dates:
+        return VersionMetrics(release_count=release_count, release_dates=release_dates)
+
+    # Calculate ages
+    latest_date = parsed_dates[-1]
+    first_date = parsed_dates[0]
+    latest_release_age_days = (now - latest_date).days
+    first_release_age_days = (now - first_date).days
+
+    # Calculate gaps between releases
+    gaps_days: list[int] = []
+    for i in range(1, len(parsed_dates)):
+        gap = (parsed_dates[i] - parsed_dates[i - 1]).days
+        gaps_days.append(gap)
+
+    avg_days: float | None = None
+    min_days: int | None = None
+    max_days: int | None = None
+    if gaps_days:
+        avg_days = round(sum(gaps_days) / len(gaps_days), 1)
+        min_days = min(gaps_days)
+        max_days = max(gaps_days)
+
+    # Count releases in last year
+    one_year_ago = now.replace(year=now.year - 1)
+    releases_last_year = sum(1 for dt in parsed_dates if dt >= one_year_ago)
+
+    return VersionMetrics(
+        release_count=release_count,
+        latest_release_age_days=latest_release_age_days,
+        first_release_age_days=first_release_age_days,
+        avg_days_between_releases=avg_days,
+        min_days_between_releases=min_days,
+        max_days_between_releases=max_days,
+        releases_last_year=releases_last_year,
+        release_dates=release_dates,
+    )
 
 
 @lru_cache(maxsize=1000)

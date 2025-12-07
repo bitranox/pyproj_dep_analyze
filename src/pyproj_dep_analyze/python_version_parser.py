@@ -129,6 +129,38 @@ def version_satisfies(version: PythonVersion, constraints: Sequence[VersionConst
     return all(_version_satisfies_constraint(version, c) for c in constraints)
 
 
+@lru_cache(maxsize=256)
+def _parse_requires_python_cached(requires_python: str) -> tuple[PythonVersion, ...]:
+    """Cached implementation of requires-python parsing.
+
+    Args:
+        requires_python: The requires-python specification string.
+
+    Returns:
+        Tuple of Python versions satisfying the requirement, sorted ascending.
+    """
+    # Split by comma to get individual constraints
+    constraint_strs = [c.strip() for c in requires_python.split(",")]
+    constraints: list[VersionConstraint] = []
+
+    for cs in constraint_strs:
+        constraint = _parse_constraint(cs)
+        if constraint:
+            constraints.append(constraint)
+
+    if not constraints:
+        logger.warning(
+            "Could not parse requires-python value: %r. Using all known Python versions.",
+            requires_python,
+        )
+        return tuple(KNOWN_PYTHON_VERSIONS)
+
+    # Filter known versions by constraints
+    valid_versions = [v for v in KNOWN_PYTHON_VERSIONS if version_satisfies(v, constraints)]
+
+    return tuple(sorted(valid_versions))
+
+
 def parse_requires_python(requires_python: str | None) -> list[PythonVersion]:
     """Parse a requires-python string and return list of valid Python versions.
 
@@ -150,26 +182,7 @@ def parse_requires_python(requires_python: str | None) -> list[PythonVersion]:
         # Default: all known Python 3.x versions
         return list(KNOWN_PYTHON_VERSIONS)
 
-    # Split by comma to get individual constraints
-    constraint_strs = [c.strip() for c in requires_python.split(",")]
-    constraints: list[VersionConstraint] = []
-
-    for cs in constraint_strs:
-        constraint = _parse_constraint(cs)
-        if constraint:
-            constraints.append(constraint)
-
-    if not constraints:
-        logger.warning(
-            "Could not parse requires-python value: %r. Using all known Python versions.",
-            requires_python,
-        )
-        return list(KNOWN_PYTHON_VERSIONS)
-
-    # Filter known versions by constraints
-    valid_versions = [v for v in KNOWN_PYTHON_VERSIONS if version_satisfies(v, constraints)]
-
-    return sorted(valid_versions)
+    return list(_parse_requires_python_cached(requires_python))
 
 
 def python_version_to_string(version: PythonVersion) -> str:
