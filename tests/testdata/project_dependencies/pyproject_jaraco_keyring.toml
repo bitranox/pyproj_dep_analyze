@@ -1,0 +1,105 @@
+[build-system]
+requires = [
+	"setuptools>=77",
+	"setuptools_scm[toml]>=3.4.1",
+	# jaraco/skeleton#174
+	"coherent.licensed",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "keyring"
+authors = [
+	{ name = "Kang Zhang", email = "jobo.zh@gmail.com" },
+]
+maintainers = [
+	{ name = "Jason R. Coombs", email = "jaraco@jaraco.com" },
+]
+description = "Store and access your passwords safely."
+readme = "README.rst"
+classifiers = [
+	"Development Status :: 5 - Production/Stable",
+	"Intended Audience :: Developers",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+]
+requires-python = ">=3.9"
+license = "MIT"
+dependencies = [
+	'pywin32-ctypes>=0.2.0; sys_platform=="win32"',
+	'SecretStorage>=3.2; sys_platform=="linux"',
+	'jeepney>=0.4.2; sys_platform=="linux"',
+	'importlib_metadata >= 4.11.4; python_version < "3.12"',
+	"jaraco.classes",
+	"jaraco.functools",
+	"jaraco.context",
+]
+dynamic = ["version"]
+
+[project.urls]
+Source = "https://github.com/jaraco/keyring"
+
+[project.optional-dependencies]
+test = [
+	# upstream
+	"pytest >= 6, != 8.1.*",
+
+	# local
+	"pyfakefs",
+]
+
+doc = [
+	# upstream
+	"sphinx >= 3.5",
+	"jaraco.packaging >= 9.3",
+	"rst.linker >= 1.9",
+	"furo",
+	"sphinx-lint",
+
+	# tidelift
+	"jaraco.tidelift >= 1.4",
+
+	# local
+]
+
+check = [
+	"pytest-checkdocs >= 2.4",
+	"pytest-ruff >= 0.2.1; sys_platform != 'cygwin'",
+]
+
+cover = [
+	"pytest-cov",
+]
+
+enabler = [
+	"pytest-enabler >= 3.4",
+]
+
+type = [
+	# upstream
+	"pytest-mypy >= 1.0.1",
+
+	# local
+	"pygobject-stubs",
+	"shtab", # Optional install for completion
+	"types-pywin32",
+]
+
+completion = ["shtab >= 1.1.0"]
+
+[project.entry-points]
+devpi_client = {keyring = "keyring.devpi_client"}
+
+[project.entry-points."keyring.backends"]
+Windows = "keyring.backends.Windows"
+macOS = "keyring.backends.macOS"
+libsecret = "keyring.backends.libsecret"
+SecretService = "keyring.backends.SecretService"
+KWallet = "keyring.backends.kwallet"
+chainer = "keyring.backends.chainer"
+
+[project.scripts]
+keyring = "keyring.cli:main"
+
+
+[tool.setuptools_scm]

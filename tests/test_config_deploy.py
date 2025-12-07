@@ -13,8 +13,9 @@ from typing import Any
 
 import pytest
 
-from pyproj_dep_analyse import config_deploy as deploy_mod
-from pyproj_dep_analyse.config_deploy import deploy_configuration
+from pyproj_dep_analyze import config_deploy as deploy_mod
+from pyproj_dep_analyze.config_deploy import deploy_configuration
+from pyproj_dep_analyze.models import DeploymentTarget
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -64,7 +65,7 @@ def test_deploy_configuration_returns_list(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", fake_deploy_config)
 
-    result = deploy_configuration(targets=["user"])
+    result = deploy_configuration(targets=[DeploymentTarget.USER])
 
     assert isinstance(result, list)
 
@@ -81,7 +82,7 @@ def test_deploy_configuration_passes_targets_to_lib_layered_config(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", capture_deploy_config)
 
-    deploy_configuration(targets=["user", "host"])
+    deploy_configuration(targets=[DeploymentTarget.USER, DeploymentTarget.HOST])
 
     assert captured["targets"] == ["user", "host"]
 
@@ -98,7 +99,7 @@ def test_deploy_configuration_passes_force_to_lib_layered_config(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", capture_deploy_config)
 
-    deploy_configuration(targets=["user"], force=True)
+    deploy_configuration(targets=[DeploymentTarget.USER], force=True)
 
     assert captured["force"] is True
 
@@ -107,7 +108,7 @@ def test_deploy_configuration_passes_force_to_lib_layered_config(
 def test_deploy_configuration_uses_correct_vendor(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse import __init__conf__
+    from pyproj_dep_analyze import __init__conf__
 
     captured: dict[str, Any] = {}
 
@@ -117,7 +118,7 @@ def test_deploy_configuration_uses_correct_vendor(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", capture_deploy_config)
 
-    deploy_configuration(targets=["user"])
+    deploy_configuration(targets=[DeploymentTarget.USER])
 
     assert captured["vendor"] == __init__conf__.LAYEREDCONF_VENDOR
 
@@ -126,7 +127,7 @@ def test_deploy_configuration_uses_correct_vendor(
 def test_deploy_configuration_uses_correct_app(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse import __init__conf__
+    from pyproj_dep_analyze import __init__conf__
 
     captured: dict[str, Any] = {}
 
@@ -136,7 +137,7 @@ def test_deploy_configuration_uses_correct_app(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", capture_deploy_config)
 
-    deploy_configuration(targets=["user"])
+    deploy_configuration(targets=[DeploymentTarget.USER])
 
     assert captured["app"] == __init__conf__.LAYEREDCONF_APP
 
@@ -145,7 +146,7 @@ def test_deploy_configuration_uses_correct_app(
 def test_deploy_configuration_uses_correct_slug(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse import __init__conf__
+    from pyproj_dep_analyze import __init__conf__
 
     captured: dict[str, Any] = {}
 
@@ -155,7 +156,7 @@ def test_deploy_configuration_uses_correct_slug(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", capture_deploy_config)
 
-    deploy_configuration(targets=["user"])
+    deploy_configuration(targets=[DeploymentTarget.USER])
 
     assert captured["slug"] == __init__conf__.LAYEREDCONF_SLUG
 
@@ -164,7 +165,7 @@ def test_deploy_configuration_uses_correct_slug(
 def test_deploy_configuration_uses_default_config_as_source(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse.config import get_default_config_path
+    from pyproj_dep_analyze.config import get_default_config_path
 
     captured: dict[str, Any] = {}
 
@@ -174,7 +175,7 @@ def test_deploy_configuration_uses_default_config_as_source(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", capture_deploy_config)
 
-    deploy_configuration(targets=["user"])
+    deploy_configuration(targets=[DeploymentTarget.USER])
 
     assert captured["source"] == get_default_config_path()
 
@@ -191,7 +192,7 @@ def test_deploy_configuration_returns_deployed_paths(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", fake_deploy_config)
 
-    result = deploy_configuration(targets=["user"])
+    result = deploy_configuration(targets=[DeploymentTarget.USER])
 
     assert result == expected_paths
 
@@ -205,7 +206,7 @@ def test_deploy_configuration_returns_empty_list_when_all_exist(
 
     monkeypatch.setattr(deploy_mod, "deploy_config", fake_deploy_config)
 
-    result = deploy_configuration(targets=["user"], force=False)
+    result = deploy_configuration(targets=[DeploymentTarget.USER], force=False)
 
     assert result == []
 

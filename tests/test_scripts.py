@@ -156,15 +156,15 @@ def _capture_sync(record: list[ProjectMetadata]) -> Callable[[ProjectMetadata], 
 @pytest.mark.os_agnostic
 def test_get_project_metadata_fields():
     meta = _utils.get_project_metadata()
-    assert meta.name == "pyproj_dep_analyse"
-    assert meta.slug == "pyproj-dep-analyse"
-    assert meta.import_package == "pyproj_dep_analyse"
-    assert meta.coverage_source == "src/pyproj_dep_analyse"
-    assert meta.github_tarball_url("1.2.3").endswith("/bitranox/pyproj_dep_analyse/archive/refs/tags/v1.2.3.tar.gz")
+    assert meta.name == "pyproj_dep_analyze"
+    assert meta.slug == "pyproj-dep-analyze"
+    assert meta.import_package == "pyproj_dep_analyze"
+    assert meta.coverage_source == "src/pyproj_dep_analyze"
+    assert meta.github_tarball_url("1.2.3").endswith("/bitranox/pyproj_dep_analyze/archive/refs/tags/v1.2.3.tar.gz")
     assert meta.version
     assert meta.summary
     assert meta.author_name
-    assert meta.metadata_module.as_posix().endswith("src/pyproj_dep_analyse/__init__conf__.py")
+    assert meta.metadata_module.as_posix().endswith("src/pyproj_dep_analyze/__init__conf__.py")
 
 
 @pytest.mark.os_agnostic

@@ -105,9 +105,9 @@ COVERAGE=on make test        # force coverage and generate coverage.xml/codecov.
 ### Versioning & Metadata
 
 - Single source of truth for package metadata is `pyproject.toml` (`[project]`).
-- The library reads its own installed metadata at runtime via `importlib.metadata` (see `src/pyproj_dep_analyse/__init__conf__.py`).
+- The library reads its own installed metadata at runtime via `importlib.metadata` (see `src/pyproj_dep_analyze/__init__conf__.py`).
 - Do not duplicate the version in code; bump only `pyproject.toml` and update `CHANGELOG.md`.
-- Console script name is discovered from entry points; defaults to `pyproj_dep_analyse`.
+- Console script name is discovered from entry points; defaults to `pyproj_dep_analyze`.
 
 ### Dependency Auditing
 

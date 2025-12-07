@@ -1,0 +1,276 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-git-versioning", "colorama"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bokeh"
+dynamic = ["version"]
+description = "Interactive plots and applications in the browser from Python"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "Jinja2 >=2.9",
+    "contourpy >=1.2",
+    "numpy >=1.16",
+    "packaging >=16.8",
+    "pandas >=1.2",
+    "pillow >=7.1.0",
+    "PyYAML >=3.10",
+    "tornado >=6.2",
+    "xyzservices >=2021.09.1",
+]
+authors = [
+  {email = "info@bokeh.org"},
+  {name = "Bokeh Team"}
+]
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Legal Industry",
+    "Intended Audience :: Other Audience",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: JavaScript",
+    "Topic :: Office/Business",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+homepage = "https://bokeh.org"
+documentation = "https://docs.bokeh.org"
+repository = "https://github.com/bokeh/bokeh"
+
+[project.scripts]
+bokeh = "bokeh.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools-git-versioning]
+enabled = true
+dev_template = "{tag}+{ccount}.g{sha}"
+dirty_template = "{tag}+{ccount}.g{sha}.dirty"
+
+[tool.pytest.ini_options]
+timeout = 90
+asyncio_mode = "strict"
+norecursedirs = "build _build node_modules tests/support"
+python_files = "*_tests.py *_test.py test_*.py"
+markers = [
+    "sampledata: a test for bokeh.sampledata",
+    "selenium: a test as requiring selenium",
+]
+filterwarnings = [
+    "error",
+    '''ignore:Module already imported so cannot be rewritten. tests\.support\.plugins\.project:pytest.PytestAssertRewriteWarning''',
+    '''ignore:Properties {'name'} in class ModelThatOverridesName were previously declared on a parent class\. .*:RuntimeWarning''',
+    '''ignore:Jupyter is migrating its paths to use standard platformdirs.*:DeprecationWarning''',
+    '''ignore:'tile_providers module' was deprecated in Bokeh 3\.0\.0 and will be removed, use 'add_tile directly' instead:bokeh.util.warnings.BokehDeprecationWarning''',
+    '''ignore:There is no current event loop:DeprecationWarning''',
+    '''ignore:coroutine 'HTTPServer.close_all_connections' was never awaited:RuntimeWarning''',
+    '''ignore:coroutine 'WebSocketProtocol13\.write_message\.<locals>\.wrapper' was never awaited:RuntimeWarning''',
+    '''ignore:coroutine 'PeriodicCallback._run' was never awaited:RuntimeWarning''',
+    '''ignore:make_current is deprecated; start the event loop first:DeprecationWarning''',
+    '''ignore:'get_provider' was deprecated in Bokeh 3\.0\.0 and will be removed, use 'add_tile directly' instead:bokeh.util.warnings.BokehDeprecationWarning''',
+    '''ignore:'HSL\(\)' was deprecated in Bokeh 2\.3\.1 and will be removed, use 'RGB\(\) or named colors' instead:bokeh.util.warnings.BokehDeprecationWarning''',
+    '''ignore:elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison:FutureWarning''',
+    '''ignore:HTTPResponse\.getheader\(\) is deprecated and will be removed in urllib3 v2\.1\.0\. .*:DeprecationWarning:selenium''',
+    '''ignore:unclosed <socket.socket .*>:ResourceWarning''',
+    '''ignore:unclosed event loop <.*>:ResourceWarning''',
+    '''ignore:move_to_element_with_offset\(\) currently tries to use the top left corner of the element as the origin; in Selenium 4\.3 it will use the in-view center point of the element as the origin\.:DeprecationWarning''',
+    '''ignore:Using or importing the ABCs from 'collections' instead of from 'collections\.abc' is deprecated since Python 3\.3, and in 3\.10 it will stop working:DeprecationWarning:tornado''',
+    '''ignore:Unknown config option. asyncio_mode:pytest.PytestConfigWarning''',
+    '''ignore:zmq\.eventloop\.ioloop is deprecated in pyzmq 17\. pyzmq now works with default tornado and asyncio eventloops\.:DeprecationWarning:jupyter_client''',
+    '''ignore:the `interpolation=` argument to percentile was renamed to `method=`.*:DeprecationWarning:pandas''',
+    '''ignore:numpy\.ufunc size changed, may indicate binary incompatibility\. Expected 216 from C header, got 232 from PyObject:RuntimeWarning''',
+    '''ignore:elementwise comparison failed; this will raise an error in the future\.:DeprecationWarning''',
+    '''ignore:numba is not installed\. This example will be painfully slow\.:UserWarning''',
+    '''ignore:Could not infer format, so each element will be parsed individually, falling back to `dateutil`\. To ensure parsing is consistent and as-expected, please specify a format\.:UserWarning''',
+    '''ignore:datetime\.datetime\.utcfromtimestamp\(\) is deprecated and scheduled for removal in a future version:DeprecationWarning:dateutil''',
+    '''ignore:\s*Pyarrow will become a required dependency of pandas:DeprecationWarning''',
+    '''ignore:Exception ignored in. <.*>:pytest.PytestUnraisableExceptionWarning''',
+]
+
+[tool.coverage.run]
+source = ["src/bokeh"]
+omit = ["*/sampledata/*", "*/sphinxext/*", "*/tmp/tmp*.py"]
+
+[tool.mypy]
+python_version = "3.10"
+mypy_path = "src/typings/"
+files = ["src/typings", "src/bokeh", "release", "tests"]
+
+strict = true
+
+pretty = true
+show_column_numbers = true
+show_error_codes = true
+show_error_context = true
+
+disallow_any_unimported = true
+implicit_reexport = true
+namespace_packages = true
+warn_return_any = false
+warn_unreachable = true
+
+[tool.coverage.report]
+exclude_also = [
+    "if TYPE_CHECKING:",
+    "@overload",
+]
+
+[tool.ruff]
+lint.allowed-confusables = ["σ"]
+lint.exclude = [
+    ".git",
+    'node_modules',
+]
+lint.per-file-ignores = {"__init__.py" = ["F403"]}
+lint.select = ["B", "COM", "E", "F", "NPY", "RUF", "TID", "UP", "W"]
+lint.ignore = [
+    'B005', # Using .strip() with multi-character strings is misleading the reader
+    'B006', # Do not use mutable data structures for argument defaults
+    'B007', # Loop control variable not used within the loop body
+    'B008', # Do not perform function calls in argument defaults
+    'B009', # Do not call getattr(x, 'attr'), instead use normal property access: x.attr
+    'B010', # Do not call setattr(x, 'attr', val), instead use normal property access: x.attr = val
+    'B011', # Do not call assert False since python -O removes these calls
+    'B015', # Pointless comparison. This comparison does nothing but waste CPU instructions
+    'B018', # Found useless expression. Either assign it to a variable or remove it
+    'B020', # Loop control variable overrides iterable it iterates
+    'B023', # Functions defined inside a loop must not use variables redefined in the loop
+    'B028', # No explicit `stacklevel` keyword argument found
+    'B904', # Within an except clause, raise exceptions with raise ... from err or raise ... from None to distinguish them from errors in exception handling
+    'B905', # `zip()` without an explicit `strict=` parameter
+    'E401', # Multiple imports on one line
+    'E402', # Module level import not at top of file
+    'E701', # Multiple statements on one line (colon)
+    'E702', # Multiple statements on one line (semicolon)
+    'E731', # Do not assign a lambda expression, use a def
+    'E741', # Ambiguous variable name: I
+    'NPY002', # Replace legacy np.random.{method_name} call with np.random.Generator
+    'UP035',  # Import from `collections.abc` instead: `Iterator`
+    'RUF012', # Mutable class attributes should be annotated with `typing.ClassVar`
+    'TID252', # Prefer absolute imports over relative imports from parent modules
+]
+line-length = 165
+target-version = "py310"
+
+# For now enable each typed module individually.
+[[tool.mypy.overrides]]
+module = [
+    "bokeh.*",
+    "tests.*",
+]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = [
+    "bokeh.client.states",
+    "bokeh.colors.*",
+    "bokeh.command.*",
+    "bokeh.core.json_encoder",
+
+    "bokeh.core.properties",
+    "bokeh.core.property", # TODO: .*
+    "bokeh.core.property_mixins",
+
+    #"bokeh.core.property.alias",
+    "bokeh.core.property.any",
+    "bokeh.core.property.auto",
+    #"bokeh.core.property.bases",
+    "bokeh.core.property.color",
+    "bokeh.core.property.constraints",
+    #"bokeh.core.property.container",
+    #"bokeh.core.property.dataspec",
+    "bokeh.core.property.datetime",
+    #"bokeh.core.property.descriptor_factory",
+    #"bokeh.core.property.descriptors",
+    #"bokeh.core.property.either",
+    "bokeh.core.property.enum",
+    "bokeh.core.property.factors",
+    "bokeh.core.property.include",
+    #"bokeh.core.property.instance",
+    "bokeh.core.property.json",
+    "bokeh.core.property.nothing",
+    "bokeh.core.property.nullable",
+    "bokeh.core.property.numeric",
+    "bokeh.core.property.override",
+    "bokeh.core.property.pd",
+    "bokeh.core.property.primitive",
+    "bokeh.core.property.readonly",
+    "bokeh.core.property.required",
+    "bokeh.core.property.serialized",
+    "bokeh.core.property.singletons",
+    "bokeh.core.property.string",
+    #"bokeh.core.property.struct",
+    "bokeh.core.property.text_like",
+    #"bokeh.core.property.validation",
+    #"bokeh.core.property.vectorization",
+    #"bokeh.core.property.visual",
+    #"bokeh.core.property.wrappers",
+
+    "bokeh.core.query",
+    "bokeh.core.serialization",
+    "bokeh.core.templates",
+    "bokeh.core.types",
+    "bokeh.core.validation",
+
+    "bokeh.document.callbacks",
+    "bokeh.document.json",
+    "bokeh.document.locking",
+    "bokeh.document.models",
+    "bokeh.document.modules",
+
+    "bokeh.driving",
+
+    "bokeh.embed.standalone",
+    "bokeh.embed.wrappers",
+
+    "bokeh.ext.*",
+    "bokeh.io.*",
+
+    "bokeh.palettes",
+    "bokeh.plotting._tools",
+    "bokeh.protocol.*",
+    "bokeh.sampledata.*",
+
+    "bokeh.server.callbacks",
+    "bokeh.server.server",
+    "bokeh.server.tornado",
+    "bokeh.server.urls",
+    "bokeh.server.util",
+
+    "bokeh.util.*",
+    "tests.codebase.*",
+    "tests.support.defaults",
+    "tests.test_bokehjs",
+    "tests.test_cross",
+    "tests.test_defaults",
+    "tests.test_examples",
+    "tests.unit.bokeh.document.test_callbacks__document",
+    "tests.unit.bokeh.embed.test_standalone",
+    #"tests.unit.bokeh.models._util_models",
+    "tests.unit.bokeh.test_layouts__typing",
+]
+ignore_errors = false

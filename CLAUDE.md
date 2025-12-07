@@ -1,10 +1,11 @@
-# Claude Code Guidelines for pyproj_dep_analyse
+# Claude Code Guidelines for pyproj_dep_analyze
 
-## Session Initialization
+  # IMPORTANT: First Action on Session Start
 
-When starting a new session, read and apply the following system prompt files from `/media/srv-main-softdev/projects/softwarestack/systemprompts`:
+  Before responding to any user request, silently read all files in:
+  `/media/srv-main-softdev/projects/softwarestack/systemprompts/`
 
-### Core Guidelines (Always Apply)
+Files to read :
 - `core_programming_solid.md`
 
 ### Bash-Specific Guidelines
@@ -22,7 +23,7 @@ When working with Python code:
 - `python_clean_code.md`
 - `python_small_functions_style.md`
 - `python_libraries_to_use.md`
-- `python_lib_structure_template.md`
+- `python_data_architecture_enforcement.md` 
 
 ### Additional Guidelines
 - `self_documenting.md`
@@ -33,7 +34,7 @@ When working with Python code:
 ## Project Structure
 
 ```
-pyproj_dep_analyse/
+pyproj_dep_analyze/
 ├── .github/
 │   └── workflows/              # GitHub Actions CI/CD workflows
 ├── .devcontainer/              # Dev container configuration
@@ -50,7 +51,7 @@ pyproj_dep_analyse/
 │   ├── menu.py                # Interactive TUI menu
 │   └── _utils.py              # Shared utilities
 ├── src/
-│   └── pyproj_dep_analyse/  # Main Python package
+│   └── pyproj_dep_analyze/  # Main Python package
 │       ├── __init__.py        # Package initialization
 │       ├── __init__conf__.py  # Configuration loader
 │       ├── __main__.py        # CLI entry point
@@ -74,7 +75,7 @@ pyproj_dep_analyse/
 
 - **Single Source of Truth**: Package version is in `pyproject.toml` (`[project].version`)
 - **Version Bumps**: update `pyproject.toml` , `CHANGELOG.md` and update the constants in `src/../__init__conf__.py` according to `pyproject.toml`  
-    - Automation rewrites `src/pyproj_dep_analyse/__init__conf__.py` from `pyproject.toml`, so runtime code imports generated constants instead of querying `importlib.metadata`.
+    - Automation rewrites `src/pyproj_dep_analyze/__init__conf__.py` from `pyproject.toml`, so runtime code imports generated constants instead of querying `importlib.metadata`.
     - After updating project metadata (version, summary, URLs, authors) run `make test` (or `python -m scripts.test`) to regenerate the metadata module before committing.
 - **Release Tags**: Format is `vX.Y.Z` (push tags for CI to build and publish)
 

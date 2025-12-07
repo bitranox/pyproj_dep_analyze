@@ -40,7 +40,7 @@ when writing or refracturing Python scripts, apply those Rules :
 
 ## Project Structure & Module Organization
 
-- `src/pyproj_dep_analyse/`: Python package
+- `src/pyproj_dep_analyze/`: Python package
 - `scripts/`: shared automation
 - `tests/`: test suite
 
@@ -48,7 +48,7 @@ when writing or refracturing Python scripts, apply those Rules :
 ### Versioning & Releases
 
 - Single source of truth for the package version is `pyproject.toml` (`[project].version`).
-- Automation rewrites `src/pyproj_dep_analyse/__init__conf__.py` from `pyproject.toml`, so runtime code imports generated constants instead of querying `importlib.metadata`.
+- Automation rewrites `src/pyproj_dep_analyze/__init__conf__.py` from `pyproject.toml`, so runtime code imports generated constants instead of querying `importlib.metadata`.
 - After updating project metadata (version, summary, URLs, authors) run `make test` (or `python -m scripts.test`) to regenerate the metadata module before committing.
 - Tag releases `vX.Y.Z` and push tags; CI will build artifacts and publish when configured.
 

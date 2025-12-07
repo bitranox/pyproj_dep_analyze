@@ -2,7 +2,7 @@
 
 > The CLI stack uses `rich-click`, which bundles `rich` styling on top of click-style ergonomics.
 
-This guide collects every supported method to install `pyproj_dep_analyse`, including
+This guide collects every supported method to install `pyproj_dep_analyze`, including
 isolated environments and system package managers. Pick the option that matches your workflow.
 
 
@@ -90,9 +90,9 @@ source .venv/bin/activate
 .venv\Scripts\Activate.ps1
 
 # install via uv from PyPI
-uv pip install pyproj_dep_analyse
+uv pip install pyproj_dep_analyze
 # optional install from GitHub
-uv pip install "git+https://github.com/bitranox/pyproj_dep_analyse"
+uv pip install "git+https://github.com/bitranox/pyproj_dep_analyze"
 # upgrade
 uv tool upgrade --all
 ```
@@ -104,9 +104,9 @@ Multiple projects with different tool versions stay isolated so each can use "it
 
 ```bash
 # run from PyPI
-uvx pyproj_dep_analyse
+uvx pyproj_dep_analyze
 # run from GitHub
-uvx --from git+https://github.com/bitranox/pyproj_dep_analyse.git pyproj_dep_analyse
+uvx --from git+https://github.com/bitranox/pyproj_dep_analyze.git pyproj_dep_analyze
 
 ```
 
@@ -119,9 +119,9 @@ uvx --from git+https://github.com/bitranox/pyproj_dep_analyse.git pyproj_dep_ana
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 # install from PyPI
-pip install pyproj_dep_analyse 
+pip install pyproj_dep_analyze 
 # optional install from GitHub
-pip install "git+https://github.com/bitranox/pyproj_dep_analyse"
+pip install "git+https://github.com/bitranox/pyproj_dep_analyze"
 # optional development install from local
 pip install -e .[dev]
 # optional install from local runtime only:
@@ -132,9 +132,9 @@ pip install .
 
 ```bash
 # install from PyPI
-pip install --user pyproj_dep_analyse 
+pip install --user pyproj_dep_analyze 
 # optional install from GitHub
-pip install --user "git+https://github.com/bitranox/pyproj_dep_analyse"
+pip install --user "git+https://github.com/bitranox/pyproj_dep_analyze"
 # optional install from local
 pip install --user .
 ```
@@ -150,12 +150,12 @@ python -m pip install pipx
 # optional install pipx via apt
 sudo apt install python-pipx
 # install via pipx from PyPI
-pipx install pyproj_dep_analyse
+pipx install pyproj_dep_analyze
 # optional install via pipx from GitHub
-pipx install "git+https://github.com/bitranox/pyproj_dep_analyse"
+pipx install "git+https://github.com/bitranox/pyproj_dep_analyze"
 # optional install from local
 pipx install .
-pipx upgrade pyproj_dep_analyse
+pipx upgrade pyproj_dep_analyze
 # From Git tag/commit:
 ```
 
@@ -163,31 +163,31 @@ pipx upgrade pyproj_dep_analyse
 
 ```bash
 python -m build
-pip install dist/pyproj_dep_analyse-*.whl
-pip install dist/pyproj_dep_analyse-*.tar.gz   # sdist
+pip install dist/pyproj_dep_analyze-*.whl
+pip install dist/pyproj_dep_analyze-*.tar.gz   # sdist
 ```
 
 ## 7. Poetry or PDM Managed Environments
 
 ```bash
 # Poetry
-poetry add pyproj_dep_analyse     # as dependency
+poetry add pyproj_dep_analyze     # as dependency
 poetry install                          # for local dev
 
 # PDM
-pdm add pyproj_dep_analyse
+pdm add pyproj_dep_analyze
 pdm install
 ```
 
 ## 8. Install Directly from Git
 
 ```bash
-pip install "git+https://github.com/bitranox/pyproj_dep_analyse#egg=pyproj_dep_analyse"
+pip install "git+https://github.com/bitranox/pyproj_dep_analyze#egg=pyproj_dep_analyze"
 ```
 
 ## 9. System Package Managers (Optional Distribution Channels)
 
 - Deb/RPM: Package with `fpm` for OS-native delivery
 
-All methods register both the `pyproj_dep_analyse` and
-`pyproj-dep-analyse` commands on your PATH.
+All methods register both the `pyproj_dep_analyze` and
+`pyproj-dep-analyze` commands on your PATH.

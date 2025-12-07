@@ -12,7 +12,7 @@ from typing import Any
 
 import pytest
 
-from pyproj_dep_analyse.models import (
+from pyproj_dep_analyze.models import (
     Action,
     AnalysisResult,
     DependencyInfo,
@@ -20,23 +20,23 @@ from pyproj_dep_analyse.models import (
     OutdatedEntry,
     PythonVersion,
 )
-from pyproj_dep_analyse.schemas import OutdatedEntrySchema
-from pyproj_dep_analyse.python_version_parser import (
+
+# OutdatedEntry is now a Pydantic model in models.py - no separate schema needed
+from pyproj_dep_analyze.python_version_parser import (
     VersionConstraint,
     parse_requires_python,
     version_satisfies,
 )
-from pyproj_dep_analyse.dependency_extractor import (
+from pyproj_dep_analyze.dependency_extractor import (
     extract_dependencies,
     get_requires_python,
     load_pyproject,
 )
-from pyproj_dep_analyse.analyzer import (
+from pyproj_dep_analyze.analyzer import (
     Analyzer,
     analyze_pyproject,
     create_analyzer,
     determine_action,
-    entry_to_dict,
     run_analysis,
     write_outdated_json,
     _count_actions,  # pyright: ignore[reportPrivateUsage]
@@ -48,7 +48,7 @@ from pyproj_dep_analyse.analyzer import (
     _version_is_greater,  # pyright: ignore[reportPrivateUsage]
     _version_tuple,  # pyright: ignore[reportPrivateUsage]
 )
-from pyproj_dep_analyse.version_resolver import (
+from pyproj_dep_analyze.version_resolver import (
     VersionResolver,
     VersionResult,
     _extract_version_from_tag,  # pyright: ignore[reportPrivateUsage]
@@ -57,6 +57,14 @@ from pyproj_dep_analyse.version_resolver import (
 
 
 TESTDATA_DIR = Path(__file__).parent / "testdata"
+
+
+def find_testdata_file(filename: str) -> Path:
+    """Find a pyproject.toml file by name across testdata subdirectories."""
+    matches = list(TESTDATA_DIR.glob(f"*/{filename}"))
+    if not matches:
+        raise FileNotFoundError(f"Test file not found: {filename}")
+    return matches[0]
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -173,9 +181,12 @@ def test_outdated_entry_stores_all_fields() -> None:
 
 @pytest.mark.os_agnostic
 def test_outdated_entry_is_immutable() -> None:
-    entry = OutdatedEntry("pkg", "3.11", "1.0", "2.0", Action.UPDATE)
+    from pydantic import ValidationError
 
-    with pytest.raises(AttributeError):
+    entry = OutdatedEntry(package="pkg", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE)
+
+    # Pydantic frozen models raise ValidationError instead of AttributeError
+    with pytest.raises(ValidationError):
         entry.package = "new"  # type: ignore[misc]
 
 
@@ -189,14 +200,8 @@ def test_outdated_entry_serializes_to_pydantic_schema() -> None:
         action=Action.UPDATE,
     )
 
-    schema = OutdatedEntrySchema(
-        package=entry.package,
-        python_version=entry.python_version,
-        current_version=entry.current_version,
-        latest_version=entry.latest_version,
-        action=entry.action,
-    )
-    data = schema.model_dump()
+    # OutdatedEntry is now a Pydantic model - use model_dump() directly
+    data = entry.model_dump()
 
     assert data["package"] == "numpy"
     assert data["action"] == "update"
@@ -212,14 +217,8 @@ def test_outdated_entry_serializes_none_values_correctly() -> None:
         action=Action.CHECK_MANUALLY,
     )
 
-    schema = OutdatedEntrySchema(
-        package=entry.package,
-        python_version=entry.python_version,
-        current_version=entry.current_version,
-        latest_version=entry.latest_version,
-        action=entry.action,
-    )
-    data = schema.model_dump()
+    # OutdatedEntry is now a Pydantic model - use model_dump() directly
+    data = entry.model_dump()
 
     assert data["current_version"] is None
 
@@ -375,10 +374,9 @@ def test_version_satisfies_checks_all_constraints() -> None:
 
 @pytest.mark.os_agnostic
 def test_load_pyproject_parses_toml_file() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_fastapi_fastapi.toml")
+    data = load_pyproject(find_testdata_file("pyproject_fastapi_fastapi.toml"))
 
-    assert "project" in data
-    assert data["project"]["name"] == "fastapi"
+    assert data.project.name == "fastapi"
 
 
 @pytest.mark.os_agnostic
@@ -389,7 +387,7 @@ def test_load_pyproject_raises_on_missing_file() -> None:
 
 @pytest.mark.os_agnostic
 def test_get_requires_python_extracts_version_constraint() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_fastapi_fastapi.toml")
+    data = load_pyproject(find_testdata_file("pyproject_fastapi_fastapi.toml"))
 
     requires = get_requires_python(data)
 
@@ -398,7 +396,9 @@ def test_get_requires_python_extracts_version_constraint() -> None:
 
 @pytest.mark.os_agnostic
 def test_get_requires_python_returns_none_when_absent() -> None:
-    data: dict[str, Any] = {"project": {"name": "test"}}
+    from pyproj_dep_analyze.schemas import PyprojectSchema
+
+    data = PyprojectSchema.model_validate({"project": {"name": "test"}})
 
     requires = get_requires_python(data)
 
@@ -407,7 +407,7 @@ def test_get_requires_python_returns_none_when_absent() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_finds_pep621_dependencies() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_fastapi_fastapi.toml")
+    data = load_pyproject(find_testdata_file("pyproject_fastapi_fastapi.toml"))
 
     deps = extract_dependencies(data)
     names = {d.name for d in deps}
@@ -418,7 +418,7 @@ def test_extract_dependencies_finds_pep621_dependencies() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_finds_poetry_dependencies() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_python-poetry_poetry.toml")
+    data = load_pyproject(find_testdata_file("pyproject_python-poetry_poetry.toml"))
 
     deps = extract_dependencies(data)
     names = {d.name for d in deps}
@@ -428,7 +428,7 @@ def test_extract_dependencies_finds_poetry_dependencies() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_finds_optional_dependencies() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_fastapi_fastapi.toml")
+    data = load_pyproject(find_testdata_file("pyproject_fastapi_fastapi.toml"))
 
     deps = extract_dependencies(data)
     sources = {d.source for d in deps}
@@ -438,7 +438,7 @@ def test_extract_dependencies_finds_optional_dependencies() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_finds_build_requires() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_pytorch_pytorch.toml")
+    data = load_pyproject(find_testdata_file("pyproject_pytorch_pytorch.toml"))
 
     deps = extract_dependencies(data)
     sources = {d.source for d in deps}
@@ -448,7 +448,7 @@ def test_extract_dependencies_finds_build_requires() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_finds_dependency_groups() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_pytorch_pytorch.toml")
+    data = load_pyproject(find_testdata_file("pyproject_pytorch_pytorch.toml"))
 
     deps = extract_dependencies(data)
     sources = {d.source for d in deps}
@@ -458,7 +458,7 @@ def test_extract_dependencies_finds_dependency_groups() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_finds_poetry_groups() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_python-poetry_poetry.toml")
+    data = load_pyproject(find_testdata_file("pyproject_python-poetry_poetry.toml"))
 
     deps = extract_dependencies(data)
     sources = {d.source for d in deps}
@@ -468,7 +468,7 @@ def test_extract_dependencies_finds_poetry_groups() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_captures_python_markers() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_python-poetry_poetry.toml")
+    data = load_pyproject(find_testdata_file("pyproject_python-poetry_poetry.toml"))
 
     deps = extract_dependencies(data)
     marker_deps = [d for d in deps if d.python_markers]
@@ -478,7 +478,7 @@ def test_extract_dependencies_captures_python_markers() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_captures_extras() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_python-poetry_poetry.toml")
+    data = load_pyproject(find_testdata_file("pyproject_python-poetry_poetry.toml"))
 
     deps = extract_dependencies(data)
 
@@ -487,7 +487,9 @@ def test_extract_dependencies_captures_extras() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_returns_empty_list_for_no_dependencies() -> None:
-    data: dict[str, Any] = {"project": {"name": "empty", "version": "1.0.0"}}
+    from pyproj_dep_analyze.schemas import PyprojectSchema
+
+    data = PyprojectSchema.model_validate({"project": {"name": "empty", "version": "1.0.0"}})
 
     deps = extract_dependencies(data)
 
@@ -496,7 +498,9 @@ def test_extract_dependencies_returns_empty_list_for_no_dependencies() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_normalizes_package_names() -> None:
-    data = {"project": {"dependencies": ["My-Package>=1.0"]}}
+    from pyproj_dep_analyze.schemas import PyprojectSchema
+
+    data = PyprojectSchema.model_validate({"project": {"dependencies": ["My-Package>=1.0"]}})
 
     deps = extract_dependencies(data)
 
@@ -505,7 +509,9 @@ def test_extract_dependencies_normalizes_package_names() -> None:
 
 @pytest.mark.os_agnostic
 def test_extract_dependencies_identifies_git_dependencies() -> None:
-    data = {"project": {"dependencies": ["mypackage @ git+https://github.com/user/repo.git"]}}
+    from pyproj_dep_analyze.schemas import PyprojectSchema
+
+    data = PyprojectSchema.model_validate({"project": {"dependencies": ["mypackage @ git+https://github.com/user/repo.git"]}})
 
     deps = extract_dependencies(data)
 
@@ -798,8 +804,8 @@ def test_determine_action_handles_dependency_with_no_version_constraint() -> Non
 def test_analysis_result_stores_entries_and_counts() -> None:
     result = AnalysisResult(
         entries=[
-            OutdatedEntry("pkg1", "3.11", "1.0", "2.0", Action.UPDATE),
-            OutdatedEntry("pkg2", "3.11", "1.0", "1.0", Action.NONE),
+            OutdatedEntry(package="pkg1", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE),
+            OutdatedEntry(package="pkg2", python_version="3.11", current_version="1.0", latest_version="1.0", action=Action.NONE),
         ],
         python_versions=["3.11"],
         total_dependencies=2,
@@ -944,15 +950,15 @@ def test_version_resolver_repr_shows_none_when_no_token() -> None:
 
 
 # ════════════════════════════════════════════════════════════════════════════
-# entry_to_dict: The serializer at the boundary
+# OutdatedEntry.model_dump(): Pydantic serialization at the boundary
 # ════════════════════════════════════════════════════════════════════════════
 
 
 @pytest.mark.os_agnostic
-def test_entry_to_dict_converts_to_serializable_dict() -> None:
-    entry = OutdatedEntry("pkg", "3.11", "1.0", "2.0", Action.UPDATE)
+def test_outdated_entry_model_dump_converts_to_serializable_dict() -> None:
+    entry = OutdatedEntry(package="pkg", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE)
 
-    result = entry_to_dict(entry)
+    result = entry.model_dump()
 
     assert result["package"] == "pkg"
     assert result["python_version"] == "3.11"
@@ -966,7 +972,7 @@ def test_entry_to_dict_converts_to_serializable_dict() -> None:
 
 @pytest.mark.os_agnostic
 def test_write_outdated_json_creates_file(tmp_path: Path) -> None:
-    entries = [OutdatedEntry("pkg", "3.11", "1.0", "2.0", Action.UPDATE)]
+    entries = [OutdatedEntry(package="pkg", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE)]
     output_path = tmp_path / "output.json"
 
     write_outdated_json(entries, output_path)
@@ -976,7 +982,7 @@ def test_write_outdated_json_creates_file(tmp_path: Path) -> None:
 
 @pytest.mark.os_agnostic
 def test_write_outdated_json_creates_parent_directories(tmp_path: Path) -> None:
-    entries = [OutdatedEntry("pkg", "3.11", "1.0", "2.0", Action.UPDATE)]
+    entries = [OutdatedEntry(package="pkg", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE)]
     output_path = tmp_path / "nested" / "dir" / "output.json"
 
     write_outdated_json(entries, output_path)
@@ -986,7 +992,7 @@ def test_write_outdated_json_creates_parent_directories(tmp_path: Path) -> None:
 
 @pytest.mark.os_agnostic
 def test_write_outdated_json_rejects_directory_path(tmp_path: Path) -> None:
-    entries = [OutdatedEntry("pkg", "3.11", "1.0", "2.0", Action.UPDATE)]
+    entries = [OutdatedEntry(package="pkg", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE)]
 
     with pytest.raises(ValueError, match="must be a file"):
         write_outdated_json(entries, tmp_path)
@@ -996,7 +1002,7 @@ def test_write_outdated_json_rejects_directory_path(tmp_path: Path) -> None:
 def test_write_outdated_json_writes_valid_json(tmp_path: Path) -> None:
     import json
 
-    entries = [OutdatedEntry("pkg", "3.11", "1.0", "2.0", Action.UPDATE)]
+    entries = [OutdatedEntry(package="pkg", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE)]
     output_path = tmp_path / "output.json"
 
     write_outdated_json(entries, output_path)
@@ -1015,15 +1021,17 @@ def test_write_outdated_json_writes_valid_json(tmp_path: Path) -> None:
 
 @pytest.fixture
 def pyproject_files() -> list[Path]:
-    """Provide all pyproject.toml test files."""
-    return list(TESTDATA_DIR.glob("pyproject_*.toml"))
+    """Provide all pyproject.toml test files from all subdirectories."""
+    return list(TESTDATA_DIR.glob("*/pyproject_*.toml"))
 
 
 @pytest.mark.os_agnostic
 def test_all_testdata_files_are_parseable(pyproject_files: list[Path]) -> None:
+    from pyproj_dep_analyze.schemas import PyprojectSchema
+
     for path in pyproject_files:
         data = load_pyproject(path)
-        assert isinstance(data, dict)
+        assert isinstance(data, PyprojectSchema)
 
 
 @pytest.mark.os_agnostic
@@ -1040,7 +1048,7 @@ def test_all_testdata_files_yield_dependencies(pyproject_files: list[Path]) -> N
 
 @pytest.mark.os_agnostic
 def test_fastapi_pyproject_contains_starlette() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_fastapi_fastapi.toml")
+    data = load_pyproject(find_testdata_file("pyproject_fastapi_fastapi.toml"))
     deps = extract_dependencies(data)
     names = {d.name for d in deps}
 
@@ -1049,7 +1057,7 @@ def test_fastapi_pyproject_contains_starlette() -> None:
 
 @pytest.mark.os_agnostic
 def test_fastapi_pyproject_contains_pydantic() -> None:
-    data = load_pyproject(TESTDATA_DIR / "pyproject_fastapi_fastapi.toml")
+    data = load_pyproject(find_testdata_file("pyproject_fastapi_fastapi.toml"))
     deps = extract_dependencies(data)
     names = {d.name for d in deps}
 
@@ -1058,35 +1066,41 @@ def test_fastapi_pyproject_contains_pydantic() -> None:
 
 @pytest.mark.os_agnostic
 def test_django_pyproject_contains_asgiref() -> None:
-    path = TESTDATA_DIR / "pyproject_django_django.toml"
-    if path.exists():
+    try:
+        path = find_testdata_file("pyproject_django_django.toml")
         data = load_pyproject(path)
         deps = extract_dependencies(data)
         names = {d.name for d in deps}
 
         assert "asgiref" in names
+    except FileNotFoundError:
+        pytest.skip("pyproject_django_django.toml not found")
 
 
 @pytest.mark.os_agnostic
 def test_pytest_pyproject_contains_pluggy() -> None:
-    path = TESTDATA_DIR / "pyproject_pytest-dev_pytest.toml"
-    if path.exists():
+    try:
+        path = find_testdata_file("pyproject_pytest-dev_pytest.toml")
         data = load_pyproject(path)
         deps = extract_dependencies(data)
         names = {d.name for d in deps}
 
         assert "pluggy" in names
+    except FileNotFoundError:
+        pytest.skip("pyproject_pytest-dev_pytest.toml not found")
 
 
 @pytest.mark.os_agnostic
 def test_pydantic_pyproject_contains_typing_extensions() -> None:
-    path = TESTDATA_DIR / "pyproject_pydantic_pydantic.toml"
-    if path.exists():
+    try:
+        path = find_testdata_file("pyproject_pydantic_pydantic.toml")
         data = load_pyproject(path)
         deps = extract_dependencies(data)
         names = {d.name for d in deps}
 
         assert "typing_extensions" in names
+    except FileNotFoundError:
+        pytest.skip("pyproject_pydantic_pydantic.toml not found")
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -1298,10 +1312,10 @@ def test_generate_entries_creates_all_combinations() -> None:
 @pytest.mark.os_agnostic
 def test_count_actions_tallies_all_action_types() -> None:
     entries = [
-        OutdatedEntry("pkg1", "3.11", "1.0", "2.0", Action.UPDATE),
-        OutdatedEntry("pkg2", "3.11", "1.0", "2.0", Action.UPDATE),
-        OutdatedEntry("pkg3", "3.11", None, None, Action.DELETE),
-        OutdatedEntry("pkg4", "3.11", "?", "?", Action.CHECK_MANUALLY),
+        OutdatedEntry(package="pkg1", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE),
+        OutdatedEntry(package="pkg2", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE),
+        OutdatedEntry(package="pkg3", python_version="3.11", current_version=None, latest_version=None, action=Action.DELETE),
+        OutdatedEntry(package="pkg4", python_version="3.11", current_version="?", latest_version="?", action=Action.CHECK_MANUALLY),
     ]
 
     counts = _count_actions(entries)
@@ -1394,3 +1408,278 @@ dependencies = ["httpx>=0.24.0"]
 
     assert isinstance(entries, list)
     assert all(isinstance(e, OutdatedEntry) for e in entries)
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# Enriched Analysis: Full metadata enrichment
+# ════════════════════════════════════════════════════════════════════════════
+
+
+@pytest.mark.os_agnostic
+def test_enriched_analysis_result_has_analyzed_at() -> None:
+    from pyproj_dep_analyze.models import EnrichedAnalysisResult
+
+    result = EnrichedAnalysisResult(
+        analyzed_at="2024-01-15T10:00:00Z",
+        pyproject_path="/path/to/pyproject.toml",
+        python_versions=["3.11"],
+    )
+
+    assert result.analyzed_at == "2024-01-15T10:00:00Z"
+
+
+@pytest.mark.os_agnostic
+def test_enriched_analysis_result_has_pyproject_path() -> None:
+    from pyproj_dep_analyze.models import EnrichedAnalysisResult
+
+    result = EnrichedAnalysisResult(
+        analyzed_at="2024-01-15T10:00:00Z",
+        pyproject_path="/path/to/pyproject.toml",
+        python_versions=["3.11"],
+    )
+
+    assert result.pyproject_path == "/path/to/pyproject.toml"
+
+
+@pytest.mark.os_agnostic
+def test_enriched_analysis_result_has_python_versions() -> None:
+    from pyproj_dep_analyze.models import EnrichedAnalysisResult
+
+    result = EnrichedAnalysisResult(
+        analyzed_at="2024-01-15T10:00:00Z",
+        pyproject_path="/path/to/pyproject.toml",
+        python_versions=["3.10", "3.11", "3.12"],
+    )
+
+    assert "3.11" in result.python_versions
+
+
+@pytest.mark.os_agnostic
+def test_enriched_analysis_result_defaults_to_empty_packages() -> None:
+    from pyproj_dep_analyze.models import EnrichedAnalysisResult
+
+    result = EnrichedAnalysisResult(
+        analyzed_at="2024-01-15T10:00:00Z",
+        pyproject_path="/path/to/pyproject.toml",
+        python_versions=["3.11"],
+    )
+
+    assert result.packages == []
+
+
+@pytest.mark.os_agnostic
+def test_enriched_entry_has_name_and_versions() -> None:
+    from pyproj_dep_analyze.models import EnrichedEntry
+
+    entry = EnrichedEntry(
+        name="requests",
+        requested_version=">=2.28.0",
+        resolved_version="2.28.0",
+        latest_version="2.31.0",
+        action=Action.UPDATE,
+        source="project.dependencies",
+    )
+
+    assert entry.name == "requests"
+    assert entry.requested_version == ">=2.28.0"
+    assert entry.resolved_version == "2.28.0"
+    assert entry.latest_version == "2.31.0"
+
+
+@pytest.mark.os_agnostic
+def test_enriched_entry_stores_action() -> None:
+    from pyproj_dep_analyze.models import EnrichedEntry
+
+    entry = EnrichedEntry(
+        name="requests",
+        action=Action.UPDATE,
+        source="project.dependencies",
+    )
+
+    assert entry.action == Action.UPDATE
+
+
+@pytest.mark.os_agnostic
+def test_enriched_entry_stores_index_info() -> None:
+    from pyproj_dep_analyze.models import EnrichedEntry, IndexInfo, IndexType
+
+    index = IndexInfo(url="https://pypi.org/simple", index_type=IndexType.PYPI, is_private=False)
+    entry = EnrichedEntry(
+        name="requests",
+        action=Action.NONE,
+        source="project.dependencies",
+        index_info=index,
+    )
+
+    assert entry.index_info is not None
+    assert entry.index_info.index_type == IndexType.PYPI
+    assert entry.index_info.name == "pypi"  # backward compat property
+
+
+@pytest.mark.os_agnostic
+def test_enriched_entry_stores_python_compatibility() -> None:
+    from pyproj_dep_analyze.models import CompatibilityStatus, EnrichedEntry
+
+    entry = EnrichedEntry(
+        name="requests",
+        action=Action.NONE,
+        source="project.dependencies",
+        python_compatibility={
+            "3.10": CompatibilityStatus.COMPATIBLE,
+            "3.11": CompatibilityStatus.COMPATIBLE,
+            "3.12": CompatibilityStatus.EXCLUDED,
+        },
+    )
+
+    assert entry.python_compatibility["3.11"] == CompatibilityStatus.COMPATIBLE
+    assert entry.python_compatibility["3.12"] == CompatibilityStatus.EXCLUDED
+
+
+@pytest.mark.os_agnostic
+def test_enriched_entry_stores_pypi_metadata() -> None:
+    from pyproj_dep_analyze.models import EnrichedEntry, PyPIMetadata
+
+    metadata = PyPIMetadata(
+        summary="HTTP library for Python",
+        license="Apache-2.0",
+        author="Kenneth Reitz",
+    )
+    entry = EnrichedEntry(
+        name="requests",
+        action=Action.NONE,
+        source="project.dependencies",
+        pypi_metadata=metadata,
+    )
+
+    assert entry.pypi_metadata is not None
+    assert entry.pypi_metadata.summary == "HTTP library for Python"
+
+
+@pytest.mark.os_agnostic
+def test_enriched_entry_stores_repo_metadata() -> None:
+    from pyproj_dep_analyze.models import EnrichedEntry, RepoMetadata, RepoType
+
+    repo = RepoMetadata(
+        repo_type=RepoType.GITHUB,
+        owner="psf",
+        name="requests",
+        stars=50000,
+    )
+    entry = EnrichedEntry(
+        name="requests",
+        action=Action.NONE,
+        source="project.dependencies",
+        repo_metadata=repo,
+    )
+
+    assert entry.repo_metadata is not None
+    assert entry.repo_metadata.owner == "psf"
+    assert entry.repo_metadata.stars == 50000
+
+
+@pytest.mark.os_agnostic
+def test_enriched_entry_stores_direct_dependencies() -> None:
+    from pyproj_dep_analyze.models import EnrichedEntry
+
+    entry = EnrichedEntry(
+        name="httpx",
+        action=Action.NONE,
+        source="project.dependencies",
+        direct_dependencies=["certifi", "httpcore", "idna", "sniffio"],
+    )
+
+    assert "certifi" in entry.direct_dependencies
+    assert len(entry.direct_dependencies) == 4
+
+
+@pytest.mark.os_agnostic
+def test_analyzer_compute_enriched_summary() -> None:
+    from pyproj_dep_analyze.models import EnrichedEntry, IndexInfo, IndexType
+
+    analyzer = Analyzer()
+    pypi_index = IndexInfo(url="https://pypi.org/simple", index_type=IndexType.PYPI, is_private=False)
+    private_index = IndexInfo(url="https://private.company.com/simple", index_type=IndexType.CUSTOM, is_private=True)
+
+    packages = [
+        EnrichedEntry(name="pkg1", action=Action.UPDATE, source="deps", index_info=pypi_index),
+        EnrichedEntry(name="pkg2", action=Action.NONE, source="deps", index_info=pypi_index),
+        EnrichedEntry(name="pkg3", action=Action.CHECK_MANUALLY, source="deps", index_info=private_index),
+    ]
+
+    summary = analyzer._compute_enriched_summary(packages, [pypi_index, private_index])  # pyright: ignore[reportPrivateUsage]
+
+    assert summary.total_packages == 3
+    assert summary.updates_available == 1
+    assert summary.up_to_date == 1
+    assert summary.check_manually == 1
+    assert summary.from_pypi == 2
+    assert summary.from_private_index == 1
+
+
+@pytest.mark.os_agnostic
+def test_analyzer_build_dependency_graph() -> None:
+    from pyproj_dep_analyze.models import PyPIMetadata
+
+    analyzer = Analyzer()
+    version_results = {
+        "httpx": VersionResult(
+            latest_version="0.25.0",
+            pypi_metadata=PyPIMetadata(requires_dist=["certifi", "httpcore>=1.0.0", "idna"]),
+        ),
+        "requests": VersionResult(
+            latest_version="2.31.0",
+            pypi_metadata=PyPIMetadata(requires_dist=["charset-normalizer>=2", "idna>=2.5", "urllib3>=1.21"]),
+        ),
+    }
+
+    graph = analyzer._build_dependency_graph(version_results)  # pyright: ignore[reportPrivateUsage]
+
+    assert "httpx" in graph
+    assert "certifi" in graph["httpx"]
+    assert "requests" in graph
+    assert "idna" in graph["requests"]
+
+
+@pytest.mark.os_agnostic
+def test_analyzer_build_dependency_graph_skips_packages_without_requires_dist() -> None:
+    from pyproj_dep_analyze.models import PyPIMetadata
+
+    analyzer = Analyzer()
+    version_results = {
+        "simple-pkg": VersionResult(
+            latest_version="1.0.0",
+            pypi_metadata=PyPIMetadata(summary="A simple package"),  # No requires_dist
+        ),
+    }
+
+    graph = analyzer._build_dependency_graph(version_results)  # pyright: ignore[reportPrivateUsage]
+
+    assert "simple-pkg" not in graph
+
+
+@pytest.mark.os_agnostic
+def test_write_enriched_json_exists() -> None:
+    from pyproj_dep_analyze.analyzer import write_enriched_json
+
+    assert callable(write_enriched_json)
+
+
+@pytest.mark.os_agnostic
+def test_run_enriched_analysis_exists() -> None:
+    from pyproj_dep_analyze.analyzer import run_enriched_analysis
+
+    assert callable(run_enriched_analysis)
+
+
+@pytest.mark.os_agnostic
+def test_module_exports_write_enriched_json() -> None:
+    from pyproj_dep_analyze import analyzer
+
+    assert hasattr(analyzer, "write_enriched_json")
+
+
+@pytest.mark.os_agnostic
+def test_module_exports_run_enriched_analysis() -> None:
+    from pyproj_dep_analyze import analyzer
+
+    assert hasattr(analyzer, "run_enriched_analysis")

@@ -31,7 +31,6 @@ The tool reads dependencies from the following sections:
 * `[tool.pdm.dev-dependencies]`
 * `[tool.hatch.metadata.dependencies]`
 * `[tool.hatch.envs.<name>.dependencies]`
-* `[tool.flit.metadata.requires]`
 * `[tool.setuptools.dynamic.dependencies]`
 * `[build-system.requires]` when relevant
 

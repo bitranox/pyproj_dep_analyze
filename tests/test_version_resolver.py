@@ -14,15 +14,17 @@ from typing import Any
 import httpx
 import pytest
 
-from pyproj_dep_analyse import version_resolver as resolver_mod
-from pyproj_dep_analyse.models import DependencyInfo
-from pyproj_dep_analyse.schemas import GitHubReleaseSchema, GitHubTagSchema
-from pyproj_dep_analyse.version_resolver import (
+from pyproj_dep_analyze import version_resolver as resolver_mod
+from pyproj_dep_analyze.models import DependencyInfo, PythonVersion
+from pyproj_dep_analyze.schemas import GitHubReleaseSchema, GitHubTagSchema, PyPIFullResponseSchema, PyPIReleaseFileSchema
+from pyproj_dep_analyze.version_resolver import (
     VersionResolver,
     VersionResult,
     _extract_version_from_tag,  # pyright: ignore[reportPrivateUsage]
+    _find_latest_compatible_version,  # pyright: ignore[reportPrivateUsage]
     _find_version_from_releases,  # pyright: ignore[reportPrivateUsage]
     _find_version_from_tags,  # pyright: ignore[reportPrivateUsage]
+    _is_python_compatible,  # pyright: ignore[reportPrivateUsage]
     _parse_github_url,  # pyright: ignore[reportPrivateUsage]
     _version_sort_key,  # pyright: ignore[reportPrivateUsage]
     resolve_pypi_version_cached,
@@ -703,3 +705,248 @@ def test_github_api_tags_contains_placeholders() -> None:
 @pytest.mark.os_agnostic
 def test_default_timeout_is_positive() -> None:
     assert resolver_mod.DEFAULT_TIMEOUT > 0
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# _is_python_compatible: Python version compatibility checking
+# ════════════════════════════════════════════════════════════════════════════
+
+# Common Python version instances for testing
+PY38 = PythonVersion(major=3, minor=8)
+PY39 = PythonVersion(major=3, minor=9)
+PY310 = PythonVersion(major=3, minor=10)
+PY311 = PythonVersion(major=3, minor=11)
+PY312 = PythonVersion(major=3, minor=12)
+
+
+@pytest.mark.os_agnostic
+def test_is_python_compatible_returns_true_when_no_constraint() -> None:
+    """No requires_python means compatible with all versions."""
+    result = _is_python_compatible(None, PY38)  # pyright: ignore[reportPrivateUsage]
+
+    assert result is True
+
+
+@pytest.mark.os_agnostic
+def test_is_python_compatible_returns_true_for_matching_constraint() -> None:
+    """Version within constraint range is compatible."""
+    result = _is_python_compatible(">=3.8", PY310)  # pyright: ignore[reportPrivateUsage]
+
+    assert result is True
+
+
+@pytest.mark.os_agnostic
+def test_is_python_compatible_returns_false_for_version_below_minimum() -> None:
+    """Version below minimum is not compatible."""
+    result = _is_python_compatible(">=3.10", PY38)  # pyright: ignore[reportPrivateUsage]
+
+    assert result is False
+
+
+@pytest.mark.os_agnostic
+def test_is_python_compatible_handles_upper_bound() -> None:
+    """Version at or above upper bound is not compatible."""
+    result = _is_python_compatible(">=3.8,<3.10", PY310)  # pyright: ignore[reportPrivateUsage]
+
+    assert result is False
+
+
+@pytest.mark.os_agnostic
+def test_is_python_compatible_handles_empty_string() -> None:
+    """Empty string is treated as no constraint."""
+    result = _is_python_compatible("", PY38)  # pyright: ignore[reportPrivateUsage]
+
+    assert result is True
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# _find_latest_compatible_version: Python-version-aware version finding
+# ════════════════════════════════════════════════════════════════════════════
+
+
+def _make_pypi_response(
+    latest_version: str,
+    latest_requires_python: str | None,
+    releases: dict[str, str | None],
+) -> PyPIFullResponseSchema:
+    """Create a mock PyPI response for testing.
+
+    Args:
+        latest_version: The version in info.version.
+        latest_requires_python: The requires_python in info.
+        releases: Dict of version -> requires_python for releases.
+
+    Returns:
+        A PyPIFullResponseSchema instance.
+    """
+    from pyproj_dep_analyze.schemas import PyPIFullInfoSchema
+
+    release_files: dict[str, list[PyPIReleaseFileSchema]] = {}
+    for ver, req_py in releases.items():
+        release_files[ver] = [PyPIReleaseFileSchema(requires_python=req_py)]
+
+    return PyPIFullResponseSchema(
+        info=PyPIFullInfoSchema(
+            name="test-package",
+            version=latest_version,
+            requires_python=latest_requires_python,
+        ),
+        releases=release_files,
+    )
+
+
+@pytest.mark.os_agnostic
+def test_find_latest_compatible_returns_info_version_when_no_python_version() -> None:
+    """Without python_version, returns the absolute latest."""
+    response = _make_pypi_response(
+        latest_version="2.0.0",
+        latest_requires_python=">=3.10",
+        releases={"2.0.0": ">=3.10", "1.0.0": ">=3.8"},
+    )
+
+    result = _find_latest_compatible_version(response, python_version=None)  # pyright: ignore[reportPrivateUsage]
+
+    assert result == "2.0.0"
+
+
+@pytest.mark.os_agnostic
+def test_find_latest_compatible_returns_latest_when_compatible() -> None:
+    """Returns latest when it's compatible with target Python."""
+    response = _make_pypi_response(
+        latest_version="2.0.0",
+        latest_requires_python=">=3.8",
+        releases={"2.0.0": ">=3.8", "1.0.0": ">=3.7"},
+    )
+
+    result = _find_latest_compatible_version(response, python_version=PY310)  # pyright: ignore[reportPrivateUsage]
+
+    assert result == "2.0.0"
+
+
+@pytest.mark.os_agnostic
+def test_find_latest_compatible_returns_older_version_for_older_python() -> None:
+    """Returns older compatible version when latest requires newer Python."""
+    response = _make_pypi_response(
+        latest_version="2.0.0",
+        latest_requires_python=">=3.10",
+        releases={"2.0.0": ">=3.10", "1.5.0": ">=3.9", "1.0.0": ">=3.8"},
+    )
+
+    result = _find_latest_compatible_version(response, python_version=PY38)  # pyright: ignore[reportPrivateUsage]
+
+    assert result == "1.0.0"
+
+
+@pytest.mark.os_agnostic
+def test_find_latest_compatible_returns_none_when_no_compatible_version() -> None:
+    """Returns None when no version is compatible."""
+    response = _make_pypi_response(
+        latest_version="2.0.0",
+        latest_requires_python=">=3.12",
+        releases={"2.0.0": ">=3.12", "1.0.0": ">=3.11"},
+    )
+
+    result = _find_latest_compatible_version(response, python_version=PY38)  # pyright: ignore[reportPrivateUsage]
+
+    assert result is None
+
+
+@pytest.mark.os_agnostic
+def test_find_latest_compatible_skips_empty_releases() -> None:
+    """Skips releases with no files."""
+    from pyproj_dep_analyze.schemas import PyPIFullInfoSchema
+
+    response = PyPIFullResponseSchema(
+        info=PyPIFullInfoSchema(
+            name="test-package",
+            version="2.0.0",
+            requires_python=">=3.10",
+        ),
+        releases={
+            "2.0.0": [PyPIReleaseFileSchema(requires_python=">=3.10")],
+            "1.5.0": [],  # Empty - should be skipped
+            "1.0.0": [PyPIReleaseFileSchema(requires_python=">=3.8")],
+        },
+    )
+
+    result = _find_latest_compatible_version(response, python_version=PY38)  # pyright: ignore[reportPrivateUsage]
+
+    assert result == "1.0.0"
+
+
+@pytest.mark.os_agnostic
+def test_find_latest_compatible_handles_no_requires_python_in_release() -> None:
+    """Release without requires_python is considered compatible with all."""
+    response = _make_pypi_response(
+        latest_version="2.0.0",
+        latest_requires_python=">=3.10",
+        releases={"2.0.0": ">=3.10", "1.0.0": None},  # No requires_python
+    )
+
+    result = _find_latest_compatible_version(response, python_version=PY38)  # pyright: ignore[reportPrivateUsage]
+
+    assert result == "1.0.0"
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# VersionResolver: Python-version-specific cache keys
+# ════════════════════════════════════════════════════════════════════════════
+
+
+@pytest.mark.os_agnostic
+def test_resolver_uses_different_cache_keys_per_python_version() -> None:
+    """Cache key includes Python version for version-specific lookups."""
+    resolver = VersionResolver()
+
+    # Pre-populate cache with different results per Python version
+    resolver.cache["pypi:requests:3.8"] = VersionResult(latest_version="2.28.0")
+    resolver.cache["pypi:requests:3.10"] = VersionResult(latest_version="2.31.0")
+
+    async def run_38() -> VersionResult:
+        return await resolver.resolve_pypi_async("requests", PY38)
+
+    async def run_310() -> VersionResult:
+        return await resolver.resolve_pypi_async("requests", PY310)
+
+    result_38 = asyncio.run(run_38())
+    result_310 = asyncio.run(run_310())
+
+    assert result_38.latest_version == "2.28.0"
+    assert result_310.latest_version == "2.31.0"
+
+
+@pytest.mark.os_agnostic
+def test_resolver_cache_key_without_python_version() -> None:
+    """Cache key without Python version for unconstrained lookups."""
+    resolver = VersionResolver()
+    resolver.cache["pypi:requests"] = VersionResult(latest_version="2.31.0")
+
+    async def run() -> VersionResult:
+        return await resolver.resolve_pypi_async("requests", python_version=None)
+
+    result = asyncio.run(run())
+
+    assert result.latest_version == "2.31.0"
+
+
+@pytest.mark.os_agnostic
+def test_resolver_parse_pypi_response_with_python_version() -> None:
+    """Parser finds compatible version when Python version specified."""
+    resolver = VersionResolver()
+    mock_response = MockResponse(
+        status_code=200,
+        _json={
+            "info": {"version": "2.31.0", "requires_python": ">=3.10"},
+            "releases": {
+                "2.31.0": [{"requires_python": ">=3.10"}],
+                "2.28.0": [{"requires_python": ">=3.8"}],
+            },
+        },
+    )
+
+    result = resolver._parse_pypi_response(  # pyright: ignore[reportPrivateUsage]
+        mock_response,  # pyright: ignore[reportArgumentType]
+        python_version=PY38,
+    )
+
+    assert result.latest_version == "2.28.0"

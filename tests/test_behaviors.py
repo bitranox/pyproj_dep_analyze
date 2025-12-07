@@ -12,7 +12,7 @@ from io import StringIO
 
 import pytest
 
-from pyproj_dep_analyse import behaviors
+from pyproj_dep_analyze import behaviors
 
 
 # ════════════════════════════════════════════════════════════════════════════

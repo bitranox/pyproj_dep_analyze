@@ -1,0 +1,3999 @@
+{
+  "pyproject_path": "/media/srv-main-softdev/projects/libs/pyproj_dep_analyze/tests/testdata/project_dependencies/pyproject_sqlalchemy.toml",
+  "python_versions": [
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.14",
+    "3.15"
+  ],
+  "total_dependencies": 45,
+  "update_count": 120,
+  "entries": [
+    {
+      "package": "typing_extensions",
+      "python_version": "3.10",
+      "current_version": "4.6.0",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 4.6.0 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.11",
+      "current_version": "4.6.0",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 4.6.0 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.12",
+      "current_version": "4.6.0",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 4.6.0 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.13",
+      "current_version": "4.6.0",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 4.6.0 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.14",
+      "current_version": "4.6.0",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 4.6.0 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.15",
+      "current_version": "4.6.0",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 4.6.0 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "greenlet",
+      "python_version": "3.10",
+      "current_version": "1",
+      "latest_version": "3.3.0",
+      "action": "update",
+      "note": "Package 'greenlet' can be updated from 1 to 3.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "greenlet",
+      "python_version": "3.11",
+      "current_version": "1",
+      "latest_version": "3.3.0",
+      "action": "update",
+      "note": "Package 'greenlet' can be updated from 1 to 3.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "greenlet",
+      "python_version": "3.12",
+      "current_version": "1",
+      "latest_version": "3.3.0",
+      "action": "update",
+      "note": "Package 'greenlet' can be updated from 1 to 3.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "greenlet",
+      "python_version": "3.13",
+      "current_version": "1",
+      "latest_version": "3.3.0",
+      "action": "update",
+      "note": "Package 'greenlet' can be updated from 1 to 3.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "greenlet",
+      "python_version": "3.14",
+      "current_version": "1",
+      "latest_version": "3.3.0",
+      "action": "update",
+      "note": "Package 'greenlet' can be updated from 1 to 3.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "greenlet",
+      "python_version": "3.15",
+      "current_version": "1",
+      "latest_version": "3.3.0",
+      "action": "update",
+      "note": "Package 'greenlet' can be updated from 1 to 3.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.10",
+      "current_version": "1.19",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.19 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.11",
+      "current_version": "1.19",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.19 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.12",
+      "current_version": "1.19",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.19 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.13",
+      "current_version": "1.19",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.19 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.14",
+      "current_version": "1.19",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.19 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.15",
+      "current_version": "1.19",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.19 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.10",
+      "current_version": "2",
+      "latest_version": "3.3.0.20251206",
+      "action": "update",
+      "note": "Package 'types_greenlet' can be updated from 2 to 3.3.0.20251206. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.11",
+      "current_version": "2",
+      "latest_version": "3.3.0.20251206",
+      "action": "update",
+      "note": "Package 'types_greenlet' can be updated from 2 to 3.3.0.20251206. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.12",
+      "current_version": "2",
+      "latest_version": "3.3.0.20251206",
+      "action": "update",
+      "note": "Package 'types_greenlet' can be updated from 2 to 3.3.0.20251206. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.13",
+      "current_version": "2",
+      "latest_version": "3.3.0.20251206",
+      "action": "update",
+      "note": "Package 'types_greenlet' can be updated from 2 to 3.3.0.20251206. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.14",
+      "current_version": "2",
+      "latest_version": "3.3.0.20251206",
+      "action": "update",
+      "note": "Package 'types_greenlet' can be updated from 2 to 3.3.0.20251206. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.15",
+      "current_version": "2",
+      "latest_version": "3.3.0.20251206",
+      "action": "update",
+      "note": "Package 'types_greenlet' can be updated from 2 to 3.3.0.20251206. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymssql",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.3.10",
+      "action": "none",
+      "note": "Package 'pymssql' has no version constraint specified (accepts any version). Latest available version is 2.3.10. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymssql",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.3.10",
+      "action": "none",
+      "note": "Package 'pymssql' has no version constraint specified (accepts any version). Latest available version is 2.3.10. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymssql",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.3.10",
+      "action": "none",
+      "note": "Package 'pymssql' has no version constraint specified (accepts any version). Latest available version is 2.3.10. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymssql",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.3.10",
+      "action": "none",
+      "note": "Package 'pymssql' has no version constraint specified (accepts any version). Latest available version is 2.3.10. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymssql",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.3.10",
+      "action": "none",
+      "note": "Package 'pymssql' has no version constraint specified (accepts any version). Latest available version is 2.3.10. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymssql",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.3.10",
+      "action": "none",
+      "note": "Package 'pymssql' has no version constraint specified (accepts any version). Latest available version is 2.3.10. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyodbc",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "5.3.0",
+      "action": "none",
+      "note": "Package 'pyodbc' has no version constraint specified (accepts any version). Latest available version is 5.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mysqlclient",
+      "python_version": "3.10",
+      "current_version": "1.4.0",
+      "latest_version": "2.2.7",
+      "action": "update",
+      "note": "Package 'mysqlclient' can be updated from 1.4.0 to 2.2.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mysqlclient",
+      "python_version": "3.11",
+      "current_version": "1.4.0",
+      "latest_version": "2.2.7",
+      "action": "update",
+      "note": "Package 'mysqlclient' can be updated from 1.4.0 to 2.2.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mysqlclient",
+      "python_version": "3.12",
+      "current_version": "1.4.0",
+      "latest_version": "2.2.7",
+      "action": "update",
+      "note": "Package 'mysqlclient' can be updated from 1.4.0 to 2.2.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mysqlclient",
+      "python_version": "3.13",
+      "current_version": "1.4.0",
+      "latest_version": "2.2.7",
+      "action": "update",
+      "note": "Package 'mysqlclient' can be updated from 1.4.0 to 2.2.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mysqlclient",
+      "python_version": "3.14",
+      "current_version": "1.4.0",
+      "latest_version": "2.2.7",
+      "action": "update",
+      "note": "Package 'mysqlclient' can be updated from 1.4.0 to 2.2.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mysqlclient",
+      "python_version": "3.15",
+      "current_version": "1.4.0",
+      "latest_version": "2.2.7",
+      "action": "update",
+      "note": "Package 'mysqlclient' can be updated from 1.4.0 to 2.2.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mysql_connector_python",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "9.5.0",
+      "action": "none",
+      "note": "Package 'mysql_connector_python' has no version constraint specified (accepts any version). Latest available version is 9.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mysql_connector_python",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "9.5.0",
+      "action": "none",
+      "note": "Package 'mysql_connector_python' has no version constraint specified (accepts any version). Latest available version is 9.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mysql_connector_python",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "9.5.0",
+      "action": "none",
+      "note": "Package 'mysql_connector_python' has no version constraint specified (accepts any version). Latest available version is 9.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mysql_connector_python",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "9.5.0",
+      "action": "none",
+      "note": "Package 'mysql_connector_python' has no version constraint specified (accepts any version). Latest available version is 9.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mysql_connector_python",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "9.5.0",
+      "action": "none",
+      "note": "Package 'mysql_connector_python' has no version constraint specified (accepts any version). Latest available version is 9.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mysql_connector_python",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "9.5.0",
+      "action": "none",
+      "note": "Package 'mysql_connector_python' has no version constraint specified (accepts any version). Latest available version is 9.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.10",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.11",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.12",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.13",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.14",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.15",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.10",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.11",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.12",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.13",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.14",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.15",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cx_oracle",
+      "python_version": "3.10",
+      "current_version": "8",
+      "latest_version": "8.3.0",
+      "action": "update",
+      "note": "Package 'cx_oracle' can be updated from 8 to 8.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cx_oracle",
+      "python_version": "3.11",
+      "current_version": "8",
+      "latest_version": "8.3.0",
+      "action": "update",
+      "note": "Package 'cx_oracle' can be updated from 8 to 8.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cx_oracle",
+      "python_version": "3.12",
+      "current_version": "8",
+      "latest_version": "8.3.0",
+      "action": "update",
+      "note": "Package 'cx_oracle' can be updated from 8 to 8.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cx_oracle",
+      "python_version": "3.13",
+      "current_version": "8",
+      "latest_version": "8.3.0",
+      "action": "update",
+      "note": "Package 'cx_oracle' can be updated from 8 to 8.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cx_oracle",
+      "python_version": "3.14",
+      "current_version": "8",
+      "latest_version": "8.3.0",
+      "action": "update",
+      "note": "Package 'cx_oracle' can be updated from 8 to 8.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cx_oracle",
+      "python_version": "3.15",
+      "current_version": "8",
+      "latest_version": "8.3.0",
+      "action": "update",
+      "note": "Package 'cx_oracle' can be updated from 8 to 8.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.10",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.11",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.12",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.13",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.14",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "oracledb",
+      "python_version": "3.15",
+      "current_version": "1.0.1",
+      "latest_version": "3.4.1",
+      "action": "update",
+      "note": "Package 'oracledb' can be updated from 1.0.1 to 3.4.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg2",
+      "python_version": "3.10",
+      "current_version": "2.7",
+      "latest_version": "2.9.11",
+      "action": "update",
+      "note": "Package 'psycopg2' can be updated from 2.7 to 2.9.11. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg2",
+      "python_version": "3.11",
+      "current_version": "2.7",
+      "latest_version": "2.9.11",
+      "action": "update",
+      "note": "Package 'psycopg2' can be updated from 2.7 to 2.9.11. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg2",
+      "python_version": "3.12",
+      "current_version": "2.7",
+      "latest_version": "2.9.11",
+      "action": "update",
+      "note": "Package 'psycopg2' can be updated from 2.7 to 2.9.11. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg2",
+      "python_version": "3.13",
+      "current_version": "2.7",
+      "latest_version": "2.9.11",
+      "action": "update",
+      "note": "Package 'psycopg2' can be updated from 2.7 to 2.9.11. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg2",
+      "python_version": "3.14",
+      "current_version": "2.7",
+      "latest_version": "2.9.11",
+      "action": "update",
+      "note": "Package 'psycopg2' can be updated from 2.7 to 2.9.11. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg2",
+      "python_version": "3.15",
+      "current_version": "2.7",
+      "latest_version": "2.9.11",
+      "action": "update",
+      "note": "Package 'psycopg2' can be updated from 2.7 to 2.9.11. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pg8000",
+      "python_version": "3.10",
+      "current_version": "1.29.3",
+      "latest_version": "1.31.5",
+      "action": "update",
+      "note": "Package 'pg8000' can be updated from 1.29.3 to 1.31.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pg8000",
+      "python_version": "3.11",
+      "current_version": "1.29.3",
+      "latest_version": "1.31.5",
+      "action": "update",
+      "note": "Package 'pg8000' can be updated from 1.29.3 to 1.31.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pg8000",
+      "python_version": "3.12",
+      "current_version": "1.29.3",
+      "latest_version": "1.31.5",
+      "action": "update",
+      "note": "Package 'pg8000' can be updated from 1.29.3 to 1.31.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pg8000",
+      "python_version": "3.13",
+      "current_version": "1.29.3",
+      "latest_version": "1.31.5",
+      "action": "update",
+      "note": "Package 'pg8000' can be updated from 1.29.3 to 1.31.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pg8000",
+      "python_version": "3.14",
+      "current_version": "1.29.3",
+      "latest_version": "1.31.5",
+      "action": "update",
+      "note": "Package 'pg8000' can be updated from 1.29.3 to 1.31.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pg8000",
+      "python_version": "3.15",
+      "current_version": "1.29.3",
+      "latest_version": "1.31.5",
+      "action": "update",
+      "note": "Package 'pg8000' can be updated from 1.29.3 to 1.31.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "asyncpg",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.31.0",
+      "action": "none",
+      "note": "Package 'asyncpg' has no version constraint specified (accepts any version). Latest available version is 0.31.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "asyncpg",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.31.0",
+      "action": "none",
+      "note": "Package 'asyncpg' has no version constraint specified (accepts any version). Latest available version is 0.31.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "asyncpg",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.31.0",
+      "action": "none",
+      "note": "Package 'asyncpg' has no version constraint specified (accepts any version). Latest available version is 0.31.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "asyncpg",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.31.0",
+      "action": "none",
+      "note": "Package 'asyncpg' has no version constraint specified (accepts any version). Latest available version is 0.31.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "asyncpg",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.31.0",
+      "action": "none",
+      "note": "Package 'asyncpg' has no version constraint specified (accepts any version). Latest available version is 0.31.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "asyncpg",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.31.0",
+      "action": "none",
+      "note": "Package 'asyncpg' has no version constraint specified (accepts any version). Latest available version is 0.31.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2_binary",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.9.11",
+      "action": "none",
+      "note": "Package 'psycopg2_binary' has no version constraint specified (accepts any version). Latest available version is 2.9.11. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2_binary",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.9.11",
+      "action": "none",
+      "note": "Package 'psycopg2_binary' has no version constraint specified (accepts any version). Latest available version is 2.9.11. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2_binary",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.9.11",
+      "action": "none",
+      "note": "Package 'psycopg2_binary' has no version constraint specified (accepts any version). Latest available version is 2.9.11. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2_binary",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.9.11",
+      "action": "none",
+      "note": "Package 'psycopg2_binary' has no version constraint specified (accepts any version). Latest available version is 2.9.11. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2_binary",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.9.11",
+      "action": "none",
+      "note": "Package 'psycopg2_binary' has no version constraint specified (accepts any version). Latest available version is 2.9.11. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2_binary",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.9.11",
+      "action": "none",
+      "note": "Package 'psycopg2_binary' has no version constraint specified (accepts any version). Latest available version is 2.9.11. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2cffi",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.9.0",
+      "action": "none",
+      "note": "Package 'psycopg2cffi' has no version constraint specified (accepts any version). Latest available version is 2.9.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2cffi",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.9.0",
+      "action": "none",
+      "note": "Package 'psycopg2cffi' has no version constraint specified (accepts any version). Latest available version is 2.9.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2cffi",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.9.0",
+      "action": "none",
+      "note": "Package 'psycopg2cffi' has no version constraint specified (accepts any version). Latest available version is 2.9.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2cffi",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.9.0",
+      "action": "none",
+      "note": "Package 'psycopg2cffi' has no version constraint specified (accepts any version). Latest available version is 2.9.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2cffi",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.9.0",
+      "action": "none",
+      "note": "Package 'psycopg2cffi' has no version constraint specified (accepts any version). Latest available version is 2.9.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg2cffi",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.9.0",
+      "action": "none",
+      "note": "Package 'psycopg2cffi' has no version constraint specified (accepts any version). Latest available version is 2.9.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.10",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.11",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.12",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.13",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.14",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.15",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.10",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.11",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.12",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.13",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.14",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psycopg",
+      "python_version": "3.15",
+      "current_version": "3.0.7",
+      "latest_version": "3.3.2",
+      "action": "update",
+      "note": "Package 'psycopg' can be updated from 3.0.7 to 3.3.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "1.1.2",
+      "action": "none",
+      "note": "Package 'pymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "1.1.2",
+      "action": "none",
+      "note": "Package 'pymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "1.1.2",
+      "action": "none",
+      "note": "Package 'pymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "1.1.2",
+      "action": "none",
+      "note": "Package 'pymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "1.1.2",
+      "action": "none",
+      "note": "Package 'pymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "1.1.2",
+      "action": "none",
+      "note": "Package 'pymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "cymysql",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "1.1.1",
+      "action": "none",
+      "note": "Package 'cymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "cymysql",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "1.1.1",
+      "action": "none",
+      "note": "Package 'cymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "cymysql",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "1.1.1",
+      "action": "none",
+      "note": "Package 'cymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "cymysql",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "1.1.1",
+      "action": "none",
+      "note": "Package 'cymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "cymysql",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "1.1.1",
+      "action": "none",
+      "note": "Package 'cymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "cymysql",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "1.1.1",
+      "action": "none",
+      "note": "Package 'cymysql' has no version constraint specified (accepts any version). Latest available version is 1.1.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiomysql",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.3.2",
+      "action": "none",
+      "note": "Package 'aiomysql' has no version constraint specified (accepts any version). Latest available version is 0.3.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiomysql",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.3.2",
+      "action": "none",
+      "note": "Package 'aiomysql' has no version constraint specified (accepts any version). Latest available version is 0.3.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiomysql",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.3.2",
+      "action": "none",
+      "note": "Package 'aiomysql' has no version constraint specified (accepts any version). Latest available version is 0.3.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiomysql",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.3.2",
+      "action": "none",
+      "note": "Package 'aiomysql' has no version constraint specified (accepts any version). Latest available version is 0.3.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiomysql",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.3.2",
+      "action": "none",
+      "note": "Package 'aiomysql' has no version constraint specified (accepts any version). Latest available version is 0.3.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiomysql",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.3.2",
+      "action": "none",
+      "note": "Package 'aiomysql' has no version constraint specified (accepts any version). Latest available version is 0.3.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "asyncmy",
+      "python_version": "3.10",
+      "current_version": "0.2.3",
+      "latest_version": "0.2.10",
+      "action": "update",
+      "note": "Package 'asyncmy' can be updated from 0.2.3 to 0.2.10. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asyncmy",
+      "python_version": "3.11",
+      "current_version": "0.2.3",
+      "latest_version": "0.2.10",
+      "action": "update",
+      "note": "Package 'asyncmy' can be updated from 0.2.3 to 0.2.10. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asyncmy",
+      "python_version": "3.12",
+      "current_version": "0.2.3",
+      "latest_version": "0.2.10",
+      "action": "update",
+      "note": "Package 'asyncmy' can be updated from 0.2.3 to 0.2.10. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asyncmy",
+      "python_version": "3.13",
+      "current_version": "0.2.3",
+      "latest_version": "0.2.10",
+      "action": "update",
+      "note": "Package 'asyncmy' can be updated from 0.2.3 to 0.2.10. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asyncmy",
+      "python_version": "3.14",
+      "current_version": "0.2.3",
+      "latest_version": "0.2.10",
+      "action": "update",
+      "note": "Package 'asyncmy' can be updated from 0.2.3 to 0.2.10. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asyncmy",
+      "python_version": "3.15",
+      "current_version": "0.2.3",
+      "latest_version": "0.2.10",
+      "action": "update",
+      "note": "Package 'asyncmy' can be updated from 0.2.3 to 0.2.10. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiosqlite",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.21.0",
+      "action": "none",
+      "note": "Package 'aiosqlite' has no version constraint specified (accepts any version). Latest available version is 0.21.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiosqlite",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.21.0",
+      "action": "none",
+      "note": "Package 'aiosqlite' has no version constraint specified (accepts any version). Latest available version is 0.21.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiosqlite",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.21.0",
+      "action": "none",
+      "note": "Package 'aiosqlite' has no version constraint specified (accepts any version). Latest available version is 0.21.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiosqlite",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.21.0",
+      "action": "none",
+      "note": "Package 'aiosqlite' has no version constraint specified (accepts any version). Latest available version is 0.21.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiosqlite",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.21.0",
+      "action": "none",
+      "note": "Package 'aiosqlite' has no version constraint specified (accepts any version). Latest available version is 0.21.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aiosqlite",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.21.0",
+      "action": "none",
+      "note": "Package 'aiosqlite' has no version constraint specified (accepts any version). Latest available version is 0.21.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlcipher3_binary",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.5.4.post2",
+      "action": "none",
+      "note": "Package 'sqlcipher3_binary' has no version constraint specified (accepts any version). Latest available version is 0.5.4.post2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlcipher3_binary",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.5.4.post2",
+      "action": "none",
+      "note": "Package 'sqlcipher3_binary' has no version constraint specified (accepts any version). Latest available version is 0.5.4.post2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlcipher3_binary",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.5.4.post2",
+      "action": "none",
+      "note": "Package 'sqlcipher3_binary' has no version constraint specified (accepts any version). Latest available version is 0.5.4.post2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlcipher3_binary",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.5.4.post2",
+      "action": "none",
+      "note": "Package 'sqlcipher3_binary' has no version constraint specified (accepts any version). Latest available version is 0.5.4.post2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlcipher3_binary",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.5.4.post2",
+      "action": "none",
+      "note": "Package 'sqlcipher3_binary' has no version constraint specified (accepts any version). Latest available version is 0.5.4.post2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlcipher3_binary",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.5.4.post2",
+      "action": "none",
+      "note": "Package 'sqlcipher3_binary' has no version constraint specified (accepts any version). Latest available version is 0.5.4.post2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.10",
+      "current_version": "77.0.3",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 77.0.3 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.11",
+      "current_version": "77.0.3",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 77.0.3 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.12",
+      "current_version": "77.0.3",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 77.0.3 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.13",
+      "current_version": "77.0.3",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 77.0.3 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.14",
+      "current_version": "77.0.3",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 77.0.3 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.15",
+      "current_version": "77.0.3",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 77.0.3 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cython",
+      "python_version": "3.10",
+      "current_version": "3.1",
+      "latest_version": "3.2.2",
+      "action": "update",
+      "note": "Package 'cython' can be updated from 3.1 to 3.2.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cython",
+      "python_version": "3.11",
+      "current_version": "3.1",
+      "latest_version": "3.2.2",
+      "action": "update",
+      "note": "Package 'cython' can be updated from 3.1 to 3.2.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cython",
+      "python_version": "3.12",
+      "current_version": "3.1",
+      "latest_version": "3.2.2",
+      "action": "update",
+      "note": "Package 'cython' can be updated from 3.1 to 3.2.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cython",
+      "python_version": "3.13",
+      "current_version": "3.1",
+      "latest_version": "3.2.2",
+      "action": "update",
+      "note": "Package 'cython' can be updated from 3.1 to 3.2.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cython",
+      "python_version": "3.14",
+      "current_version": "3.1",
+      "latest_version": "3.2.2",
+      "action": "update",
+      "note": "Package 'cython' can be updated from 3.1 to 3.2.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cython",
+      "python_version": "3.15",
+      "current_version": "3.1",
+      "latest_version": "3.2.2",
+      "action": "update",
+      "note": "Package 'cython' can be updated from 3.1 to 3.2.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.10",
+      "current_version": "7.0.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.0.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.11",
+      "current_version": "7.0.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.0.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.12",
+      "current_version": "7.0.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.0.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.13",
+      "current_version": "7.0.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.0.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.14",
+      "current_version": "7.0.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.0.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.15",
+      "current_version": "7.0.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.0.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_xdist",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "3.8.0",
+      "action": "none",
+      "note": "Package 'pytest_xdist' has no version constraint specified (accepts any version). Latest available version is 3.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_xdist",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "3.8.0",
+      "action": "none",
+      "note": "Package 'pytest_xdist' has no version constraint specified (accepts any version). Latest available version is 3.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_xdist",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "3.8.0",
+      "action": "none",
+      "note": "Package 'pytest_xdist' has no version constraint specified (accepts any version). Latest available version is 3.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_xdist",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "3.8.0",
+      "action": "none",
+      "note": "Package 'pytest_xdist' has no version constraint specified (accepts any version). Latest available version is 3.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_xdist",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "3.8.0",
+      "action": "none",
+      "note": "Package 'pytest_xdist' has no version constraint specified (accepts any version). Latest available version is 3.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_xdist",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "3.8.0",
+      "action": "none",
+      "note": "Package 'pytest_xdist' has no version constraint specified (accepts any version). Latest available version is 3.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_cov",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "7.0.0",
+      "action": "none",
+      "note": "Package 'pytest_cov' has no version constraint specified (accepts any version). Latest available version is 7.0.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_cov",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "7.0.0",
+      "action": "none",
+      "note": "Package 'pytest_cov' has no version constraint specified (accepts any version). Latest available version is 7.0.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_cov",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "7.0.0",
+      "action": "none",
+      "note": "Package 'pytest_cov' has no version constraint specified (accepts any version). Latest available version is 7.0.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_cov",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "7.0.0",
+      "action": "none",
+      "note": "Package 'pytest_cov' has no version constraint specified (accepts any version). Latest available version is 7.0.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_cov",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "7.0.0",
+      "action": "none",
+      "note": "Package 'pytest_cov' has no version constraint specified (accepts any version). Latest available version is 7.0.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest_cov",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "7.0.0",
+      "action": "none",
+      "note": "Package 'pytest_cov' has no version constraint specified (accepts any version). Latest available version is 7.0.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.10",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.11",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.12",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.13",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.14",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mariadb",
+      "python_version": "3.15",
+      "current_version": "1.0.1",
+      "latest_version": "1.1.14",
+      "action": "update",
+      "note": "Package 'mariadb' can be updated from 1.0.1 to 1.1.14. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "aioodbc",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'aioodbc' has no version constraint specified (accepts any version). Latest available version is 0.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8",
+      "python_version": "3.10",
+      "current_version": "7.3.0",
+      "latest_version": "7.3.0",
+      "action": "none",
+      "note": "Package 'flake8' is up to date at version 7.3.0 (latest: 7.3.0) for Python 3.10."
+    },
+    {
+      "package": "flake8",
+      "python_version": "3.11",
+      "current_version": "7.3.0",
+      "latest_version": "7.3.0",
+      "action": "none",
+      "note": "Package 'flake8' is up to date at version 7.3.0 (latest: 7.3.0) for Python 3.11."
+    },
+    {
+      "package": "flake8",
+      "python_version": "3.12",
+      "current_version": "7.3.0",
+      "latest_version": "7.3.0",
+      "action": "none",
+      "note": "Package 'flake8' is up to date at version 7.3.0 (latest: 7.3.0) for Python 3.12."
+    },
+    {
+      "package": "flake8",
+      "python_version": "3.13",
+      "current_version": "7.3.0",
+      "latest_version": "7.3.0",
+      "action": "none",
+      "note": "Package 'flake8' is up to date at version 7.3.0 (latest: 7.3.0) for Python 3.13."
+    },
+    {
+      "package": "flake8",
+      "python_version": "3.14",
+      "current_version": "7.3.0",
+      "latest_version": "7.3.0",
+      "action": "none",
+      "note": "Package 'flake8' is up to date at version 7.3.0 (latest: 7.3.0) for Python 3.14."
+    },
+    {
+      "package": "flake8",
+      "python_version": "3.15",
+      "current_version": "7.3.0",
+      "latest_version": "7.3.0",
+      "action": "none",
+      "note": "Package 'flake8' is up to date at version 7.3.0 (latest: 7.3.0) for Python 3.15."
+    },
+    {
+      "package": "flake8_pyproject",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "1.2.4",
+      "action": "none",
+      "note": "Package 'flake8_pyproject' has no version constraint specified (accepts any version). Latest available version is 1.2.4. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_pyproject",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "1.2.4",
+      "action": "none",
+      "note": "Package 'flake8_pyproject' has no version constraint specified (accepts any version). Latest available version is 1.2.4. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_pyproject",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "1.2.4",
+      "action": "none",
+      "note": "Package 'flake8_pyproject' has no version constraint specified (accepts any version). Latest available version is 1.2.4. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_pyproject",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "1.2.4",
+      "action": "none",
+      "note": "Package 'flake8_pyproject' has no version constraint specified (accepts any version). Latest available version is 1.2.4. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_pyproject",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "1.2.4",
+      "action": "none",
+      "note": "Package 'flake8_pyproject' has no version constraint specified (accepts any version). Latest available version is 1.2.4. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_pyproject",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "1.2.4",
+      "action": "none",
+      "note": "Package 'flake8_pyproject' has no version constraint specified (accepts any version). Latest available version is 1.2.4. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_import_order",
+      "python_version": "3.10",
+      "current_version": "0.19.2",
+      "latest_version": "0.19.2",
+      "action": "none",
+      "note": "Package 'flake8_import_order' is up to date at version 0.19.2 (latest: 0.19.2) for Python 3.10."
+    },
+    {
+      "package": "flake8_import_order",
+      "python_version": "3.11",
+      "current_version": "0.19.2",
+      "latest_version": "0.19.2",
+      "action": "none",
+      "note": "Package 'flake8_import_order' is up to date at version 0.19.2 (latest: 0.19.2) for Python 3.11."
+    },
+    {
+      "package": "flake8_import_order",
+      "python_version": "3.12",
+      "current_version": "0.19.2",
+      "latest_version": "0.19.2",
+      "action": "none",
+      "note": "Package 'flake8_import_order' is up to date at version 0.19.2 (latest: 0.19.2) for Python 3.12."
+    },
+    {
+      "package": "flake8_import_order",
+      "python_version": "3.13",
+      "current_version": "0.19.2",
+      "latest_version": "0.19.2",
+      "action": "none",
+      "note": "Package 'flake8_import_order' is up to date at version 0.19.2 (latest: 0.19.2) for Python 3.13."
+    },
+    {
+      "package": "flake8_import_order",
+      "python_version": "3.14",
+      "current_version": "0.19.2",
+      "latest_version": "0.19.2",
+      "action": "none",
+      "note": "Package 'flake8_import_order' is up to date at version 0.19.2 (latest: 0.19.2) for Python 3.14."
+    },
+    {
+      "package": "flake8_import_order",
+      "python_version": "3.15",
+      "current_version": "0.19.2",
+      "latest_version": "0.19.2",
+      "action": "none",
+      "note": "Package 'flake8_import_order' is up to date at version 0.19.2 (latest: 0.19.2) for Python 3.15."
+    },
+    {
+      "package": "flake8_import_single",
+      "python_version": "3.10",
+      "current_version": "0.1.5",
+      "latest_version": "0.1.5",
+      "action": "none",
+      "note": "Package 'flake8_import_single' is up to date at version 0.1.5 (latest: 0.1.5) for Python 3.10."
+    },
+    {
+      "package": "flake8_import_single",
+      "python_version": "3.11",
+      "current_version": "0.1.5",
+      "latest_version": "0.1.5",
+      "action": "none",
+      "note": "Package 'flake8_import_single' is up to date at version 0.1.5 (latest: 0.1.5) for Python 3.11."
+    },
+    {
+      "package": "flake8_import_single",
+      "python_version": "3.12",
+      "current_version": "0.1.5",
+      "latest_version": "0.1.5",
+      "action": "none",
+      "note": "Package 'flake8_import_single' is up to date at version 0.1.5 (latest: 0.1.5) for Python 3.12."
+    },
+    {
+      "package": "flake8_import_single",
+      "python_version": "3.13",
+      "current_version": "0.1.5",
+      "latest_version": "0.1.5",
+      "action": "none",
+      "note": "Package 'flake8_import_single' is up to date at version 0.1.5 (latest: 0.1.5) for Python 3.13."
+    },
+    {
+      "package": "flake8_import_single",
+      "python_version": "3.14",
+      "current_version": "0.1.5",
+      "latest_version": "0.1.5",
+      "action": "none",
+      "note": "Package 'flake8_import_single' is up to date at version 0.1.5 (latest: 0.1.5) for Python 3.14."
+    },
+    {
+      "package": "flake8_import_single",
+      "python_version": "3.15",
+      "current_version": "0.1.5",
+      "latest_version": "0.1.5",
+      "action": "none",
+      "note": "Package 'flake8_import_single' is up to date at version 0.1.5 (latest: 0.1.5) for Python 3.15."
+    },
+    {
+      "package": "flake8_builtins",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "3.1.0",
+      "action": "none",
+      "note": "Package 'flake8_builtins' has no version constraint specified (accepts any version). Latest available version is 3.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_builtins",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "3.1.0",
+      "action": "none",
+      "note": "Package 'flake8_builtins' has no version constraint specified (accepts any version). Latest available version is 3.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_builtins",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "3.1.0",
+      "action": "none",
+      "note": "Package 'flake8_builtins' has no version constraint specified (accepts any version). Latest available version is 3.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_builtins",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "3.1.0",
+      "action": "none",
+      "note": "Package 'flake8_builtins' has no version constraint specified (accepts any version). Latest available version is 3.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_builtins",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "3.1.0",
+      "action": "none",
+      "note": "Package 'flake8_builtins' has no version constraint specified (accepts any version). Latest available version is 3.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_builtins",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "3.1.0",
+      "action": "none",
+      "note": "Package 'flake8_builtins' has no version constraint specified (accepts any version). Latest available version is 3.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_future_annotations",
+      "python_version": "3.10",
+      "current_version": "0.0.5",
+      "latest_version": "1.1.0",
+      "action": "update",
+      "note": "Package 'flake8_future_annotations' can be updated from 0.0.5 to 1.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "flake8_future_annotations",
+      "python_version": "3.11",
+      "current_version": "0.0.5",
+      "latest_version": "1.1.0",
+      "action": "update",
+      "note": "Package 'flake8_future_annotations' can be updated from 0.0.5 to 1.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "flake8_future_annotations",
+      "python_version": "3.12",
+      "current_version": "0.0.5",
+      "latest_version": "1.1.0",
+      "action": "update",
+      "note": "Package 'flake8_future_annotations' can be updated from 0.0.5 to 1.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "flake8_future_annotations",
+      "python_version": "3.13",
+      "current_version": "0.0.5",
+      "latest_version": "1.1.0",
+      "action": "update",
+      "note": "Package 'flake8_future_annotations' can be updated from 0.0.5 to 1.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "flake8_future_annotations",
+      "python_version": "3.14",
+      "current_version": "0.0.5",
+      "latest_version": "1.1.0",
+      "action": "update",
+      "note": "Package 'flake8_future_annotations' can be updated from 0.0.5 to 1.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "flake8_future_annotations",
+      "python_version": "3.15",
+      "current_version": "0.0.5",
+      "latest_version": "1.1.0",
+      "action": "update",
+      "note": "Package 'flake8_future_annotations' can be updated from 0.0.5 to 1.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "flake8_docstrings",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "1.7.0",
+      "action": "none",
+      "note": "Package 'flake8_docstrings' has no version constraint specified (accepts any version). Latest available version is 1.7.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_docstrings",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "1.7.0",
+      "action": "none",
+      "note": "Package 'flake8_docstrings' has no version constraint specified (accepts any version). Latest available version is 1.7.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_docstrings",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "1.7.0",
+      "action": "none",
+      "note": "Package 'flake8_docstrings' has no version constraint specified (accepts any version). Latest available version is 1.7.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_docstrings",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "1.7.0",
+      "action": "none",
+      "note": "Package 'flake8_docstrings' has no version constraint specified (accepts any version). Latest available version is 1.7.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_docstrings",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "1.7.0",
+      "action": "none",
+      "note": "Package 'flake8_docstrings' has no version constraint specified (accepts any version). Latest available version is 1.7.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_docstrings",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "1.7.0",
+      "action": "none",
+      "note": "Package 'flake8_docstrings' has no version constraint specified (accepts any version). Latest available version is 1.7.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_unused_arguments",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.0.14",
+      "action": "none",
+      "note": "Package 'flake8_unused_arguments' has no version constraint specified (accepts any version). Latest available version is 0.0.14. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_unused_arguments",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.0.14",
+      "action": "none",
+      "note": "Package 'flake8_unused_arguments' has no version constraint specified (accepts any version). Latest available version is 0.0.14. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_unused_arguments",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.0.14",
+      "action": "none",
+      "note": "Package 'flake8_unused_arguments' has no version constraint specified (accepts any version). Latest available version is 0.0.14. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_unused_arguments",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.0.14",
+      "action": "none",
+      "note": "Package 'flake8_unused_arguments' has no version constraint specified (accepts any version). Latest available version is 0.0.14. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_unused_arguments",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.0.14",
+      "action": "none",
+      "note": "Package 'flake8_unused_arguments' has no version constraint specified (accepts any version). Latest available version is 0.0.14. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_unused_arguments",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.0.14",
+      "action": "none",
+      "note": "Package 'flake8_unused_arguments' has no version constraint specified (accepts any version). Latest available version is 0.0.14. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_rst_docstrings",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.4.0",
+      "action": "none",
+      "note": "Package 'flake8_rst_docstrings' has no version constraint specified (accepts any version). Latest available version is 0.4.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_rst_docstrings",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.4.0",
+      "action": "none",
+      "note": "Package 'flake8_rst_docstrings' has no version constraint specified (accepts any version). Latest available version is 0.4.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_rst_docstrings",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.4.0",
+      "action": "none",
+      "note": "Package 'flake8_rst_docstrings' has no version constraint specified (accepts any version). Latest available version is 0.4.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_rst_docstrings",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.4.0",
+      "action": "none",
+      "note": "Package 'flake8_rst_docstrings' has no version constraint specified (accepts any version). Latest available version is 0.4.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_rst_docstrings",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "0.4.0",
+      "action": "none",
+      "note": "Package 'flake8_rst_docstrings' has no version constraint specified (accepts any version). Latest available version is 0.4.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "flake8_rst_docstrings",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "0.4.0",
+      "action": "none",
+      "note": "Package 'flake8_rst_docstrings' has no version constraint specified (accepts any version). Latest available version is 0.4.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pydocstyle",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "6.3.0",
+      "action": "none",
+      "note": "Package 'pydocstyle' has no version constraint specified (accepts any version). Latest available version is 6.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pydocstyle",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "6.3.0",
+      "action": "none",
+      "note": "Package 'pydocstyle' has no version constraint specified (accepts any version). Latest available version is 6.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pydocstyle",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "6.3.0",
+      "action": "none",
+      "note": "Package 'pydocstyle' has no version constraint specified (accepts any version). Latest available version is 6.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pydocstyle",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "6.3.0",
+      "action": "none",
+      "note": "Package 'pydocstyle' has no version constraint specified (accepts any version). Latest available version is 6.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pydocstyle",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "6.3.0",
+      "action": "none",
+      "note": "Package 'pydocstyle' has no version constraint specified (accepts any version). Latest available version is 6.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pydocstyle",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "6.3.0",
+      "action": "none",
+      "note": "Package 'pydocstyle' has no version constraint specified (accepts any version). Latest available version is 6.3.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pygments",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.19.2",
+      "action": "none",
+      "note": "Package 'pygments' has no version constraint specified (accepts any version). Latest available version is 2.19.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pygments",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.19.2",
+      "action": "none",
+      "note": "Package 'pygments' has no version constraint specified (accepts any version). Latest available version is 2.19.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pygments",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.19.2",
+      "action": "none",
+      "note": "Package 'pygments' has no version constraint specified (accepts any version). Latest available version is 2.19.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pygments",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.19.2",
+      "action": "none",
+      "note": "Package 'pygments' has no version constraint specified (accepts any version). Latest available version is 2.19.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pygments",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.19.2",
+      "action": "none",
+      "note": "Package 'pygments' has no version constraint specified (accepts any version). Latest available version is 2.19.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pygments",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.19.2",
+      "action": "none",
+      "note": "Package 'pygments' has no version constraint specified (accepts any version). Latest available version is 2.19.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "black",
+      "python_version": "3.10",
+      "current_version": "25.11.0",
+      "latest_version": "25.11.0",
+      "action": "none",
+      "note": "Package 'black' is up to date at version 25.11.0 (latest: 25.11.0) for Python 3.10."
+    },
+    {
+      "package": "black",
+      "python_version": "3.11",
+      "current_version": "25.11.0",
+      "latest_version": "25.11.0",
+      "action": "none",
+      "note": "Package 'black' is up to date at version 25.11.0 (latest: 25.11.0) for Python 3.11."
+    },
+    {
+      "package": "black",
+      "python_version": "3.12",
+      "current_version": "25.11.0",
+      "latest_version": "25.11.0",
+      "action": "none",
+      "note": "Package 'black' is up to date at version 25.11.0 (latest: 25.11.0) for Python 3.12."
+    },
+    {
+      "package": "black",
+      "python_version": "3.13",
+      "current_version": "25.11.0",
+      "latest_version": "25.11.0",
+      "action": "none",
+      "note": "Package 'black' is up to date at version 25.11.0 (latest: 25.11.0) for Python 3.13."
+    },
+    {
+      "package": "black",
+      "python_version": "3.14",
+      "current_version": "25.11.0",
+      "latest_version": "25.11.0",
+      "action": "none",
+      "note": "Package 'black' is up to date at version 25.11.0 (latest: 25.11.0) for Python 3.14."
+    },
+    {
+      "package": "black",
+      "python_version": "3.15",
+      "current_version": "25.11.0",
+      "latest_version": "25.11.0",
+      "action": "none",
+      "note": "Package 'black' is up to date at version 25.11.0 (latest: 25.11.0) for Python 3.15."
+    },
+    {
+      "package": "slotscheck",
+      "python_version": "3.10",
+      "current_version": "0.17.0",
+      "latest_version": "0.19.1",
+      "action": "update",
+      "note": "Package 'slotscheck' can be updated from 0.17.0 to 0.19.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "slotscheck",
+      "python_version": "3.11",
+      "current_version": "0.17.0",
+      "latest_version": "0.19.1",
+      "action": "update",
+      "note": "Package 'slotscheck' can be updated from 0.17.0 to 0.19.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "slotscheck",
+      "python_version": "3.12",
+      "current_version": "0.17.0",
+      "latest_version": "0.19.1",
+      "action": "update",
+      "note": "Package 'slotscheck' can be updated from 0.17.0 to 0.19.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "slotscheck",
+      "python_version": "3.13",
+      "current_version": "0.17.0",
+      "latest_version": "0.19.1",
+      "action": "update",
+      "note": "Package 'slotscheck' can be updated from 0.17.0 to 0.19.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "slotscheck",
+      "python_version": "3.14",
+      "current_version": "0.17.0",
+      "latest_version": "0.19.1",
+      "action": "update",
+      "note": "Package 'slotscheck' can be updated from 0.17.0 to 0.19.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "slotscheck",
+      "python_version": "3.15",
+      "current_version": "0.17.0",
+      "latest_version": "0.19.1",
+      "action": "update",
+      "note": "Package 'slotscheck' can be updated from 0.17.0 to 0.19.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "zimports",
+      "python_version": "3.10",
+      "current_version": "0.7.0",
+      "latest_version": "0.7.0",
+      "action": "none",
+      "note": "Package 'zimports' is up to date at version 0.7.0 (latest: 0.7.0) for Python 3.10."
+    },
+    {
+      "package": "zimports",
+      "python_version": "3.11",
+      "current_version": "0.7.0",
+      "latest_version": "0.7.0",
+      "action": "none",
+      "note": "Package 'zimports' is up to date at version 0.7.0 (latest: 0.7.0) for Python 3.11."
+    },
+    {
+      "package": "zimports",
+      "python_version": "3.12",
+      "current_version": "0.7.0",
+      "latest_version": "0.7.0",
+      "action": "none",
+      "note": "Package 'zimports' is up to date at version 0.7.0 (latest: 0.7.0) for Python 3.12."
+    },
+    {
+      "package": "zimports",
+      "python_version": "3.13",
+      "current_version": "0.7.0",
+      "latest_version": "0.7.0",
+      "action": "none",
+      "note": "Package 'zimports' is up to date at version 0.7.0 (latest: 0.7.0) for Python 3.13."
+    },
+    {
+      "package": "zimports",
+      "python_version": "3.14",
+      "current_version": "0.7.0",
+      "latest_version": "0.7.0",
+      "action": "none",
+      "note": "Package 'zimports' is up to date at version 0.7.0 (latest: 0.7.0) for Python 3.14."
+    },
+    {
+      "package": "zimports",
+      "python_version": "3.15",
+      "current_version": "0.7.0",
+      "latest_version": "0.7.0",
+      "action": "none",
+      "note": "Package 'zimports' is up to date at version 0.7.0 (latest: 0.7.0) for Python 3.15."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2.0.44",
+      "action": "none",
+      "note": "Package 'sqlalchemy' has no version constraint specified (accepts any version). Latest available version is 2.0.44. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "nox",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2025.11.12",
+      "action": "none",
+      "note": "Package 'nox' has no version constraint specified (accepts any version). Latest available version is 2025.11.12. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "nox",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2025.11.12",
+      "action": "none",
+      "note": "Package 'nox' has no version constraint specified (accepts any version). Latest available version is 2025.11.12. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "nox",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2025.11.12",
+      "action": "none",
+      "note": "Package 'nox' has no version constraint specified (accepts any version). Latest available version is 2025.11.12. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "nox",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2025.11.12",
+      "action": "none",
+      "note": "Package 'nox' has no version constraint specified (accepts any version). Latest available version is 2025.11.12. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "nox",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "2025.11.12",
+      "action": "none",
+      "note": "Package 'nox' has no version constraint specified (accepts any version). Latest available version is 2025.11.12. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "nox",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "2025.11.12",
+      "action": "none",
+      "note": "Package 'nox' has no version constraint specified (accepts any version). Latest available version is 2025.11.12. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "9.0.2",
+      "action": "none",
+      "note": "Package 'pytest' has no version constraint specified (accepts any version). Latest available version is 9.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "9.0.2",
+      "action": "none",
+      "note": "Package 'pytest' has no version constraint specified (accepts any version). Latest available version is 9.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "9.0.2",
+      "action": "none",
+      "note": "Package 'pytest' has no version constraint specified (accepts any version). Latest available version is 9.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "9.0.2",
+      "action": "none",
+      "note": "Package 'pytest' has no version constraint specified (accepts any version). Latest available version is 9.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "9.0.2",
+      "action": "none",
+      "note": "Package 'pytest' has no version constraint specified (accepts any version). Latest available version is 9.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "9.0.2",
+      "action": "none",
+      "note": "Package 'pytest' has no version constraint specified (accepts any version). Latest available version is 9.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "3.3.0.20251206",
+      "action": "none",
+      "note": "Package 'types_greenlet' has no version constraint specified (accepts any version). Latest available version is 3.3.0.20251206. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "3.3.0.20251206",
+      "action": "none",
+      "note": "Package 'types_greenlet' has no version constraint specified (accepts any version). Latest available version is 3.3.0.20251206. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "3.3.0.20251206",
+      "action": "none",
+      "note": "Package 'types_greenlet' has no version constraint specified (accepts any version). Latest available version is 3.3.0.20251206. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "3.3.0.20251206",
+      "action": "none",
+      "note": "Package 'types_greenlet' has no version constraint specified (accepts any version). Latest available version is 3.3.0.20251206. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.14",
+      "current_version": null,
+      "latest_version": "3.3.0.20251206",
+      "action": "none",
+      "note": "Package 'types_greenlet' has no version constraint specified (accepts any version). Latest available version is 3.3.0.20251206. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "types_greenlet",
+      "python_version": "3.15",
+      "current_version": null,
+      "latest_version": "3.3.0.20251206",
+      "action": "none",
+      "note": "Package 'types_greenlet' has no version constraint specified (accepts any version). Latest available version is 3.3.0.20251206. Consider pinning to a specific version range for reproducible builds."
+    }
+  ]
+}

@@ -10,9 +10,10 @@ from __future__ import annotations
 from pathlib import Path
 
 import pytest
+from pydantic import ValidationError
 
-from pyproj_dep_analyse import config as config_mod
-from pyproj_dep_analyse.config import (
+from pyproj_dep_analyze import config as config_mod
+from pyproj_dep_analyze.config import (
     AnalyzerSettings,
     get_analyzer_settings,
     get_config,
@@ -164,7 +165,8 @@ def test_analyzer_settings_is_frozen() -> None:
         concurrency=10,
     )
 
-    with pytest.raises(AttributeError):
+    # Pydantic frozen models raise ValidationError, not AttributeError
+    with pytest.raises(ValidationError):
         settings.github_token = "new"  # type: ignore[misc]
 
 
@@ -181,8 +183,8 @@ def test_analyzer_settings_is_hashable() -> None:
 
 @pytest.mark.os_agnostic
 def test_analyzer_settings_equality() -> None:
-    settings1 = AnalyzerSettings("", 30.0, 10)
-    settings2 = AnalyzerSettings("", 30.0, 10)
+    settings1 = AnalyzerSettings(github_token="", timeout=30.0, concurrency=10)
+    settings2 = AnalyzerSettings(github_token="", timeout=30.0, concurrency=10)
 
     assert settings1 == settings2
 
@@ -218,7 +220,7 @@ def test_get_analyzer_settings_respects_github_token_env_var(
     clear_config_cache: None,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setenv("PYPROJ_DEP_ANALYSE_GITHUB_TOKEN", "env-token")
+    monkeypatch.setenv("PYPROJ_DEP_ANALYZE_GITHUB_TOKEN", "env-token")
 
     result = get_analyzer_settings()
 
@@ -230,7 +232,7 @@ def test_get_analyzer_settings_respects_timeout_env_var(
     clear_config_cache: None,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setenv("PYPROJ_DEP_ANALYSE_TIMEOUT", "60.5")
+    monkeypatch.setenv("PYPROJ_DEP_ANALYZE_TIMEOUT", "60.5")
 
     result = get_analyzer_settings()
 
@@ -242,7 +244,7 @@ def test_get_analyzer_settings_respects_concurrency_env_var(
     clear_config_cache: None,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setenv("PYPROJ_DEP_ANALYSE_CONCURRENCY", "25")
+    monkeypatch.setenv("PYPROJ_DEP_ANALYZE_CONCURRENCY", "25")
 
     result = get_analyzer_settings()
 
@@ -254,7 +256,7 @@ def test_get_analyzer_settings_ignores_invalid_timeout_env_var(
     clear_config_cache: None,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setenv("PYPROJ_DEP_ANALYSE_TIMEOUT", "not-a-number")
+    monkeypatch.setenv("PYPROJ_DEP_ANALYZE_TIMEOUT", "not-a-number")
 
     result = get_analyzer_settings()
 
@@ -266,7 +268,7 @@ def test_get_analyzer_settings_ignores_invalid_concurrency_env_var(
     clear_config_cache: None,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    monkeypatch.setenv("PYPROJ_DEP_ANALYSE_CONCURRENCY", "not-a-number")
+    monkeypatch.setenv("PYPROJ_DEP_ANALYZE_CONCURRENCY", "not-a-number")
 
     result = get_analyzer_settings()
 

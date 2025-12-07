@@ -209,7 +209,7 @@ def _package_name_to_display(value: str) -> str:
     """Convert package name to display-friendly app name.
 
     Examples:
-        "pyproj_dep_analyse" -> "Check ZPool Status"
+        "pyproj_dep_analyze" -> "Check ZPool Status"
         "my-cool-app" -> "My Cool App"
     """
     # Replace underscores and hyphens with spaces

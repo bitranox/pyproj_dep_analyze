@@ -1,0 +1,103 @@
+[project]
+name = "invoke"
+requires-python = ">=3.9"
+version = "3.0.0"
+description = "Pythonic task execution"
+readme = "README.rst"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+authors = [{ name = "Jeff Forcier", email = "jeff@bitprophet.org" }]
+
+# We have a few 'dependencies' but we vendor them internally.
+dependencies = []
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: POSIX",
+  "Operating System :: Unix",
+  "Operating System :: MacOS :: MacOS X",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Software Development",
+  "Topic :: Software Development :: Build Tools",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: System :: Software Distribution",
+  "Topic :: System :: Systems Administration",
+]
+
+
+[project.urls]
+Docs = "https://docs.pyinvoke.org"
+Source = "https://github.com/pyinvoke/invoke"
+Changelog = "https://www.pyinvoke.org/changelog.html"
+CI = "https://app.circleci.com/pipelines/github/pyinvoke/invoke"
+Issues = "https://github.com/pyinvoke/invoke/issues"
+
+
+[project.scripts]
+invoke = "invoke.main:program.run"
+inv = "invoke.main:program.run"
+
+
+[build-system]
+requires = ["setuptools >= 77"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.packages.find]
+include = ["invoke*"]
+
+
+[dependency-groups]
+dev = [
+  # Invocations, for all sorts of things
+  "invocations>=4",
+  # Coverage!
+  "coverage>=6.2,<7",
+  # Docs
+  "releases>=2",
+  "alabaster==0.7.12",
+  # Testing
+  "pytest-relaxed>=2",
+  "pytest-cov>=4",
+  # Formatting
+  "flake8~=7.3.0",
+  "black>=23.3.0",
+  # Packaging
+  "setuptools>56",
+  # Debuggery
+  "icecream>=2.1",
+  # typing
+  "mypy==0.971",
+  "types-PyYAML==6.0.12.4",
+]
+
+[tool.mypy]
+disallow_untyped_defs = true
+exclude = ["integration/", "tests/", "setup.py", "sites/www/conf.py", "build/"]
+ignore_missing_imports = true
+warn_incomplete_stub = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+overrides = [
+  { module = "alabaster", ignore_missing_imports = true },
+  { module = "icecream", ignore_missing_imports = true },
+  { module = "invocations", ignore_missing_imports = true },
+  { module = "invoke.vendor.*", ignore_errors = true },
+  { module = "pytest_relaxed", ignore_missing_imports = true },
+]
+
+[tool.ruff]
+line-length = 79

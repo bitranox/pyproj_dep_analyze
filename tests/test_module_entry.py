@@ -1,4 +1,4 @@
-"""Module entry stories: `python -m pyproj_dep_analyse` mirrors the CLI.
+"""Module entry stories: `python -m pyproj_dep_analyze` mirrors the CLI.
 
 The __main__.py module enables execution via `python -m`. These tests
 verify that module execution behaves identically to the console script,
@@ -17,7 +17,7 @@ import pytest
 
 import lib_cli_exit_tools
 
-from pyproj_dep_analyse import __init__conf__, cli as cli_mod
+from pyproj_dep_analyze import __init__conf__, cli as cli_mod
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -77,12 +77,12 @@ def test_module_entry_invokes_cli_with_correct_prog_name(
         recorded["prog_name"] = prog_name
         return 0
 
-    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyse"])
+    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyze"])
     monkeypatch.setattr(lib_cli_exit_tools, "run_cli", capture_run_cli)
     monkeypatch.setattr("lib_cli_exit_tools.application.runner.run_cli", capture_run_cli)
 
     with pytest.raises(SystemExit) as exc:
-        runpy.run_module("pyproj_dep_analyse.__main__", run_name="__main__")
+        runpy.run_module("pyproj_dep_analyze.__main__", run_name="__main__")
 
     assert exc.value.code == 0
     assert recorded["command"] is cli_mod.cli
@@ -96,12 +96,12 @@ def test_module_entry_exits_with_zero_on_success(
     def fake_run_cli(*_: object, **__: object) -> int:
         return 0
 
-    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyse"])
+    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyze"])
     monkeypatch.setattr(lib_cli_exit_tools, "run_cli", fake_run_cli)
     monkeypatch.setattr("lib_cli_exit_tools.application.runner.run_cli", fake_run_cli)
 
     with pytest.raises(SystemExit) as exc:
-        runpy.run_module("pyproj_dep_analyse.__main__", run_name="__main__")
+        runpy.run_module("pyproj_dep_analyze.__main__", run_name="__main__")
 
     assert exc.value.code == 0
 
@@ -118,7 +118,7 @@ def test_module_entry_formats_exception_via_exit_tools(
     printed: list[PrintedTraceback] = []
     exit_codes: list[str] = []
 
-    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyse"])
+    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyze"])
     monkeypatch.setattr(lib_cli_exit_tools.config, "traceback", False, raising=False)
     monkeypatch.setattr(lib_cli_exit_tools.config, "traceback_force_color", False, raising=False)
 
@@ -147,7 +147,7 @@ def test_module_entry_formats_exception_via_exit_tools(
     monkeypatch.setattr("lib_cli_exit_tools.application.runner.run_cli", exploding_cli)
 
     with pytest.raises(SystemExit) as exc:
-        runpy.run_module("pyproj_dep_analyse.__main__", run_name="__main__")
+        runpy.run_module("pyproj_dep_analyze.__main__", run_name="__main__")
 
     assert exc.value.code == 88
     assert printed == [PrintedTraceback(trace_back=False, length_limit=500, stream_present=False)]
@@ -161,12 +161,12 @@ def test_module_entry_returns_exit_code_from_cli(
     def return_custom_code(*_: object, **__: object) -> int:
         return 42
 
-    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyse"])
+    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyze"])
     monkeypatch.setattr(lib_cli_exit_tools, "run_cli", return_custom_code)
     monkeypatch.setattr("lib_cli_exit_tools.application.runner.run_cli", return_custom_code)
 
     with pytest.raises(SystemExit) as exc:
-        runpy.run_module("pyproj_dep_analyse.__main__", run_name="__main__")
+        runpy.run_module("pyproj_dep_analyze.__main__", run_name="__main__")
 
     assert exc.value.code == 42
 
@@ -182,12 +182,12 @@ def test_module_entry_with_traceback_flag_prints_full_traceback(
     capsys: pytest.CaptureFixture[str],
     strip_ansi: Callable[[str], str],
 ) -> None:
-    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyse", "--traceback", "fail"])
+    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyze", "--traceback", "fail"])
     monkeypatch.setattr(lib_cli_exit_tools.config, "traceback", False, raising=False)
     monkeypatch.setattr(lib_cli_exit_tools.config, "traceback_force_color", False, raising=False)
 
     with pytest.raises(SystemExit) as exc:
-        runpy.run_module("pyproj_dep_analyse.__main__", run_name="__main__")
+        runpy.run_module("pyproj_dep_analyze.__main__", run_name="__main__")
 
     plain_err = strip_ansi(capsys.readouterr().err)
 
@@ -202,12 +202,12 @@ def test_module_entry_restores_traceback_config_after_execution(
     capsys: pytest.CaptureFixture[str],
     preserve_traceback_state: None,
 ) -> None:
-    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyse", "--traceback", "fail"])
+    monkeypatch.setattr(sys, "argv", ["pyproj_dep_analyze", "--traceback", "fail"])
     monkeypatch.setattr(lib_cli_exit_tools.config, "traceback", False, raising=False)
     monkeypatch.setattr(lib_cli_exit_tools.config, "traceback_force_color", False, raising=False)
 
     with pytest.raises(SystemExit):
-        runpy.run_module("pyproj_dep_analyse.__main__", run_name="__main__")
+        runpy.run_module("pyproj_dep_analyze.__main__", run_name="__main__")
 
     assert lib_cli_exit_tools.config.traceback is False
     assert lib_cli_exit_tools.config.traceback_force_color is False

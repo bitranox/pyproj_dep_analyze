@@ -35,7 +35,7 @@ CONFIG_FIELDS: tuple[str, ...] = tuple(field.name for field in fields(type(lib_c
 
 
 def pytest_configure(config: pytest.Config) -> None:
-    """Register custom markers for OS-specific tests."""
+    """Register custom markers for OS-specific and E2E tests."""
     config.addinivalue_line(
         "markers",
         "os_agnostic: marks test as OS-agnostic (runs on all platforms)",
@@ -55,6 +55,14 @@ def pytest_configure(config: pytest.Config) -> None:
     config.addinivalue_line(
         "markers",
         "linux_only: marks test to run only on Linux",
+    )
+    config.addinivalue_line(
+        "markers",
+        "e2e: marks test as end-to-end integration test (requires network)",
+    )
+    config.addinivalue_line(
+        "markers",
+        "network: marks test as requiring network access to PyPI/GitHub APIs",
     )
 
 
@@ -166,5 +174,5 @@ def testdata_dir() -> Path:
 
 @pytest.fixture
 def pyproject_files(testdata_dir: Path) -> list[Path]:
-    """Provide all pyproject.toml test files."""
-    return list(testdata_dir.glob("pyproject_*.toml"))
+    """Provide all pyproject.toml test files from all subdirectories."""
+    return list(testdata_dir.glob("*/pyproject_*.toml"))

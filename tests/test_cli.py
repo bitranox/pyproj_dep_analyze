@@ -15,9 +15,9 @@ from click.testing import CliRunner, Result
 
 import lib_cli_exit_tools
 
-from pyproj_dep_analyse import cli as cli_mod
-from pyproj_dep_analyse import cli_display as cli_display_mod
-from pyproj_dep_analyse import __init__conf__
+from pyproj_dep_analyze import cli as cli_mod
+from pyproj_dep_analyze import cli_display as cli_display_mod
+from pyproj_dep_analyze import __init__conf__
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -31,7 +31,8 @@ def test_snapshot_traceback_state_captures_false_when_disabled(
 ) -> None:
     result = cli_mod.snapshot_traceback_state()
 
-    assert result == (False, False)
+    assert result.enabled is False
+    assert result.force_color is False
 
 
 @pytest.mark.os_agnostic
@@ -42,7 +43,8 @@ def test_snapshot_traceback_state_captures_true_when_enabled(
 
     result = cli_mod.snapshot_traceback_state()
 
-    assert result == (True, True)
+    assert result.enabled is True
+    assert result.force_color is True
 
 
 @pytest.mark.os_agnostic
@@ -265,8 +267,8 @@ def test_config_command_with_mocked_config_shows_sections(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     from lib_layered_config import Config
-    from pyproj_dep_analyse import config as config_mod
-    from pyproj_dep_analyse import config_show
+    from pyproj_dep_analyze import config as config_mod
+    from pyproj_dep_analyze import config_show
 
     test_data = {
         "test_section": {
@@ -289,6 +291,12 @@ def test_config_command_with_mocked_config_shows_sections(
 
         def get(self, key: str, default: Any = None) -> Any:
             return test_data.get(key, default)
+
+        def __iter__(self):
+            return iter(test_data)
+
+        def __getitem__(self, key: str) -> Any:
+            return test_data[key]
 
     config_mod.get_config.cache_clear()
 
@@ -567,7 +575,7 @@ def test_analyze_command_with_mocked_analysis(
     tmp_path: Any,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse.models import Action, AnalysisResult, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, AnalysisResult, OutdatedEntry
 
     # Create a minimal pyproject.toml
     pyproject = tmp_path / "pyproject.toml"
@@ -612,7 +620,7 @@ def test_analyze_command_writes_to_output_file(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     from pathlib import Path
-    from pyproj_dep_analyse.models import AnalysisResult
+    from pyproj_dep_analyze.models import AnalysisResult
 
     pyproject = tmp_path / "pyproject.toml"
     pyproject.write_text('[project]\nname = "test"')
@@ -644,7 +652,7 @@ def test_analyze_command_with_summary_format(
     tmp_path: Any,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse.models import AnalysisResult
+    from pyproj_dep_analyze.models import AnalysisResult
 
     pyproject = tmp_path / "pyproject.toml"
     pyproject.write_text('[project]\nname = "test"')
@@ -673,7 +681,7 @@ def test_analyze_command_with_json_format(
     tmp_path: Any,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse.models import AnalysisResult
+    from pyproj_dep_analyze.models import AnalysisResult
 
     pyproject = tmp_path / "pyproject.toml"
     pyproject.write_text('[project]\nname = "test"')
@@ -705,7 +713,7 @@ def test_analyze_command_with_json_format(
 def test_display_summary_shows_python_versions(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    from pyproj_dep_analyse.models import AnalysisResult
+    from pyproj_dep_analyze.models import AnalysisResult
 
     result = AnalysisResult(entries=[], python_versions=["3.10", "3.11"])
 
@@ -720,12 +728,12 @@ def test_display_summary_shows_python_versions(
 def test_display_summary_shows_total_dependencies(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    from pyproj_dep_analyse.models import Action, AnalysisResult, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, AnalysisResult, OutdatedEntry
 
     result = AnalysisResult(
         entries=[
-            OutdatedEntry("pkg1", "3.11", "1.0", "1.1", Action.UPDATE),
-            OutdatedEntry("pkg2", "3.11", "2.0", "2.1", Action.UPDATE),
+            OutdatedEntry(package="pkg1", python_version="3.11", current_version="1.0", latest_version="1.1", action=Action.UPDATE),
+            OutdatedEntry(package="pkg2", python_version="3.11", current_version="2.0", latest_version="2.1", action=Action.UPDATE),
         ],
         python_versions=["3.11"],
         total_dependencies=2,  # Must be explicitly set
@@ -741,10 +749,10 @@ def test_display_summary_shows_total_dependencies(
 def test_display_updates_section_shows_updates(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    from pyproj_dep_analyse.models import Action, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, OutdatedEntry
 
     updates = [
-        OutdatedEntry("requests", "3.11", "2.28.0", "2.31.0", Action.UPDATE),
+        OutdatedEntry(package="requests", python_version="3.11", current_version="2.28.0", latest_version="2.31.0", action=Action.UPDATE),
     ]
 
     cli_display_mod._display_updates_section(updates)  # pyright: ignore[reportPrivateUsage]
@@ -760,9 +768,9 @@ def test_display_updates_section_shows_updates(
 def test_display_updates_section_truncates_at_twenty(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    from pyproj_dep_analyse.models import Action, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, OutdatedEntry
 
-    updates = [OutdatedEntry(f"pkg{i}", "3.11", "1.0", "2.0", Action.UPDATE) for i in range(25)]
+    updates = [OutdatedEntry(package=f"pkg{i}", python_version="3.11", current_version="1.0", latest_version="2.0", action=Action.UPDATE) for i in range(25)]
 
     cli_display_mod._display_updates_section(updates)  # pyright: ignore[reportPrivateUsage]
 
@@ -784,10 +792,10 @@ def test_display_updates_section_does_nothing_for_empty_list(
 def test_display_manual_section_shows_manual_checks(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    from pyproj_dep_analyse.models import Action, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, OutdatedEntry
 
     manual = [
-        OutdatedEntry("custom-pkg", "3.11", "unknown", "unknown", Action.CHECK_MANUALLY),
+        OutdatedEntry(package="custom-pkg", python_version="3.11", current_version="unknown", latest_version="unknown", action=Action.CHECK_MANUALLY),
     ]
 
     cli_display_mod._display_manual_section(manual)  # pyright: ignore[reportPrivateUsage]
@@ -801,9 +809,11 @@ def test_display_manual_section_shows_manual_checks(
 def test_display_manual_section_truncates_at_ten(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    from pyproj_dep_analyse.models import Action, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, OutdatedEntry
 
-    manual = [OutdatedEntry(f"pkg{i}", "3.11", "1.0", "?", Action.CHECK_MANUALLY) for i in range(15)]
+    manual = [
+        OutdatedEntry(package=f"pkg{i}", python_version="3.11", current_version="1.0", latest_version="?", action=Action.CHECK_MANUALLY) for i in range(15)
+    ]
 
     cli_display_mod._display_manual_section(manual)  # pyright: ignore[reportPrivateUsage]
 
@@ -826,11 +836,11 @@ def test_display_json_outputs_valid_json(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
     import json
-    from pyproj_dep_analyse.models import Action, AnalysisResult, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, AnalysisResult, OutdatedEntry
 
     result = AnalysisResult(
         entries=[
-            OutdatedEntry("requests", "3.11", "2.28.0", "2.31.0", Action.UPDATE),
+            OutdatedEntry(package="requests", python_version="3.11", current_version="2.28.0", latest_version="2.31.0", action=Action.UPDATE),
         ],
         python_versions=["3.11"],
     )
@@ -847,12 +857,12 @@ def test_display_json_outputs_valid_json(
 def test_display_table_includes_summary_and_sections(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    from pyproj_dep_analyse.models import Action, AnalysisResult, OutdatedEntry
+    from pyproj_dep_analyze.models import Action, AnalysisResult, OutdatedEntry
 
     result = AnalysisResult(
         entries=[
-            OutdatedEntry("requests", "3.11", "2.28.0", "2.31.0", Action.UPDATE),
-            OutdatedEntry("custom", "3.11", "?", "?", Action.CHECK_MANUALLY),
+            OutdatedEntry(package="requests", python_version="3.11", current_version="2.28.0", latest_version="2.31.0", action=Action.UPDATE),
+            OutdatedEntry(package="custom", python_version="3.11", current_version="?", latest_version="?", action=Action.CHECK_MANUALLY),
         ],
         python_versions=["3.11"],
     )

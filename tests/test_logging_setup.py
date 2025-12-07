@@ -11,8 +11,8 @@ from typing import Any
 
 import pytest
 
-from pyproj_dep_analyse import logging_setup as setup_mod
-from pyproj_dep_analyse.logging_setup import init_logging
+from pyproj_dep_analyze import logging_setup as setup_mod
+from pyproj_dep_analyze.logging_setup import init_logging
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -150,7 +150,7 @@ def test_build_runtime_config_reads_from_layered_config(
 def test_build_runtime_config_provides_defaults_when_config_empty(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pyproj_dep_analyse import __init__conf__
+    from pyproj_dep_analyze import __init__conf__
 
     class FakeConfig:
         def get(self, key: str, default: Any = None) -> Any:

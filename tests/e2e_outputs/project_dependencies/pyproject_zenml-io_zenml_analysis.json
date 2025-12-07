@@ -1,0 +1,3661 @@
+{
+  "pyproject_path": "/media/srv-main-softdev/projects/libs/pyproj_dep_analyze/tests/testdata/project_dependencies/pyproject_zenml-io_zenml.toml",
+  "python_versions": [
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13"
+  ],
+  "total_dependencies": 107,
+  "update_count": 368,
+  "entries": [
+    {
+      "package": "asgiref",
+      "python_version": "3.10",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.0",
+      "action": "update",
+      "note": "Package 'asgiref' can be updated from =3.10.0 to 3.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asgiref",
+      "python_version": "3.11",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.0",
+      "action": "update",
+      "note": "Package 'asgiref' can be updated from =3.10.0 to 3.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asgiref",
+      "python_version": "3.12",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.0",
+      "action": "update",
+      "note": "Package 'asgiref' can be updated from =3.10.0 to 3.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "asgiref",
+      "python_version": "3.13",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.0",
+      "action": "update",
+      "note": "Package 'asgiref' can be updated from =3.10.0 to 3.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "click",
+      "python_version": "3.10",
+      "current_version": "8.0.1",
+      "latest_version": "8.3.1",
+      "action": "update",
+      "note": "Package 'click' can be updated from 8.0.1 to 8.3.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "click",
+      "python_version": "3.11",
+      "current_version": "8.0.1",
+      "latest_version": "8.3.1",
+      "action": "update",
+      "note": "Package 'click' can be updated from 8.0.1 to 8.3.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "click",
+      "python_version": "3.12",
+      "current_version": "8.0.1",
+      "latest_version": "8.3.1",
+      "action": "update",
+      "note": "Package 'click' can be updated from 8.0.1 to 8.3.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "click",
+      "python_version": "3.13",
+      "current_version": "8.0.1",
+      "latest_version": "8.3.1",
+      "action": "update",
+      "note": "Package 'click' can be updated from 8.0.1 to 8.3.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cloudpickle",
+      "python_version": "3.10",
+      "current_version": "2.0.0",
+      "latest_version": "3.1.2",
+      "action": "update",
+      "note": "Package 'cloudpickle' can be updated from 2.0.0 to 3.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cloudpickle",
+      "python_version": "3.11",
+      "current_version": "2.0.0",
+      "latest_version": "3.1.2",
+      "action": "update",
+      "note": "Package 'cloudpickle' can be updated from 2.0.0 to 3.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cloudpickle",
+      "python_version": "3.12",
+      "current_version": "2.0.0",
+      "latest_version": "3.1.2",
+      "action": "update",
+      "note": "Package 'cloudpickle' can be updated from 2.0.0 to 3.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "cloudpickle",
+      "python_version": "3.13",
+      "current_version": "2.0.0",
+      "latest_version": "3.1.2",
+      "action": "update",
+      "note": "Package 'cloudpickle' can be updated from 2.0.0 to 3.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "distro",
+      "python_version": "3.10",
+      "current_version": "1.6.0",
+      "latest_version": "1.9.0",
+      "action": "update",
+      "note": "Package 'distro' can be updated from 1.6.0 to 1.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "distro",
+      "python_version": "3.11",
+      "current_version": "1.6.0",
+      "latest_version": "1.9.0",
+      "action": "update",
+      "note": "Package 'distro' can be updated from 1.6.0 to 1.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "distro",
+      "python_version": "3.12",
+      "current_version": "1.6.0",
+      "latest_version": "1.9.0",
+      "action": "update",
+      "note": "Package 'distro' can be updated from 1.6.0 to 1.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "distro",
+      "python_version": "3.13",
+      "current_version": "1.6.0",
+      "latest_version": "1.9.0",
+      "action": "update",
+      "note": "Package 'distro' can be updated from 1.6.0 to 1.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "docker",
+      "python_version": "3.10",
+      "current_version": "=7.1.0",
+      "latest_version": "7.1.0",
+      "action": "none",
+      "note": "Package 'docker' is up to date at version =7.1.0 (latest: 7.1.0) for Python 3.10."
+    },
+    {
+      "package": "docker",
+      "python_version": "3.11",
+      "current_version": "=7.1.0",
+      "latest_version": "7.1.0",
+      "action": "none",
+      "note": "Package 'docker' is up to date at version =7.1.0 (latest: 7.1.0) for Python 3.11."
+    },
+    {
+      "package": "docker",
+      "python_version": "3.12",
+      "current_version": "=7.1.0",
+      "latest_version": "7.1.0",
+      "action": "none",
+      "note": "Package 'docker' is up to date at version =7.1.0 (latest: 7.1.0) for Python 3.12."
+    },
+    {
+      "package": "docker",
+      "python_version": "3.13",
+      "current_version": "=7.1.0",
+      "latest_version": "7.1.0",
+      "action": "none",
+      "note": "Package 'docker' is up to date at version =7.1.0 (latest: 7.1.0) for Python 3.13."
+    },
+    {
+      "package": "gitpython",
+      "python_version": "3.10",
+      "current_version": "3.1.18",
+      "latest_version": "3.1.45",
+      "action": "update",
+      "note": "Package 'gitpython' can be updated from 3.1.18 to 3.1.45. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "gitpython",
+      "python_version": "3.11",
+      "current_version": "3.1.18",
+      "latest_version": "3.1.45",
+      "action": "update",
+      "note": "Package 'gitpython' can be updated from 3.1.18 to 3.1.45. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "gitpython",
+      "python_version": "3.12",
+      "current_version": "3.1.18",
+      "latest_version": "3.1.45",
+      "action": "update",
+      "note": "Package 'gitpython' can be updated from 3.1.18 to 3.1.45. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "gitpython",
+      "python_version": "3.13",
+      "current_version": "3.1.18",
+      "latest_version": "3.1.45",
+      "action": "update",
+      "note": "Package 'gitpython' can be updated from 3.1.18 to 3.1.45. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "jsonref",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "1.1.0",
+      "action": "none",
+      "note": "Package 'jsonref' has no version constraint specified (accepts any version). Latest available version is 1.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "jsonref",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "1.1.0",
+      "action": "none",
+      "note": "Package 'jsonref' has no version constraint specified (accepts any version). Latest available version is 1.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "jsonref",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "1.1.0",
+      "action": "none",
+      "note": "Package 'jsonref' has no version constraint specified (accepts any version). Latest available version is 1.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "jsonref",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "1.1.0",
+      "action": "none",
+      "note": "Package 'jsonref' has no version constraint specified (accepts any version). Latest available version is 1.1.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "packaging",
+      "python_version": "3.10",
+      "current_version": "24.1",
+      "latest_version": "25.0",
+      "action": "update",
+      "note": "Package 'packaging' can be updated from 24.1 to 25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "packaging",
+      "python_version": "3.11",
+      "current_version": "24.1",
+      "latest_version": "25.0",
+      "action": "update",
+      "note": "Package 'packaging' can be updated from 24.1 to 25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "packaging",
+      "python_version": "3.12",
+      "current_version": "24.1",
+      "latest_version": "25.0",
+      "action": "update",
+      "note": "Package 'packaging' can be updated from 24.1 to 25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "packaging",
+      "python_version": "3.13",
+      "current_version": "24.1",
+      "latest_version": "25.0",
+      "action": "update",
+      "note": "Package 'packaging' can be updated from 24.1 to 25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psutil",
+      "python_version": "3.10",
+      "current_version": "5.0.0",
+      "latest_version": "7.1.3",
+      "action": "update",
+      "note": "Package 'psutil' can be updated from 5.0.0 to 7.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psutil",
+      "python_version": "3.11",
+      "current_version": "5.0.0",
+      "latest_version": "7.1.3",
+      "action": "update",
+      "note": "Package 'psutil' can be updated from 5.0.0 to 7.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psutil",
+      "python_version": "3.12",
+      "current_version": "5.0.0",
+      "latest_version": "7.1.3",
+      "action": "update",
+      "note": "Package 'psutil' can be updated from 5.0.0 to 7.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "psutil",
+      "python_version": "3.13",
+      "current_version": "5.0.0",
+      "latest_version": "7.1.3",
+      "action": "update",
+      "note": "Package 'psutil' can be updated from 5.0.0 to 7.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pydantic",
+      "python_version": "3.10",
+      "current_version": "2.0",
+      "latest_version": "2.12.5",
+      "action": "update",
+      "note": "Package 'pydantic' can be updated from 2.0 to 2.12.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pydantic",
+      "python_version": "3.11",
+      "current_version": "2.0",
+      "latest_version": "2.12.5",
+      "action": "update",
+      "note": "Package 'pydantic' can be updated from 2.0 to 2.12.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pydantic",
+      "python_version": "3.12",
+      "current_version": "2.0",
+      "latest_version": "2.12.5",
+      "action": "update",
+      "note": "Package 'pydantic' can be updated from 2.0 to 2.12.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pydantic",
+      "python_version": "3.13",
+      "current_version": "2.0",
+      "latest_version": "2.12.5",
+      "action": "update",
+      "note": "Package 'pydantic' can be updated from 2.0 to 2.12.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_dateutil",
+      "python_version": "3.10",
+      "current_version": "2.8.1",
+      "latest_version": "2.9.0.post0",
+      "action": "update",
+      "note": "Package 'python_dateutil' can be updated from 2.8.1 to 2.9.0.post0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_dateutil",
+      "python_version": "3.11",
+      "current_version": "2.8.1",
+      "latest_version": "2.9.0.post0",
+      "action": "update",
+      "note": "Package 'python_dateutil' can be updated from 2.8.1 to 2.9.0.post0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_dateutil",
+      "python_version": "3.12",
+      "current_version": "2.8.1",
+      "latest_version": "2.9.0.post0",
+      "action": "update",
+      "note": "Package 'python_dateutil' can be updated from 2.8.1 to 2.9.0.post0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_dateutil",
+      "python_version": "3.13",
+      "current_version": "2.8.1",
+      "latest_version": "2.9.0.post0",
+      "action": "update",
+      "note": "Package 'python_dateutil' can be updated from 2.8.1 to 2.9.0.post0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyyaml",
+      "python_version": "3.10",
+      "current_version": "6.0.1",
+      "latest_version": "6.0.3",
+      "action": "update",
+      "note": "Package 'pyyaml' can be updated from 6.0.1 to 6.0.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyyaml",
+      "python_version": "3.11",
+      "current_version": "6.0.1",
+      "latest_version": "6.0.3",
+      "action": "update",
+      "note": "Package 'pyyaml' can be updated from 6.0.1 to 6.0.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyyaml",
+      "python_version": "3.12",
+      "current_version": "6.0.1",
+      "latest_version": "6.0.3",
+      "action": "update",
+      "note": "Package 'pyyaml' can be updated from 6.0.1 to 6.0.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyyaml",
+      "python_version": "3.13",
+      "current_version": "6.0.1",
+      "latest_version": "6.0.3",
+      "action": "update",
+      "note": "Package 'pyyaml' can be updated from 6.0.1 to 6.0.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.10",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.11",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.12",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.13",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.10",
+      "current_version": "70.0.0",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 70.0.0 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.11",
+      "current_version": "70.0.0",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 70.0.0 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.12",
+      "current_version": "70.0.0",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 70.0.0 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "setuptools",
+      "python_version": "3.13",
+      "current_version": "70.0.0",
+      "latest_version": "80.9.0",
+      "action": "update",
+      "note": "Package 'setuptools' can be updated from 70.0.0 to 80.9.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "alembic",
+      "python_version": "3.10",
+      "current_version": "1.8.1",
+      "latest_version": "1.17.2",
+      "action": "update",
+      "note": "Package 'alembic' can be updated from 1.8.1 to 1.17.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "alembic",
+      "python_version": "3.11",
+      "current_version": "1.8.1",
+      "latest_version": "1.17.2",
+      "action": "update",
+      "note": "Package 'alembic' can be updated from 1.8.1 to 1.17.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "alembic",
+      "python_version": "3.12",
+      "current_version": "1.8.1",
+      "latest_version": "1.17.2",
+      "action": "update",
+      "note": "Package 'alembic' can be updated from 1.8.1 to 1.17.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "alembic",
+      "python_version": "3.13",
+      "current_version": "1.8.1",
+      "latest_version": "1.17.2",
+      "action": "update",
+      "note": "Package 'alembic' can be updated from 1.8.1 to 1.17.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bcrypt",
+      "python_version": "3.10",
+      "current_version": "4.0.1",
+      "latest_version": "5.0.0",
+      "action": "update",
+      "note": "Package 'bcrypt' can be updated from 4.0.1 to 5.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bcrypt",
+      "python_version": "3.11",
+      "current_version": "4.0.1",
+      "latest_version": "5.0.0",
+      "action": "update",
+      "note": "Package 'bcrypt' can be updated from 4.0.1 to 5.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bcrypt",
+      "python_version": "3.12",
+      "current_version": "4.0.1",
+      "latest_version": "5.0.0",
+      "action": "update",
+      "note": "Package 'bcrypt' can be updated from 4.0.1 to 5.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bcrypt",
+      "python_version": "3.13",
+      "current_version": "4.0.1",
+      "latest_version": "5.0.0",
+      "action": "update",
+      "note": "Package 'bcrypt' can be updated from 4.0.1 to 5.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "passlib",
+      "python_version": "3.10",
+      "current_version": "=1.7.4",
+      "latest_version": "1.7.4",
+      "action": "none",
+      "note": "Package 'passlib' is up to date at version =1.7.4 (latest: 1.7.4) for Python 3.10."
+    },
+    {
+      "package": "passlib",
+      "python_version": "3.11",
+      "current_version": "=1.7.4",
+      "latest_version": "1.7.4",
+      "action": "none",
+      "note": "Package 'passlib' is up to date at version =1.7.4 (latest: 1.7.4) for Python 3.11."
+    },
+    {
+      "package": "passlib",
+      "python_version": "3.12",
+      "current_version": "=1.7.4",
+      "latest_version": "1.7.4",
+      "action": "none",
+      "note": "Package 'passlib' is up to date at version =1.7.4 (latest: 1.7.4) for Python 3.12."
+    },
+    {
+      "package": "passlib",
+      "python_version": "3.13",
+      "current_version": "=1.7.4",
+      "latest_version": "1.7.4",
+      "action": "none",
+      "note": "Package 'passlib' is up to date at version =1.7.4 (latest: 1.7.4) for Python 3.13."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.10",
+      "current_version": "1.1.1",
+      "latest_version": "1.1.2",
+      "action": "update",
+      "note": "Package 'pymysql' can be updated from 1.1.1 to 1.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.11",
+      "current_version": "1.1.1",
+      "latest_version": "1.1.2",
+      "action": "update",
+      "note": "Package 'pymysql' can be updated from 1.1.1 to 1.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.12",
+      "current_version": "1.1.1",
+      "latest_version": "1.1.2",
+      "action": "update",
+      "note": "Package 'pymysql' can be updated from 1.1.1 to 1.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pymysql",
+      "python_version": "3.13",
+      "current_version": "1.1.1",
+      "latest_version": "1.1.2",
+      "action": "update",
+      "note": "Package 'pymysql' can be updated from 1.1.1 to 1.1.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.10",
+      "current_version": "2.0.0",
+      "latest_version": "2.0.44",
+      "action": "update",
+      "note": "Package 'sqlalchemy' can be updated from 2.0.0 to 2.0.44. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.11",
+      "current_version": "2.0.0",
+      "latest_version": "2.0.44",
+      "action": "update",
+      "note": "Package 'sqlalchemy' can be updated from 2.0.0 to 2.0.44. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.12",
+      "current_version": "2.0.0",
+      "latest_version": "2.0.44",
+      "action": "update",
+      "note": "Package 'sqlalchemy' can be updated from 2.0.0 to 2.0.44. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy",
+      "python_version": "3.13",
+      "current_version": "2.0.0",
+      "latest_version": "2.0.44",
+      "action": "update",
+      "note": "Package 'sqlalchemy' can be updated from 2.0.0 to 2.0.44. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlalchemy_utils",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.42.0",
+      "action": "none",
+      "note": "Package 'sqlalchemy_utils' has no version constraint specified (accepts any version). Latest available version is 0.42.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy_utils",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.42.0",
+      "action": "none",
+      "note": "Package 'sqlalchemy_utils' has no version constraint specified (accepts any version). Latest available version is 0.42.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy_utils",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.42.0",
+      "action": "none",
+      "note": "Package 'sqlalchemy_utils' has no version constraint specified (accepts any version). Latest available version is 0.42.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlalchemy_utils",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.42.0",
+      "action": "none",
+      "note": "Package 'sqlalchemy_utils' has no version constraint specified (accepts any version). Latest available version is 0.42.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "sqlmodel",
+      "python_version": "3.10",
+      "current_version": "0.0.18",
+      "latest_version": "0.0.27",
+      "action": "update",
+      "note": "Package 'sqlmodel' can be updated from 0.0.18 to 0.0.27. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlmodel",
+      "python_version": "3.11",
+      "current_version": "0.0.18",
+      "latest_version": "0.0.27",
+      "action": "update",
+      "note": "Package 'sqlmodel' can be updated from 0.0.18 to 0.0.27. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlmodel",
+      "python_version": "3.12",
+      "current_version": "0.0.18",
+      "latest_version": "0.0.27",
+      "action": "update",
+      "note": "Package 'sqlmodel' can be updated from 0.0.18 to 0.0.27. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sqlmodel",
+      "python_version": "3.13",
+      "current_version": "0.0.18",
+      "latest_version": "0.0.27",
+      "action": "update",
+      "note": "Package 'sqlmodel' can be updated from 0.0.18 to 0.0.27. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "zenml",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.92.0",
+      "action": "none",
+      "note": "Package 'zenml' has no version constraint specified (accepts any version). Latest available version is 0.92.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "zenml",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.92.0",
+      "action": "none",
+      "note": "Package 'zenml' has no version constraint specified (accepts any version). Latest available version is 0.92.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "zenml",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.92.0",
+      "action": "none",
+      "note": "Package 'zenml' has no version constraint specified (accepts any version). Latest available version is 0.92.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "zenml",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.92.0",
+      "action": "none",
+      "note": "Package 'zenml' has no version constraint specified (accepts any version). Latest available version is 0.92.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "fastapi",
+      "python_version": "3.10",
+      "current_version": "0.100",
+      "latest_version": "0.124.0",
+      "action": "update",
+      "note": "Package 'fastapi' can be updated from 0.100 to 0.124.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "fastapi",
+      "python_version": "3.11",
+      "current_version": "0.100",
+      "latest_version": "0.124.0",
+      "action": "update",
+      "note": "Package 'fastapi' can be updated from 0.100 to 0.124.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "fastapi",
+      "python_version": "3.12",
+      "current_version": "0.100",
+      "latest_version": "0.124.0",
+      "action": "update",
+      "note": "Package 'fastapi' can be updated from 0.100 to 0.124.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "fastapi",
+      "python_version": "3.13",
+      "current_version": "0.100",
+      "latest_version": "0.124.0",
+      "action": "update",
+      "note": "Package 'fastapi' can be updated from 0.100 to 0.124.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uvicorn",
+      "python_version": "3.10",
+      "current_version": "0.17.5",
+      "latest_version": "0.38.0",
+      "action": "update",
+      "note": "Package 'uvicorn' can be updated from 0.17.5 to 0.38.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uvicorn",
+      "python_version": "3.11",
+      "current_version": "0.17.5",
+      "latest_version": "0.38.0",
+      "action": "update",
+      "note": "Package 'uvicorn' can be updated from 0.17.5 to 0.38.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uvicorn",
+      "python_version": "3.12",
+      "current_version": "0.17.5",
+      "latest_version": "0.38.0",
+      "action": "update",
+      "note": "Package 'uvicorn' can be updated from 0.17.5 to 0.38.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uvicorn",
+      "python_version": "3.13",
+      "current_version": "0.17.5",
+      "latest_version": "0.38.0",
+      "action": "update",
+      "note": "Package 'uvicorn' can be updated from 0.17.5 to 0.38.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_multipart",
+      "python_version": "3.10",
+      "current_version": "=0.0.9",
+      "latest_version": "0.0.20",
+      "action": "update",
+      "note": "Package 'python_multipart' can be updated from =0.0.9 to 0.0.20. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_multipart",
+      "python_version": "3.11",
+      "current_version": "=0.0.9",
+      "latest_version": "0.0.20",
+      "action": "update",
+      "note": "Package 'python_multipart' can be updated from =0.0.9 to 0.0.20. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_multipart",
+      "python_version": "3.12",
+      "current_version": "=0.0.9",
+      "latest_version": "0.0.20",
+      "action": "update",
+      "note": "Package 'python_multipart' can be updated from =0.0.9 to 0.0.20. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "python_multipart",
+      "python_version": "3.13",
+      "current_version": "=0.0.9",
+      "latest_version": "0.0.20",
+      "action": "update",
+      "note": "Package 'python_multipart' can be updated from =0.0.9 to 0.0.20. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyjwt",
+      "python_version": "3.10",
+      "current_version": "2.7.",
+      "latest_version": "2.10.1",
+      "action": "update",
+      "note": "Package 'pyjwt' can be updated from 2.7. to 2.10.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyjwt",
+      "python_version": "3.11",
+      "current_version": "2.7.",
+      "latest_version": "2.10.1",
+      "action": "update",
+      "note": "Package 'pyjwt' can be updated from 2.7. to 2.10.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyjwt",
+      "python_version": "3.12",
+      "current_version": "2.7.",
+      "latest_version": "2.10.1",
+      "action": "update",
+      "note": "Package 'pyjwt' can be updated from 2.7. to 2.10.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyjwt",
+      "python_version": "3.13",
+      "current_version": "2.7.",
+      "latest_version": "2.10.1",
+      "action": "update",
+      "note": "Package 'pyjwt' can be updated from 2.7. to 2.10.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "fastapi_utils",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.8.0",
+      "action": "none",
+      "note": "Package 'fastapi_utils' has no version constraint specified (accepts any version). Latest available version is 0.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "fastapi_utils",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.8.0",
+      "action": "none",
+      "note": "Package 'fastapi_utils' has no version constraint specified (accepts any version). Latest available version is 0.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "fastapi_utils",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.8.0",
+      "action": "none",
+      "note": "Package 'fastapi_utils' has no version constraint specified (accepts any version). Latest available version is 0.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "fastapi_utils",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.8.0",
+      "action": "none",
+      "note": "Package 'fastapi_utils' has no version constraint specified (accepts any version). Latest available version is 0.8.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "orjson",
+      "python_version": "3.10",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.5",
+      "action": "update",
+      "note": "Package 'orjson' can be updated from =3.10.0 to 3.11.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "orjson",
+      "python_version": "3.11",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.5",
+      "action": "update",
+      "note": "Package 'orjson' can be updated from =3.10.0 to 3.11.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "orjson",
+      "python_version": "3.12",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.5",
+      "action": "update",
+      "note": "Package 'orjson' can be updated from =3.10.0 to 3.11.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "orjson",
+      "python_version": "3.13",
+      "current_version": "=3.10.0",
+      "latest_version": "3.11.5",
+      "action": "update",
+      "note": "Package 'orjson' can be updated from =3.10.0 to 3.11.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "jinja2",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "3.1.6",
+      "action": "none",
+      "note": "Package 'jinja2' has no version constraint specified (accepts any version). Latest available version is 3.1.6. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "jinja2",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "3.1.6",
+      "action": "none",
+      "note": "Package 'jinja2' has no version constraint specified (accepts any version). Latest available version is 3.1.6. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "jinja2",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "3.1.6",
+      "action": "none",
+      "note": "Package 'jinja2' has no version constraint specified (accepts any version). Latest available version is 3.1.6. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "jinja2",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "3.1.6",
+      "action": "none",
+      "note": "Package 'jinja2' has no version constraint specified (accepts any version). Latest available version is 3.1.6. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "ipinfo",
+      "python_version": "3.10",
+      "current_version": "4.4.3",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'ipinfo' can be updated from 4.4.3 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ipinfo",
+      "python_version": "3.11",
+      "current_version": "4.4.3",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'ipinfo' can be updated from 4.4.3 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ipinfo",
+      "python_version": "3.12",
+      "current_version": "4.4.3",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'ipinfo' can be updated from 4.4.3 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ipinfo",
+      "python_version": "3.13",
+      "current_version": "4.4.3",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'ipinfo' can be updated from 4.4.3 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "secure",
+      "python_version": "3.10",
+      "current_version": "=1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'secure' is up to date at version =1.0.1 (latest: 1.0.1) for Python 3.10."
+    },
+    {
+      "package": "secure",
+      "python_version": "3.11",
+      "current_version": "=1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'secure' is up to date at version =1.0.1 (latest: 1.0.1) for Python 3.11."
+    },
+    {
+      "package": "secure",
+      "python_version": "3.12",
+      "current_version": "=1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'secure' is up to date at version =1.0.1 (latest: 1.0.1) for Python 3.12."
+    },
+    {
+      "package": "secure",
+      "python_version": "3.13",
+      "current_version": "=1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'secure' is up to date at version =1.0.1 (latest: 1.0.1) for Python 3.13."
+    },
+    {
+      "package": "tldextract",
+      "python_version": "3.10",
+      "current_version": "=5.1.0",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'tldextract' can be updated from =5.1.0 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "tldextract",
+      "python_version": "3.11",
+      "current_version": "=5.1.0",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'tldextract' can be updated from =5.1.0 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "tldextract",
+      "python_version": "3.12",
+      "current_version": "=5.1.0",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'tldextract' can be updated from =5.1.0 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "tldextract",
+      "python_version": "3.13",
+      "current_version": "=5.1.0",
+      "latest_version": "5.3.0",
+      "action": "update",
+      "note": "Package 'tldextract' can be updated from =5.1.0 to 5.3.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "itsdangerous",
+      "python_version": "3.10",
+      "current_version": "=2.2.0",
+      "latest_version": "2.2.0",
+      "action": "none",
+      "note": "Package 'itsdangerous' is up to date at version =2.2.0 (latest: 2.2.0) for Python 3.10."
+    },
+    {
+      "package": "itsdangerous",
+      "python_version": "3.11",
+      "current_version": "=2.2.0",
+      "latest_version": "2.2.0",
+      "action": "none",
+      "note": "Package 'itsdangerous' is up to date at version =2.2.0 (latest: 2.2.0) for Python 3.11."
+    },
+    {
+      "package": "itsdangerous",
+      "python_version": "3.12",
+      "current_version": "=2.2.0",
+      "latest_version": "2.2.0",
+      "action": "none",
+      "note": "Package 'itsdangerous' is up to date at version =2.2.0 (latest: 2.2.0) for Python 3.12."
+    },
+    {
+      "package": "itsdangerous",
+      "python_version": "3.13",
+      "current_version": "=2.2.0",
+      "latest_version": "2.2.0",
+      "action": "none",
+      "note": "Package 'itsdangerous' is up to date at version =2.2.0 (latest: 2.2.0) for Python 3.13."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.10",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.11",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.12",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "rich",
+      "python_version": "3.13",
+      "current_version": "12.0.0",
+      "latest_version": "14.2.0",
+      "action": "update",
+      "note": "Package 'rich' can be updated from 12.0.0 to 14.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "copier",
+      "python_version": "3.10",
+      "current_version": "8.1.0",
+      "latest_version": "9.11.0",
+      "action": "update",
+      "note": "Package 'copier' can be updated from 8.1.0 to 9.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "copier",
+      "python_version": "3.11",
+      "current_version": "8.1.0",
+      "latest_version": "9.11.0",
+      "action": "update",
+      "note": "Package 'copier' can be updated from 8.1.0 to 9.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "copier",
+      "python_version": "3.12",
+      "current_version": "8.1.0",
+      "latest_version": "9.11.0",
+      "action": "update",
+      "note": "Package 'copier' can be updated from 8.1.0 to 9.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "copier",
+      "python_version": "3.13",
+      "current_version": "8.1.0",
+      "latest_version": "9.11.0",
+      "action": "update",
+      "note": "Package 'copier' can be updated from 8.1.0 to 9.11.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "jinja2_time",
+      "python_version": "3.10",
+      "current_version": "0.2.0",
+      "latest_version": "0.2.0",
+      "action": "none",
+      "note": "Package 'jinja2_time' is up to date at version 0.2.0 (latest: 0.2.0) for Python 3.10."
+    },
+    {
+      "package": "jinja2_time",
+      "python_version": "3.11",
+      "current_version": "0.2.0",
+      "latest_version": "0.2.0",
+      "action": "none",
+      "note": "Package 'jinja2_time' is up to date at version 0.2.0 (latest: 0.2.0) for Python 3.11."
+    },
+    {
+      "package": "jinja2_time",
+      "python_version": "3.12",
+      "current_version": "0.2.0",
+      "latest_version": "0.2.0",
+      "action": "none",
+      "note": "Package 'jinja2_time' is up to date at version 0.2.0 (latest: 0.2.0) for Python 3.12."
+    },
+    {
+      "package": "jinja2_time",
+      "python_version": "3.13",
+      "current_version": "0.2.0",
+      "latest_version": "0.2.0",
+      "action": "none",
+      "note": "Package 'jinja2_time' is up to date at version 0.2.0 (latest: 0.2.0) for Python 3.13."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.10",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.11",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.12",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.13",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pyyaml_include",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.2",
+      "action": "none",
+      "note": "Package 'pyyaml_include' has no version constraint specified (accepts any version). Latest available version is 2.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyyaml_include",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.2",
+      "action": "none",
+      "note": "Package 'pyyaml_include' has no version constraint specified (accepts any version). Latest available version is 2.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyyaml_include",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.2",
+      "action": "none",
+      "note": "Package 'pyyaml_include' has no version constraint specified (accepts any version). Latest available version is 2.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyyaml_include",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.2",
+      "action": "none",
+      "note": "Package 'pyyaml_include' has no version constraint specified (accepts any version). Latest available version is 2.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "python_terraform",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "0.10.1",
+      "action": "none",
+      "note": "Package 'python_terraform' has no version constraint specified (accepts any version). Latest available version is 0.10.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "python_terraform",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "0.10.1",
+      "action": "none",
+      "note": "Package 'python_terraform' has no version constraint specified (accepts any version). Latest available version is 0.10.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "python_terraform",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "0.10.1",
+      "action": "none",
+      "note": "Package 'python_terraform' has no version constraint specified (accepts any version). Latest available version is 0.10.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "python_terraform",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "0.10.1",
+      "action": "none",
+      "note": "Package 'python_terraform' has no version constraint specified (accepts any version). Latest available version is 0.10.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.10",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.11",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.12",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.13",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_secret_manager",
+      "python_version": "3.10",
+      "current_version": "2.12.5",
+      "latest_version": "2.25.0",
+      "action": "update",
+      "note": "Package 'google_cloud_secret_manager' can be updated from 2.12.5 to 2.25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_secret_manager",
+      "python_version": "3.11",
+      "current_version": "2.12.5",
+      "latest_version": "2.25.0",
+      "action": "update",
+      "note": "Package 'google_cloud_secret_manager' can be updated from 2.12.5 to 2.25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_secret_manager",
+      "python_version": "3.12",
+      "current_version": "2.12.5",
+      "latest_version": "2.25.0",
+      "action": "update",
+      "note": "Package 'google_cloud_secret_manager' can be updated from 2.12.5 to 2.25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_secret_manager",
+      "python_version": "3.13",
+      "current_version": "2.12.5",
+      "latest_version": "2.25.0",
+      "action": "update",
+      "note": "Package 'google_cloud_secret_manager' can be updated from 2.12.5 to 2.25.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.10",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.11",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.12",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.13",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_keyvault_secrets",
+      "python_version": "3.10",
+      "current_version": "4.0.0",
+      "latest_version": "4.10.0",
+      "action": "update",
+      "note": "Package 'azure_keyvault_secrets' can be updated from 4.0.0 to 4.10.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_keyvault_secrets",
+      "python_version": "3.11",
+      "current_version": "4.0.0",
+      "latest_version": "4.10.0",
+      "action": "update",
+      "note": "Package 'azure_keyvault_secrets' can be updated from 4.0.0 to 4.10.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_keyvault_secrets",
+      "python_version": "3.12",
+      "current_version": "4.0.0",
+      "latest_version": "4.10.0",
+      "action": "update",
+      "note": "Package 'azure_keyvault_secrets' can be updated from 4.0.0 to 4.10.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_keyvault_secrets",
+      "python_version": "3.13",
+      "current_version": "4.0.0",
+      "latest_version": "4.10.0",
+      "action": "update",
+      "note": "Package 'azure_keyvault_secrets' can be updated from 4.0.0 to 4.10.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hvac",
+      "python_version": "3.10",
+      "current_version": "0.11.2",
+      "latest_version": "2.4.0",
+      "action": "update",
+      "note": "Package 'hvac' can be updated from 0.11.2 to 2.4.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hvac",
+      "python_version": "3.11",
+      "current_version": "0.11.2",
+      "latest_version": "2.4.0",
+      "action": "update",
+      "note": "Package 'hvac' can be updated from 0.11.2 to 2.4.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hvac",
+      "python_version": "3.12",
+      "current_version": "0.11.2",
+      "latest_version": "2.4.0",
+      "action": "update",
+      "note": "Package 'hvac' can be updated from 0.11.2 to 2.4.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hvac",
+      "python_version": "3.13",
+      "current_version": "0.11.2",
+      "latest_version": "2.4.0",
+      "action": "update",
+      "note": "Package 'hvac' can be updated from 0.11.2 to 2.4.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "s3fs",
+      "python_version": "3.10",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 's3fs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "s3fs",
+      "python_version": "3.11",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 's3fs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "s3fs",
+      "python_version": "3.12",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 's3fs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "s3fs",
+      "python_version": "3.13",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 's3fs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "gcsfs",
+      "python_version": "3.10",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 'gcsfs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "gcsfs",
+      "python_version": "3.11",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 'gcsfs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "gcsfs",
+      "python_version": "3.12",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 'gcsfs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "gcsfs",
+      "python_version": "3.13",
+      "current_version": "2022.11.0",
+      "latest_version": "2025.12.0",
+      "action": "update",
+      "note": "Package 'gcsfs' can be updated from 2022.11.0 to 2025.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "adlfs",
+      "python_version": "3.10",
+      "current_version": "2021.10.0",
+      "latest_version": "2025.8.0",
+      "action": "update",
+      "note": "Package 'adlfs' can be updated from 2021.10.0 to 2025.8.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "adlfs",
+      "python_version": "3.11",
+      "current_version": "2021.10.0",
+      "latest_version": "2025.8.0",
+      "action": "update",
+      "note": "Package 'adlfs' can be updated from 2021.10.0 to 2025.8.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "adlfs",
+      "python_version": "3.12",
+      "current_version": "2021.10.0",
+      "latest_version": "2025.8.0",
+      "action": "update",
+      "note": "Package 'adlfs' can be updated from 2021.10.0 to 2025.8.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "adlfs",
+      "python_version": "3.13",
+      "current_version": "2021.10.0",
+      "latest_version": "2025.8.0",
+      "action": "update",
+      "note": "Package 'adlfs' can be updated from 2021.10.0 to 2025.8.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.10",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.11",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.12",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.13",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.10",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.11",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.12",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "boto3",
+      "python_version": "3.13",
+      "current_version": "1.16.0",
+      "latest_version": "1.42.4",
+      "action": "update",
+      "note": "Package 'boto3' can be updated from 1.16.0 to 1.42.4. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.10",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.11",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.12",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.13",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "aws_profile_manager",
+      "python_version": "3.10",
+      "current_version": "0.5.0",
+      "latest_version": "0.7.3",
+      "action": "update",
+      "note": "Package 'aws_profile_manager' can be updated from 0.5.0 to 0.7.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "aws_profile_manager",
+      "python_version": "3.11",
+      "current_version": "0.5.0",
+      "latest_version": "0.7.3",
+      "action": "update",
+      "note": "Package 'aws_profile_manager' can be updated from 0.5.0 to 0.7.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "aws_profile_manager",
+      "python_version": "3.12",
+      "current_version": "0.5.0",
+      "latest_version": "0.7.3",
+      "action": "update",
+      "note": "Package 'aws_profile_manager' can be updated from 0.5.0 to 0.7.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "aws_profile_manager",
+      "python_version": "3.13",
+      "current_version": "0.5.0",
+      "latest_version": "0.7.3",
+      "action": "update",
+      "note": "Package 'aws_profile_manager' can be updated from 0.5.0 to 0.7.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_container",
+      "python_version": "3.10",
+      "current_version": "2.21.0",
+      "latest_version": "2.61.0",
+      "action": "update",
+      "note": "Package 'google_cloud_container' can be updated from 2.21.0 to 2.61.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_container",
+      "python_version": "3.11",
+      "current_version": "2.21.0",
+      "latest_version": "2.61.0",
+      "action": "update",
+      "note": "Package 'google_cloud_container' can be updated from 2.21.0 to 2.61.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_container",
+      "python_version": "3.12",
+      "current_version": "2.21.0",
+      "latest_version": "2.61.0",
+      "action": "update",
+      "note": "Package 'google_cloud_container' can be updated from 2.21.0 to 2.61.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_container",
+      "python_version": "3.13",
+      "current_version": "2.21.0",
+      "latest_version": "2.61.0",
+      "action": "update",
+      "note": "Package 'google_cloud_container' can be updated from 2.21.0 to 2.61.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_storage",
+      "python_version": "3.10",
+      "current_version": "2.9.0",
+      "latest_version": "3.6.0",
+      "action": "update",
+      "note": "Package 'google_cloud_storage' can be updated from 2.9.0 to 3.6.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_storage",
+      "python_version": "3.11",
+      "current_version": "2.9.0",
+      "latest_version": "3.6.0",
+      "action": "update",
+      "note": "Package 'google_cloud_storage' can be updated from 2.9.0 to 3.6.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_storage",
+      "python_version": "3.12",
+      "current_version": "2.9.0",
+      "latest_version": "3.6.0",
+      "action": "update",
+      "note": "Package 'google_cloud_storage' can be updated from 2.9.0 to 3.6.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_storage",
+      "python_version": "3.13",
+      "current_version": "2.9.0",
+      "latest_version": "3.6.0",
+      "action": "update",
+      "note": "Package 'google_cloud_storage' can be updated from 2.9.0 to 3.6.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_artifact_registry",
+      "python_version": "3.10",
+      "current_version": "1.11.3",
+      "latest_version": "1.18.0",
+      "action": "update",
+      "note": "Package 'google_cloud_artifact_registry' can be updated from 1.11.3 to 1.18.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_artifact_registry",
+      "python_version": "3.11",
+      "current_version": "1.11.3",
+      "latest_version": "1.18.0",
+      "action": "update",
+      "note": "Package 'google_cloud_artifact_registry' can be updated from 1.11.3 to 1.18.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_artifact_registry",
+      "python_version": "3.12",
+      "current_version": "1.11.3",
+      "latest_version": "1.18.0",
+      "action": "update",
+      "note": "Package 'google_cloud_artifact_registry' can be updated from 1.11.3 to 1.18.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_artifact_registry",
+      "python_version": "3.13",
+      "current_version": "1.11.3",
+      "latest_version": "1.18.0",
+      "action": "update",
+      "note": "Package 'google_cloud_artifact_registry' can be updated from 1.11.3 to 1.18.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.10",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.11",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.12",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.13",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.10",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.11",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.12",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_identity",
+      "python_version": "3.13",
+      "current_version": "1.4.0",
+      "latest_version": "1.25.1",
+      "action": "update",
+      "note": "Package 'azure_identity' can be updated from 1.4.0 to 1.25.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerservice",
+      "python_version": "3.10",
+      "current_version": "20.0.0",
+      "latest_version": "40.2.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerservice' can be updated from 20.0.0 to 40.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerservice",
+      "python_version": "3.11",
+      "current_version": "20.0.0",
+      "latest_version": "40.2.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerservice' can be updated from 20.0.0 to 40.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerservice",
+      "python_version": "3.12",
+      "current_version": "20.0.0",
+      "latest_version": "40.2.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerservice' can be updated from 20.0.0 to 40.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerservice",
+      "python_version": "3.13",
+      "current_version": "20.0.0",
+      "latest_version": "40.2.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerservice' can be updated from 20.0.0 to 40.2.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerregistry",
+      "python_version": "3.10",
+      "current_version": "10.0.0",
+      "latest_version": "14.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerregistry' can be updated from 10.0.0 to 14.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerregistry",
+      "python_version": "3.11",
+      "current_version": "10.0.0",
+      "latest_version": "14.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerregistry' can be updated from 10.0.0 to 14.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerregistry",
+      "python_version": "3.12",
+      "current_version": "10.0.0",
+      "latest_version": "14.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerregistry' can be updated from 10.0.0 to 14.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_containerregistry",
+      "python_version": "3.13",
+      "current_version": "10.0.0",
+      "latest_version": "14.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_containerregistry' can be updated from 10.0.0 to 14.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_storage",
+      "python_version": "3.10",
+      "current_version": "20.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_storage' can be updated from 20.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_storage",
+      "python_version": "3.11",
+      "current_version": "20.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_storage' can be updated from 20.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_storage",
+      "python_version": "3.12",
+      "current_version": "20.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_storage' can be updated from 20.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_storage",
+      "python_version": "3.13",
+      "current_version": "20.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_storage' can be updated from 20.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_storage_blob",
+      "python_version": "3.10",
+      "current_version": "12.0.0",
+      "latest_version": "12.27.1",
+      "action": "update",
+      "note": "Package 'azure_storage_blob' can be updated from 12.0.0 to 12.27.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_storage_blob",
+      "python_version": "3.11",
+      "current_version": "12.0.0",
+      "latest_version": "12.27.1",
+      "action": "update",
+      "note": "Package 'azure_storage_blob' can be updated from 12.0.0 to 12.27.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_storage_blob",
+      "python_version": "3.12",
+      "current_version": "12.0.0",
+      "latest_version": "12.27.1",
+      "action": "update",
+      "note": "Package 'azure_storage_blob' can be updated from 12.0.0 to 12.27.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_storage_blob",
+      "python_version": "3.13",
+      "current_version": "12.0.0",
+      "latest_version": "12.27.1",
+      "action": "update",
+      "note": "Package 'azure_storage_blob' can be updated from 12.0.0 to 12.27.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_resource",
+      "python_version": "3.10",
+      "current_version": "21.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_resource' can be updated from 21.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_resource",
+      "python_version": "3.11",
+      "current_version": "21.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_resource' can be updated from 21.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_resource",
+      "python_version": "3.12",
+      "current_version": "21.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_resource' can be updated from 21.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_mgmt_resource",
+      "python_version": "3.13",
+      "current_version": "21.0.0",
+      "latest_version": "24.0.0",
+      "action": "update",
+      "note": "Package 'azure_mgmt_resource' can be updated from 21.0.0 to 24.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.10",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.11",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.12",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kubernetes",
+      "python_version": "3.13",
+      "current_version": "18.20.0",
+      "latest_version": "34.1.0",
+      "action": "update",
+      "note": "Package 'kubernetes' can be updated from 18.20.0 to 34.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "requests",
+      "python_version": "3.10",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.5",
+      "action": "update",
+      "note": "Package 'requests' can be updated from 2.27.11 to 2.32.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "requests",
+      "python_version": "3.11",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.5",
+      "action": "update",
+      "note": "Package 'requests' can be updated from 2.27.11 to 2.32.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "requests",
+      "python_version": "3.12",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.5",
+      "action": "update",
+      "note": "Package 'requests' can be updated from 2.27.11 to 2.32.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "requests",
+      "python_version": "3.13",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.5",
+      "action": "update",
+      "note": "Package 'requests' can be updated from 2.27.11 to 2.32.5. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sagemaker",
+      "python_version": "3.10",
+      "current_version": "2.237.3",
+      "latest_version": "3.1.0",
+      "action": "update",
+      "note": "Package 'sagemaker' can be updated from 2.237.3 to 3.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sagemaker",
+      "python_version": "3.11",
+      "current_version": "2.237.3",
+      "latest_version": "3.1.0",
+      "action": "update",
+      "note": "Package 'sagemaker' can be updated from 2.237.3 to 3.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sagemaker",
+      "python_version": "3.12",
+      "current_version": "2.237.3",
+      "latest_version": "3.1.0",
+      "action": "update",
+      "note": "Package 'sagemaker' can be updated from 2.237.3 to 3.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "sagemaker",
+      "python_version": "3.13",
+      "current_version": "2.237.3",
+      "latest_version": "3.1.0",
+      "action": "update",
+      "note": "Package 'sagemaker' can be updated from 2.237.3 to 3.1.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_aiplatform",
+      "python_version": "3.10",
+      "current_version": "1.34.0",
+      "latest_version": "1.129.0",
+      "action": "update",
+      "note": "Package 'google_cloud_aiplatform' can be updated from 1.34.0 to 1.129.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_aiplatform",
+      "python_version": "3.11",
+      "current_version": "1.34.0",
+      "latest_version": "1.129.0",
+      "action": "update",
+      "note": "Package 'google_cloud_aiplatform' can be updated from 1.34.0 to 1.129.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_aiplatform",
+      "python_version": "3.12",
+      "current_version": "1.34.0",
+      "latest_version": "1.129.0",
+      "action": "update",
+      "note": "Package 'google_cloud_aiplatform' can be updated from 1.34.0 to 1.129.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_aiplatform",
+      "python_version": "3.13",
+      "current_version": "1.34.0",
+      "latest_version": "1.129.0",
+      "action": "update",
+      "note": "Package 'google_cloud_aiplatform' can be updated from 1.34.0 to 1.129.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kfp",
+      "python_version": "3.10",
+      "current_version": "2.6.0",
+      "latest_version": "2.15.2",
+      "action": "update",
+      "note": "Package 'kfp' can be updated from 2.6.0 to 2.15.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kfp",
+      "python_version": "3.11",
+      "current_version": "2.6.0",
+      "latest_version": "2.15.2",
+      "action": "update",
+      "note": "Package 'kfp' can be updated from 2.6.0 to 2.15.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kfp",
+      "python_version": "3.12",
+      "current_version": "2.6.0",
+      "latest_version": "2.15.2",
+      "action": "update",
+      "note": "Package 'kfp' can be updated from 2.6.0 to 2.15.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "kfp",
+      "python_version": "3.13",
+      "current_version": "2.6.0",
+      "latest_version": "2.15.2",
+      "action": "update",
+      "note": "Package 'kfp' can be updated from 2.6.0 to 2.15.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_pipeline_components",
+      "python_version": "3.10",
+      "current_version": "2.19.0",
+      "latest_version": "2.22.0",
+      "action": "update",
+      "note": "Package 'google_cloud_pipeline_components' can be updated from 2.19.0 to 2.22.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_pipeline_components",
+      "python_version": "3.11",
+      "current_version": "2.19.0",
+      "latest_version": "2.22.0",
+      "action": "update",
+      "note": "Package 'google_cloud_pipeline_components' can be updated from 2.19.0 to 2.22.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_pipeline_components",
+      "python_version": "3.12",
+      "current_version": "2.19.0",
+      "latest_version": "2.22.0",
+      "action": "update",
+      "note": "Package 'google_cloud_pipeline_components' can be updated from 2.19.0 to 2.22.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "google_cloud_pipeline_components",
+      "python_version": "3.13",
+      "current_version": "2.19.0",
+      "latest_version": "2.22.0",
+      "action": "update",
+      "note": "Package 'google_cloud_pipeline_components' can be updated from 2.19.0 to 2.22.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_ai_ml",
+      "python_version": "3.10",
+      "current_version": "1.23.1",
+      "latest_version": "1.30.0",
+      "action": "update",
+      "note": "Package 'azure_ai_ml' can be updated from 1.23.1 to 1.30.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_ai_ml",
+      "python_version": "3.11",
+      "current_version": "1.23.1",
+      "latest_version": "1.30.0",
+      "action": "update",
+      "note": "Package 'azure_ai_ml' can be updated from 1.23.1 to 1.30.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_ai_ml",
+      "python_version": "3.12",
+      "current_version": "1.23.1",
+      "latest_version": "1.30.0",
+      "action": "update",
+      "note": "Package 'azure_ai_ml' can be updated from 1.23.1 to 1.30.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "azure_ai_ml",
+      "python_version": "3.13",
+      "current_version": "1.23.1",
+      "latest_version": "1.30.0",
+      "action": "update",
+      "note": "Package 'azure_ai_ml' can be updated from 1.23.1 to 1.30.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bandit",
+      "python_version": "3.10",
+      "current_version": "1.7.5",
+      "latest_version": "1.9.2",
+      "action": "update",
+      "note": "Package 'bandit' can be updated from 1.7.5 to 1.9.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bandit",
+      "python_version": "3.11",
+      "current_version": "1.7.5",
+      "latest_version": "1.9.2",
+      "action": "update",
+      "note": "Package 'bandit' can be updated from 1.7.5 to 1.9.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bandit",
+      "python_version": "3.12",
+      "current_version": "1.7.5",
+      "latest_version": "1.9.2",
+      "action": "update",
+      "note": "Package 'bandit' can be updated from 1.7.5 to 1.9.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "bandit",
+      "python_version": "3.13",
+      "current_version": "1.7.5",
+      "latest_version": "1.9.2",
+      "action": "update",
+      "note": "Package 'bandit' can be updated from 1.7.5 to 1.9.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.10",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.11",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.12",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "ruff",
+      "python_version": "3.13",
+      "current_version": "0.1.7",
+      "latest_version": "0.14.8",
+      "action": "update",
+      "note": "Package 'ruff' can be updated from 0.1.7 to 0.14.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "yamlfix",
+      "python_version": "3.10",
+      "current_version": "1.16.0",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'yamlfix' can be updated from 1.16.0 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "yamlfix",
+      "python_version": "3.11",
+      "current_version": "1.16.0",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'yamlfix' can be updated from 1.16.0 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "yamlfix",
+      "python_version": "3.12",
+      "current_version": "1.16.0",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'yamlfix' can be updated from 1.16.0 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "yamlfix",
+      "python_version": "3.13",
+      "current_version": "1.16.0",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'yamlfix' can be updated from 1.16.0 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "coverage",
+      "python_version": "3.10",
+      "current_version": "5.5",
+      "latest_version": "7.12.0",
+      "action": "update",
+      "note": "Package 'coverage' can be updated from 5.5 to 7.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "coverage",
+      "python_version": "3.11",
+      "current_version": "5.5",
+      "latest_version": "7.12.0",
+      "action": "update",
+      "note": "Package 'coverage' can be updated from 5.5 to 7.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "coverage",
+      "python_version": "3.12",
+      "current_version": "5.5",
+      "latest_version": "7.12.0",
+      "action": "update",
+      "note": "Package 'coverage' can be updated from 5.5 to 7.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "coverage",
+      "python_version": "3.13",
+      "current_version": "5.5",
+      "latest_version": "7.12.0",
+      "action": "update",
+      "note": "Package 'coverage' can be updated from 5.5 to 7.12.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.10",
+      "current_version": "7.4.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.4.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.11",
+      "current_version": "7.4.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.4.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.12",
+      "current_version": "7.4.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.4.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest",
+      "python_version": "3.13",
+      "current_version": "7.4.0",
+      "latest_version": "9.0.2",
+      "action": "update",
+      "note": "Package 'pytest' can be updated from 7.4.0 to 9.0.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.10",
+      "current_version": "1.18.1",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.18.1 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.11",
+      "current_version": "1.18.1",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.18.1 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.12",
+      "current_version": "1.18.1",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.18.1 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mypy",
+      "python_version": "3.13",
+      "current_version": "1.18.1",
+      "latest_version": "1.19.0",
+      "action": "update",
+      "note": "Package 'mypy' can be updated from 1.18.1 to 1.19.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pre_commit",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "4.5.0",
+      "action": "none",
+      "note": "Package 'pre_commit' has no version constraint specified (accepts any version). Latest available version is 4.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pre_commit",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "4.5.0",
+      "action": "none",
+      "note": "Package 'pre_commit' has no version constraint specified (accepts any version). Latest available version is 4.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pre_commit",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "4.5.0",
+      "action": "none",
+      "note": "Package 'pre_commit' has no version constraint specified (accepts any version). Latest available version is 4.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pre_commit",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "4.5.0",
+      "action": "none",
+      "note": "Package 'pre_commit' has no version constraint specified (accepts any version). Latest available version is 4.5.0. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "pyment",
+      "python_version": "3.10",
+      "current_version": "0.3.3",
+      "latest_version": "0.3.3",
+      "action": "none",
+      "note": "Package 'pyment' is up to date at version 0.3.3 (latest: 0.3.3) for Python 3.10."
+    },
+    {
+      "package": "pyment",
+      "python_version": "3.11",
+      "current_version": "0.3.3",
+      "latest_version": "0.3.3",
+      "action": "none",
+      "note": "Package 'pyment' is up to date at version 0.3.3 (latest: 0.3.3) for Python 3.11."
+    },
+    {
+      "package": "pyment",
+      "python_version": "3.12",
+      "current_version": "0.3.3",
+      "latest_version": "0.3.3",
+      "action": "none",
+      "note": "Package 'pyment' is up to date at version 0.3.3 (latest: 0.3.3) for Python 3.12."
+    },
+    {
+      "package": "pyment",
+      "python_version": "3.13",
+      "current_version": "0.3.3",
+      "latest_version": "0.3.3",
+      "action": "none",
+      "note": "Package 'pyment' is up to date at version 0.3.3 (latest: 0.3.3) for Python 3.13."
+    },
+    {
+      "package": "tox",
+      "python_version": "3.10",
+      "current_version": "3.24.3",
+      "latest_version": "4.32.0",
+      "action": "update",
+      "note": "Package 'tox' can be updated from 3.24.3 to 4.32.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "tox",
+      "python_version": "3.11",
+      "current_version": "3.24.3",
+      "latest_version": "4.32.0",
+      "action": "update",
+      "note": "Package 'tox' can be updated from 3.24.3 to 4.32.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "tox",
+      "python_version": "3.12",
+      "current_version": "3.24.3",
+      "latest_version": "4.32.0",
+      "action": "update",
+      "note": "Package 'tox' can be updated from 3.24.3 to 4.32.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "tox",
+      "python_version": "3.13",
+      "current_version": "3.24.3",
+      "latest_version": "4.32.0",
+      "action": "update",
+      "note": "Package 'tox' can be updated from 3.24.3 to 4.32.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hypothesis",
+      "python_version": "3.10",
+      "current_version": "6.43.1",
+      "latest_version": "6.148.7",
+      "action": "update",
+      "note": "Package 'hypothesis' can be updated from 6.43.1 to 6.148.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hypothesis",
+      "python_version": "3.11",
+      "current_version": "6.43.1",
+      "latest_version": "6.148.7",
+      "action": "update",
+      "note": "Package 'hypothesis' can be updated from 6.43.1 to 6.148.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hypothesis",
+      "python_version": "3.12",
+      "current_version": "6.43.1",
+      "latest_version": "6.148.7",
+      "action": "update",
+      "note": "Package 'hypothesis' can be updated from 6.43.1 to 6.148.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "hypothesis",
+      "python_version": "3.13",
+      "current_version": "6.43.1",
+      "latest_version": "6.148.7",
+      "action": "update",
+      "note": "Package 'hypothesis' can be updated from 6.43.1 to 6.148.7. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.10",
+      "current_version": "3.7.4",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 3.7.4 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.11",
+      "current_version": "3.7.4",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 3.7.4 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.12",
+      "current_version": "3.7.4",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 3.7.4 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "typing_extensions",
+      "python_version": "3.13",
+      "current_version": "3.7.4",
+      "latest_version": "4.15.0",
+      "action": "update",
+      "note": "Package 'typing_extensions' can be updated from 3.7.4 to 4.15.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "darglint",
+      "python_version": "3.10",
+      "current_version": "1.8.1",
+      "latest_version": "1.8.1",
+      "action": "none",
+      "note": "Package 'darglint' is up to date at version 1.8.1 (latest: 1.8.1) for Python 3.10."
+    },
+    {
+      "package": "darglint",
+      "python_version": "3.11",
+      "current_version": "1.8.1",
+      "latest_version": "1.8.1",
+      "action": "none",
+      "note": "Package 'darglint' is up to date at version 1.8.1 (latest: 1.8.1) for Python 3.11."
+    },
+    {
+      "package": "darglint",
+      "python_version": "3.12",
+      "current_version": "1.8.1",
+      "latest_version": "1.8.1",
+      "action": "none",
+      "note": "Package 'darglint' is up to date at version 1.8.1 (latest: 1.8.1) for Python 3.12."
+    },
+    {
+      "package": "darglint",
+      "python_version": "3.13",
+      "current_version": "1.8.1",
+      "latest_version": "1.8.1",
+      "action": "none",
+      "note": "Package 'darglint' is up to date at version 1.8.1 (latest: 1.8.1) for Python 3.13."
+    },
+    {
+      "package": "pytest_randomly",
+      "python_version": "3.10",
+      "current_version": "3.10.1",
+      "latest_version": "4.0.1",
+      "action": "update",
+      "note": "Package 'pytest_randomly' can be updated from 3.10.1 to 4.0.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_randomly",
+      "python_version": "3.11",
+      "current_version": "3.10.1",
+      "latest_version": "4.0.1",
+      "action": "update",
+      "note": "Package 'pytest_randomly' can be updated from 3.10.1 to 4.0.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_randomly",
+      "python_version": "3.12",
+      "current_version": "3.10.1",
+      "latest_version": "4.0.1",
+      "action": "update",
+      "note": "Package 'pytest_randomly' can be updated from 3.10.1 to 4.0.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_randomly",
+      "python_version": "3.13",
+      "current_version": "3.10.1",
+      "latest_version": "4.0.1",
+      "action": "update",
+      "note": "Package 'pytest_randomly' can be updated from 3.10.1 to 4.0.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_mock",
+      "python_version": "3.10",
+      "current_version": "3.6.1",
+      "latest_version": "3.15.1",
+      "action": "update",
+      "note": "Package 'pytest_mock' can be updated from 3.6.1 to 3.15.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_mock",
+      "python_version": "3.11",
+      "current_version": "3.6.1",
+      "latest_version": "3.15.1",
+      "action": "update",
+      "note": "Package 'pytest_mock' can be updated from 3.6.1 to 3.15.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_mock",
+      "python_version": "3.12",
+      "current_version": "3.6.1",
+      "latest_version": "3.15.1",
+      "action": "update",
+      "note": "Package 'pytest_mock' can be updated from 3.6.1 to 3.15.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_mock",
+      "python_version": "3.13",
+      "current_version": "3.6.1",
+      "latest_version": "3.15.1",
+      "action": "update",
+      "note": "Package 'pytest_mock' can be updated from 3.6.1 to 3.15.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_clarity",
+      "python_version": "3.10",
+      "current_version": "1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'pytest_clarity' is up to date at version 1.0.1 (latest: 1.0.1) for Python 3.10."
+    },
+    {
+      "package": "pytest_clarity",
+      "python_version": "3.11",
+      "current_version": "1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'pytest_clarity' is up to date at version 1.0.1 (latest: 1.0.1) for Python 3.11."
+    },
+    {
+      "package": "pytest_clarity",
+      "python_version": "3.12",
+      "current_version": "1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'pytest_clarity' is up to date at version 1.0.1 (latest: 1.0.1) for Python 3.12."
+    },
+    {
+      "package": "pytest_clarity",
+      "python_version": "3.13",
+      "current_version": "1.0.1",
+      "latest_version": "1.0.1",
+      "action": "none",
+      "note": "Package 'pytest_clarity' is up to date at version 1.0.1 (latest: 1.0.1) for Python 3.13."
+    },
+    {
+      "package": "pytest_instafail",
+      "python_version": "3.10",
+      "current_version": "0.5.0",
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'pytest_instafail' is up to date at version 0.5.0 (latest: 0.5.0) for Python 3.10."
+    },
+    {
+      "package": "pytest_instafail",
+      "python_version": "3.11",
+      "current_version": "0.5.0",
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'pytest_instafail' is up to date at version 0.5.0 (latest: 0.5.0) for Python 3.11."
+    },
+    {
+      "package": "pytest_instafail",
+      "python_version": "3.12",
+      "current_version": "0.5.0",
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'pytest_instafail' is up to date at version 0.5.0 (latest: 0.5.0) for Python 3.12."
+    },
+    {
+      "package": "pytest_instafail",
+      "python_version": "3.13",
+      "current_version": "0.5.0",
+      "latest_version": "0.5.0",
+      "action": "none",
+      "note": "Package 'pytest_instafail' is up to date at version 0.5.0 (latest: 0.5.0) for Python 3.13."
+    },
+    {
+      "package": "pytest_rerunfailures",
+      "python_version": "3.10",
+      "current_version": "13.0",
+      "latest_version": "16.1",
+      "action": "update",
+      "note": "Package 'pytest_rerunfailures' can be updated from 13.0 to 16.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_rerunfailures",
+      "python_version": "3.11",
+      "current_version": "13.0",
+      "latest_version": "16.1",
+      "action": "update",
+      "note": "Package 'pytest_rerunfailures' can be updated from 13.0 to 16.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_rerunfailures",
+      "python_version": "3.12",
+      "current_version": "13.0",
+      "latest_version": "16.1",
+      "action": "update",
+      "note": "Package 'pytest_rerunfailures' can be updated from 13.0 to 16.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_rerunfailures",
+      "python_version": "3.13",
+      "current_version": "13.0",
+      "latest_version": "16.1",
+      "action": "update",
+      "note": "Package 'pytest_rerunfailures' can be updated from 13.0 to 16.1. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "pytest_split",
+      "python_version": "3.10",
+      "current_version": "0.10.0",
+      "latest_version": "0.10.0",
+      "action": "none",
+      "note": "Package 'pytest_split' is up to date at version 0.10.0 (latest: 0.10.0) for Python 3.10."
+    },
+    {
+      "package": "pytest_split",
+      "python_version": "3.11",
+      "current_version": "0.10.0",
+      "latest_version": "0.10.0",
+      "action": "none",
+      "note": "Package 'pytest_split' is up to date at version 0.10.0 (latest: 0.10.0) for Python 3.11."
+    },
+    {
+      "package": "pytest_split",
+      "python_version": "3.12",
+      "current_version": "0.10.0",
+      "latest_version": "0.10.0",
+      "action": "none",
+      "note": "Package 'pytest_split' is up to date at version 0.10.0 (latest: 0.10.0) for Python 3.12."
+    },
+    {
+      "package": "pytest_split",
+      "python_version": "3.13",
+      "current_version": "0.10.0",
+      "latest_version": "0.10.0",
+      "action": "none",
+      "note": "Package 'pytest_split' is up to date at version 0.10.0 (latest: 0.10.0) for Python 3.13."
+    },
+    {
+      "package": "mkdocs",
+      "python_version": "3.10",
+      "current_version": "1.6.1",
+      "latest_version": "1.6.1",
+      "action": "none",
+      "note": "Package 'mkdocs' is up to date at version 1.6.1 (latest: 1.6.1) for Python 3.10."
+    },
+    {
+      "package": "mkdocs",
+      "python_version": "3.11",
+      "current_version": "1.6.1",
+      "latest_version": "1.6.1",
+      "action": "none",
+      "note": "Package 'mkdocs' is up to date at version 1.6.1 (latest: 1.6.1) for Python 3.11."
+    },
+    {
+      "package": "mkdocs",
+      "python_version": "3.12",
+      "current_version": "1.6.1",
+      "latest_version": "1.6.1",
+      "action": "none",
+      "note": "Package 'mkdocs' is up to date at version 1.6.1 (latest: 1.6.1) for Python 3.12."
+    },
+    {
+      "package": "mkdocs",
+      "python_version": "3.13",
+      "current_version": "1.6.1",
+      "latest_version": "1.6.1",
+      "action": "none",
+      "note": "Package 'mkdocs' is up to date at version 1.6.1 (latest: 1.6.1) for Python 3.13."
+    },
+    {
+      "package": "mkdocs_material",
+      "python_version": "3.10",
+      "current_version": "9.6.8",
+      "latest_version": "9.7.0",
+      "action": "update",
+      "note": "Package 'mkdocs_material' can be updated from 9.6.8 to 9.7.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocs_material",
+      "python_version": "3.11",
+      "current_version": "9.6.8",
+      "latest_version": "9.7.0",
+      "action": "update",
+      "note": "Package 'mkdocs_material' can be updated from 9.6.8 to 9.7.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocs_material",
+      "python_version": "3.12",
+      "current_version": "9.6.8",
+      "latest_version": "9.7.0",
+      "action": "update",
+      "note": "Package 'mkdocs_material' can be updated from 9.6.8 to 9.7.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocs_material",
+      "python_version": "3.13",
+      "current_version": "9.6.8",
+      "latest_version": "9.7.0",
+      "action": "update",
+      "note": "Package 'mkdocs_material' can be updated from 9.6.8 to 9.7.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocs_awesome_pages_plugin",
+      "python_version": "3.10",
+      "current_version": "2.10.1",
+      "latest_version": "2.10.1",
+      "action": "none",
+      "note": "Package 'mkdocs_awesome_pages_plugin' is up to date at version 2.10.1 (latest: 2.10.1) for Python 3.10."
+    },
+    {
+      "package": "mkdocs_awesome_pages_plugin",
+      "python_version": "3.11",
+      "current_version": "2.10.1",
+      "latest_version": "2.10.1",
+      "action": "none",
+      "note": "Package 'mkdocs_awesome_pages_plugin' is up to date at version 2.10.1 (latest: 2.10.1) for Python 3.11."
+    },
+    {
+      "package": "mkdocs_awesome_pages_plugin",
+      "python_version": "3.12",
+      "current_version": "2.10.1",
+      "latest_version": "2.10.1",
+      "action": "none",
+      "note": "Package 'mkdocs_awesome_pages_plugin' is up to date at version 2.10.1 (latest: 2.10.1) for Python 3.12."
+    },
+    {
+      "package": "mkdocs_awesome_pages_plugin",
+      "python_version": "3.13",
+      "current_version": "2.10.1",
+      "latest_version": "2.10.1",
+      "action": "none",
+      "note": "Package 'mkdocs_awesome_pages_plugin' is up to date at version 2.10.1 (latest: 2.10.1) for Python 3.13."
+    },
+    {
+      "package": "mkdocstrings",
+      "python_version": "3.10",
+      "current_version": "0.28.1",
+      "latest_version": "1.0.0",
+      "action": "update",
+      "note": "Package 'mkdocstrings' can be updated from 0.28.1 to 1.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocstrings",
+      "python_version": "3.11",
+      "current_version": "0.28.1",
+      "latest_version": "1.0.0",
+      "action": "update",
+      "note": "Package 'mkdocstrings' can be updated from 0.28.1 to 1.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocstrings",
+      "python_version": "3.12",
+      "current_version": "0.28.1",
+      "latest_version": "1.0.0",
+      "action": "update",
+      "note": "Package 'mkdocstrings' can be updated from 0.28.1 to 1.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocstrings",
+      "python_version": "3.13",
+      "current_version": "0.28.1",
+      "latest_version": "1.0.0",
+      "action": "update",
+      "note": "Package 'mkdocstrings' can be updated from 0.28.1 to 1.0.0. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocstrings_python",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.1",
+      "action": "none",
+      "note": "Package 'mkdocstrings_python' has no version constraint specified (accepts any version). Latest available version is 2.0.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mkdocstrings_python",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.1",
+      "action": "none",
+      "note": "Package 'mkdocstrings_python' has no version constraint specified (accepts any version). Latest available version is 2.0.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mkdocstrings_python",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.1",
+      "action": "none",
+      "note": "Package 'mkdocstrings_python' has no version constraint specified (accepts any version). Latest available version is 2.0.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mkdocstrings_python",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.1",
+      "action": "none",
+      "note": "Package 'mkdocstrings_python' has no version constraint specified (accepts any version). Latest available version is 2.0.1. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "mkdocs_autorefs",
+      "python_version": "3.10",
+      "current_version": "1.4.0",
+      "latest_version": "1.4.3",
+      "action": "update",
+      "note": "Package 'mkdocs_autorefs' can be updated from 1.4.0 to 1.4.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocs_autorefs",
+      "python_version": "3.11",
+      "current_version": "1.4.0",
+      "latest_version": "1.4.3",
+      "action": "update",
+      "note": "Package 'mkdocs_autorefs' can be updated from 1.4.0 to 1.4.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocs_autorefs",
+      "python_version": "3.12",
+      "current_version": "1.4.0",
+      "latest_version": "1.4.3",
+      "action": "update",
+      "note": "Package 'mkdocs_autorefs' can be updated from 1.4.0 to 1.4.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mkdocs_autorefs",
+      "python_version": "3.13",
+      "current_version": "1.4.0",
+      "latest_version": "1.4.3",
+      "action": "update",
+      "note": "Package 'mkdocs_autorefs' can be updated from 1.4.0 to 1.4.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mike",
+      "python_version": "3.10",
+      "current_version": "1.1.2",
+      "latest_version": "2.1.3",
+      "action": "update",
+      "note": "Package 'mike' can be updated from 1.1.2 to 2.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mike",
+      "python_version": "3.11",
+      "current_version": "1.1.2",
+      "latest_version": "2.1.3",
+      "action": "update",
+      "note": "Package 'mike' can be updated from 1.1.2 to 2.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mike",
+      "python_version": "3.12",
+      "current_version": "1.1.2",
+      "latest_version": "2.1.3",
+      "action": "update",
+      "note": "Package 'mike' can be updated from 1.1.2 to 2.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "mike",
+      "python_version": "3.13",
+      "current_version": "1.1.2",
+      "latest_version": "2.1.3",
+      "action": "update",
+      "note": "Package 'mike' can be updated from 1.1.2 to 2.1.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "maison",
+      "python_version": "3.10",
+      "current_version": null,
+      "latest_version": "2.0.2",
+      "action": "none",
+      "note": "Package 'maison' has no version constraint specified (accepts any version). Latest available version is 2.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "maison",
+      "python_version": "3.11",
+      "current_version": null,
+      "latest_version": "2.0.2",
+      "action": "none",
+      "note": "Package 'maison' has no version constraint specified (accepts any version). Latest available version is 2.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "maison",
+      "python_version": "3.12",
+      "current_version": null,
+      "latest_version": "2.0.2",
+      "action": "none",
+      "note": "Package 'maison' has no version constraint specified (accepts any version). Latest available version is 2.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "maison",
+      "python_version": "3.13",
+      "current_version": null,
+      "latest_version": "2.0.2",
+      "action": "none",
+      "note": "Package 'maison' has no version constraint specified (accepts any version). Latest available version is 2.0.2. Consider pinning to a specific version range for reproducible builds."
+    },
+    {
+      "package": "types_certifi",
+      "python_version": "3.10",
+      "current_version": "2021.10.8.0",
+      "latest_version": "2021.10.8.3",
+      "action": "update",
+      "note": "Package 'types_certifi' can be updated from 2021.10.8.0 to 2021.10.8.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_certifi",
+      "python_version": "3.11",
+      "current_version": "2021.10.8.0",
+      "latest_version": "2021.10.8.3",
+      "action": "update",
+      "note": "Package 'types_certifi' can be updated from 2021.10.8.0 to 2021.10.8.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_certifi",
+      "python_version": "3.12",
+      "current_version": "2021.10.8.0",
+      "latest_version": "2021.10.8.3",
+      "action": "update",
+      "note": "Package 'types_certifi' can be updated from 2021.10.8.0 to 2021.10.8.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_certifi",
+      "python_version": "3.13",
+      "current_version": "2021.10.8.0",
+      "latest_version": "2021.10.8.3",
+      "action": "update",
+      "note": "Package 'types_certifi' can be updated from 2021.10.8.0 to 2021.10.8.3. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_croniter",
+      "python_version": "3.10",
+      "current_version": "1.0.2",
+      "latest_version": "6.0.0.20250809",
+      "action": "update",
+      "note": "Package 'types_croniter' can be updated from 1.0.2 to 6.0.0.20250809. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_croniter",
+      "python_version": "3.11",
+      "current_version": "1.0.2",
+      "latest_version": "6.0.0.20250809",
+      "action": "update",
+      "note": "Package 'types_croniter' can be updated from 1.0.2 to 6.0.0.20250809. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_croniter",
+      "python_version": "3.12",
+      "current_version": "1.0.2",
+      "latest_version": "6.0.0.20250809",
+      "action": "update",
+      "note": "Package 'types_croniter' can be updated from 1.0.2 to 6.0.0.20250809. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_croniter",
+      "python_version": "3.13",
+      "current_version": "1.0.2",
+      "latest_version": "6.0.0.20250809",
+      "action": "update",
+      "note": "Package 'types_croniter' can be updated from 1.0.2 to 6.0.0.20250809. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_futures",
+      "python_version": "3.10",
+      "current_version": "3.3.1",
+      "latest_version": "3.3.8",
+      "action": "update",
+      "note": "Package 'types_futures' can be updated from 3.3.1 to 3.3.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_futures",
+      "python_version": "3.11",
+      "current_version": "3.3.1",
+      "latest_version": "3.3.8",
+      "action": "update",
+      "note": "Package 'types_futures' can be updated from 3.3.1 to 3.3.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_futures",
+      "python_version": "3.12",
+      "current_version": "3.3.1",
+      "latest_version": "3.3.8",
+      "action": "update",
+      "note": "Package 'types_futures' can be updated from 3.3.1 to 3.3.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_futures",
+      "python_version": "3.13",
+      "current_version": "3.3.1",
+      "latest_version": "3.3.8",
+      "action": "update",
+      "note": "Package 'types_futures' can be updated from 3.3.1 to 3.3.8. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_hvac",
+      "python_version": "3.10",
+      "current_version": "2.3.0",
+      "latest_version": "2.4.0.20251115",
+      "action": "update",
+      "note": "Package 'types_hvac' can be updated from 2.3.0 to 2.4.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_hvac",
+      "python_version": "3.11",
+      "current_version": "2.3.0",
+      "latest_version": "2.4.0.20251115",
+      "action": "update",
+      "note": "Package 'types_hvac' can be updated from 2.3.0 to 2.4.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_hvac",
+      "python_version": "3.12",
+      "current_version": "2.3.0",
+      "latest_version": "2.4.0.20251115",
+      "action": "update",
+      "note": "Package 'types_hvac' can be updated from 2.3.0 to 2.4.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_hvac",
+      "python_version": "3.13",
+      "current_version": "2.3.0",
+      "latest_version": "2.4.0.20251115",
+      "action": "update",
+      "note": "Package 'types_hvac' can be updated from 2.3.0 to 2.4.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_markdown",
+      "python_version": "3.10",
+      "current_version": "3.3.6",
+      "latest_version": "3.10.0.20251106",
+      "action": "update",
+      "note": "Package 'types_markdown' can be updated from 3.3.6 to 3.10.0.20251106. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_markdown",
+      "python_version": "3.11",
+      "current_version": "3.3.6",
+      "latest_version": "3.10.0.20251106",
+      "action": "update",
+      "note": "Package 'types_markdown' can be updated from 3.3.6 to 3.10.0.20251106. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_markdown",
+      "python_version": "3.12",
+      "current_version": "3.3.6",
+      "latest_version": "3.10.0.20251106",
+      "action": "update",
+      "note": "Package 'types_markdown' can be updated from 3.3.6 to 3.10.0.20251106. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_markdown",
+      "python_version": "3.13",
+      "current_version": "3.3.6",
+      "latest_version": "3.10.0.20251106",
+      "action": "update",
+      "note": "Package 'types_markdown' can be updated from 3.3.6 to 3.10.0.20251106. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_paramiko",
+      "python_version": "3.10",
+      "current_version": "3.4.0",
+      "latest_version": "4.0.0.20250822",
+      "action": "update",
+      "note": "Package 'types_paramiko' can be updated from 3.4.0 to 4.0.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_paramiko",
+      "python_version": "3.11",
+      "current_version": "3.4.0",
+      "latest_version": "4.0.0.20250822",
+      "action": "update",
+      "note": "Package 'types_paramiko' can be updated from 3.4.0 to 4.0.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_paramiko",
+      "python_version": "3.12",
+      "current_version": "3.4.0",
+      "latest_version": "4.0.0.20250822",
+      "action": "update",
+      "note": "Package 'types_paramiko' can be updated from 3.4.0 to 4.0.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_paramiko",
+      "python_version": "3.13",
+      "current_version": "3.4.0",
+      "latest_version": "4.0.0.20250822",
+      "action": "update",
+      "note": "Package 'types_paramiko' can be updated from 3.4.0 to 4.0.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pillow",
+      "python_version": "3.10",
+      "current_version": "9.2.1",
+      "latest_version": "10.2.0.20240822",
+      "action": "update",
+      "note": "Package 'types_pillow' can be updated from 9.2.1 to 10.2.0.20240822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pillow",
+      "python_version": "3.11",
+      "current_version": "9.2.1",
+      "latest_version": "10.2.0.20240822",
+      "action": "update",
+      "note": "Package 'types_pillow' can be updated from 9.2.1 to 10.2.0.20240822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pillow",
+      "python_version": "3.12",
+      "current_version": "9.2.1",
+      "latest_version": "10.2.0.20240822",
+      "action": "update",
+      "note": "Package 'types_pillow' can be updated from 9.2.1 to 10.2.0.20240822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pillow",
+      "python_version": "3.13",
+      "current_version": "9.2.1",
+      "latest_version": "10.2.0.20240822",
+      "action": "update",
+      "note": "Package 'types_pillow' can be updated from 9.2.1 to 10.2.0.20240822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_protobuf",
+      "python_version": "3.10",
+      "current_version": "3.18.0",
+      "latest_version": "6.32.1.20251105",
+      "action": "update",
+      "note": "Package 'types_protobuf' can be updated from 3.18.0 to 6.32.1.20251105. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_protobuf",
+      "python_version": "3.11",
+      "current_version": "3.18.0",
+      "latest_version": "6.32.1.20251105",
+      "action": "update",
+      "note": "Package 'types_protobuf' can be updated from 3.18.0 to 6.32.1.20251105. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_protobuf",
+      "python_version": "3.12",
+      "current_version": "3.18.0",
+      "latest_version": "6.32.1.20251105",
+      "action": "update",
+      "note": "Package 'types_protobuf' can be updated from 3.18.0 to 6.32.1.20251105. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_protobuf",
+      "python_version": "3.13",
+      "current_version": "3.18.0",
+      "latest_version": "6.32.1.20251105",
+      "action": "update",
+      "note": "Package 'types_protobuf' can be updated from 3.18.0 to 6.32.1.20251105. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pymysql",
+      "python_version": "3.10",
+      "current_version": "1.0.4",
+      "latest_version": "1.1.0.20250916",
+      "action": "update",
+      "note": "Package 'types_pymysql' can be updated from 1.0.4 to 1.1.0.20250916. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pymysql",
+      "python_version": "3.11",
+      "current_version": "1.0.4",
+      "latest_version": "1.1.0.20250916",
+      "action": "update",
+      "note": "Package 'types_pymysql' can be updated from 1.0.4 to 1.1.0.20250916. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pymysql",
+      "python_version": "3.12",
+      "current_version": "1.0.4",
+      "latest_version": "1.1.0.20250916",
+      "action": "update",
+      "note": "Package 'types_pymysql' can be updated from 1.0.4 to 1.1.0.20250916. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pymysql",
+      "python_version": "3.13",
+      "current_version": "1.0.4",
+      "latest_version": "1.1.0.20250916",
+      "action": "update",
+      "note": "Package 'types_pymysql' can be updated from 1.0.4 to 1.1.0.20250916. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_dateutil",
+      "python_version": "3.10",
+      "current_version": "2.8.2",
+      "latest_version": "2.9.0.20251115",
+      "action": "update",
+      "note": "Package 'types_python_dateutil' can be updated from 2.8.2 to 2.9.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_dateutil",
+      "python_version": "3.11",
+      "current_version": "2.8.2",
+      "latest_version": "2.9.0.20251115",
+      "action": "update",
+      "note": "Package 'types_python_dateutil' can be updated from 2.8.2 to 2.9.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_dateutil",
+      "python_version": "3.12",
+      "current_version": "2.8.2",
+      "latest_version": "2.9.0.20251115",
+      "action": "update",
+      "note": "Package 'types_python_dateutil' can be updated from 2.8.2 to 2.9.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_dateutil",
+      "python_version": "3.13",
+      "current_version": "2.8.2",
+      "latest_version": "2.9.0.20251115",
+      "action": "update",
+      "note": "Package 'types_python_dateutil' can be updated from 2.8.2 to 2.9.0.20251115. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_slugify",
+      "python_version": "3.10",
+      "current_version": "5.0.2",
+      "latest_version": "8.0.2.20240310",
+      "action": "update",
+      "note": "Package 'types_python_slugify' can be updated from 5.0.2 to 8.0.2.20240310. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_slugify",
+      "python_version": "3.11",
+      "current_version": "5.0.2",
+      "latest_version": "8.0.2.20240310",
+      "action": "update",
+      "note": "Package 'types_python_slugify' can be updated from 5.0.2 to 8.0.2.20240310. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_slugify",
+      "python_version": "3.12",
+      "current_version": "5.0.2",
+      "latest_version": "8.0.2.20240310",
+      "action": "update",
+      "note": "Package 'types_python_slugify' can be updated from 5.0.2 to 8.0.2.20240310. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_python_slugify",
+      "python_version": "3.13",
+      "current_version": "5.0.2",
+      "latest_version": "8.0.2.20240310",
+      "action": "update",
+      "note": "Package 'types_python_slugify' can be updated from 5.0.2 to 8.0.2.20240310. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pyyaml",
+      "python_version": "3.10",
+      "current_version": "6.0.0",
+      "latest_version": "6.0.12.20250915",
+      "action": "update",
+      "note": "Package 'types_pyyaml' can be updated from 6.0.0 to 6.0.12.20250915. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pyyaml",
+      "python_version": "3.11",
+      "current_version": "6.0.0",
+      "latest_version": "6.0.12.20250915",
+      "action": "update",
+      "note": "Package 'types_pyyaml' can be updated from 6.0.0 to 6.0.12.20250915. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pyyaml",
+      "python_version": "3.12",
+      "current_version": "6.0.0",
+      "latest_version": "6.0.12.20250915",
+      "action": "update",
+      "note": "Package 'types_pyyaml' can be updated from 6.0.0 to 6.0.12.20250915. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_pyyaml",
+      "python_version": "3.13",
+      "current_version": "6.0.0",
+      "latest_version": "6.0.12.20250915",
+      "action": "update",
+      "note": "Package 'types_pyyaml' can be updated from 6.0.0 to 6.0.12.20250915. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_redis",
+      "python_version": "3.10",
+      "current_version": "4.1.19",
+      "latest_version": "4.6.0.20241004",
+      "action": "update",
+      "note": "Package 'types_redis' can be updated from 4.1.19 to 4.6.0.20241004. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_redis",
+      "python_version": "3.11",
+      "current_version": "4.1.19",
+      "latest_version": "4.6.0.20241004",
+      "action": "update",
+      "note": "Package 'types_redis' can be updated from 4.1.19 to 4.6.0.20241004. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_redis",
+      "python_version": "3.12",
+      "current_version": "4.1.19",
+      "latest_version": "4.6.0.20241004",
+      "action": "update",
+      "note": "Package 'types_redis' can be updated from 4.1.19 to 4.6.0.20241004. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_redis",
+      "python_version": "3.13",
+      "current_version": "4.1.19",
+      "latest_version": "4.6.0.20241004",
+      "action": "update",
+      "note": "Package 'types_redis' can be updated from 4.1.19 to 4.6.0.20241004. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_requests",
+      "python_version": "3.10",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.4.20250913",
+      "action": "update",
+      "note": "Package 'types_requests' can be updated from 2.27.11 to 2.32.4.20250913. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_requests",
+      "python_version": "3.11",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.4.20250913",
+      "action": "update",
+      "note": "Package 'types_requests' can be updated from 2.27.11 to 2.32.4.20250913. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_requests",
+      "python_version": "3.12",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.4.20250913",
+      "action": "update",
+      "note": "Package 'types_requests' can be updated from 2.27.11 to 2.32.4.20250913. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_requests",
+      "python_version": "3.13",
+      "current_version": "2.27.11",
+      "latest_version": "2.32.4.20250913",
+      "action": "update",
+      "note": "Package 'types_requests' can be updated from 2.27.11 to 2.32.4.20250913. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_setuptools",
+      "python_version": "3.10",
+      "current_version": "57.4.2",
+      "latest_version": "80.9.0.20250822",
+      "action": "update",
+      "note": "Package 'types_setuptools' can be updated from 57.4.2 to 80.9.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_setuptools",
+      "python_version": "3.11",
+      "current_version": "57.4.2",
+      "latest_version": "80.9.0.20250822",
+      "action": "update",
+      "note": "Package 'types_setuptools' can be updated from 57.4.2 to 80.9.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_setuptools",
+      "python_version": "3.12",
+      "current_version": "57.4.2",
+      "latest_version": "80.9.0.20250822",
+      "action": "update",
+      "note": "Package 'types_setuptools' can be updated from 57.4.2 to 80.9.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_setuptools",
+      "python_version": "3.13",
+      "current_version": "57.4.2",
+      "latest_version": "80.9.0.20250822",
+      "action": "update",
+      "note": "Package 'types_setuptools' can be updated from 57.4.2 to 80.9.0.20250822. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_six",
+      "python_version": "3.10",
+      "current_version": "1.16.2",
+      "latest_version": "1.17.0.20251009",
+      "action": "update",
+      "note": "Package 'types_six' can be updated from 1.16.2 to 1.17.0.20251009. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_six",
+      "python_version": "3.11",
+      "current_version": "1.16.2",
+      "latest_version": "1.17.0.20251009",
+      "action": "update",
+      "note": "Package 'types_six' can be updated from 1.16.2 to 1.17.0.20251009. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_six",
+      "python_version": "3.12",
+      "current_version": "1.16.2",
+      "latest_version": "1.17.0.20251009",
+      "action": "update",
+      "note": "Package 'types_six' can be updated from 1.16.2 to 1.17.0.20251009. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_six",
+      "python_version": "3.13",
+      "current_version": "1.16.2",
+      "latest_version": "1.17.0.20251009",
+      "action": "update",
+      "note": "Package 'types_six' can be updated from 1.16.2 to 1.17.0.20251009. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_termcolor",
+      "python_version": "3.10",
+      "current_version": "1.1.2",
+      "latest_version": "1.1.6.2",
+      "action": "update",
+      "note": "Package 'types_termcolor' can be updated from 1.1.2 to 1.1.6.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_termcolor",
+      "python_version": "3.11",
+      "current_version": "1.1.2",
+      "latest_version": "1.1.6.2",
+      "action": "update",
+      "note": "Package 'types_termcolor' can be updated from 1.1.2 to 1.1.6.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_termcolor",
+      "python_version": "3.12",
+      "current_version": "1.1.2",
+      "latest_version": "1.1.6.2",
+      "action": "update",
+      "note": "Package 'types_termcolor' can be updated from 1.1.2 to 1.1.6.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_termcolor",
+      "python_version": "3.13",
+      "current_version": "1.1.2",
+      "latest_version": "1.1.6.2",
+      "action": "update",
+      "note": "Package 'types_termcolor' can be updated from 1.1.2 to 1.1.6.2. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_psutil",
+      "python_version": "3.10",
+      "current_version": "5.8.13",
+      "latest_version": "7.1.3.20251202",
+      "action": "update",
+      "note": "Package 'types_psutil' can be updated from 5.8.13 to 7.1.3.20251202. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_psutil",
+      "python_version": "3.11",
+      "current_version": "5.8.13",
+      "latest_version": "7.1.3.20251202",
+      "action": "update",
+      "note": "Package 'types_psutil' can be updated from 5.8.13 to 7.1.3.20251202. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_psutil",
+      "python_version": "3.12",
+      "current_version": "5.8.13",
+      "latest_version": "7.1.3.20251202",
+      "action": "update",
+      "note": "Package 'types_psutil' can be updated from 5.8.13 to 7.1.3.20251202. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_psutil",
+      "python_version": "3.13",
+      "current_version": "5.8.13",
+      "latest_version": "7.1.3.20251202",
+      "action": "update",
+      "note": "Package 'types_psutil' can be updated from 5.8.13 to 7.1.3.20251202. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_passlib",
+      "python_version": "3.10",
+      "current_version": "1.7.7",
+      "latest_version": "1.7.7.20250602",
+      "action": "update",
+      "note": "Package 'types_passlib' can be updated from 1.7.7 to 1.7.7.20250602. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_passlib",
+      "python_version": "3.11",
+      "current_version": "1.7.7",
+      "latest_version": "1.7.7.20250602",
+      "action": "update",
+      "note": "Package 'types_passlib' can be updated from 1.7.7 to 1.7.7.20250602. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_passlib",
+      "python_version": "3.12",
+      "current_version": "1.7.7",
+      "latest_version": "1.7.7.20250602",
+      "action": "update",
+      "note": "Package 'types_passlib' can be updated from 1.7.7 to 1.7.7.20250602. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "types_passlib",
+      "python_version": "3.13",
+      "current_version": "1.7.7",
+      "latest_version": "1.7.7.20250602",
+      "action": "update",
+      "note": "Package 'types_passlib' can be updated from 1.7.7 to 1.7.7.20250602. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uv_build",
+      "python_version": "3.10",
+      "current_version": "0.8.17",
+      "latest_version": "0.9.16",
+      "action": "update",
+      "note": "Package 'uv_build' can be updated from 0.8.17 to 0.9.16. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uv_build",
+      "python_version": "3.11",
+      "current_version": "0.8.17",
+      "latest_version": "0.9.16",
+      "action": "update",
+      "note": "Package 'uv_build' can be updated from 0.8.17 to 0.9.16. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uv_build",
+      "python_version": "3.12",
+      "current_version": "0.8.17",
+      "latest_version": "0.9.16",
+      "action": "update",
+      "note": "Package 'uv_build' can be updated from 0.8.17 to 0.9.16. Review the changelog for breaking changes before updating."
+    },
+    {
+      "package": "uv_build",
+      "python_version": "3.13",
+      "current_version": "0.8.17",
+      "latest_version": "0.9.16",
+      "action": "update",
+      "note": "Package 'uv_build' can be updated from 0.8.17 to 0.9.16. Review the changelog for breaking changes before updating."
+    }
+  ]
+}

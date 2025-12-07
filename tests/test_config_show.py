@@ -12,8 +12,9 @@ from typing import Any
 
 import pytest
 
-from pyproj_dep_analyse import config_show as show_mod
-from pyproj_dep_analyse.config_show import display_config
+from pyproj_dep_analyze import config_show as show_mod
+from pyproj_dep_analyze.config_show import display_config
+from pyproj_dep_analyze.models import ConfigFormat
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -91,6 +92,12 @@ def mock_config(monkeypatch: pytest.MonkeyPatch) -> dict[str, Any]:
         def get(self, key: str, default: Any = None) -> Any:
             return test_data.get(key, default)
 
+        def __iter__(self):
+            return iter(test_data)
+
+        def __getitem__(self, key: str) -> Any:
+            return test_data[key]
+
     def fake_get_config(**kwargs: Any) -> FakeConfig:
         return FakeConfig()
 
@@ -109,7 +116,7 @@ def test_display_config_human_format_shows_sections(
     mock_config: dict[str, Any],
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    display_config(format="human")
+    display_config(format=ConfigFormat.HUMAN)
 
     captured = capsys.readouterr()
 
@@ -122,7 +129,7 @@ def test_display_config_human_format_shows_values(
     mock_config: dict[str, Any],
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    display_config(format="human")
+    display_config(format=ConfigFormat.HUMAN)
 
     captured = capsys.readouterr()
 
@@ -135,7 +142,7 @@ def test_display_config_json_format_outputs_valid_json(
     mock_config: dict[str, Any],
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    display_config(format="json")
+    display_config(format=ConfigFormat.JSON)
 
     captured = capsys.readouterr()
     parsed = json.loads(captured.out)
@@ -148,7 +155,7 @@ def test_display_config_json_format_includes_all_sections(
     mock_config: dict[str, Any],
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    display_config(format="json")
+    display_config(format=ConfigFormat.JSON)
 
     captured = capsys.readouterr()
     parsed = json.loads(captured.out)
@@ -162,7 +169,7 @@ def test_display_config_with_section_filter_shows_only_that_section(
     mock_config: dict[str, Any],
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    display_config(format="human", section="lib_log_rich")
+    display_config(format=ConfigFormat.HUMAN, section="lib_log_rich")
 
     captured = capsys.readouterr()
 
@@ -175,7 +182,7 @@ def test_display_config_json_with_section_filter(
     mock_config: dict[str, Any],
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    display_config(format="json", section="analyzer")
+    display_config(format=ConfigFormat.JSON, section="analyzer")
 
     captured = capsys.readouterr()
     parsed = json.loads(captured.out)
@@ -189,7 +196,7 @@ def test_display_config_with_missing_section_raises_system_exit(
     mock_config: dict[str, Any],
 ) -> None:
     with pytest.raises(SystemExit) as exc:
-        display_config(format="human", section="nonexistent")
+        display_config(format=ConfigFormat.HUMAN, section="nonexistent")
 
     assert exc.value.code == 1
 
@@ -200,7 +207,7 @@ def test_display_config_with_missing_section_prints_error(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
     with pytest.raises(SystemExit):
-        display_config(format="human", section="nonexistent")
+        display_config(format=ConfigFormat.HUMAN, section="nonexistent")
 
     captured = capsys.readouterr()
 
@@ -212,7 +219,7 @@ def test_display_config_json_with_missing_section_raises_system_exit(
     mock_config: dict[str, Any],
 ) -> None:
     with pytest.raises(SystemExit) as exc:
-        display_config(format="json", section="nonexistent")
+        display_config(format=ConfigFormat.JSON, section="nonexistent")
 
     assert exc.value.code == 1
 
@@ -230,11 +237,11 @@ def test_display_config_defaults_to_human_format(
 
 
 @pytest.mark.os_agnostic
-def test_display_config_format_is_case_insensitive(
+def test_display_config_accepts_config_format_enum(
     mock_config: dict[str, Any],
     capsys: pytest.CaptureFixture[str],
 ) -> None:
-    display_config(format="JSON")
+    display_config(format=ConfigFormat.JSON)
 
     captured = capsys.readouterr()
     parsed = json.loads(captured.out)

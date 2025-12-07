@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import pytest
 
-from pyproj_dep_analyse import __init__conf__
+from pyproj_dep_analyze import __init__conf__
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -63,7 +63,7 @@ def test_name_is_not_empty() -> None:
 
 @pytest.mark.os_agnostic
 def test_name_is_expected_value() -> None:
-    assert __init__conf__.name == "pyproj_dep_analyse"
+    assert __init__conf__.name == "pyproj_dep_analyze"
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -88,7 +88,7 @@ def test_shell_command_is_not_empty() -> None:
 
 @pytest.mark.os_agnostic
 def test_shell_command_is_expected_value() -> None:
-    assert __init__conf__.shell_command == "pyproj-dep-analyse"
+    assert __init__conf__.shell_command == "pyproj-dep-analyze"
 
 
 # ════════════════════════════════════════════════════════════════════════════
