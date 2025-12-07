@@ -50,7 +50,7 @@
 | **Index detection**      | Identify which package index serves each dependency            |
 | **Direct dependencies**  | Extract immediate dependencies from `requires_dist`            |
 
-### What Belongs in `pyproj_dep_scan` (Separate Project)
+### What Belongs in `pyproj_dep_security` (Separate Project)
 
 | Capability                          | Reason                                               |
 |-------------------------------------|------------------------------------------------------|
@@ -75,8 +75,8 @@
 
 > **Design Principle:**
 > - `pyproj_dep_analyze` analyzes *declared* dependencies from project files
-> - `pyproj_dep_scan` analyzes *installed* environments for security issues
-> - `pyproj_dep_update` *modifies* pyproject.toml based on analysis and scan results
+> - `pyproj_dep_security` analyzes *installed* environments (in a venv) for security issues
+> - `pyproj_dep_update` *modifies* pyproject.toml based on analysis and security scan results
 
 ---
 
