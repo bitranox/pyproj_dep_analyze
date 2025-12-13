@@ -122,21 +122,23 @@ This document shows the data flow through pyproj_dep_analyze, from input (pyproj
 │  │   │ summary: EnrichedSummary                                        │  │  │
 │  │   └─────────────────────────────────────────────────────────────────┘  │  │
 │  │                                                                        │  │
-│  │   ┌──────────────────────┐    ┌──────────────────────────────────┐     │  │
-│  │   │   EnrichedSummary    │    │        EnrichedEntry             │     │  │
-│  │   ├──────────────────────┤    ├──────────────────────────────────┤     │  │
-│  │   │ total_packages: int  │    │ name: str                        │     │  │
-│  │   │ updates_available    │    │ requested_version: str | None    │     │  │
-│  │   │ up_to_date           │    │ resolved_version: str | None     │     │  │
-│  │   │ check_manually       │    │ latest_version: str | None       │     │  │
-│  │   │ from_pypi            │    │ action: Action                   │     │  │
-│  │   │ from_private_index   │    │ source: str                      │     │  │
-│  │   └──────────────────────┘    │ index_info: IndexInfo | None     │     │  │
-│  │                               │ python_compatibility: dict       │     │  │
-│  │                               │ pypi_metadata: PyPIMetadata|None │     │  │
-│  │                               │ repo_metadata: RepoMetadata|None │     │  │
-│  │                               │ direct_dependencies: list[str]   │     │  │
-│  │                               └──────────────────────────────────┘     │  │
+│  │   ┌──────────────────────┐    ┌─────────────────────────────────────────┐  │  │
+│  │   │   EnrichedSummary    │    │        EnrichedEntry                    │  │  │
+│  │   ├──────────────────────┤    ├─────────────────────────────────────────┤  │  │
+│  │   │ total_packages: int  │    │ name: str                               │  │  │
+│  │   │ updates_available    │    │ requested_version: str | None           │  │  │
+│  │   │ up_to_date           │    │ resolved_version: str | None            │  │  │
+│  │   │ check_manually       │    │ latest_version: str | None              │  │  │
+│  │   │ from_pypi            │    │ action: Action                          │  │  │
+│  │   │ from_private_index   │    │ source: str                             │  │  │
+│  │   └──────────────────────┘    │ index_info: IndexInfo | None            │  │  │
+│  │                               │ python_compatibility: dict              │  │  │
+│  │                               │ pypi_metadata: PyPIMetadata|None        │  │  │
+│  │                               │ repo_metadata: RepoMetadata|None        │  │  │
+│  │                               │ direct_dependencies: list[str]          │  │  │
+│  │                               │ optional_dependencies: dict[str,list]   │  │  │
+│  │                               │ required_by: list[str]                  │  │  │
+│  │                               └─────────────────────────────────────────┘  │  │
 │  │                                                                        │  │
 │  │   ┌──────────────────────┐    ┌──────────────────────┐                 │  │
 │  │   │    RepoMetadata      │    │    PyPIMetadata      │                 │  │

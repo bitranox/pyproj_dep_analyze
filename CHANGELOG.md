@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file following
 the [Keep a Changelog](https://keepachangelog.com/) format.
 
 
+## [4.0.0] - 2025-12-13
+
+### Breaking Changes
+- **`direct_dependencies`** now only includes runtime dependencies (previously included all dependencies including optional extras)
+
+### Added
+- **`optional_dependencies`** field in `EnrichedEntry` - dict mapping extra name to list of package names
+  - Groups optional dependencies by their extra (e.g., `"dev"`, `"test"`, `"docs"`)
+  - Example: `{"dev": ["pytest", "ruff"], "docs": ["sphinx", "myst_parser"]}`
+- `_extract_optional_dependency_names()` function to extract and group optional dependencies
+- `_extract_extra_name()` helper function to parse extra names from requirement markers
+
+### Changed
+- `_extract_dependency_names()` now filters out dependencies with `extra ==` markers by default
+- Added `include_optional` parameter to `_extract_dependency_names()` for backwards compatibility
+
 ## [3.1.0] - 2025-12-13
 
 ### Changed

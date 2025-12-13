@@ -703,8 +703,9 @@ class Analyzer:
             # Determine action
             action, current, latest = determine_action(dep, python_versions[0], version_result)
 
-            # Extract direct dependencies
+            # Extract direct dependencies (runtime only) and optional dependencies
             direct_deps = _extract_dependency_names(version_result.pypi_metadata)
+            optional_deps = _extract_optional_dependency_names(version_result.pypi_metadata)
 
             # Get reverse dependencies (who requires this package)
             required_by = reverse_graph.get(name, [])
@@ -736,6 +737,7 @@ class Analyzer:
                     pypi_metadata=version_result.pypi_metadata,
                     repo_metadata=repo_meta,
                     direct_dependencies=direct_deps,
+                    optional_dependencies=optional_deps,
                     required_by=required_by,
                 )
             )
@@ -826,11 +828,17 @@ class Analyzer:
         return asyncio.run(self.analyze_enriched_async(pyproject_path))
 
 
-def _extract_dependency_names(pypi_metadata: PyPIMetadata | None) -> list[str]:
+def _extract_dependency_names(
+    pypi_metadata: PyPIMetadata | None,
+    *,
+    include_optional: bool = False,
+) -> list[str]:
     """Extract package names from requires_dist.
 
     Args:
         pypi_metadata: PyPI metadata containing requires_dist.
+        include_optional: If True, include optional/extra dependencies.
+            If False (default), only include runtime dependencies.
 
     Returns:
         List of normalized package names.
@@ -840,11 +848,71 @@ def _extract_dependency_names(pypi_metadata: PyPIMetadata | None) -> list[str]:
 
     deps: list[str] = []
     for req in pypi_metadata.requires_dist:
+        # Skip optional dependencies (those with 'extra ==' markers) unless requested
+        if not include_optional and "extra ==" in req.lower():
+            continue
         # Extract package name: take first word, strip extras/markers/versions
         dep_name = req.split()[0].split("[")[0].split(";")[0].split("<")[0].split(">")[0].split("=")[0].split("!")[0].strip()
         if dep_name:
             deps.append(dep_name.lower().replace("-", "_"))
     return deps
+
+
+def _extract_optional_dependency_names(pypi_metadata: PyPIMetadata | None) -> dict[str, list[str]]:
+    """Extract optional/extra dependency names from requires_dist, grouped by extra.
+
+    This function extracts only dependencies that have 'extra ==' markers,
+    indicating they are optional (dev, test, docs, etc.) dependencies,
+    and groups them by their extra name.
+
+    Args:
+        pypi_metadata: PyPI metadata containing requires_dist.
+
+    Returns:
+        Dict mapping extra name to list of normalized package names.
+        Example: {"dev": ["pytest", "ruff"], "docs": ["sphinx", "myst_parser"]}
+    """
+    if not pypi_metadata or not pypi_metadata.requires_dist:
+        return {}
+
+    deps: dict[str, list[str]] = {}
+    for req in pypi_metadata.requires_dist:
+        req_lower = req.lower()
+        # Only include optional dependencies (those with 'extra ==' markers)
+        if "extra ==" not in req_lower:
+            continue
+
+        # Extract extra name from marker (e.g., 'extra == "dev"' -> 'dev')
+        extra_name = _extract_extra_name(req)
+        if not extra_name:
+            extra_name = "other"
+
+        # Extract package name: take first word, strip extras/markers/versions
+        dep_name = req.split()[0].split("[")[0].split(";")[0].split("<")[0].split(">")[0].split("=")[0].split("!")[0].strip()
+        if dep_name:
+            normalized = dep_name.lower().replace("-", "_")
+            if extra_name not in deps:
+                deps[extra_name] = []
+            if normalized not in deps[extra_name]:
+                deps[extra_name].append(normalized)
+
+    return deps
+
+
+def _extract_extra_name(req: str) -> str | None:
+    """Extract the extra name from a requirement string with 'extra ==' marker.
+
+    Args:
+        req: Requirement string like 'pytest ; extra == "dev"'
+
+    Returns:
+        The extra name (e.g., "dev") or None if not found.
+    """
+    # Match patterns like: extra == "dev", extra == 'dev', extra== "dev"
+    match = re.search(r'extra\s*==\s*["\']([^"\']+)["\']', req, re.IGNORECASE)
+    if match:
+        return match.group(1).lower()
+    return None
 
 
 def create_analyzer(

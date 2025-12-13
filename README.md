@@ -588,19 +588,22 @@ Complete result from enriched analysis.
 
 Enriched package entry with full metadata.
 
-| Field                  | Type                                   | Description                 |
-|------------------------|----------------------------------------|-----------------------------|
-| `name`                 | `str`                                  | Package name                |
-| `requested_version`    | `str \| None`                          | Version constraint          |
-| `resolved_version`     | `str \| None`                          | Resolved version            |
-| `latest_version`       | `str \| None`                          | Latest version              |
-| `action`               | `Action`                               | Recommended action          |
-| `source`               | `str`                                  | Where declared              |
-| `index_info`           | `IndexInfo \| None`                    | Package index               |
-| `python_compatibility` | `dict[str, CompatibilityStatus]`       | Per-version compatibility   |
-| `pypi_metadata`        | `PyPIMetadata \| None`                 | PyPI data                   |
-| `repo_metadata`        | `RepoMetadata \| None`                 | Repository data             |
-| `direct_dependencies`  | `list[str]`                            | Direct deps                 |
+| Field                   | Type                                   | Description                              |
+|-------------------------|----------------------------------------|------------------------------------------|
+| `name`                  | `str`                                  | Package name                             |
+| `requested_version`     | `str \| None`                          | Version constraint                       |
+| `resolved_version`      | `str \| None`                          | Resolved version                         |
+| `latest_version`        | `str \| None`                          | Latest version                           |
+| `action`                | `Action`                               | Recommended action                       |
+| `note`                  | `str`                                  | Human/LLM-readable explanation           |
+| `source`                | `str`                                  | Where declared                           |
+| `index_info`            | `IndexInfo \| None`                    | Package index                            |
+| `python_compatibility`  | `dict[str, CompatibilityStatus]`       | Per-version compatibility                |
+| `pypi_metadata`         | `PyPIMetadata \| None`                 | PyPI data                                |
+| `repo_metadata`         | `RepoMetadata \| None`                 | Repository data                          |
+| `direct_dependencies`   | `list[str]`                            | Runtime dependencies only                |
+| `optional_dependencies` | `dict[str, list[str]]`                 | Optional deps grouped by extra (dev, test, docs) |
+| `required_by`           | `list[str]`                            | Reverse dependencies                     |
 
 ---
 

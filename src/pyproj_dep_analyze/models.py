@@ -565,6 +565,11 @@ def _empty_compat_dict() -> dict[str, CompatibilityStatus]:
     return {}
 
 
+def _empty_str_list_dict() -> dict[str, list[str]]:
+    """Return an empty dict of string lists for defaults."""
+    return {}
+
+
 class EnrichedEntry(BaseModel):
     """Enriched dependency analysis entry with full metadata.
 
@@ -580,7 +585,8 @@ class EnrichedEntry(BaseModel):
         python_compatibility: Dict mapping Python version to compatibility status.
         pypi_metadata: Enriched PyPI metadata.
         repo_metadata: Repository metadata.
-        direct_dependencies: List of direct dependency names (what this package depends on).
+        direct_dependencies: List of runtime dependency names (what this package depends on).
+        optional_dependencies: Dict mapping extra name to list of package names (dev, test, docs, etc.).
         required_by: List of packages that depend on this package (reverse dependencies).
     """
 
@@ -598,6 +604,7 @@ class EnrichedEntry(BaseModel):
     pypi_metadata: PyPIMetadata | None = None
     repo_metadata: RepoMetadata | None = None
     direct_dependencies: list[str] = Field(default_factory=_empty_str_list)
+    optional_dependencies: dict[str, list[str]] = Field(default_factory=_empty_str_list_dict)
     required_by: list[str] = Field(default_factory=_empty_str_list)
 
 
@@ -609,11 +616,6 @@ def _empty_enriched_entry_list() -> list[EnrichedEntry]:
 def _empty_index_info_list() -> list[IndexInfo]:
     """Return an empty IndexInfo list for defaults."""
     return []
-
-
-def _empty_str_list_dict() -> dict[str, list[str]]:
-    """Return an empty dict of string lists for defaults."""
-    return {}
 
 
 def _default_enriched_summary() -> EnrichedSummary:
