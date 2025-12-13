@@ -51,6 +51,8 @@ import rich_click as click
 from click.core import ParameterSource
 from pydantic import BaseModel, ConfigDict
 
+from lib_layered_config.examples.deploy import DeployResult
+
 from . import __init__conf__
 from .analyzer import run_analysis, run_enriched_analysis, write_enriched_json, write_outdated_json
 from .behaviors import emit_greeting, noop_main, raise_intentional_failure
@@ -750,12 +752,12 @@ def cli_analyze_enriched(
         click.echo(f"From private index: {result.summary.from_private_index}")
 
 
-def _report_deploy_results(deployed_paths: list[Path]) -> None:
+def _report_deploy_results(results: list[DeployResult]) -> None:
     """Report deployment results to the user."""
-    if deployed_paths:
+    if results:
         click.echo("\nConfiguration deployed successfully:")
-        for path in deployed_paths:
-            click.echo(f"  ✓ {path}")
+        for result in results:
+            click.echo(f"  ✓ {result.destination}")
     else:
         click.echo("\nNo files were created (all target files already exist).")
         click.echo("Use --force to overwrite existing configuration files.")

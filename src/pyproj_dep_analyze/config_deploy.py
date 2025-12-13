@@ -20,9 +20,9 @@ parsing and user interaction.
 from __future__ import annotations
 
 from collections.abc import Sequence
-from pathlib import Path
 
 from lib_layered_config import deploy_config
+from lib_layered_config.examples.deploy import DeployResult
 
 from . import __init__conf__
 from .config import get_default_config_path
@@ -33,7 +33,7 @@ def deploy_configuration(
     *,
     targets: Sequence[DeploymentTarget],
     force: bool = False,
-) -> list[Path]:
+) -> list[DeployResult]:
     r"""Deploy default configuration to specified target layers.
 
     Users need to initialize configuration files in standard locations
@@ -42,7 +42,7 @@ def deploy_configuration(
 
     Uses lib_layered_config.deploy_config() to copy the bundled
     defaultconfig.toml to requested target layers (app, host, user).
-    Returns the list of created configuration file paths.
+    Returns a list of DeployResult objects describing what was done.
 
     Args:
         targets: Sequence of target layers to deploy to. Valid values:
@@ -52,8 +52,10 @@ def deploy_configuration(
             (default), skip files that already exist.
 
     Returns:
-        List of paths where configuration files were created or would be
-        created. Empty list if all target files already exist and force=False.
+        List of DeployResult objects describing what was done for each
+        destination. Each result contains: destination path, action taken,
+        backup_path (if backed up), and ucf_path (if using batch mode).
+        Empty list if all target files already exist and force=False.
 
     Raises:
         PermissionError: When deploying to app/host without sufficient privileges.
@@ -77,10 +79,10 @@ def deploy_configuration(
         - Windows (user): %APPDATA%\{vendor}\{app}\config.toml
 
     Example:
-        >>> paths = deploy_configuration(targets=["user"])  # doctest: +SKIP
-        >>> len(paths) > 0  # doctest: +SKIP
+        >>> results = deploy_configuration(targets=["user"])  # doctest: +SKIP
+        >>> len(results) > 0  # doctest: +SKIP
         True
-        >>> paths[0].exists()  # doctest: +SKIP
+        >>> results[0].destination.exists()  # doctest: +SKIP
         True
     """
     source = get_default_config_path()

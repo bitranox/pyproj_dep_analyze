@@ -8,10 +8,12 @@ where necessary for state isolation.
 from __future__ import annotations
 
 from collections.abc import Callable
+from pathlib import Path
 from typing import Any
 
 import pytest
 from click.testing import CliRunner, Result
+from lib_layered_config.examples.deploy import DeployAction, DeployResult
 
 import lib_cli_exit_tools
 
@@ -331,13 +333,18 @@ def test_config_deploy_with_target_invokes_deploy(
     tmp_path: Any,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pathlib import Path
-
     deployed_path = tmp_path / "deployed.toml"
     deployed_path.touch()
 
-    def fake_deploy(*, targets: Any, force: bool = False) -> list[Path]:
-        return [deployed_path]
+    def fake_deploy(*, targets: Any, force: bool = False) -> list[DeployResult]:
+        return [
+            DeployResult(
+                destination=deployed_path,
+                action=DeployAction.CREATED,
+                backup_path=None,
+                ucf_path=None,
+            )
+        ]
 
     monkeypatch.setattr(cli_mod, "deploy_configuration", fake_deploy)
 
@@ -352,9 +359,7 @@ def test_config_deploy_reports_when_no_files_created(
     cli_runner: CliRunner,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pathlib import Path
-
-    def fake_deploy(*, targets: Any, force: bool = False) -> list[Path]:
+    def fake_deploy(*, targets: Any, force: bool = False) -> list[DeployResult]:
         return []
 
     monkeypatch.setattr(cli_mod, "deploy_configuration", fake_deploy)
@@ -388,17 +393,28 @@ def test_config_deploy_accepts_multiple_targets(
     tmp_path: Any,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pathlib import Path
-
     path1 = tmp_path / "config1.toml"
     path2 = tmp_path / "config2.toml"
     path1.touch()
     path2.touch()
     captured_targets: list[Any] = []
 
-    def fake_deploy(*, targets: Any, force: bool = False) -> list[Path]:
+    def fake_deploy(*, targets: Any, force: bool = False) -> list[DeployResult]:
         captured_targets.extend(targets)
-        return [path1, path2]
+        return [
+            DeployResult(
+                destination=path1,
+                action=DeployAction.CREATED,
+                backup_path=None,
+                ucf_path=None,
+            ),
+            DeployResult(
+                destination=path2,
+                action=DeployAction.CREATED,
+                backup_path=None,
+                ucf_path=None,
+            ),
+        ]
 
     monkeypatch.setattr(cli_mod, "deploy_configuration", fake_deploy)
 
@@ -619,7 +635,6 @@ def test_analyze_command_writes_to_output_file(
     tmp_path: Any,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    from pathlib import Path
     from pyproj_dep_analyze.models import AnalysisResult
 
     pyproject = tmp_path / "pyproject.toml"
@@ -885,9 +900,22 @@ def test_report_deploy_results_shows_paths(
     capsys: pytest.CaptureFixture[str],
     tmp_path: Any,
 ) -> None:
-    paths = [tmp_path / "config1.toml", tmp_path / "config2.toml"]
+    results = [
+        DeployResult(
+            destination=tmp_path / "config1.toml",
+            action=DeployAction.CREATED,
+            backup_path=None,
+            ucf_path=None,
+        ),
+        DeployResult(
+            destination=tmp_path / "config2.toml",
+            action=DeployAction.CREATED,
+            backup_path=None,
+            ucf_path=None,
+        ),
+    ]
 
-    cli_mod._report_deploy_results(paths)  # pyright: ignore[reportPrivateUsage]
+    cli_mod._report_deploy_results(results)  # pyright: ignore[reportPrivateUsage]
 
     captured = capsys.readouterr()
     assert "Configuration deployed successfully" in captured.out

@@ -12,6 +12,7 @@ from pathlib import Path
 from typing import Any
 
 import pytest
+from lib_layered_config.examples.deploy import DeployAction, DeployResult
 
 from pyproj_dep_analyze import config_deploy as deploy_mod
 from pyproj_dep_analyze.config_deploy import deploy_configuration
@@ -60,7 +61,7 @@ def test_deploy_configuration_force_defaults_to_false() -> None:
 def test_deploy_configuration_returns_list(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    def fake_deploy_config(**kwargs: Any) -> list[Path]:
+    def fake_deploy_config(**kwargs: Any) -> list[DeployResult]:
         return []
 
     monkeypatch.setattr(deploy_mod, "deploy_config", fake_deploy_config)
@@ -76,7 +77,7 @@ def test_deploy_configuration_passes_targets_to_lib_layered_config(
 ) -> None:
     captured: dict[str, Any] = {}
 
-    def capture_deploy_config(**kwargs: Any) -> list[Path]:
+    def capture_deploy_config(**kwargs: Any) -> list[DeployResult]:
         captured.update(kwargs)
         return []
 
@@ -93,7 +94,7 @@ def test_deploy_configuration_passes_force_to_lib_layered_config(
 ) -> None:
     captured: dict[str, Any] = {}
 
-    def capture_deploy_config(**kwargs: Any) -> list[Path]:
+    def capture_deploy_config(**kwargs: Any) -> list[DeployResult]:
         captured.update(kwargs)
         return []
 
@@ -112,7 +113,7 @@ def test_deploy_configuration_uses_correct_vendor(
 
     captured: dict[str, Any] = {}
 
-    def capture_deploy_config(**kwargs: Any) -> list[Path]:
+    def capture_deploy_config(**kwargs: Any) -> list[DeployResult]:
         captured.update(kwargs)
         return []
 
@@ -131,7 +132,7 @@ def test_deploy_configuration_uses_correct_app(
 
     captured: dict[str, Any] = {}
 
-    def capture_deploy_config(**kwargs: Any) -> list[Path]:
+    def capture_deploy_config(**kwargs: Any) -> list[DeployResult]:
         captured.update(kwargs)
         return []
 
@@ -150,7 +151,7 @@ def test_deploy_configuration_uses_correct_slug(
 
     captured: dict[str, Any] = {}
 
-    def capture_deploy_config(**kwargs: Any) -> list[Path]:
+    def capture_deploy_config(**kwargs: Any) -> list[DeployResult]:
         captured.update(kwargs)
         return []
 
@@ -169,7 +170,7 @@ def test_deploy_configuration_uses_default_config_as_source(
 
     captured: dict[str, Any] = {}
 
-    def capture_deploy_config(**kwargs: Any) -> list[Path]:
+    def capture_deploy_config(**kwargs: Any) -> list[DeployResult]:
         captured.update(kwargs)
         return []
 
@@ -181,27 +182,40 @@ def test_deploy_configuration_uses_default_config_as_source(
 
 
 @pytest.mark.os_agnostic
-def test_deploy_configuration_returns_deployed_paths(
+def test_deploy_configuration_returns_deployed_results(
     monkeypatch: pytest.MonkeyPatch,
     tmp_path: Path,
 ) -> None:
-    expected_paths = [tmp_path / "config1.toml", tmp_path / "config2.toml"]
+    expected_results = [
+        DeployResult(
+            destination=tmp_path / "config1.toml",
+            action=DeployAction.CREATED,
+            backup_path=None,
+            ucf_path=None,
+        ),
+        DeployResult(
+            destination=tmp_path / "config2.toml",
+            action=DeployAction.CREATED,
+            backup_path=None,
+            ucf_path=None,
+        ),
+    ]
 
-    def fake_deploy_config(**kwargs: Any) -> list[Path]:
-        return expected_paths
+    def fake_deploy_config(**kwargs: Any) -> list[DeployResult]:
+        return expected_results
 
     monkeypatch.setattr(deploy_mod, "deploy_config", fake_deploy_config)
 
     result = deploy_configuration(targets=[DeploymentTarget.USER])
 
-    assert result == expected_paths
+    assert result == expected_results
 
 
 @pytest.mark.os_agnostic
 def test_deploy_configuration_returns_empty_list_when_all_exist(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    def fake_deploy_config(**kwargs: Any) -> list[Path]:
+    def fake_deploy_config(**kwargs: Any) -> list[DeployResult]:
         return []
 
     monkeypatch.setattr(deploy_mod, "deploy_config", fake_deploy_config)
