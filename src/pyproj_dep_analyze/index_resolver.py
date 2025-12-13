@@ -186,10 +186,9 @@ def _get_uv_indexes(project_dir: Path) -> list[str]:
         return indexes
 
     try:
-        import tomllib
+        import rtoml
 
-        with uv_toml.open("rb") as f:
-            data = tomllib.load(f)
+        data = rtoml.load(uv_toml)
 
         config = UVConfigSchema.model_validate(data)
 

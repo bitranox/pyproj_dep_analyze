@@ -21,11 +21,12 @@ from __future__ import annotations
 
 import logging
 import re
-import tomllib
 from enum import Enum
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
+
+import rtoml
 
 from .models import DependencyInfo, DependencyMarker, GitProtocol
 from .schemas import PoetryDependencySpec, PyprojectSchema
@@ -71,11 +72,10 @@ def _load_pyproject_raw(path: Path | str) -> dict[str, Any]:
 
     Raises:
         FileNotFoundError: If the file does not exist.
-        tomllib.TOMLDecodeError: If the file is not valid TOML.
+        rtoml.TomlParsingError: If the file is not valid TOML.
     """
     path = Path(path)
-    with path.open("rb") as f:
-        return tomllib.load(f)
+    return rtoml.load(path)
 
 
 def load_pyproject(path: Path | str) -> PyprojectSchema:
@@ -92,7 +92,7 @@ def load_pyproject(path: Path | str) -> PyprojectSchema:
 
     Raises:
         FileNotFoundError: If the file does not exist.
-        tomllib.TOMLDecodeError: If the file is not valid TOML.
+        rtoml.TomlParsingError: If the file is not valid TOML.
         pydantic.ValidationError: If the TOML doesn't match expected schema.
     """
     raw_data = _load_pyproject_raw(path)

@@ -217,6 +217,22 @@ models (bottom layer)
 - Monitor GitHub Actions for errors after pushing
 - Attempt to correct any CI/CD errors that appear
 
+## Python Version & Dependencies
+
+- **Python 3.10+** - supports Python 3.10, 3.11, 3.12, and 3.13
+- **TOML parsing** - uses `rtoml` (Rust-based) for consistent cross-version support
+- **Type hints** - uses `from __future__ import annotations` in all files for modern syntax compatibility
+- **CI matrix** - tests against all supported Python versions on Ubuntu, macOS, and Windows
+
+### Key Runtime Dependencies
+- `rich-click` - CLI framework
+- `httpx` - async HTTP client for PyPI/GitHub API calls
+- `pydantic` - data validation and models
+- `rtoml` - TOML parsing (replaces stdlib `tomllib` for Python 3.10 compatibility)
+- `lib_layered_config` - layered configuration management
+- `lib_log_rich` - structured logging with Rich
+- `lib_cli_exit_tools` - CLI exit handling
+
 ## Claude Code Workflow
 
 When working on this project:

@@ -5,6 +5,11 @@
 This guide collects every supported method to install `pyproj_dep_analyze`, including
 isolated environments and system package managers. Pick the option that matches your workflow.
 
+## Requirements
+
+- **Python 3.10 or higher** (tested on 3.10, 3.11, 3.12, 3.13)
+- Works on Linux, macOS, and Windows
+
 
 ## We recommend `uv` to install the package 
 

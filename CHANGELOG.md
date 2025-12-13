@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file following
 the [Keep a Changelog](https://keepachangelog.com/) format.
 
 
+## [3.1.0] - 2025-12-13
+
+### Changed
+- **Python 3.10+ compatibility** - lowered minimum Python version from 3.13 to 3.10
+- Switched from `tomllib`/`tomli` to `rtoml` (Rust-based TOML parser) for consistent cross-version support
+- Updated CI matrix to test Python 3.10, 3.11, 3.12, and 3.13
+- Updated Ruff target version from `py313` to `py310`
+
+### Added
+- **"Why pyproj_dep_analyze?"** section in README explaining security motivation for dependency analysis in AI-assisted "vibe coded" applications
+- Documented common supply chain attack vectors: typosquatting, dependency confusion, malicious updates, abandoned package takeover, protestware, hidden malware
+- Added `rtoml>=0.11.0` as runtime dependency (replaces conditional `tomli` backport)
+- Python version classifiers for 3.10, 3.11, 3.12, 3.13 in package metadata
+
+### Removed
+- Removed conditional `tomli` dependency (no longer needed with `rtoml`)
+
 ## [3.0.0] - 2025-12-07
 
 ### Added

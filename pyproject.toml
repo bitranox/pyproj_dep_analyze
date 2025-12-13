@@ -1,9 +1,9 @@
 [project]
 name = "pyproj_dep_analyze"
-version = "3.0.0"
+version = "3.1.0"
 description = "Python project dependency analyzer"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.10"
 dependencies = [
     "rich-click>=1.9.4",
     "lib_cli_exit_tools>=2.2.2",
@@ -11,6 +11,7 @@ dependencies = [
     "lib_layered_config>=5.0.0",
     "httpx>=0.28.1",
     "pydantic>=2.12.5",
+    "rtoml>=0.13.0",
 ]
 license = { text = "MIT" }
 authors = [{ name = "bitranox", email = "bitranox@gmail.com" }]
@@ -18,6 +19,10 @@ keywords = ["dependency", "analyzer", "pyproject", "outdated", "version", "cli"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
   "License :: OSI Approved :: MIT License",
   "Environment :: Console",
   "Operating System :: OS Independent",
@@ -60,7 +65,7 @@ include = ["src/pyproj_dep_analyze/py.typed", "src/pyproj_dep_analyze/defaultcon
 
 [tool.ruff]
 line-length = 160
-target-version = "py313"
+target-version = "py310"
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

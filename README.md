@@ -7,7 +7,7 @@
 [![PyPI](https://img.shields.io/pypi/v/pyproj_dep_analyze.svg)](https://pypi.org/project/pyproj_dep_analyze/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyproj_dep_analyze.svg)](https://pypi.org/project/pyproj_dep_analyze/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![Open in Codespaces](https://img.shields.io/badge/Codespaces-Open-blue?logo=github&logoColor=white&style=flat-square)](https://codespaces.new/bitranox/pyproj_dep_analyze?quickstart=1)
 [![Code Style: Ruff](https://img.shields.io/badge/Code%20Style-Ruff-46A3FF?logo=ruff&labelColor=000)](https://docs.astral.sh/ruff/)
 [![Maintainability](https://qlty.sh/badges/041ba2c1-37d6-40bb-85a0-ec5a8a0aca0c/maintainability.svg)](https://qlty.sh/gh/bitranox/projects/pyproj_dep_analyze)
@@ -18,8 +18,39 @@
 
 ---
 
+## Why pyproj_dep_analyze?
+
+**AI-assisted "vibe coding" creates apps fast, but dependencies are often unvetted.**
+
+When developers build applications rapidly with AI assistance, the focus is on functionality, not supply chain security. Dependencies get added without scrutiny, creating blind spots that attackers exploit:
+
+| Attack Vector | Description |
+|--------------|-------------|
+| **Typosquatting** | Malicious packages with names similar to popular ones (`reqeusts` vs `requests`) |
+| **Dependency Confusion** | Private package names hijacked on public PyPI |
+| **Malicious Updates** | Legitimate packages compromised via maintainer account takeover |
+| **Abandoned Package Takeover** | Unmaintained packages acquired by bad actors |
+| **Protestware / Sabotage** | Maintainers intentionally breaking their own packages |
+| **Hidden Malware** | Obfuscated code in install scripts or deep dependencies |
+
+`pyproj_dep_analyze` provides **visibility into your dependency landscape**, generating structured data that feeds into security workflows:
+
+```
+pyproj_dep_analyze  →  pyproj_dep_security  →  pyproj_dep_update
+     (analyze)            (scan & audit)         (remediate)
+```
+
+- **`pyproj_dep_analyze`** - Extracts and enriches dependency metadata from `pyproject.toml`
+- **`pyproj_dep_security`** - Scans installed environments for vulnerabilities and supply chain risks
+- **`pyproj_dep_update`** - Applies fixes by updating `pyproject.toml` based on security findings
+
+> **Know your dependencies before they become your vulnerabilities.**
+
+---
+
 ## Table of Contents
 
+- [Why pyproj_dep_analyze?](#why-pyproj_dep_analyze)
 - [Overview](#overview)
 - [Scope & Boundaries](#scope--boundaries)
 - [Installation](#installation)
@@ -102,7 +133,7 @@ uv pip install pyproj_dep_analyze
 pip install pyproj_dep_analyze
 ```
 
-**Requirements:** Python 3.13+
+**Requirements:** Python 3.10+
 
 Both `pyproj_dep_analyze` and `pyproj-dep-analyze` commands are available after installation.
 
