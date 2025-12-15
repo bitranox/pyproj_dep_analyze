@@ -35,6 +35,8 @@ from subprocess import CompletedProcess
 from typing import Any, Mapping, Sequence, cast
 from urllib.parse import urlparse
 
+import rtoml
+
 
 @dataclass
 class RunResult:
@@ -118,41 +120,6 @@ class ProjectMetadata:
 
 _PYPROJECT_DATA_CACHE: dict[Path, dict[str, object]] = {}
 _METADATA_CACHE: dict[Path, ProjectMetadata] = {}
-_toml_module: Any = None
-
-
-def _get_toml_module() -> Any:
-    """Return tomllib (Python 3.11+) or tomli backport (Python 3.9-3.10).
-
-    Purpose
-    -------
-    Ensure TOML parsing works across Python 3.9+ by using the standard
-    library tomllib on 3.11+ and falling back to the tomli package
-    on earlier versions.
-
-    Returns
-    -------
-    module
-        Either tomllib or tomli with identical interfaces.
-
-    Raises
-    ------
-    ModuleNotFoundError
-        If neither tomllib nor tomli can be imported.
-    """
-    global _toml_module
-    if _toml_module is not None:
-        return _toml_module
-
-    # Use tomllib (Python 3.11+) or tomli backport (Python 3.9-3.10)
-    # Both have the same interface, so we can treat them interchangeably
-    try:
-        import tomllib as module  # type: ignore[import-not-found]
-    except ModuleNotFoundError:
-        import tomli as module  # type: ignore[import-not-found,no-redef]
-
-    _toml_module = module
-    return module
 
 
 def run(
@@ -164,13 +131,6 @@ def run(
     env: Mapping[str, str] | None = None,
     dry_run: bool = False,
 ) -> RunResult:
-    """Execute a subprocess command and return structured results.
-
-    Security Note:
-        When cmd is a string, shell=True is used intentionally to support
-        shell features like pipes and redirects. This is safe for internal
-        build scripts where commands are not constructed from user input.
-    """
     if isinstance(cmd, str):
         display = cmd
         shell = True
@@ -182,7 +142,7 @@ def run(
     if dry_run:
         print(f"[dry-run] {display}")
         return RunResult(0, "", "")
-    proc: CompletedProcess[str] = subprocess.run(  # nosec B602 - shell=True intentional for build scripts
+    proc: CompletedProcess[str] = subprocess.run(
         args,
         shell=shell,
         cwd=cwd,
@@ -209,7 +169,7 @@ def _package_name_to_display(value: str) -> str:
     """Convert package name to display-friendly app name.
 
     Examples:
-        "pyproj_dep_analyze" -> "Check ZPool Status"
+        "check_zpool_status" -> "Check ZPool Status"
         "my-cool-app" -> "My Cool App"
     """
     # Replace underscores and hyphens with spaces
@@ -257,10 +217,9 @@ def _load_pyproject(pyproject: Path) -> dict[str, object]:
     if cached is not None:
         return cached
     raw_text = path.read_text(encoding="utf-8")
-    toml_module = _get_toml_module()
     try:
-        parsed_obj = toml_module.loads(raw_text)
-    except toml_module.TOMLDecodeError as exc:  # pragma: no cover - invalid pyproject fails fast
+        parsed_obj = rtoml.loads(raw_text)
+    except rtoml.TomlParsingError as exc:  # pragma: no cover - invalid pyproject fails fast
         msg = f"Unable to parse {path}: {exc}"
         raise ValueError(msg) from exc
     data = {str(key): value for key, value in parsed_obj.items()}
@@ -651,19 +610,10 @@ def read_version_from_pyproject(pyproject: Path = Path("pyproject.toml")) -> str
 
 def ensure_clean_git_tree() -> None:
     """Ensure the git working tree has no uncommitted changes."""
-    # Check for unstaged changes
-    unstaged = subprocess.call(
-        ["git", "diff", "--quiet"],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
+    dirty = subprocess.call(
+        ["bash", "-lc", "! git diff --quiet || ! git diff --cached --quiet"], stdout=subprocess.DEVNULL
     )
-    # Check for staged changes
-    staged = subprocess.call(
-        ["git", "diff", "--cached", "--quiet"],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-    )
-    if unstaged != 0 or staged != 0:
+    if dirty == 0:
         print("[release] Working tree not clean. Commit or stash changes first.", file=sys.stderr)
         raise SystemExit(1)
 
@@ -684,9 +634,8 @@ def git_tag_exists(name: str) -> bool:
     """Check if a git tag exists locally."""
     return (
         subprocess.call(
-            ["git", "rev-parse", "-q", "--verify", f"refs/tags/{name}"],
+            ["bash", "-lc", f"git rev-parse -q --verify {shlex.quote('refs/tags/' + name)} >/dev/null"],
             stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
         )
         == 0
     )
@@ -711,9 +660,7 @@ def gh_release_exists(tag: str) -> bool:
     """Check if a GitHub release exists for the given tag."""
     return (
         subprocess.call(
-            ["gh", "release", "view", tag],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            ["bash", "-lc", f"gh release view {shlex.quote(tag)} >/dev/null 2>&1"], stdout=subprocess.DEVNULL
         )
         == 0
     )
