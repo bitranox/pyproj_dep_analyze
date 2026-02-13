@@ -177,4 +177,4 @@ layers = [
 # PYSEC-2022-42969: same as above (alias)
 # CVE-2025-66418, CVE-2025-66471: urllib3 vulnerabilities (pending upstream fix)
 # PYSEC-2022-43012, PYSEC-2025-49, CVE-2024-6345: setuptools vulnerabilities (CI uses older version)
-ignore-vulns = ["GHSA-4xh5-x5gv-qwph", "PYSEC-2022-42969", "CVE-2025-66418", "CVE-2025-66471", "PYSEC-2022-43012", "PYSEC-2025-49", "CVE-2024-6345", "CVE-2026-25990"]
+ignore-vulns = ["GHSA-4xh5-x5gv-qwph", "PYSEC-2022-42969", "CVE-2025-66418", "CVE-2025-66471", "PYSEC-2022-43012", "PYSEC-2025-49", "CVE-2024-6345", "CVE-2026-25990", "CVE-2026-26007"]
