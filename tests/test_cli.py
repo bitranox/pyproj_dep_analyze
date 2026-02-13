@@ -283,10 +283,10 @@ def test_config_command_with_mocked_config_shows_sections(
         def __init__(self) -> None:
             pass
 
-        def as_dict(self) -> dict[str, Any]:
+        def as_dict(self, *, redact: bool = False) -> dict[str, Any]:
             return test_data
 
-        def to_json(self, *, indent: int | None = None) -> str:
+        def to_json(self, *, indent: int | None = None, redact: bool = False) -> str:
             import json
 
             return json.dumps(test_data, indent=indent)

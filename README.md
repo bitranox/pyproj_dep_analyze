@@ -1,7 +1,7 @@
 # pyproj_dep_analyze
 
 <!-- Badges -->
-[![CI](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/ci.yml/badge.svg)](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/ci.yml)
+[![CI](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/default_cicd_public.yml/badge.svg)](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/default_cicd_public.yml)
 [![CodeQL](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/codeql.yml/badge.svg)](https://github.com/bitranox/pyproj_dep_analyze/actions/workflows/codeql.yml)
 [![codecov](https://codecov.io/gh/bitranox/pyproj_dep_analyze/graph/badge.svg?token=UFBaUDIgRk)](https://codecov.io/gh/bitranox/pyproj_dep_analyze)
 [![PyPI](https://img.shields.io/pypi/v/pyproj_dep_analyze.svg)](https://pypi.org/project/pyproj_dep_analyze/)

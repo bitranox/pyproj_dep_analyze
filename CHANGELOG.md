@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file following
 the [Keep a Changelog](https://keepachangelog.com/) format.
 
 
+## [Unreleased]
+
+## [4.0.1] - 2026-02-13
+
+### Changed
+- Replaced `scripts/` directory with external `bmk` build tool
+- Restructured CI/CD workflows (`default_cicd_public.yml`, `default_release_public.yml`)
+- Added `extract-metadata` composite GitHub Action
+- Rewrote Makefile to use `bmk` for all build tasks
+- Updated import-linter architecture contracts to properly layer `python_version_parser`
+- Updated 10 dependencies to latest versions
+
+### Fixed
+- Fixed litestar test data TOML parsing error (duplicate `lint` key under `tool.ruff`)
+- Fixed `FakeConfig` test compatibility with `lib_layered_config` `redact` parameter
+- Fixed shell script formatting and shellcheck warnings in `reset_git_history.sh`
+
+### Removed
+- Removed `scripts/` directory (replaced by `bmk` tool)
+- Removed `tests/test_scripts.py`
+
 ## [4.0.0] - 2025-12-13
 
 ### Breaking Changes

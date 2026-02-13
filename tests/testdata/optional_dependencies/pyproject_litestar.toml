@@ -403,8 +403,12 @@ strict-imports = false
 
 [tool.ruff]
 include = ["{litestar,tests,docs,test_apps,tools}/**/*.{py,pyi}", "pyproject.toml"]
+line-length = 120
+src = ["litestar", "tests", "docs/examples"]
+target-version = "py39"
 
-lint.ignore = [
+[tool.ruff.lint]
+ignore = [
   "A003",    # flake8-builtins - class attribute {name} is shadowing a python builtin
   "B010",    # flake8-bugbear - do not call setattr with a constant attribute value
   "D100",    # pydocstyle - missing docstring in public module
@@ -429,7 +433,7 @@ lint.ignore = [
   "PLW1641", # Object does not implement `__hash__` method
   "SIM103",  # 'Return the condition directly': This is a bit overzealous
 ]
-lint.select = [
+select = [
   "A",   # flake8-builtins
   "B",   # flake8-bugbear
   "BLE", # flake8-blind-except
@@ -465,10 +469,6 @@ lint.select = [
   "W",   # pycodestyle - warning
   "YTT", # flake8-2020
 ]
-
-line-length = 120
-src = ["litestar", "tests", "docs/examples"]
-target-version = "py39"
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

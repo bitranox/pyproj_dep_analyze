@@ -1,14 +1,14 @@
 [project]
 name = "pyproj_dep_analyze"
-version = "4.0.0"
+version = "4.0.1"
 description = "Python project dependency analyzer"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "rich-click>=1.9.4",
-    "lib_cli_exit_tools>=2.2.2",
-    "lib_log_rich>=6.0.0",
-    "lib_layered_config>=5.0.0",
+    "rich-click>=1.9.7",
+    "lib_cli_exit_tools>=2.3.0",
+    "lib_log_rich>=6.3.3",
+    "lib_layered_config>=5.4.1",
     "httpx>=0.28.1",
     "pydantic>=2.12.5",
     "rtoml>=0.13.0",
@@ -38,15 +38,15 @@ Issues = "https://github.com/bitranox/pyproj_dep_analyze/issues"
 dev = [
   "pytest>=9.0.2",
   "pytest-cov>=7.0.0",
-  "ruff>=0.14.9",
-  "pyright[nodejs]>=1.1.407",
-  "bandit>=1.9.2",
-  "build>=1.3.0",
+  "ruff>=0.15.1",
+  "pyright[nodejs]>=1.1.408",
+  "bandit>=1.9.3",
+  "build>=1.4.0",
   "twine>=6.2.0",
   "codecov-cli>=11.2.6",
   "pip-audit>=2.10.0",
-  "textual>=6.8.0",
-  "import-linter>=2.9"
+  "textual>=7.5.0",
+  "import-linter>=2.10"
 ]
 
 [project.scripts]
@@ -151,23 +151,13 @@ src-path = "src"
 root_package = "pyproj_dep_analyze"
 
 [[tool.importlinter.contracts]]
-name = "Core modules are independent"
-type = "independence"
-modules = [
-  "pyproj_dep_analyze.models",
-  "pyproj_dep_analyze.python_version_parser",
-]
-
-[[tool.importlinter.contracts]]
 name = "CLI is the top layer"
 type = "layers"
 layers = [
   "pyproj_dep_analyze.cli",
   "pyproj_dep_analyze.analyzer",
-  "pyproj_dep_analyze.index_resolver",
-  "pyproj_dep_analyze.repo_resolver",
-  "pyproj_dep_analyze.version_resolver",
-  "pyproj_dep_analyze.dependency_extractor",
+  "pyproj_dep_analyze.index_resolver | pyproj_dep_analyze.repo_resolver | pyproj_dep_analyze.version_resolver",
+  "pyproj_dep_analyze.dependency_extractor | pyproj_dep_analyze.python_version_parser",
   "pyproj_dep_analyze.models",
 ]
 
