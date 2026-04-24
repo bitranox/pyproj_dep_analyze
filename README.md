@@ -11,7 +11,6 @@
 [![Open in Codespaces](https://img.shields.io/badge/Codespaces-Open-blue?logo=github&logoColor=white&style=flat-square)](https://codespaces.new/bitranox/pyproj_dep_analyze?quickstart=1)
 [![Code Style: Ruff](https://img.shields.io/badge/Code%20Style-Ruff-46A3FF?logo=ruff&labelColor=000)](https://docs.astral.sh/ruff/)
 [![Maintainability](https://qlty.sh/badges/041ba2c1-37d6-40bb-85a0-ec5a8a0aca0c/maintainability.svg)](https://qlty.sh/gh/bitranox/projects/pyproj_dep_analyze)
-[![Known Vulnerabilities](https://snyk.io/test/github/bitranox/pyproj_dep_analyze/badge.svg)](https://snyk.io/test/github/bitranox/pyproj_dep_analyze)
 [![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)
 
 **Parses `pyproject.toml` to generate actionable dependency data for security audits, update automation, and LLM-powered code review.**
