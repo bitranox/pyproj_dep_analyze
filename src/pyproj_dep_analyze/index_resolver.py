@@ -28,7 +28,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
 
-import httpx
+import httpx2
 
 from .models import IndexInfo, IndexType, KNOWN_INDEX_PATTERNS, PackageIndexResolutions
 from .schemas import PyprojectSchema, UVConfigSchema
@@ -330,7 +330,7 @@ class IndexResolver:
         url = self._get_json_api_url(index, package)
 
         try:
-            async with httpx.AsyncClient(timeout=self.timeout) as client:
+            async with httpx2.AsyncClient(timeout=self.timeout) as client:
                 response = await client.head(url)
                 return response.status_code == 200
         except Exception:

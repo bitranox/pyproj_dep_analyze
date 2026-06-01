@@ -10,7 +10,7 @@ from __future__ import annotations
 import asyncio
 from unittest.mock import AsyncMock, MagicMock, patch
 
-import httpx
+import httpx2
 import pytest
 
 from pyproj_dep_analyze.models import RepoMetadata, RepoType
@@ -409,7 +409,7 @@ def test_repo_resolver_fetch_handles_non_200_response() -> None:
     mock_response = MagicMock()
     mock_response.status_code = 404
 
-    with patch("httpx.AsyncClient") as mock_client:
+    with patch("httpx2.AsyncClient") as mock_client:
         mock_instance = AsyncMock()
         mock_instance.get.return_value = mock_response
         mock_instance.__aenter__.return_value = mock_instance
@@ -430,9 +430,9 @@ def test_repo_resolver_fetch_handles_timeout() -> None:
 
     resolver = RepoResolver()
 
-    with patch("httpx.AsyncClient") as mock_client:
+    with patch("httpx2.AsyncClient") as mock_client:
         mock_instance = AsyncMock()
-        mock_instance.get.side_effect = httpx.TimeoutException("timeout")
+        mock_instance.get.side_effect = httpx2.TimeoutException("timeout")
         mock_instance.__aenter__.return_value = mock_instance
         mock_instance.__aexit__.return_value = None
         mock_client.return_value = mock_instance

@@ -1,16 +1,16 @@
 [project]
 name = "pyproj_dep_analyze"
-version = "4.0.1"
+version = "4.0.2"
 description = "Python project dependency analyzer"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "rich-click>=1.9.7",
-    "lib_cli_exit_tools>=2.3.0",
-    "lib_log_rich>=6.3.3",
-    "lib_layered_config>=5.4.1",
-    "httpx>=0.28.1",
-    "pydantic>=2.12.5",
+    "rich-click>=1.9.8",
+    "lib_cli_exit_tools>=2.3.1",
+    "lib_log_rich>=6.3.4",
+    "lib_layered_config>=5.5.1",
+    "httpx2>=2.3.0",
+    "pydantic>=2.13.4",
     "rtoml>=0.13.0",
 ]
 license = { text = "MIT" }
@@ -45,17 +45,17 @@ Issues = "https://github.com/bitranox/pyproj_dep_analyze/issues"
 
 [project.optional-dependencies]
 dev = [
-  "pytest>=9.0.2",
-  "pytest-cov>=7.0.0",
-  "ruff>=0.15.1",
-  "pyright[nodejs]>=1.1.408",
-  "bandit>=1.9.3",
-  "build>=1.4.0",
+  "pytest>=9.0.3",
+  "pytest-cov>=7.1.0",
+  "ruff>=0.15.15",
+  "pyright[nodejs]>=1.1.409",
+  "bandit>=1.9.4",
+  "build>=1.5.0",
   "twine>=6.2.0",
-  "codecov-cli>=11.2.6",
+  "codecov-cli>=11.2.8",
   "pip-audit>=2.10.0",
-  "textual>=7.5.0",
-  "import-linter>=2.10"
+  "textual>=8.2.7",
+  "import-linter>=2.11"
 ]
 
 [project.scripts]
@@ -63,7 +63,7 @@ pyproj_dep_analyze = "pyproj_dep_analyze.cli:main"
 pyproj-dep-analyze = "pyproj_dep_analyze.cli:main"
 
 [build-system]
-requires = ["hatchling>=1.28.0"]
+requires = ["hatchling>=1.29.0"]
 build-backend = "hatchling.build"
 
 
@@ -177,4 +177,9 @@ layers = [
 # PYSEC-2022-42969: same as above (alias)
 # CVE-2025-66418, CVE-2025-66471: urllib3 vulnerabilities (pending upstream fix)
 # PYSEC-2022-43012, PYSEC-2025-49, CVE-2024-6345: setuptools vulnerabilities (CI uses older version)
-ignore-vulns = ["GHSA-4xh5-x5gv-qwph", "PYSEC-2022-42969", "CVE-2025-66418", "CVE-2025-66471", "PYSEC-2022-43012", "PYSEC-2025-49", "CVE-2024-6345", "CVE-2026-25990", "CVE-2026-26007", "CVE-2026-4539", "CVE-2026-25645"]
+# CVE-2026-25990: Pillow OOB write via crafted PSD image (transitive dev/build dep; fixed upstream in 12.1.1)
+# CVE-2026-26007: pyca cryptography small-subgroup attack on SECT curves (transitive via twine/keyring; fixed in 46.0.5)
+# CVE-2026-4539: Pygments AdlLexer ReDoS, local-only DoS (transitive via rich; low risk)
+# CVE-2026-25645: requests extract_zipped_paths temp-file reuse; helper unused by us (fixed upstream in 2.33.0)
+# CVE-2026-44405: paramiko allows SHA-1 for RSA keys; NOT a dependency of this project (shared-venv audit noise), no fix available
+ignore-vulns = ["GHSA-4xh5-x5gv-qwph", "PYSEC-2022-42969", "CVE-2025-66418", "CVE-2025-66471", "PYSEC-2022-43012", "PYSEC-2025-49", "CVE-2024-6345", "CVE-2026-25990", "CVE-2026-26007", "CVE-2026-4539", "CVE-2026-25645", "CVE-2026-44405"]

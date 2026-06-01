@@ -26,7 +26,7 @@ import re
 from dataclasses import dataclass, field
 from functools import lru_cache
 
-import httpx
+import httpx2
 from pydantic import TypeAdapter
 
 from .models import DependencyInfo, PyPIMetadata, PythonVersion, VersionMetrics
@@ -153,9 +153,9 @@ class VersionResolver:
         url = PYPI_API_URL.format(package=package_name)
         try:
             return await self._query_pypi_api(url, package_name, python_version)
-        except httpx.TimeoutException:
+        except httpx2.TimeoutException:
             return VersionResult(is_unknown=True, error=f"Timeout querying PyPI for {package_name}")
-        except httpx.HTTPError as e:
+        except httpx2.HTTPError as e:
             return VersionResult(is_unknown=True, error=f"HTTP error querying PyPI: {e}")
         except Exception as e:
             return VersionResult(is_unknown=True, error=f"Error querying PyPI: {e}")
@@ -167,7 +167,7 @@ class VersionResolver:
         python_version: PythonVersion | None = None,
     ) -> VersionResult:
         """Query PyPI API and parse response."""
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
+        async with httpx2.AsyncClient(timeout=self.timeout) as client:
             response = await client.get(url, headers=self._get_headers())
 
         if response.status_code == 404:
@@ -178,7 +178,7 @@ class VersionResolver:
 
     def _parse_pypi_response(
         self,
-        response: httpx.Response,
+        response: httpx2.Response,
         python_version: PythonVersion | None = None,
     ) -> VersionResult:
         """Parse PyPI API response into VersionResult with full metadata.
@@ -250,16 +250,16 @@ class VersionResolver:
         """Fetch version from GitHub API (releases then tags)."""
         try:
             return await self._query_github_api(owner, repo)
-        except httpx.TimeoutException:
+        except httpx2.TimeoutException:
             return VersionResult(is_unknown=True, error=f"Timeout querying GitHub for {owner}/{repo}")
-        except httpx.HTTPError as e:
+        except httpx2.HTTPError as e:
             return VersionResult(is_unknown=True, error=f"HTTP error querying GitHub: {e}")
         except Exception as e:
             return VersionResult(is_unknown=True, error=f"Error querying GitHub: {e}")
 
     async def _query_github_api(self, owner: str, repo: str) -> VersionResult:
         """Query GitHub API for releases then tags."""
-        async with httpx.AsyncClient(timeout=self.timeout) as client:
+        async with httpx2.AsyncClient(timeout=self.timeout) as client:
             version = await self._try_github_releases(client, owner, repo)
             if version:
                 return VersionResult(latest_version=version)
@@ -276,7 +276,7 @@ class VersionResolver:
 
     async def _try_github_releases(
         self,
-        client: httpx.AsyncClient,
+        client: httpx2.AsyncClient,
         owner: str,
         repo: str,
     ) -> str | None:
@@ -293,7 +293,7 @@ class VersionResolver:
 
     async def _try_github_tags(
         self,
-        client: httpx.AsyncClient,
+        client: httpx2.AsyncClient,
         owner: str,
         repo: str,
     ) -> str | None:

@@ -26,7 +26,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import TYPE_CHECKING
 
-import httpx
+import httpx2
 from pydantic import BaseModel, ConfigDict
 
 from .models import RepoMetadata, RepoType
@@ -218,7 +218,7 @@ class RepoResolver:
         """Get HTTP headers for GitHub API requests.
 
         Note: HTTP headers are inherently key-value pairs. Dict is acceptable
-        at this boundary as it matches the httpx API contract.
+        at this boundary as it matches the httpx2 API contract.
         """
         headers = {
             _HEADER_ACCEPT: _GITHUB_ACCEPT_VALUE,
@@ -253,7 +253,7 @@ class RepoResolver:
         url = GITHUB_REPO_API.format(owner=owner, repo=repo)
 
         try:
-            async with httpx.AsyncClient(timeout=self.timeout) as client:
+            async with httpx2.AsyncClient(timeout=self.timeout) as client:
                 response = await client.get(url, headers=self._get_github_headers())
 
             if response.status_code != 200:
@@ -263,7 +263,7 @@ class RepoResolver:
             parsed = GitHubRepoResponseSchema.model_validate(response.json())
             return self._build_metadata_from_schema(parsed, owner, repo)
 
-        except httpx.TimeoutException:
+        except httpx2.TimeoutException:
             logger.warning("Timeout fetching GitHub metadata for %s/%s", owner, repo)
             return RepoMetadata(repo_type=RepoType.GITHUB, owner=owner, name=repo)
         except Exception as e:

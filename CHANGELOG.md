@@ -6,6 +6,16 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 
 ## [Unreleased]
 
+## [4.0.2] 2026-06-01 16:39:42
+
+### Changed
+- Replaced `httpx` with `httpx2` (the Pydantic-maintained successor to httpx) as the async HTTP client for PyPI/GitHub API calls. This is an internal implementation change — the public API of resolver classes and models is unchanged.
+- Bumped minimum versions of runtime dependencies (`rich-click`, `lib_cli_exit_tools`, `lib_log_rich`, `lib_layered_config`, `pydantic`).
+- Regenerated end-to-end snapshot outputs under `tests/e2e_outputs/` (corrected the embedded project path after the repository move and refreshed live PyPI version data).
+
+### Security
+- Documented the previously undocumented `pip-audit` CVE exclusions with their affected package and rationale: `CVE-2026-25990` (Pillow), `CVE-2026-26007` (cryptography), `CVE-2026-4539` (Pygments), `CVE-2026-25645` (requests). All are transitive dev/build-toolchain advisories with no runtime impact.
+
 ## [4.0.1] - 2026-02-13
 
 ### Changed

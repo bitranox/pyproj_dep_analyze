@@ -11,7 +11,7 @@ import asyncio
 from dataclasses import dataclass
 from typing import Any
 
-import httpx
+import httpx2
 import pytest
 
 from pyproj_dep_analyze import version_resolver as resolver_mod
@@ -459,10 +459,10 @@ class MockResponse:
 
     def raise_for_status(self) -> None:
         if self.status_code >= 400:
-            raise httpx.HTTPStatusError(
+            raise httpx2.HTTPStatusError(
                 "Error",
-                request=httpx.Request("GET", "http://test"),
-                response=httpx.Response(self.status_code),
+                request=httpx2.Request("GET", "http://test"),
+                response=httpx2.Response(self.status_code),
             )
 
 

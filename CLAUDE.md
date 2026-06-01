@@ -227,7 +227,7 @@ models (bottom layer)
 
 ### Key Runtime Dependencies
 - `rich-click` - CLI framework
-- `httpx` - async HTTP client for PyPI/GitHub API calls
+- `httpx2` - async HTTP client for PyPI/GitHub API calls
 - `pydantic` - data validation and models
 - `rtoml` - TOML parsing (replaces stdlib `tomllib` for Python 3.10 compatibility)
 - `lib_layered_config` - layered configuration management

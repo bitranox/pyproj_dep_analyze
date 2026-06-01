@@ -27,7 +27,7 @@ import logging
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 
-import httpx
+import httpx2
 from pydantic import BaseModel, ConfigDict
 
 from .models import DownloadStats
@@ -108,7 +108,7 @@ class StatsResolver:
         """Fetch stats from pypistats.org API."""
         url = PYPISTATS_RECENT_URL.format(package=package_name)
         try:
-            async with httpx.AsyncClient(timeout=self.timeout) as client:
+            async with httpx2.AsyncClient(timeout=self.timeout) as client:
                 response = await client.get(url, headers={"Accept": "application/json", "User-Agent": "pyproj-dep-analyze/1.0"})
 
             if response.status_code == 404:
@@ -120,17 +120,17 @@ class StatsResolver:
                 return None
 
             return self._parse_pypistats_response(response)
-        except httpx.TimeoutException:
+        except httpx2.TimeoutException:
             logger.debug("Timeout fetching stats for %s", package_name)
             return None
-        except httpx.HTTPError as e:
+        except httpx2.HTTPError as e:
             logger.debug("HTTP error fetching stats for %s: %s", package_name, e)
             return None
         except Exception as e:
             logger.debug("Error fetching stats for %s: %s", package_name, e)
             return None
 
-    def _parse_pypistats_response(self, response: httpx.Response) -> DownloadStats | None:
+    def _parse_pypistats_response(self, response: httpx2.Response) -> DownloadStats | None:
         """Parse pypistats.org API response into DownloadStats."""
         try:
             data = response.json()

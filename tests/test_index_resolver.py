@@ -11,7 +11,7 @@ import asyncio
 import os
 from unittest.mock import AsyncMock, MagicMock, patch
 
-import httpx
+import httpx2
 import pytest
 
 from pyproj_dep_analyze.index_resolver import (
@@ -410,7 +410,7 @@ def test_index_resolver_package_exists_returns_true_on_200() -> None:
     mock_response = MagicMock()
     mock_response.status_code = 200
 
-    with patch("httpx.AsyncClient") as mock_client:
+    with patch("httpx2.AsyncClient") as mock_client:
         mock_instance = AsyncMock()
         mock_instance.head.return_value = mock_response
         mock_instance.__aenter__.return_value = mock_instance
@@ -432,7 +432,7 @@ def test_index_resolver_package_exists_returns_false_on_404() -> None:
     mock_response = MagicMock()
     mock_response.status_code = 404
 
-    with patch("httpx.AsyncClient") as mock_client:
+    with patch("httpx2.AsyncClient") as mock_client:
         mock_instance = AsyncMock()
         mock_instance.head.return_value = mock_response
         mock_instance.__aenter__.return_value = mock_instance
@@ -451,9 +451,9 @@ def test_index_resolver_package_exists_returns_false_on_exception() -> None:
     pypi_index = IndexInfo(url="https://pypi.org/simple", index_type=IndexType.PYPI, is_private=False)
     resolver = IndexResolver(indexes=[pypi_index])
 
-    with patch("httpx.AsyncClient") as mock_client:
+    with patch("httpx2.AsyncClient") as mock_client:
         mock_instance = AsyncMock()
-        mock_instance.head.side_effect = httpx.TimeoutException("timeout")
+        mock_instance.head.side_effect = httpx2.TimeoutException("timeout")
         mock_instance.__aenter__.return_value = mock_instance
         mock_instance.__aexit__.return_value = None
         mock_client.return_value = mock_instance
