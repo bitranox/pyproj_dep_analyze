@@ -1,14 +1,14 @@
 [project]
 name = "pyproj_dep_analyze"
-version = "4.0.2"
+version = "4.0.3"
 description = "Python project dependency analyzer"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "rich-click>=1.9.8",
-    "lib_cli_exit_tools>=2.3.1",
-    "lib_log_rich>=6.3.4",
-    "lib_layered_config>=5.5.1",
+    "lib_cli_exit_tools>=2.3.2",
+    "lib_log_rich>=6.3.5",
+    "lib_layered_config>=5.5.2",
     "httpx2>=2.3.0",
     "pydantic>=2.13.4",
     "rtoml>=0.13.0",

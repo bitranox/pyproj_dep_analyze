@@ -62,6 +62,7 @@ from .config_deploy import deploy_configuration
 from .config_show import display_config
 from .logging_setup import init_logging
 from .models import ConfigFormat, DeploymentTarget, OutputFormat
+from .typed_click import argument, option, version_option
 
 
 class CliCommand(str, Enum):
@@ -456,12 +457,12 @@ def _run_cli_via_exit_tools(
     context_settings=CLICK_CONTEXT_SETTINGS,
     invoke_without_command=True,
 )
-@click.version_option(
+@version_option(
     version=__init__conf__.version,
     prog_name=__init__conf__.shell_command,
     message=f"{__init__conf__.shell_command} version {__init__conf__.version}",
 )
-@click.option(
+@option(
     "--traceback/--no-traceback",
     is_flag=True,
     default=False,
@@ -547,13 +548,13 @@ def cli_fail() -> None:
 
 
 @cli.command("config", context_settings=CLICK_CONTEXT_SETTINGS)
-@click.option(
+@option(
     "--format",
     type=EnumChoice(ConfigFormat),
     default=ConfigFormat.HUMAN.value,
     help="Output format (human-readable or JSON)",
 )
-@click.option(
+@option(
     "--section",
     type=str,
     default=None,
@@ -577,34 +578,34 @@ def cli_config(format: ConfigFormat, section: str | None) -> None:
 
 
 @cli.command("analyze", context_settings=CLICK_CONTEXT_SETTINGS)
-@click.argument("pyproject_path", type=click.Path(exists=True, path_type=Path), default="pyproject.toml")
-@click.option(
+@argument("pyproject_path", type=click.Path(exists=True, path_type=Path), default="pyproject.toml")
+@option(
     "-o",
     "--output",
     type=click.Path(path_type=Path),
     default="outdated.json",
     help="Output file path (default: outdated.json)",
 )
-@click.option(
+@option(
     "--github-token",
     type=str,
     envvar="GITHUB_TOKEN",
     default=None,
     help="GitHub token for API authentication. Can also be set via PYPROJ_DEP_ANALYZE_GITHUB_TOKEN env var or config file.",
 )
-@click.option(
+@option(
     "--timeout",
     type=float,
     default=None,
     help="Request timeout in seconds. Default from config (30.0). Can also be set via PYPROJ_DEP_ANALYZE_TIMEOUT env var.",
 )
-@click.option(
+@option(
     "--concurrency",
     type=int,
     default=None,
     help="Maximum concurrent API requests. Default from config (10). Can also be set via PYPROJ_DEP_ANALYZE_CONCURRENCY env var.",
 )
-@click.option(
+@option(
     "--format",
     "output_format",
     type=EnumChoice(OutputFormat),
@@ -675,28 +676,28 @@ def cli_analyze(
 
 
 @cli.command("analyze-enriched", context_settings=CLICK_CONTEXT_SETTINGS)
-@click.argument("pyproject_path", type=click.Path(exists=True, path_type=Path), default="pyproject.toml")
-@click.option(
+@argument("pyproject_path", type=click.Path(exists=True, path_type=Path), default="pyproject.toml")
+@option(
     "-o",
     "--output",
     type=click.Path(path_type=Path),
     default="deps_enriched.json",
     help="Output file path (default: deps_enriched.json)",
 )
-@click.option(
+@option(
     "--github-token",
     type=str,
     envvar="GITHUB_TOKEN",
     default=None,
     help="GitHub token for API authentication.",
 )
-@click.option(
+@option(
     "--timeout",
     type=float,
     default=None,
     help="Request timeout in seconds.",
 )
-@click.option(
+@option(
     "--concurrency",
     type=int,
     default=None,
@@ -781,7 +782,7 @@ def _handle_deploy_error(exc: Exception) -> None:
 
 
 @cli.command("config-deploy", context_settings=CLICK_CONTEXT_SETTINGS)
-@click.option(
+@option(
     "--target",
     "targets",
     type=EnumChoice(DeploymentTarget),
@@ -789,7 +790,7 @@ def _handle_deploy_error(exc: Exception) -> None:
     required=True,
     help="Target configuration layer(s) to deploy to (can specify multiple)",
 )
-@click.option(
+@option(
     "--force",
     is_flag=True,
     default=False,
