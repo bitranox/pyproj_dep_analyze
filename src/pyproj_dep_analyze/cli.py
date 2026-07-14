@@ -97,7 +97,7 @@ TRACEBACK_VERBOSE_LIMIT: Final[int] = 10_000
 logger = logging.getLogger(__name__)
 
 
-class EnumChoice(click.ParamType):
+class EnumChoice(click.ParamType[Enum]):
     """Click parameter type that converts string choices to typed Enums.
 
     This type enforces data architecture by performing string-to-Enum conversion
