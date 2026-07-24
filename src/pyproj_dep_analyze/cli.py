@@ -10,23 +10,23 @@ aligned with the Clean Code rules captured in
 
 Contents
 --------
-* :data:`CLICK_CONTEXT_SETTINGS` – shared Click settings ensuring consistent
+* :data:`CLICK_CONTEXT_SETTINGS` - shared Click settings ensuring consistent
   ``--help`` behavior across commands.
-* :func:`apply_traceback_preferences` – helper that synchronises the shared
+* :func:`apply_traceback_preferences` - helper that synchronises the shared
   traceback configuration flags.
-* :func:`snapshot_traceback_state` / :func:`restore_traceback_state` – utilities
+* :func:`snapshot_traceback_state` / :func:`restore_traceback_state` - utilities
   for preserving and reapplying the global traceback preference.
-* :func:`cli` – root command group wiring the global options.
-* :func:`cli_main` – default action when no subcommand is provided.
-* :func:`cli_info`, :func:`cli_hello`, :func:`cli_fail` – subcommands covering
+* :func:`cli` - root command group wiring the global options.
+* :func:`cli_main` - default action when no subcommand is provided.
+* :func:`cli_info`, :func:`cli_hello`, :func:`cli_fail` - subcommands covering
   metadata printing, success path, and failure path.
-* :func:`_record_traceback_choice`, :func:`_announce_traceback_choice` – persist
+* :func:`_record_traceback_choice`, :func:`_announce_traceback_choice` - persist
   traceback preferences across context and shared tooling.
 * :func:`_invoke_cli`, :func:`_current_traceback_mode`, :func:`_traceback_limit`,
-  :func:`_print_exception`, :func:`_run_cli_via_exit_tools` – isolate the error
+  :func:`_print_exception`, :func:`_run_cli_via_exit_tools` - isolate the error
   handling and delegation path.
-* :func:`_restore_when_requested` – restores tracebacks when ``main`` finishes.
-* :func:`main` – composition helper delegating to ``lib_cli_exit_tools`` while
+* :func:`_restore_when_requested` - restores tracebacks when ``main`` finishes.
+* :func:`main` - composition helper delegating to ``lib_cli_exit_tools`` while
   honouring the shared traceback preferences.
 
 System Role
@@ -40,18 +40,15 @@ behaviour remains consistent regardless of entry point.
 from __future__ import annotations
 
 import logging
-from collections.abc import Sequence
 from enum import Enum
 from pathlib import Path
-from typing import Any, Final
+from typing import TYPE_CHECKING, Any, Final
 
 import lib_cli_exit_tools
 import lib_log_rich.runtime
 import rich_click as click
 from click.core import ParameterSource
 from pydantic import BaseModel, ConfigDict
-
-from lib_layered_config.examples.deploy import DeployResult
 
 from . import __init__conf__
 from .analyzer import run_analysis, run_enriched_analysis, write_enriched_json, write_outdated_json
@@ -63,6 +60,11 @@ from .config_show import display_config
 from .logging_setup import init_logging
 from .models import ConfigFormat, DeploymentTarget, OutputFormat
 from .typed_click import argument, option, version_option
+
+if TYPE_CHECKING:
+    from collections.abc import Sequence
+
+    from lib_layered_config.examples.deploy import DeployResult
 
 
 class CliCommand(str, Enum):
@@ -88,7 +90,7 @@ class CliCommand(str, Enum):
 
 
 #: Shared Click context flags so help output stays consistent across commands.
-CLICK_CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}  # noqa: C408
+CLICK_CONTEXT_SETTINGS = {"help_option_names": ["-h", "--help"]}
 #: Character budget used when printing truncated tracebacks.
 TRACEBACK_SUMMARY_LIMIT: Final[int] = 500
 #: Character budget used when verbose tracebacks are enabled.
@@ -197,7 +199,7 @@ class ClickContextState(BaseModel):
     traceback: bool = False
 
 
-def apply_traceback_preferences(enabled: bool) -> None:
+def apply_traceback_preferences(*, enabled: bool) -> None:
     """Synchronise shared traceback flags with the requested preference.
 
     ``lib_cli_exit_tools`` inspects global flags to decide whether tracebacks
@@ -210,7 +212,7 @@ def apply_traceback_preferences(enabled: bool) -> None:
             the compact summary mode.
 
     Example:
-        >>> apply_traceback_preferences(True)
+        >>> apply_traceback_preferences(enabled=True)
         >>> bool(lib_cli_exit_tools.config.traceback)
         True
         >>> bool(lib_cli_exit_tools.config.traceback_force_color)
@@ -248,7 +250,7 @@ def restore_traceback_state(state: TracebackState) -> None:
 
     Example:
         >>> prev = snapshot_traceback_state()
-        >>> apply_traceback_preferences(True)
+        >>> apply_traceback_preferences(enabled=True)
         >>> restore_traceback_state(prev)
         >>> snapshot_traceback_state() == prev
         True
@@ -282,7 +284,7 @@ def _record_traceback_choice(ctx: click.Context, *, enabled: bool) -> None:
     ctx.obj["state"] = ClickContextState(traceback=enabled)
 
 
-def _announce_traceback_choice(enabled: bool) -> None:
+def _announce_traceback_choice(*, enabled: bool) -> None:
     """Keep ``lib_cli_exit_tools`` in sync with the selected traceback mode.
 
     ``lib_cli_exit_tools`` reads global configuration to decide how to print
@@ -295,7 +297,7 @@ def _announce_traceback_choice(enabled: bool) -> None:
     Side Effects:
         Mutates ``lib_cli_exit_tools.config``.
     """
-    apply_traceback_preferences(enabled)
+    apply_traceback_preferences(enabled=enabled)
 
 
 def _no_subcommand_requested(ctx: click.Context) -> bool:
@@ -348,7 +350,7 @@ def _current_traceback_mode() -> bool:
     return bool(getattr(lib_cli_exit_tools.config, "traceback", False))
 
 
-def _traceback_limit(tracebacks_enabled: bool, *, summary_limit: int, verbose_limit: int) -> int:
+def _traceback_limit(*, tracebacks_enabled: bool, summary_limit: int, verbose_limit: int) -> int:
     """Return the character budget that matches the current traceback mode.
 
     Verbose tracebacks should show the full story while compact ones keep the
@@ -438,14 +440,14 @@ def _run_cli_via_exit_tools(
     """
     try:
         return _invoke_cli(argv)
-    except BaseException as exc:  # noqa: BLE001 - handled by shared printers
+    except BaseException as exc:
         tracebacks_enabled = _current_traceback_mode()
-        apply_traceback_preferences(tracebacks_enabled)
+        apply_traceback_preferences(enabled=tracebacks_enabled)
         return _print_exception(
             exc,
             tracebacks_enabled=tracebacks_enabled,
             length_limit=_traceback_limit(
-                tracebacks_enabled,
+                tracebacks_enabled=tracebacks_enabled,
                 summary_limit=summary_limit,
                 verbose_limit=verbose_limit,
             ),
@@ -469,7 +471,7 @@ def _run_cli_via_exit_tools(
     help="Show full Python traceback on errors",
 )
 @click.pass_context
-def cli(ctx: click.Context, traceback: bool) -> None:
+def cli(ctx: click.Context, *, traceback: bool) -> None:
     """Root command storing global flags and syncing shared traceback state.
 
     The CLI must provide a switch for verbose tracebacks so developers can
@@ -499,7 +501,7 @@ def cli(ctx: click.Context, traceback: bool) -> None:
     init_logging()
 
     _record_traceback_choice(ctx, enabled=traceback)
-    _announce_traceback_choice(traceback)
+    _announce_traceback_choice(enabled=traceback)
     if _no_subcommand_requested(ctx):
         if _traceback_option_requested(ctx):
             cli_main()
@@ -550,6 +552,7 @@ def cli_fail() -> None:
 @cli.command("config", context_settings=CLICK_CONTEXT_SETTINGS)
 @option(
     "--format",
+    "config_format",
     type=EnumChoice(ConfigFormat),
     default=ConfigFormat.HUMAN.value,
     help="Output format (human-readable or JSON)",
@@ -560,7 +563,7 @@ def cli_fail() -> None:
     default=None,
     help="Show only a specific configuration section (e.g., 'lib_log_rich')",
 )
-def cli_config(format: ConfigFormat, section: str | None) -> None:
+def cli_config(config_format: ConfigFormat, section: str | None) -> None:
     """Display the current merged configuration from all sources.
 
     Shows configuration loaded from:
@@ -570,11 +573,11 @@ def cli_config(format: ConfigFormat, section: str | None) -> None:
     - .env files
     - Environment variables (PYPROJ_DEP_ANALYZE_*)
 
-    Precedence: defaults → app → host → user → dotenv → env
+    Precedence: defaults -> app -> host -> user -> dotenv -> env
     """
-    with lib_log_rich.runtime.bind(job_id=CliCommand.CONFIG.value, extra={"command": CliCommand.CONFIG.value, "format": format.value}):
-        logger.info("Displaying configuration", extra={"format": format.value, "section": section})
-        display_config(format=format, section=section)
+    with lib_log_rich.runtime.bind(job_id=CliCommand.CONFIG.value, extra={"command": CliCommand.CONFIG.value, "format": config_format.value}):
+        logger.info("Displaying configuration", extra={"format": config_format.value, "section": section})
+        display_config(config_format=config_format, section=section)
 
 
 @cli.command("analyze", context_settings=CLICK_CONTEXT_SETTINGS)
@@ -613,6 +616,7 @@ def cli_config(format: ConfigFormat, section: str | None) -> None:
     help="Output format (default: table)",
 )
 def cli_analyze(
+    *,
     pyproject_path: Path,
     output: Path,
     github_token: str | None,
@@ -796,7 +800,7 @@ def _handle_deploy_error(exc: Exception) -> None:
     default=False,
     help="Overwrite existing configuration files",
 )
-def cli_config_deploy(targets: tuple[DeploymentTarget, ...], force: bool) -> None:
+def cli_config_deploy(*, targets: tuple[DeploymentTarget, ...], force: bool) -> None:
     r"""Deploy default configuration to system or user directories.
 
     Creates configuration files in platform-specific locations:
@@ -873,11 +877,11 @@ def main(
             verbose_limit=verbose_limit,
         )
     finally:
-        _restore_when_requested(previous_state, restore_traceback)
+        _restore_when_requested(previous_state, should_restore=restore_traceback)
         lib_log_rich.runtime.shutdown()
 
 
-def _restore_when_requested(state: TracebackState, should_restore: bool) -> None:
+def _restore_when_requested(state: TracebackState, *, should_restore: bool) -> None:
     """Restore the prior traceback configuration when requested.
 
     CLI execution may toggle verbose tracebacks for the duration of the run.

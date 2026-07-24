@@ -356,10 +356,10 @@ Analyze a pyproject.toml file and return outdated entries.
 from pyproj_dep_analyze import analyze_pyproject, OutdatedEntry, Action
 
 entries: list[OutdatedEntry] = analyze_pyproject(
-    "pyproject.toml",           # Path to pyproject.toml (required)
-    github_token=None,          # GitHub API token (default: None)
-    timeout=30.0,               # Request timeout in seconds (default: 30.0)
-    concurrency=10,             # Max concurrent requests (default: 10)
+    "pyproject.toml",  # Path to pyproject.toml (required)
+    github_token=None,  # GitHub API token (default: None)
+    timeout=30.0,  # Request timeout in seconds (default: 30.0)
+    concurrency=10,  # Max concurrent requests (default: 10)
 )
 
 # Filter results
@@ -376,10 +376,10 @@ Analyze with full metadata enrichment.
 from pyproj_dep_analyze import run_enriched_analysis, write_enriched_json
 
 result = run_enriched_analysis(
-    "pyproject.toml",           # Path to pyproject.toml (required)
-    github_token=None,          # GitHub API token (default: None)
-    timeout=30.0,               # Request timeout in seconds (default: 30.0)
-    concurrency=10,             # Max concurrent requests (default: 10)
+    "pyproject.toml",  # Path to pyproject.toml (required)
+    github_token=None,  # GitHub API token (default: None)
+    timeout=30.0,  # Request timeout in seconds (default: 30.0)
+    concurrency=10,  # Max concurrent requests (default: 10)
 )
 
 # Access results
@@ -429,9 +429,9 @@ from pyproj_dep_analyze import Analyzer
 from pathlib import Path
 
 analyzer = Analyzer(
-    github_token="ghp_xxxxx",   # GitHub API token (default: None)
-    timeout=60.0,               # Request timeout in seconds (default: 30.0)
-    concurrency=20,             # Max concurrent requests (default: 10)
+    github_token="ghp_xxxxx",  # GitHub API token (default: None)
+    timeout=60.0,  # Request timeout in seconds (default: 30.0)
+    concurrency=20,  # Max concurrent requests (default: 10)
 )
 
 # Basic analysis
@@ -533,9 +533,9 @@ results = await resolver.fetch_many_async(
 ```python
 from pyproj_dep_analyze import Action
 
-Action.UPDATE          # "update" - newer version exists
-Action.DELETE          # "delete" - remove for this Python version
-Action.NONE            # "none" - up to date
+Action.UPDATE  # "update" - newer version exists
+Action.DELETE  # "delete" - remove for this Python version
+Action.NONE  # "none" - up to date
 Action.CHECK_MANUALLY  # "check manually" - needs manual verification
 ```
 
@@ -707,10 +707,10 @@ from pyproj_dep_analyze import PythonVersion
 pv = PythonVersion.from_string("3.11")
 pv.major  # 3
 pv.minor  # 11
-str(pv)   # "3.11"
+str(pv)  # "3.11"
 
 # Comparisons
-pv < PythonVersion(3, 12)   # True
+pv < PythonVersion(3, 12)  # True
 pv >= PythonVersion(3, 10)  # True
 ```
 

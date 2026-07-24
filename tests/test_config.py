@@ -20,7 +20,6 @@ from pyproj_dep_analyze.config import (
     get_default_config_path,
 )
 
-
 # ════════════════════════════════════════════════════════════════════════════
 # get_default_config_path: The bundled config locator
 # ════════════════════════════════════════════════════════════════════════════

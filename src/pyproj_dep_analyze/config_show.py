@@ -8,7 +8,7 @@ all formatting and display logic here.
 
 Contents
 --------
-* :func:`display_config` – displays configuration in requested format
+* :func:`display_config` - displays configuration in requested format
 
 System Role
 -----------
@@ -33,7 +33,8 @@ The dict usage here does NOT violate data architecture principles because:
 from __future__ import annotations
 
 import json
-from typing import Any, Mapping, Protocol
+from collections.abc import Mapping
+from typing import Any, Protocol
 
 import click
 
@@ -171,7 +172,7 @@ def _display_human_output(config: ConfigMapping, section: str | None) -> None:
             _display_section_human(section_name, config[section_name])
 
 
-def display_config(*, format: ConfigFormat = ConfigFormat.HUMAN, section: str | None = None) -> None:
+def display_config(*, config_format: ConfigFormat = ConfigFormat.HUMAN, section: str | None = None) -> None:
     """Display the current merged configuration from all sources.
 
     Users need visibility into the effective configuration loaded from
@@ -183,7 +184,7 @@ def display_config(*, format: ConfigFormat = ConfigFormat.HUMAN, section: str | 
     and JSON output formats.
 
     Args:
-        format: Output format enum value. Defaults to ConfigFormat.HUMAN.
+        config_format: Output format enum value. Defaults to ConfigFormat.HUMAN.
         section: Optional section name to display only that section. When None,
             displays all configuration.
 
@@ -202,7 +203,7 @@ def display_config(*, format: ConfigFormat = ConfigFormat.HUMAN, section: str | 
           service = "pyproj_dep_analyze"
           environment = "prod"
 
-        >>> display_config(format=ConfigFormat.JSON)  # doctest: +SKIP
+        >>> display_config(config_format=ConfigFormat.JSON)  # doctest: +SKIP
         {
           "lib_log_rich": {
             "service": "pyproj_dep_analyze",
@@ -212,7 +213,7 @@ def display_config(*, format: ConfigFormat = ConfigFormat.HUMAN, section: str | 
     """
     config = get_config()
 
-    if format == ConfigFormat.JSON:
+    if config_format == ConfigFormat.JSON:
         _display_json_output(config, section)
     else:
         _display_human_output(config, section)

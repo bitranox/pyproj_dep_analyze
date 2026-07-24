@@ -24,7 +24,7 @@ name = "pyproj_dep_analyze"
 #: Human-readable summary shown in CLI help output.
 title = "Python project dependency analyzer"
 #: Current release version pulled from ``pyproject.toml`` by automation.
-version = "4.0.3"
+version = "4.0.4"
 #: Repository homepage presented to users.
 homepage = "https://github.com/bitranox/pyproj_dep_analyze"
 #: Author attribution surfaced in CLI output.
@@ -71,4 +71,7 @@ def print_info() -> None:
     pad = max(len(label) for label, _ in fields)
     lines = [f"Info for {name}:", ""]
     lines.extend(f"    {label.ljust(pad)} = {value}" for label, value in fields)
-    print("\n".join(lines))
+    # This module stays dependency-light (no click import) so packaging metadata
+    # is queryable without pulling in the CLI framework; stdlib print is the
+    # sanctioned output channel for the `info` command's rendering.
+    print("\n".join(lines))  # noqa: T201 - dependency-light metadata module, not a debug leftover

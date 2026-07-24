@@ -7,20 +7,21 @@ where necessary for state isolation.
 
 from __future__ import annotations
 
-from collections.abc import Callable
-from pathlib import Path
-from typing import Any
-
-import pytest
-from click.testing import CliRunner, Result
-from lib_layered_config.examples.deploy import DeployAction, DeployResult
+from typing import TYPE_CHECKING, Any
 
 import lib_cli_exit_tools
+import pytest
+from lib_layered_config.examples.deploy import DeployAction, DeployResult
 
+from pyproj_dep_analyze import __init__conf__
 from pyproj_dep_analyze import cli as cli_mod
 from pyproj_dep_analyze import cli_display as cli_display_mod
-from pyproj_dep_analyze import __init__conf__
 
+if TYPE_CHECKING:
+    from collections.abc import Callable
+    from pathlib import Path
+
+    from click.testing import CliRunner, Result
 
 # ════════════════════════════════════════════════════════════════════════════
 # Traceback State Management: snapshot, apply, restore
@@ -41,7 +42,7 @@ def test_snapshot_traceback_state_captures_false_when_disabled(
 def test_snapshot_traceback_state_captures_true_when_enabled(
     isolated_traceback_config: None,
 ) -> None:
-    cli_mod.apply_traceback_preferences(True)
+    cli_mod.apply_traceback_preferences(enabled=True)
 
     result = cli_mod.snapshot_traceback_state()
 
@@ -53,7 +54,7 @@ def test_snapshot_traceback_state_captures_true_when_enabled(
 def test_apply_traceback_preferences_enables_both_flags(
     isolated_traceback_config: None,
 ) -> None:
-    cli_mod.apply_traceback_preferences(True)
+    cli_mod.apply_traceback_preferences(enabled=True)
 
     assert lib_cli_exit_tools.config.traceback is True
     assert lib_cli_exit_tools.config.traceback_force_color is True
@@ -63,8 +64,8 @@ def test_apply_traceback_preferences_enables_both_flags(
 def test_apply_traceback_preferences_disables_both_flags(
     isolated_traceback_config: None,
 ) -> None:
-    cli_mod.apply_traceback_preferences(True)
-    cli_mod.apply_traceback_preferences(False)
+    cli_mod.apply_traceback_preferences(enabled=True)
+    cli_mod.apply_traceback_preferences(enabled=False)
 
     assert lib_cli_exit_tools.config.traceback is False
     assert lib_cli_exit_tools.config.traceback_force_color is False
@@ -75,7 +76,7 @@ def test_restore_traceback_state_resets_to_previous_values(
     isolated_traceback_config: None,
 ) -> None:
     previous = cli_mod.snapshot_traceback_state()
-    cli_mod.apply_traceback_preferences(True)
+    cli_mod.apply_traceback_preferences(enabled=True)
 
     cli_mod.restore_traceback_state(previous)
 
@@ -269,6 +270,7 @@ def test_config_command_with_mocked_config_shows_sections(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     from lib_layered_config import Config
+
     from pyproj_dep_analyze import config as config_mod
     from pyproj_dep_analyze import config_show
 
@@ -485,7 +487,7 @@ def test_main_preserves_traceback_when_restore_disabled(
     isolated_traceback_config: None,
     preserve_traceback_state: None,
 ) -> None:
-    cli_mod.apply_traceback_preferences(False)
+    cli_mod.apply_traceback_preferences(enabled=False)
 
     cli_mod.main(["--traceback", "hello"], restore_traceback=False)
 
@@ -560,7 +562,7 @@ def test_current_traceback_mode_reflects_config(
 ) -> None:
     assert cli_mod._current_traceback_mode() is False  # pyright: ignore[reportPrivateUsage]
 
-    cli_mod.apply_traceback_preferences(True)
+    cli_mod.apply_traceback_preferences(enabled=True)
 
     assert cli_mod._current_traceback_mode() is True  # pyright: ignore[reportPrivateUsage]
 
@@ -851,6 +853,7 @@ def test_display_json_outputs_valid_json(
     capsys: pytest.CaptureFixture[str],
 ) -> None:
     import json
+
     from pyproj_dep_analyze.models import Action, AnalysisResult, OutdatedEntry
 
     result = AnalysisResult(

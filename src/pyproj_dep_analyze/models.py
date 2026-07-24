@@ -442,6 +442,10 @@ class DependencyInfo:
     git_ref: str | None = None
 
 
+#: Minimum dotted components required to parse a "major.minor[.patch]" string.
+_MIN_VERSION_PARTS = 2
+
+
 @dataclass(frozen=True, slots=True)
 class PythonVersion:
     """Represents a Python version like 3.11 or 3.12.
@@ -499,7 +503,7 @@ class PythonVersion:
             ValueError: If the version string cannot be parsed.
         """
         parts = version_str.strip().split(".")
-        if len(parts) < 2:
+        if len(parts) < _MIN_VERSION_PARTS:
             msg = f"Invalid Python version format: {version_str}"
             raise ValueError(msg)
         return cls(major=int(parts[0]), minor=int(parts[1]))
@@ -661,6 +665,8 @@ KNOWN_PYTHON_VERSIONS: Sequence[PythonVersion] = (
 
 
 __all__ = [
+    "KNOWN_INDEX_PATTERNS",
+    "KNOWN_PYTHON_VERSIONS",
     "Action",
     "AnalysisResult",
     "CompatibilityStatus",
@@ -676,8 +682,6 @@ __all__ = [
     "IndexInfo",
     "IndexPatternMapping",
     "IndexType",
-    "KNOWN_INDEX_PATTERNS",
-    "KNOWN_PYTHON_VERSIONS",
     "OutdatedEntry",
     "OutputFormat",
     "PackageIndexResolutions",

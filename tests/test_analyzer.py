@@ -12,11 +12,32 @@ from typing import Any
 
 import pytest
 
+from pyproj_dep_analyze.analyzer import (
+    Analyzer,
+    _count_actions,  # pyright: ignore[reportPrivateUsage]
+    _dependency_applies_to_python_version,  # pyright: ignore[reportPrivateUsage]
+    _determine_git_action,  # pyright: ignore[reportPrivateUsage]
+    _determine_pypi_action,  # pyright: ignore[reportPrivateUsage]
+    _generate_entries,  # pyright: ignore[reportPrivateUsage]
+    _parse_version_constraint_minimum,  # pyright: ignore[reportPrivateUsage]
+    _version_is_greater,  # pyright: ignore[reportPrivateUsage]
+    _version_tuple,  # pyright: ignore[reportPrivateUsage]
+    analyze_pyproject,
+    create_analyzer,
+    determine_action,
+    run_analysis,
+    write_outdated_json,
+)
+from pyproj_dep_analyze.dependency_extractor import (
+    extract_dependencies,
+    get_requires_python,
+    load_pyproject,
+)
 from pyproj_dep_analyze.models import (
+    KNOWN_PYTHON_VERSIONS,
     Action,
     AnalysisResult,
     DependencyInfo,
-    KNOWN_PYTHON_VERSIONS,
     OutdatedEntry,
     PythonVersion,
 )
@@ -27,34 +48,12 @@ from pyproj_dep_analyze.python_version_parser import (
     parse_requires_python,
     version_satisfies,
 )
-from pyproj_dep_analyze.dependency_extractor import (
-    extract_dependencies,
-    get_requires_python,
-    load_pyproject,
-)
-from pyproj_dep_analyze.analyzer import (
-    Analyzer,
-    analyze_pyproject,
-    create_analyzer,
-    determine_action,
-    run_analysis,
-    write_outdated_json,
-    _count_actions,  # pyright: ignore[reportPrivateUsage]
-    _dependency_applies_to_python_version,  # pyright: ignore[reportPrivateUsage]
-    _determine_git_action,  # pyright: ignore[reportPrivateUsage]
-    _determine_pypi_action,  # pyright: ignore[reportPrivateUsage]
-    _generate_entries,  # pyright: ignore[reportPrivateUsage]
-    _parse_version_constraint_minimum,  # pyright: ignore[reportPrivateUsage]
-    _version_is_greater,  # pyright: ignore[reportPrivateUsage]
-    _version_tuple,  # pyright: ignore[reportPrivateUsage]
-)
 from pyproj_dep_analyze.version_resolver import (
     VersionResolver,
     VersionResult,
     _extract_version_from_tag,  # pyright: ignore[reportPrivateUsage]
     _parse_github_url,  # pyright: ignore[reportPrivateUsage]
 )
-
 
 TESTDATA_DIR = Path(__file__).parent / "testdata"
 
@@ -1325,7 +1324,7 @@ def test_generate_entries_creates_all_combinations() -> None:
 
     entries = _generate_entries(deps, versions, results)
 
-    assert len(entries) == 4  # 2 deps × 2 versions
+    assert len(entries) == 4  # 2 deps x 2 versions
 
 
 @pytest.mark.os_agnostic

@@ -194,3 +194,8 @@ LLM-CONTEXT/
 # Python virtual environments (managed by bmk)
 .venv-win/
 .venv-bmk/
+
+# Python virtual environments (managed by bmk)
+.venv*/
+# bitranox curated memory (local; CLAUDE.local.md @imports it)
+CLAUDE.local.md

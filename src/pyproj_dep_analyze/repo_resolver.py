@@ -24,15 +24,14 @@ import logging
 import re
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import TYPE_CHECKING
 
 import httpx2
 from pydantic import BaseModel, ConfigDict
 
 from .models import RepoMetadata, RepoType
+from .schemas import GitHubRepoResponseSchema
 
-if TYPE_CHECKING:
-    from .schemas import GitHubRepoResponseSchema
+_HTTP_STATUS_OK = 200  # httpx2.codes.OK is a (code, phrase) tuple, not an int
 
 logger = logging.getLogger(__name__)
 
@@ -145,14 +144,12 @@ def detect_repo_url(metadata: PyPIUrlMetadata) -> str | None:
     for key_enum in _REPO_URL_KEYS:
         key_value = key_enum.value
         for url_key, url in metadata.project_urls.items():
-            if key_value.lower() in url_key.lower():
-                if _RE_GITHUB_URL.search(url) or _RE_GITLAB_URL.search(url):
-                    return url
+            if key_value.lower() in url_key.lower() and (_RE_GITHUB_URL.search(url) or _RE_GITLAB_URL.search(url)):
+                return url
 
     # Fallback: check home_page
-    if metadata.home_page:
-        if _RE_GITHUB_URL.search(metadata.home_page) or _RE_GITLAB_URL.search(metadata.home_page):
-            return metadata.home_page
+    if metadata.home_page and (_RE_GITHUB_URL.search(metadata.home_page) or _RE_GITLAB_URL.search(metadata.home_page)):
+        return metadata.home_page
 
     return None
 
@@ -248,7 +245,6 @@ class RepoResolver:
 
     async def _fetch_github_metadata(self, owner: str, repo: str) -> RepoMetadata:
         """Fetch metadata from GitHub API."""
-        from .schemas import GitHubRepoResponseSchema
 
         url = GITHUB_REPO_API.format(owner=owner, repo=repo)
 
@@ -256,7 +252,7 @@ class RepoResolver:
             async with httpx2.AsyncClient(timeout=self.timeout) as client:
                 response = await client.get(url, headers=self._get_github_headers())
 
-            if response.status_code != 200:
+            if response.status_code != _HTTP_STATUS_OK:
                 logger.warning("GitHub API returned %d for %s/%s", response.status_code, owner, repo)
                 return RepoMetadata(repo_type=RepoType.GITHUB, owner=owner, name=repo)
 

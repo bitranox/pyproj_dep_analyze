@@ -14,7 +14,6 @@ import pytest
 from pyproj_dep_analyze import logging_setup as setup_mod
 from pyproj_dep_analyze.logging_setup import init_logging
 
-
 # ════════════════════════════════════════════════════════════════════════════
 # init_logging: The idempotent initializer
 # ════════════════════════════════════════════════════════════════════════════

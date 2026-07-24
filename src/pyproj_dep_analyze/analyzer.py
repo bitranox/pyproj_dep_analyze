@@ -25,12 +25,15 @@ import json
 import logging
 import re
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from functools import lru_cache
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from collections.abc import Callable
+
+    from .schemas import PyprojectSchema
 
 from .dependency_extractor import extract_dependencies, get_requires_python, load_pyproject
 from .index_resolver import IndexResolver, detect_configured_indexes
@@ -50,8 +53,7 @@ from .models import (
     VersionStatus,
 )
 from .python_version_parser import parse_requires_python
-from .repo_resolver import RepoResolver
-from .schemas import PyprojectSchema
+from .repo_resolver import PyPIUrlMetadata, RepoResolver
 from .version_resolver import VersionResolver, VersionResult
 
 logger = logging.getLogger(__name__)
@@ -87,11 +89,11 @@ def _parse_version_constraint_minimum(constraints: str) -> str | None:
 
     # Handle Poetry ^ operator (compatible release)
     if constraints.startswith("^"):
-        return constraints[1:].split(",")[0].strip()
+        return constraints[1:].split(",", maxsplit=1)[0].strip()
 
     # Handle ~ operator (compatible release)
     if constraints.startswith("~"):
-        return constraints[1:].split(",")[0].strip()
+        return constraints[1:].split(",", maxsplit=1)[0].strip()
 
     # Look for >= or == as minimum version
     for pattern in (_RE_VERSION_GE, _RE_VERSION_EQ, _RE_VERSION_COMPAT):
@@ -118,7 +120,7 @@ def _version_tuple(version: str) -> tuple[int, ...]:
         Tuple of version components.
     """
     # Extract numeric parts, ignoring pre-release suffixes
-    parts = _RE_NUMERIC_PARTS.findall(version.split("-")[0].split("+")[0])
+    parts = _RE_NUMERIC_PARTS.findall(version.split("-", maxsplit=1)[0].split("+", maxsplit=1)[0])
     return tuple(int(p) for p in parts) if parts else (0,)
 
 
@@ -220,110 +222,136 @@ def _determine_pypi_action(
     return Action.NONE, current_version, latest_version
 
 
-def _generate_note(
-    action: Action,
-    package: str,
-    python_version: str,
-    current_version: str | None,
-    latest_version: str | None,
-    is_git_dependency: bool,
-) -> str:
+@dataclass(frozen=True, slots=True)
+class _NoteContext:
+    """Per-dependency facts needed to render an analysis note.
+
+    Bundled into one value object so the note generators take a single
+    context argument instead of five separate positional facts.
+    """
+
+    package: str
+    python_version: str
+    current_version: str | None
+    latest_version: str | None
+    is_git_dependency: bool
+
+
+def _note_for_delete(ctx: _NoteContext) -> str:
+    """Render the note explaining a DELETE action."""
+    return (
+        f"Package '{ctx.package}' has a Python version marker that excludes Python {ctx.python_version}. "
+        f"This dependency should be removed from configurations targeting Python {ctx.python_version}, "
+        f"or the marker is intentional (e.g., backport packages like 'tomli' for Python <3.11)."
+    )
+
+
+def _note_for_update(ctx: _NoteContext) -> str:
+    """Render the note explaining an UPDATE action."""
+    if ctx.is_git_dependency:
+        return (
+            f"Git dependency '{ctx.package}' has a newer release available. "
+            f"Current ref: {ctx.current_version}, latest release: {ctx.latest_version}. "
+            f"Consider updating the git reference to the latest version."
+        )
+    return (
+        f"Package '{ctx.package}' can be updated from {ctx.current_version} to {ctx.latest_version}. Review the changelog for breaking changes before updating."
+    )
+
+
+def _note_for_check_manually(ctx: _NoteContext) -> str:
+    """Render the note explaining a CHECK_MANUALLY action."""
+    if ctx.latest_version == VersionStatus.UNKNOWN.value:
+        if ctx.is_git_dependency:
+            return (
+                f"Git dependency '{ctx.package}' requires manual verification. "
+                f"Could not determine latest version from GitHub releases/tags. "
+                f"This may be a private repository, or the project doesn't use GitHub releases. "
+                f"SECURITY: Verify this is a legitimate package and not a typosquatting attempt."
+            )
+        return (
+            f"Package '{ctx.package}' requires manual verification. "
+            f"Could not determine latest version from PyPI. "
+            f"This may be a private/internal package, or PyPI API was unavailable. "
+            f"SECURITY: Verify this is a legitimate package and not a dependency confusion attack."
+        )
+    # Git dependency with some version info but unclear status
+    return (
+        f"Git dependency '{ctx.package}' requires manual verification. "
+        f"Current ref: {ctx.current_version or 'unspecified'}, found version: {ctx.latest_version}. "
+        f"Unable to automatically compare versions. Check if an update is needed."
+    )
+
+
+def _note_for_none(ctx: _NoteContext) -> str:
+    """Render the note explaining an up-to-date (Action.NONE) result."""
+    if ctx.current_version is None:
+        return (
+            f"Package '{ctx.package}' has no version constraint specified (accepts any version). "
+            f"Latest available version is {ctx.latest_version}. "
+            f"Consider pinning to a specific version range for reproducible builds."
+        )
+    return f"Package '{ctx.package}' is up to date at version {ctx.current_version} (latest: {ctx.latest_version}) for Python {ctx.python_version}."
+
+
+_NOTE_GENERATORS: dict[Action, Callable[[_NoteContext], str]] = {
+    Action.DELETE: _note_for_delete,
+    Action.UPDATE: _note_for_update,
+    Action.CHECK_MANUALLY: _note_for_check_manually,
+    Action.NONE: _note_for_none,
+}
+
+
+def _generate_note(*, action: Action, ctx: _NoteContext) -> str:
     """Generate a human/LLM-readable note explaining the analysis result.
 
     Args:
         action: The determined action for this dependency.
-        package: Package name.
-        python_version: Python version string (e.g., "3.11").
-        current_version: Currently specified version or None.
-        latest_version: Latest available version or None/"unknown".
-        is_git_dependency: Whether this is a git-based dependency.
+        ctx: Per-dependency facts (package, versions, git-dependency flag).
 
     Returns:
         Explanatory note for this analysis result.
     """
-    if action == Action.DELETE:
-        return (
-            f"Package '{package}' has a Python version marker that excludes Python {python_version}. "
-            f"This dependency should be removed from configurations targeting Python {python_version}, "
-            f"or the marker is intentional (e.g., backport packages like 'tomli' for Python <3.11)."
-        )
+    return _NOTE_GENERATORS[action](ctx)
 
-    if action == Action.UPDATE:
-        if is_git_dependency:
-            return (
-                f"Git dependency '{package}' has a newer release available. "
-                f"Current ref: {current_version}, latest release: {latest_version}. "
-                f"Consider updating the git reference to the latest version."
-            )
-        return f"Package '{package}' can be updated from {current_version} to {latest_version}. Review the changelog for breaking changes before updating."
 
-    if action == Action.CHECK_MANUALLY:
-        if latest_version == VersionStatus.UNKNOWN.value:
-            if is_git_dependency:
-                return (
-                    f"Git dependency '{package}' requires manual verification. "
-                    f"Could not determine latest version from GitHub releases/tags. "
-                    f"This may be a private repository, or the project doesn't use GitHub releases. "
-                    f"SECURITY: Verify this is a legitimate package and not a typosquatting attempt."
-                )
-            return (
-                f"Package '{package}' requires manual verification. "
-                f"Could not determine latest version from PyPI. "
-                f"This may be a private/internal package, or PyPI API was unavailable. "
-                f"SECURITY: Verify this is a legitimate package and not a dependency confusion attack."
-            )
-        # Git dependency with some version info but unclear status
-        return (
-            f"Git dependency '{package}' requires manual verification. "
-            f"Current ref: {current_version or 'unspecified'}, found version: {latest_version}. "
-            f"Unable to automatically compare versions. Check if an update is needed."
-        )
+@dataclass(frozen=True, slots=True)
+class _SummaryCounts:
+    """Aggregate dependency counts feeding the analysis summary note."""
 
-    # Action.NONE - up to date
-    if current_version is None:
-        return (
-            f"Package '{package}' has no version constraint specified (accepts any version). "
-            f"Latest available version is {latest_version}. "
-            f"Consider pinning to a specific version range for reproducible builds."
-        )
-
-    return f"Package '{package}' is up to date at version {current_version} (latest: {latest_version}) for Python {python_version}."
+    total_packages: int
+    updates_available: int
+    up_to_date: int
+    check_manually: int
+    from_private_index: int
 
 
 def _generate_summary_note(
-    total_packages: int,
-    updates_available: int,
-    up_to_date: int,
-    check_manually: int,
-    from_private_index: int,
+    counts: _SummaryCounts,
     indexes: list[IndexInfo] | None = None,
 ) -> str:
     """Generate a human/LLM-readable summary note.
 
     Args:
-        total_packages: Total number of packages analyzed.
-        updates_available: Number of packages with updates available.
-        up_to_date: Number of packages that are up to date.
-        check_manually: Number of packages requiring manual verification.
-        from_private_index: Number of packages from private indexes.
+        counts: Aggregate package counts (total, updates, up-to-date, etc.).
         indexes: List of configured package indexes (for security analysis).
 
     Returns:
         Summary note explaining the analysis results.
     """
-    parts: list[str] = [f"Analyzed {total_packages} dependencies."]
+    parts: list[str] = [f"Analyzed {counts.total_packages} dependencies."]
 
-    if updates_available > 0:
-        parts.append(f"{updates_available} can be updated.")
+    if counts.updates_available > 0:
+        parts.append(f"{counts.updates_available} can be updated.")
 
-    if up_to_date > 0:
-        parts.append(f"{up_to_date} are up to date.")
+    if counts.up_to_date > 0:
+        parts.append(f"{counts.up_to_date} are up to date.")
 
-    if check_manually > 0:
-        parts.append(f"{check_manually} require manual verification - SECURITY: Review these for potential dependency confusion or typosquatting.")
+    if counts.check_manually > 0:
+        parts.append(f"{counts.check_manually} require manual verification - SECURITY: Review these for potential dependency confusion or typosquatting.")
 
-    if from_private_index > 0:
-        parts.append(f"{from_private_index} are from private indexes - ensure these are from trusted internal sources.")
+    if counts.from_private_index > 0:
+        parts.append(f"{counts.from_private_index} are from private indexes - ensure these are from trusted internal sources.")
 
     # Check for index configuration security issues
     if indexes:
@@ -345,58 +373,50 @@ def _generate_summary_note(
     return " ".join(parts)
 
 
+@dataclass(frozen=True, slots=True)
+class _EnrichmentMetadata:
+    """Optional GitHub/PyPI metadata appended to an enriched analysis note."""
+
+    license_info: str | None = None
+    stars: int | None = None
+    forks: int | None = None
+    latest_release_date: str | None = None
+
+
 def _generate_enriched_note(
+    *,
     action: Action,
-    package: str,
-    current_version: str | None,
-    latest_version: str | None,
-    is_git_dependency: bool,
-    license_info: str | None = None,
-    stars: int | None = None,
-    forks: int | None = None,
-    latest_release_date: str | None = None,
+    ctx: _NoteContext,
+    metadata: _EnrichmentMetadata | None = None,
 ) -> str:
     """Generate an enriched human/LLM-readable note with metadata context.
 
     Args:
         action: The determined action for this dependency.
-        package: Package name.
-        current_version: Currently specified version or None.
-        latest_version: Latest available version or None/"unknown".
-        is_git_dependency: Whether this is a git-based dependency.
-        license_info: SPDX license identifier or None.
-        stars: GitHub stars count or None.
-        forks: GitHub forks count or None.
-        latest_release_date: ISO date of latest release or None.
+        ctx: Per-dependency facts (package, versions, git-dependency flag).
+        metadata: Optional GitHub/PyPI metadata to append to the base note.
 
     Returns:
         Enriched explanatory note for this analysis result.
     """
-    # Build base note
-    base_note = _generate_note(
-        action=action,
-        package=package,
-        python_version="all",  # Enriched analysis is version-agnostic
-        current_version=current_version,
-        latest_version=latest_version,
-        is_git_dependency=is_git_dependency,
-    )
+    base_note = _generate_note(action=action, ctx=ctx)
+    metadata = metadata or _EnrichmentMetadata()
 
     # Add metadata context
     metadata_parts: list[str] = []
 
-    if license_info:
-        metadata_parts.append(f"License: {license_info}")
+    if metadata.license_info:
+        metadata_parts.append(f"License: {metadata.license_info}")
 
-    if stars is not None:
-        metadata_parts.append(f"{stars:,} stars")
+    if metadata.stars is not None:
+        metadata_parts.append(f"{metadata.stars:,} stars")
 
-    if forks is not None:
-        metadata_parts.append(f"{forks:,} forks")
+    if metadata.forks is not None:
+        metadata_parts.append(f"{metadata.forks:,} forks")
 
-    if latest_release_date:
+    if metadata.latest_release_date:
         # Extract just the date part from ISO timestamp
-        date_part = latest_release_date.split("T")[0] if "T" in latest_release_date else latest_release_date
+        date_part = metadata.latest_release_date.split("T")[0] if "T" in metadata.latest_release_date else metadata.latest_release_date
         metadata_parts.append(f"last release: {date_part}")
 
     if metadata_parts:
@@ -424,11 +444,13 @@ def _create_entry_for_version(
     action, current, latest = determine_action(dep, py_ver, version_result)
     note = _generate_note(
         action=action,
-        package=dep.name,
-        python_version=str(py_ver),
-        current_version=current,
-        latest_version=latest,
-        is_git_dependency=dep.is_git_dependency,
+        ctx=_NoteContext(
+            package=dep.name,
+            python_version=str(py_ver),
+            current_version=current,
+            latest_version=latest,
+            is_git_dependency=dep.is_git_dependency,
+        ),
     )
     return OutdatedEntry(
         package=dep.name,
@@ -464,7 +486,7 @@ def _generate_entries(
     python_versions: list[PythonVersion],
     version_results: dict[str, VersionResult],
 ) -> list[OutdatedEntry]:
-    """Generate analysis entries for all dependency × Python version combinations.
+    """Generate analysis entries for all dependency x Python version combinations.
 
     Args:
         dependencies: List of all dependencies.
@@ -517,6 +539,21 @@ def determine_action(
         return _determine_git_action(dep, version_result)
 
     return _determine_pypi_action(dep, version_result)
+
+
+@dataclass(frozen=True, slots=True)
+class _EnrichedBuildContext:
+    """Resolved cross-package data needed to build one enriched package entry.
+
+    Bundled into one value object so :meth:`Analyzer._build_enriched_packages`
+    takes a single context argument instead of five separate resolved-data facts.
+    """
+
+    version_results: dict[str, VersionResult]
+    index_results: dict[str, IndexInfo | None]
+    python_versions: list[PythonVersion]
+    repo_resolver: RepoResolver
+    reverse_graph: dict[str, list[str]]
 
 
 @dataclass
@@ -616,8 +653,6 @@ class Analyzer:
         Returns:
             Enriched analysis result with PyPI and repo metadata.
         """
-        from datetime import datetime, timezone
-
         path = Path(pyproject_path)
         logger.info("Analyzing %s (enriched mode)", path)
 
@@ -650,11 +685,13 @@ class Analyzer:
         repo_resolver = RepoResolver(timeout=self.timeout, github_token=self.github_token)
         enriched_packages = await self._build_enriched_packages(
             unique_deps,
-            version_results,
-            index_results,
-            python_versions,
-            repo_resolver,
-            reverse_graph,
+            _EnrichedBuildContext(
+                version_results=version_results,
+                index_results=index_results,
+                python_versions=python_versions,
+                repo_resolver=repo_resolver,
+                reverse_graph=reverse_graph,
+            ),
         )
 
         return EnrichedAnalysisResult(
@@ -670,57 +707,56 @@ class Analyzer:
     async def _build_enriched_packages(
         self,
         unique_deps: dict[str, DependencyInfo],
-        version_results: dict[str, VersionResult],
-        index_results: dict[str, IndexInfo | None],
-        python_versions: list[PythonVersion],
-        repo_resolver: RepoResolver,
-        reverse_graph: dict[str, list[str]],
+        ctx: _EnrichedBuildContext,
     ) -> list[EnrichedEntry]:
         """Build enriched package entries with metadata."""
         packages: list[EnrichedEntry] = []
 
         for name, dep in unique_deps.items():
-            version_result = version_results.get(name, VersionResult(is_unknown=True))
-            index_info = index_results.get(name)
+            version_result = ctx.version_results.get(name, VersionResult(is_unknown=True))
+            index_info = ctx.index_results.get(name)
 
             # Resolve repo metadata if PyPI metadata available
             repo_meta = None
             if version_result.pypi_metadata:
-                from .repo_resolver import PyPIUrlMetadata
-
                 metadata = PyPIUrlMetadata(
                     project_urls=version_result.pypi_metadata.project_urls,
                     home_page=version_result.pypi_metadata.home_page,
                 )
-                repo_meta = await repo_resolver.resolve_from_pypi_metadata_async(metadata)
+                repo_meta = await ctx.repo_resolver.resolve_from_pypi_metadata_async(metadata)
 
             # Compute Python compatibility
             py_compat = {
                 str(pv): CompatibilityStatus.COMPATIBLE if _dependency_applies_to_python_version(dep, pv) else CompatibilityStatus.EXCLUDED
-                for pv in python_versions
+                for pv in ctx.python_versions
             }
 
             # Determine action
-            action, current, latest = determine_action(dep, python_versions[0], version_result)
+            action, current, latest = determine_action(dep, ctx.python_versions[0], version_result)
 
             # Extract direct dependencies (runtime only) and optional dependencies
             direct_deps = _extract_dependency_names(version_result.pypi_metadata)
             optional_deps = _extract_optional_dependency_names(version_result.pypi_metadata)
 
             # Get reverse dependencies (who requires this package)
-            required_by = reverse_graph.get(name, [])
+            required_by = ctx.reverse_graph.get(name, [])
 
             # Generate enriched note with metadata context
             note = _generate_enriched_note(
                 action=action,
-                package=name,
-                current_version=current,
-                latest_version=latest,
-                is_git_dependency=dep.is_git_dependency,
-                license_info=version_result.pypi_metadata.license if version_result.pypi_metadata else None,
-                stars=repo_meta.stars if repo_meta else None,
-                forks=repo_meta.forks if repo_meta else None,
-                latest_release_date=version_result.pypi_metadata.latest_release_date if version_result.pypi_metadata else None,
+                ctx=_NoteContext(
+                    package=name,
+                    python_version="all",  # Enriched analysis is version-agnostic
+                    current_version=current,
+                    latest_version=latest,
+                    is_git_dependency=dep.is_git_dependency,
+                ),
+                metadata=_EnrichmentMetadata(
+                    license_info=version_result.pypi_metadata.license if version_result.pypi_metadata else None,
+                    stars=repo_meta.stars if repo_meta else None,
+                    forks=repo_meta.forks if repo_meta else None,
+                    latest_release_date=version_result.pypi_metadata.latest_release_date if version_result.pypi_metadata else None,
+                ),
             )
 
             packages.append(
@@ -798,11 +834,13 @@ class Analyzer:
 
         # Generate summary note
         note = _generate_summary_note(
-            total_packages=total,
-            updates_available=updates,
-            up_to_date=up_to_date,
-            check_manually=check_manually,
-            from_private_index=from_private,
+            _SummaryCounts(
+                total_packages=total,
+                updates_available=updates,
+                up_to_date=up_to_date,
+                check_manually=check_manually,
+                from_private_index=from_private,
+            ),
             indexes=indexes,
         )
 

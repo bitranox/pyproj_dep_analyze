@@ -11,7 +11,6 @@ import pytest
 
 from pyproj_dep_analyze import __init__conf__
 
-
 # ════════════════════════════════════════════════════════════════════════════
 # Version: The semantic identifier
 # ════════════════════════════════════════════════════════════════════════════
@@ -198,7 +197,7 @@ def test_layeredconf_slug_exists() -> None:
 
 @pytest.mark.os_agnostic
 def test_layeredconf_slug_matches_shell_command() -> None:
-    assert __init__conf__.LAYEREDCONF_SLUG == __init__conf__.shell_command
+    assert __init__conf__.shell_command == __init__conf__.LAYEREDCONF_SLUG
 
 
 # ════════════════════════════════════════════════════════════════════════════

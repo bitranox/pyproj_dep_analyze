@@ -32,6 +32,7 @@ from .behaviors import (
 from .config import get_config
 from .index_resolver import IndexResolver, detect_configured_indexes, identify_index
 from .models import (
+    KNOWN_INDEX_PATTERNS,
     Action,
     AnalysisResult,
     DependencyInfo,
@@ -39,14 +40,12 @@ from .models import (
     EnrichedAnalysisResult,
     EnrichedEntry,
     IndexInfo,
-    KNOWN_INDEX_PATTERNS,
     OutdatedEntry,
     PyPIMetadata,
     PythonVersion,
     RepoMetadata,
     VersionMetrics,
 )
-from .stats_resolver import StatsResolver
 from .repo_resolver import (
     ParsedRepoUrl,
     ProjectUrlKey,
@@ -55,19 +54,20 @@ from .repo_resolver import (
     detect_repo_url,
     parse_repo_url,
 )
+from .stats_resolver import StatsResolver
 
 __all__ = [
-    "Action",
-    "Analyzer",
-    "AnalysisResult",
     "CANONICAL_GREETING",
+    "KNOWN_INDEX_PATTERNS",
+    "Action",
+    "AnalysisResult",
+    "Analyzer",
     "DependencyInfo",
     "DownloadStats",
     "EnrichedAnalysisResult",
     "EnrichedEntry",
     "IndexInfo",
     "IndexResolver",
-    "KNOWN_INDEX_PATTERNS",
     "OutdatedEntry",
     "ParsedRepoUrl",
     "ProjectUrlKey",

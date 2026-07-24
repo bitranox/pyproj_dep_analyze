@@ -8,9 +8,9 @@ following a deterministic precedence order.
 
 Contents
 --------
-* :func:`get_config` – loads configuration with lib_layered_config
-* :func:`get_default_config_path` – returns path to bundled default config
-* :func:`get_analyzer_settings` – returns analyzer-specific settings
+* :func:`get_config` - loads configuration with lib_layered_config
+* :func:`get_default_config_path` - returns path to bundled default config
+* :func:`get_analyzer_settings` - returns analyzer-specific settings
 
 Configuration identifiers (vendor, app, slug) are imported from
 :mod:`pyproj_dep_analyze.__init__conf__` as LAYEREDCONF_* constants.
@@ -24,6 +24,7 @@ configuration mechanics.
 
 from __future__ import annotations
 
+import contextlib
 import os
 from functools import lru_cache
 from pathlib import Path
@@ -161,18 +162,16 @@ def _apply_env_overrides(schema: AnalyzerConfigSchema) -> AnalyzerSettings:
     # Parse timeout with fallback to schema value
     timeout = schema.timeout
     if env_timeout := os.environ.get(f"{_ENV_PREFIX}TIMEOUT"):
-        try:
+        # Keep the schema value if the env var is invalid.
+        with contextlib.suppress(ValueError):
             timeout = float(env_timeout)
-        except ValueError:
-            pass  # Keep config value if env var is invalid
 
     # Parse concurrency with fallback to schema value
     concurrency = schema.concurrency
     if env_concurrency := os.environ.get(f"{_ENV_PREFIX}CONCURRENCY"):
-        try:
+        # Keep the schema value if the env var is invalid.
+        with contextlib.suppress(ValueError):
             concurrency = int(env_concurrency)
-        except ValueError:
-            pass  # Keep config value if env var is invalid
 
     # Treat empty string as empty for github_token
     if not github_token:

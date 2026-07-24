@@ -6,6 +6,24 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 
 ## [Unreleased]
 
+## [4.0.4] 2026-07-24 17:05:10
+
+### Fixed
+- Fixed CI going red under a newer `ruff` release: this repo had no explicit `[tool.ruff.lint].select`, so ruff 0.16's widened default rule set (~920 rules) suddenly applied in full. Pinned the curated bitranox rule selection instead of chasing the default set, then fixed the real violations it surfaced at the root (no rule was added to `ignore` to silence it):
+  - `PLR0913`/`PLR0917` (too many/positional arguments): grouped related parameters into small value objects (`_NoteContext`, `_SummaryCounts`, `_EnrichmentMetadata`, `_EnrichedBuildContext` in `analyzer.py`) instead of passing five-plus loose facts around; made click option/argument parameters keyword-only where Click already invokes by keyword.
+  - `PLR0911` (too many returns): replaced the `_version_satisfies_constraint` if/elif operator chain with an operator-name-to-comparator mapping.
+  - `FBT001`/`FBT002` (boolean positional/default args): keyword-only across `cli.py`, `version_resolver.py`.
+  - `PLC0415` (mid-function imports): promoted trivial stdlib/third-party imports to module top (`datetime`, `rtoml`, `GitHubRepoResponseSchema`, `IncludeGroupSchema`, `PyPIUrlMetadata`); kept the CLI-adapter and deferred-import-as-test-idiom cases as documented per-file-ignores.
+  - `PLR2004` (magic values): named constants for HTTP status codes (`httpx2.codes.OK`/`NOT_FOUND`), display truncation limits, and the minimum dotted-version-part count.
+  - `A002` (builtin shadowing): renamed the `format` parameter to `config_format` on `cli_config`/`display_config`.
+  - `SIM102` (nested if): merged into single conditions in `repo_resolver.py` and `tests/conftest.py`.
+  - `PERF203`/`PERF401`/`SIM105`: extracted a per-item date parser out of its loop, replaced a manual accumulation loop with `list.extend`, and replaced two `try`/`except`/`pass` blocks with `contextlib.suppress`.
+  - `RUF001`/`RUF002`/`RUF003` (ambiguous Unicode): replaced en-dashes and multiplication signs with ASCII in docstrings/comments.
+  - `PLW0603` (global statement): documented and kept the one deliberate, guarded module-level logging-runtime cache with a scoped `noqa`.
+
+### Changed
+- Added `[tool.ruff.lint].select` (the curated bitranox rule set) plus `[tool.ruff.lint.flake8-type-checking].runtime-evaluated-base-classes = ["pydantic.BaseModel"]` (this project's Pydantic models resolve field annotations at runtime) and two targeted per-file-ignores: `PLR0913` on `cli.py` (Click commands legitimately need many options) and `PERF203` added to the existing `tests/*.py` ignore list (two tests loop over ~100 real-world pyproject.toml fixtures and skip invalid ones per item).
+
 ## [4.0.3] 2026-06-14
 
 ### Changed
@@ -15,7 +33,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 ## [4.0.2] 2026-06-01 16:39:42
 
 ### Changed
-- Replaced `httpx` with `httpx2` (the Pydantic-maintained successor to httpx) as the async HTTP client for PyPI/GitHub API calls. This is an internal implementation change — the public API of resolver classes and models is unchanged.
+- Replaced `httpx` with `httpx2` (the Pydantic-maintained successor to httpx) as the async HTTP client for PyPI/GitHub API calls. This is an internal implementation change - the public API of resolver classes and models is unchanged.
 - Bumped minimum versions of runtime dependencies (`rich-click`, `lib_cli_exit_tools`, `lib_log_rich`, `lib_layered_config`, `pydantic`).
 - Regenerated end-to-end snapshot outputs under `tests/e2e_outputs/` (corrected the embedded project path after the repository move and refreshed live PyPI version data).
 

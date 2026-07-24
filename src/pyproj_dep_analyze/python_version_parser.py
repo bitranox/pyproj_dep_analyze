@@ -20,6 +20,7 @@ The resulting version list drives the per-version dependency analysis.
 from __future__ import annotations
 
 import logging
+import operator
 import re
 from dataclasses import dataclass
 from functools import lru_cache
@@ -30,7 +31,7 @@ from .models import KNOWN_PYTHON_VERSIONS, PythonVersion
 logger = logging.getLogger(__name__)
 
 if TYPE_CHECKING:
-    from collections.abc import Sequence
+    from collections.abc import Callable, Sequence
 
 # Precompiled regex for version constraint parsing
 _RE_CONSTRAINT = re.compile(r"^(>=|<=|!=|==|~=|>|<)?\s*(\d+(?:\.\d+)*)")
@@ -84,6 +85,18 @@ def _parse_constraint(constraint_str: str) -> VersionConstraint | None:
     return VersionConstraint(operator=operator, version=version)
 
 
+#: Direct comparison operators, mapped to their stdlib comparator. ``~=`` is
+#: handled separately below since it is a compound rule, not a single comparison.
+_COMPARATORS: dict[str, Callable[[PythonVersion, PythonVersion], bool]] = {
+    ">=": operator.ge,
+    ">": operator.gt,
+    "<=": operator.le,
+    "<": operator.lt,
+    "==": operator.eq,
+    "!=": operator.ne,
+}
+
+
 def _version_satisfies_constraint(version: PythonVersion, constraint: VersionConstraint) -> bool:
     """Check if a version satisfies a single constraint.
 
@@ -97,23 +110,12 @@ def _version_satisfies_constraint(version: PythonVersion, constraint: VersionCon
     op = constraint.operator
     cv = constraint.version
 
-    if op == ">=":
-        return version >= cv
-    if op == ">":
-        return version > cv
-    if op == "<=":
-        return version <= cv
-    if op == "<":
-        return version < cv
-    if op == "==":
-        return version == cv
-    if op == "!=":
-        return version != cv
     if op == "~=":
         # Compatible release: ~=3.9 means >=3.9, <4.0
         return version >= cv and version.major == cv.major
 
-    return False
+    comparator = _COMPARATORS.get(op)
+    return comparator(version, cv) if comparator else False
 
 
 def version_satisfies(version: PythonVersion, constraints: Sequence[VersionConstraint]) -> bool:

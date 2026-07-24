@@ -17,15 +17,14 @@ import pytest
 from pyproj_dep_analyze.index_resolver import (
     DEFAULT_PYPI_INDEX,
     IndexResolver,
+    _get_env_indexes,  # pyright: ignore[reportPrivateUsage]
+    _get_pdm_sources_from_schema,  # pyright: ignore[reportPrivateUsage]
+    _get_poetry_sources_from_schema,  # pyright: ignore[reportPrivateUsage]
     detect_configured_indexes,
     identify_index,
-    _get_env_indexes,  # pyright: ignore[reportPrivateUsage]
-    _get_poetry_sources_from_schema,  # pyright: ignore[reportPrivateUsage]
-    _get_pdm_sources_from_schema,  # pyright: ignore[reportPrivateUsage]
 )
 from pyproj_dep_analyze.models import IndexInfo
 from pyproj_dep_analyze.schemas import PyprojectSchema
-
 
 # ════════════════════════════════════════════════════════════════════════════
 # IndexInfo: The index metadata container

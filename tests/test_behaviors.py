@@ -14,7 +14,6 @@ import pytest
 
 from pyproj_dep_analyze import behaviors
 
-
 # ════════════════════════════════════════════════════════════════════════════
 # emit_greeting: The canonical Hello World
 # ════════════════════════════════════════════════════════════════════════════

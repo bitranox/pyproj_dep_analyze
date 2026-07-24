@@ -32,6 +32,9 @@ from pydantic import BaseModel, ConfigDict
 
 from .models import DownloadStats
 
+_HTTP_STATUS_OK = 200  # httpx2.codes.OK is a (code, phrase) tuple, not an int
+_HTTP_STATUS_NOT_FOUND = 404
+
 logger = logging.getLogger(__name__)
 
 # pypistats.org API endpoints
@@ -111,11 +114,11 @@ class StatsResolver:
             async with httpx2.AsyncClient(timeout=self.timeout) as client:
                 response = await client.get(url, headers={"Accept": "application/json", "User-Agent": "pyproj-dep-analyze/1.0"})
 
-            if response.status_code == 404:
+            if response.status_code == _HTTP_STATUS_NOT_FOUND:
                 logger.debug("Package %s not found on pypistats.org", package_name)
                 return None
 
-            if response.status_code != 200:
+            if response.status_code != _HTTP_STATUS_OK:
                 logger.debug("pypistats.org returned %d for %s", response.status_code, package_name)
                 return None
 

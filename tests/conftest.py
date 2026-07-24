@@ -11,14 +11,16 @@ from __future__ import annotations
 
 import re
 import sys
-from collections.abc import Callable, Iterator
 from dataclasses import fields
 from pathlib import Path
+from typing import TYPE_CHECKING
 
+import lib_cli_exit_tools
 import pytest
 from click.testing import CliRunner
 
-import lib_cli_exit_tools
+if TYPE_CHECKING:
+    from collections.abc import Callable, Iterator
 
 # ════════════════════════════════════════════════════════════════════════════
 # Paths
@@ -77,21 +79,17 @@ def pytest_collection_modifyitems(
     is_posix = not is_windows
 
     for item in items:
-        if item.get_closest_marker("windows_only"):
-            if not is_windows:
-                item.add_marker(pytest.mark.skip(reason="Windows-only test"))
+        if item.get_closest_marker("windows_only") and not is_windows:
+            item.add_marker(pytest.mark.skip(reason="Windows-only test"))
 
-        if item.get_closest_marker("posix_only"):
-            if not is_posix:
-                item.add_marker(pytest.mark.skip(reason="POSIX-only test"))
+        if item.get_closest_marker("posix_only") and not is_posix:
+            item.add_marker(pytest.mark.skip(reason="POSIX-only test"))
 
-        if item.get_closest_marker("macos_only"):
-            if not is_macos:
-                item.add_marker(pytest.mark.skip(reason="macOS-only test"))
+        if item.get_closest_marker("macos_only") and not is_macos:
+            item.add_marker(pytest.mark.skip(reason="macOS-only test"))
 
-        if item.get_closest_marker("linux_only"):
-            if not is_linux:
-                item.add_marker(pytest.mark.skip(reason="Linux-only test"))
+        if item.get_closest_marker("linux_only") and not is_linux:
+            item.add_marker(pytest.mark.skip(reason="Linux-only test"))
 
 
 # ════════════════════════════════════════════════════════════════════════════

@@ -9,16 +9,17 @@ from __future__ import annotations
 
 import runpy
 import sys
-from collections.abc import Callable
 from dataclasses import dataclass
-from typing import TextIO
-
-import pytest
+from typing import TYPE_CHECKING, TextIO
 
 import lib_cli_exit_tools
+import pytest
 
-from pyproj_dep_analyze import __init__conf__, cli as cli_mod
+from pyproj_dep_analyze import __init__conf__
+from pyproj_dep_analyze import cli as cli_mod
 
+if TYPE_CHECKING:
+    from collections.abc import Callable
 
 # ════════════════════════════════════════════════════════════════════════════
 # Helpers for traceback capture

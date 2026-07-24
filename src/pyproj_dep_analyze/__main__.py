@@ -9,10 +9,10 @@ installed console script, including traceback handling and exit-code mapping.
 
 Contents
 --------
-* :func:`_open_cli_session` – wires ``cli_session`` with the agreed limits.
-* :func:`_command_to_run` / :func:`_command_name` – expose the command and label
+* :func:`_open_cli_session` - wires ``cli_session`` with the agreed limits.
+* :func:`_command_to_run` / :func:`_command_name` - expose the command and label
   used by the module entry.
-* :func:`_module_main` – drives execution and returns the exit code.
+* :func:`_module_main` - drives execution and returns the exit code.
 
 System Role
 -----------

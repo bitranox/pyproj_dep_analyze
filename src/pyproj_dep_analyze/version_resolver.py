@@ -24,6 +24,7 @@ import asyncio
 import logging
 import re
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from functools import lru_cache
 
 import httpx2
@@ -32,6 +33,9 @@ from pydantic import TypeAdapter
 from .models import DependencyInfo, PyPIMetadata, PythonVersion, VersionMetrics
 from .python_version_parser import parse_requires_python
 from .schemas import GitHubReleaseSchema, GitHubTagSchema, PyPIFullResponseSchema
+
+_HTTP_STATUS_OK = 200  # httpx2.codes.OK is a (code, phrase) tuple, not an int
+_HTTP_STATUS_NOT_FOUND = 404
 
 logger = logging.getLogger(__name__)
 
@@ -96,7 +100,7 @@ class VersionResolver:
         token_display = "***" if self.github_token else "None"
         return f"VersionResolver(timeout={self.timeout}, github_token={token_display})"
 
-    def _get_headers(self, for_github: bool = False) -> dict[str, str]:
+    def _get_headers(self, *, for_github: bool = False) -> dict[str, str]:
         """Get HTTP headers for API requests."""
         headers = {"Accept": "application/json", "User-Agent": "pyproj-dep-analyze/1.0"}
         if for_github and self.github_token:
@@ -170,7 +174,7 @@ class VersionResolver:
         async with httpx2.AsyncClient(timeout=self.timeout) as client:
             response = await client.get(url, headers=self._get_headers())
 
-        if response.status_code == 404:
+        if response.status_code == _HTTP_STATUS_NOT_FOUND:
             return VersionResult(is_unknown=True, error=f"Package {package_name} not found on PyPI")
 
         response.raise_for_status()
@@ -284,7 +288,7 @@ class VersionResolver:
         releases_url = GITHUB_API_RELEASES.format(owner=owner, repo=repo)
         response = await client.get(releases_url, headers=self._get_headers(for_github=True))
 
-        if response.status_code != 200:
+        if response.status_code != _HTTP_STATUS_OK:
             return None
 
         releases_adapter = TypeAdapter(list[GitHubReleaseSchema])
@@ -301,7 +305,7 @@ class VersionResolver:
         tags_url = GITHUB_API_TAGS.format(owner=owner, repo=repo)
         response = await client.get(tags_url, headers=self._get_headers(for_github=True))
 
-        if response.status_code != 200:
+        if response.status_code != _HTTP_STATUS_OK:
             return None
 
         tags_adapter = TypeAdapter(list[GitHubTagSchema])
@@ -616,9 +620,7 @@ def _extract_release_dates(
     """
     dates: list[str] = []
     for files in response.releases.values():
-        for f in files:
-            if f.upload_time_iso_8601:
-                dates.append(f.upload_time_iso_8601)
+        dates.extend(f.upload_time_iso_8601 for f in files if f.upload_time_iso_8601)
 
     if not dates:
         return None, None
@@ -651,6 +653,22 @@ def _extract_all_release_dates(response: PyPIFullResponseSchema) -> list[str]:
     return sorted_dates
 
 
+def _parse_release_date(date_str: str) -> datetime | None:
+    """Parse one ISO release timestamp, or None if it is malformed.
+
+    Isolated from the calling loop so the try/except lives in its own frame
+    (avoids PERF203's per-iteration exception-handler setup cost).
+    """
+    try:
+        # Handle ISO format with optional timezone
+        dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+    except (ValueError, TypeError):
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt
+
+
 def _compute_version_metrics(release_dates: list[str]) -> VersionMetrics:
     """Compute version metrics from release dates.
 
@@ -660,25 +678,14 @@ def _compute_version_metrics(release_dates: list[str]) -> VersionMetrics:
     Returns:
         Computed VersionMetrics.
     """
-    from datetime import datetime, timezone
-
     if not release_dates:
         return VersionMetrics(release_count=0, release_dates=[])
 
     now = datetime.now(timezone.utc)
     release_count = len(release_dates)
 
-    # Parse dates
-    parsed_dates: list[datetime] = []
-    for date_str in release_dates:
-        try:
-            # Handle ISO format with optional timezone
-            dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            parsed_dates.append(dt)
-        except (ValueError, TypeError):
-            continue
+    # Parse dates, dropping any that are malformed
+    parsed_dates = [dt for dt in (_parse_release_date(date_str) for date_str in release_dates) if dt is not None]
 
     if not parsed_dates:
         return VersionMetrics(release_count=release_count, release_dates=release_dates)

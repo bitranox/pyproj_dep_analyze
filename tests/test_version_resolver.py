@@ -30,7 +30,6 @@ from pyproj_dep_analyze.version_resolver import (
     resolve_pypi_version_cached,
 )
 
-
 # ════════════════════════════════════════════════════════════════════════════
 # VersionResult: The resolution result container
 # ════════════════════════════════════════════════════════════════════════════

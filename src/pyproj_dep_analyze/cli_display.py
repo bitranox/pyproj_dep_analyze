@@ -21,11 +21,19 @@ to format and display analysis results in various formats.
 from __future__ import annotations
 
 import json
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 import click
 
 from .models import Action, AnalysisResult, OutdatedEntry, OutputFormat
+
+if TYPE_CHECKING:
+    from pathlib import Path
+
+#: Table row cap for the "updates available" section; longer lists get a "N more" suffix.
+_MAX_UPDATES_DISPLAYED = 20
+#: Table row cap for the "manual check required" section; longer lists get a "N more" suffix.
+_MAX_MANUAL_DISPLAYED = 10
 
 
 def display_summary(result: AnalysisResult) -> None:
@@ -40,7 +48,7 @@ def display_summary(result: AnalysisResult) -> None:
     click.echo(separator)
     click.echo(f"Python versions analyzed: {', '.join(result.python_versions)}")
     click.echo(f"Total unique dependencies: {result.total_dependencies}")
-    click.echo(f"Total entries (deps × versions): {len(result.entries)}")
+    click.echo(f"Total entries (deps x versions): {len(result.entries)}")
     click.echo("-" * 60)
     click.echo(f"  Updates available: {result.update_count}")
     click.echo(f"  Deletions recommended: {result.delete_count}")
@@ -58,10 +66,10 @@ def _display_updates_section(updates: list[OutdatedEntry]) -> None:
         return
     click.echo("\nUPDATES AVAILABLE:")
     click.echo("-" * 60)
-    for entry in updates[:20]:
+    for entry in updates[:_MAX_UPDATES_DISPLAYED]:
         click.echo(f"  {entry.package} (py{entry.python_version}): {entry.current_version} -> {entry.latest_version}")
-    if len(updates) > 20:
-        click.echo(f"  ... and {len(updates) - 20} more")
+    if len(updates) > _MAX_UPDATES_DISPLAYED:
+        click.echo(f"  ... and {len(updates) - _MAX_UPDATES_DISPLAYED} more")
 
 
 def _display_manual_section(manual: list[OutdatedEntry]) -> None:
@@ -74,10 +82,10 @@ def _display_manual_section(manual: list[OutdatedEntry]) -> None:
         return
     click.echo("\nMANUAL CHECK REQUIRED:")
     click.echo("-" * 60)
-    for entry in manual[:10]:
+    for entry in manual[:_MAX_MANUAL_DISPLAYED]:
         click.echo(f"  {entry.package} (py{entry.python_version})")
-    if len(manual) > 10:
-        click.echo(f"  ... and {len(manual) - 10} more")
+    if len(manual) > _MAX_MANUAL_DISPLAYED:
+        click.echo(f"  ... and {len(manual) - _MAX_MANUAL_DISPLAYED} more")
 
 
 def display_table(result: AnalysisResult) -> None:

@@ -29,7 +29,7 @@ from typing import Any
 import rtoml
 
 from .models import DependencyInfo, DependencyMarker, GitProtocol
-from .schemas import PoetryDependencySpec, PyprojectSchema
+from .schemas import IncludeGroupSchema, PoetryDependencySpec, PyprojectSchema
 
 logger = logging.getLogger(__name__)
 
@@ -407,7 +407,6 @@ def _extract_dependency_groups_from_schema(data: PyprojectSchema) -> list[Depend
     because dependency-groups can contain either string specs or IncludeGroupSchema
     objects, which cannot be statically determined.
     """
-    from .schemas import IncludeGroupSchema
 
     result: list[DependencyInfo] = []
 

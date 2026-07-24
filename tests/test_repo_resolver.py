@@ -15,15 +15,14 @@ import pytest
 
 from pyproj_dep_analyze.models import RepoMetadata, RepoType
 from pyproj_dep_analyze.repo_resolver import (
+    _RE_GITHUB_URL,  # pyright: ignore[reportPrivateUsage]
+    _RE_GITLAB_URL,  # pyright: ignore[reportPrivateUsage]
+    GITHUB_REPO_API,
     PyPIUrlMetadata,
     RepoResolver,
     detect_repo_url,
     parse_repo_url,
-    _RE_GITHUB_URL,  # pyright: ignore[reportPrivateUsage]
-    _RE_GITLAB_URL,  # pyright: ignore[reportPrivateUsage]
-    GITHUB_REPO_API,
 )
-
 
 # ════════════════════════════════════════════════════════════════════════════
 # RepoMetadata: The repository metadata container

@@ -8,8 +8,7 @@ necessary for platform isolation.
 
 from __future__ import annotations
 
-from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import pytest
 from lib_layered_config.examples.deploy import DeployAction, DeployResult
@@ -18,6 +17,8 @@ from pyproj_dep_analyze import config_deploy as deploy_mod
 from pyproj_dep_analyze.config_deploy import deploy_configuration
 from pyproj_dep_analyze.models import DeploymentTarget
 
+if TYPE_CHECKING:
+    from pathlib import Path
 
 # ════════════════════════════════════════════════════════════════════════════
 # deploy_configuration: The configuration deployer

@@ -13,6 +13,23 @@ from pathlib import Path
 
 import pytest
 
+from pyproj_dep_analyze.analyzer import (
+    Analyzer,
+    _count_actions,
+    _dependency_applies_to_python_version,
+    _EnrichmentMetadata,
+    _extract_dependency_names,
+    _generate_enriched_note,
+    _generate_entries,
+    _generate_note,
+    _generate_summary_note,
+    _NoteContext,
+    _parse_version_constraint_minimum,
+    _SummaryCounts,
+    _version_is_greater,
+    _version_tuple,
+    write_enriched_json,
+)
 from pyproj_dep_analyze.models import (
     Action,
     CompatibilityStatus,
@@ -29,23 +46,8 @@ from pyproj_dep_analyze.models import (
     RepoType,
     VersionStatus,
 )
-from pyproj_dep_analyze.analyzer import (
-    Analyzer,
-    _count_actions,
-    _dependency_applies_to_python_version,
-    _extract_dependency_names,
-    _generate_entries,
-    _generate_enriched_note,
-    _generate_note,
-    _generate_summary_note,
-    _parse_version_constraint_minimum,
-    _version_is_greater,
-    _version_tuple,
-    write_enriched_json,
-)
 from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
 from pyproj_dep_analyze.version_resolver import VersionResult
-
 
 TESTDATA_DIR = Path(__file__).parent / "testdata"
 
@@ -60,11 +62,13 @@ def test_generate_note_delete_action_explains_marker_exclusion() -> None:
     """DELETE action note explains Python version marker exclusion."""
     note = _generate_note(
         action=Action.DELETE,
-        package="tomli",
-        python_version="3.11",
-        current_version="2.0.0",
-        latest_version="2.1.0",
-        is_git_dependency=False,
+        ctx=_NoteContext(
+            package="tomli",
+            python_version="3.11",
+            current_version="2.0.0",
+            latest_version="2.1.0",
+            is_git_dependency=False,
+        ),
     )
 
     assert "Python version marker" in note
@@ -77,11 +81,13 @@ def test_generate_note_update_action_for_pypi_package() -> None:
     """UPDATE action note for PyPI package includes version and changelog hint."""
     note = _generate_note(
         action=Action.UPDATE,
-        package="requests",
-        python_version="3.11",
-        current_version="2.28.0",
-        latest_version="2.31.0",
-        is_git_dependency=False,
+        ctx=_NoteContext(
+            package="requests",
+            python_version="3.11",
+            current_version="2.28.0",
+            latest_version="2.31.0",
+            is_git_dependency=False,
+        ),
     )
 
     assert "can be updated" in note
@@ -95,11 +101,13 @@ def test_generate_note_update_action_for_git_dependency() -> None:
     """UPDATE action note for git dependency mentions git reference."""
     note = _generate_note(
         action=Action.UPDATE,
-        package="custom-lib",
-        python_version="3.11",
-        current_version="v1.0.0",
-        latest_version="v2.0.0",
-        is_git_dependency=True,
+        ctx=_NoteContext(
+            package="custom-lib",
+            python_version="3.11",
+            current_version="v1.0.0",
+            latest_version="v2.0.0",
+            is_git_dependency=True,
+        ),
     )
 
     assert "Git dependency" in note
@@ -112,11 +120,13 @@ def test_generate_note_check_manually_unknown_pypi() -> None:
     """CHECK_MANUALLY note for unknown PyPI package includes security warning."""
     note = _generate_note(
         action=Action.CHECK_MANUALLY,
-        package="internal-pkg",
-        python_version="3.11",
-        current_version="1.0.0",
-        latest_version=VersionStatus.UNKNOWN.value,
-        is_git_dependency=False,
+        ctx=_NoteContext(
+            package="internal-pkg",
+            python_version="3.11",
+            current_version="1.0.0",
+            latest_version=VersionStatus.UNKNOWN.value,
+            is_git_dependency=False,
+        ),
     )
 
     assert "manual verification" in note
@@ -130,11 +140,13 @@ def test_generate_note_check_manually_unknown_git() -> None:
     """CHECK_MANUALLY note for unknown git dependency suggests checking releases."""
     note = _generate_note(
         action=Action.CHECK_MANUALLY,
-        package="private-repo",
-        python_version="3.11",
-        current_version="main",
-        latest_version=VersionStatus.UNKNOWN.value,
-        is_git_dependency=True,
+        ctx=_NoteContext(
+            package="private-repo",
+            python_version="3.11",
+            current_version="main",
+            latest_version=VersionStatus.UNKNOWN.value,
+            is_git_dependency=True,
+        ),
     )
 
     assert "Git dependency" in note
@@ -147,11 +159,13 @@ def test_generate_note_check_manually_git_with_version() -> None:
     """CHECK_MANUALLY note for git dependency with known versions shows both."""
     note = _generate_note(
         action=Action.CHECK_MANUALLY,
-        package="lib",
-        python_version="3.11",
-        current_version="v1.0",
-        latest_version="v1.5",  # Not "unknown"
-        is_git_dependency=True,
+        ctx=_NoteContext(
+            package="lib",
+            python_version="3.11",
+            current_version="v1.0",
+            latest_version="v1.5",  # Not "unknown"
+            is_git_dependency=True,
+        ),
     )
 
     assert "manual verification" in note
@@ -164,11 +178,13 @@ def test_generate_note_none_action_no_constraint() -> None:
     """NONE action note warns about missing version constraint."""
     note = _generate_note(
         action=Action.NONE,
-        package="httpx",
-        python_version="3.11",
-        current_version=None,
-        latest_version="0.25.0",
-        is_git_dependency=False,
+        ctx=_NoteContext(
+            package="httpx",
+            python_version="3.11",
+            current_version=None,
+            latest_version="0.25.0",
+            is_git_dependency=False,
+        ),
     )
 
     assert "no version constraint" in note
@@ -181,11 +197,13 @@ def test_generate_note_none_action_up_to_date() -> None:
     """NONE action note confirms package is up to date."""
     note = _generate_note(
         action=Action.NONE,
-        package="pydantic",
-        python_version="3.11",
-        current_version="2.5.0",
-        latest_version="2.5.0",
-        is_git_dependency=False,
+        ctx=_NoteContext(
+            package="pydantic",
+            python_version="3.11",
+            current_version="2.5.0",
+            latest_version="2.5.0",
+            is_git_dependency=False,
+        ),
     )
 
     assert "up to date" in note
@@ -212,11 +230,13 @@ def test_generate_note_none_action_up_to_date() -> None:
 def test_generate_summary_note_basic(expected_text: str) -> None:
     """Summary note includes all package counts."""
     note = _generate_summary_note(
-        total_packages=10,
-        updates_available=3,
-        up_to_date=5,
-        check_manually=2,
-        from_private_index=1,
+        _SummaryCounts(
+            total_packages=10,
+            updates_available=3,
+            up_to_date=5,
+            check_manually=2,
+            from_private_index=1,
+        ),
     )
 
     assert expected_text in note
@@ -230,11 +250,13 @@ def test_generate_summary_note_security_warning() -> None:
 
     # PyPI before private = potential dependency confusion
     note = _generate_summary_note(
-        total_packages=5,
-        updates_available=0,
-        up_to_date=5,
-        check_manually=0,
-        from_private_index=2,
+        _SummaryCounts(
+            total_packages=5,
+            updates_available=0,
+            up_to_date=5,
+            check_manually=0,
+            from_private_index=2,
+        ),
         indexes=[pypi_index, private_index],
     )
 
@@ -248,11 +270,13 @@ def test_generate_summary_note_no_security_warning_when_private_first() -> None:
     pypi_index = IndexInfo(url="https://pypi.org/simple", index_type=IndexType.PYPI, is_private=False)
     private_index = IndexInfo(url="https://private.company.com/simple", index_type=IndexType.CUSTOM, is_private=True)
     note = _generate_summary_note(
-        total_packages=5,
-        updates_available=0,
-        up_to_date=5,
-        check_manually=0,
-        from_private_index=2,
+        _SummaryCounts(
+            total_packages=5,
+            updates_available=0,
+            up_to_date=5,
+            check_manually=0,
+            from_private_index=2,
+        ),
         indexes=[private_index, pypi_index],
     )
 
@@ -263,11 +287,13 @@ def test_generate_summary_note_no_security_warning_when_private_first() -> None:
 def test_generate_summary_note_zero_counts_omitted() -> None:
     """Summary note omits sections with zero counts."""
     note = _generate_summary_note(
-        total_packages=10,
-        updates_available=0,
-        up_to_date=10,
-        check_manually=0,
-        from_private_index=0,
+        _SummaryCounts(
+            total_packages=10,
+            updates_available=0,
+            up_to_date=10,
+            check_manually=0,
+            from_private_index=0,
+        ),
     )
 
     assert "can be updated" not in note
@@ -296,14 +322,19 @@ def test_generate_enriched_note_with_metadata(expected_text: str) -> None:
     """Enriched note includes license, stars, forks, and release date."""
     note = _generate_enriched_note(
         action=Action.UPDATE,
-        package="requests",
-        current_version="2.28.0",
-        latest_version="2.31.0",
-        is_git_dependency=False,
-        license_info="Apache-2.0",
-        stars=50000,
-        forks=9000,
-        latest_release_date="2024-01-15T10:00:00Z",
+        ctx=_NoteContext(
+            package="requests",
+            python_version="all",
+            current_version="2.28.0",
+            latest_version="2.31.0",
+            is_git_dependency=False,
+        ),
+        metadata=_EnrichmentMetadata(
+            license_info="Apache-2.0",
+            stars=50000,
+            forks=9000,
+            latest_release_date="2024-01-15T10:00:00Z",
+        ),
     )
 
     assert expected_text in note
@@ -314,10 +345,13 @@ def test_generate_enriched_note_without_metadata() -> None:
     """Enriched note without metadata omits metadata section."""
     note = _generate_enriched_note(
         action=Action.NONE,
-        package="simple-pkg",
-        current_version="1.0.0",
-        latest_version="1.0.0",
-        is_git_dependency=False,
+        ctx=_NoteContext(
+            package="simple-pkg",
+            python_version="all",
+            current_version="1.0.0",
+            latest_version="1.0.0",
+            is_git_dependency=False,
+        ),
     )
 
     # Should not have metadata brackets when no metadata
@@ -329,14 +363,19 @@ def test_generate_enriched_note_partial_metadata() -> None:
     """Enriched note with partial metadata includes only available fields."""
     note = _generate_enriched_note(
         action=Action.UPDATE,
-        package="pkg",
-        current_version="1.0",
-        latest_version="2.0",
-        is_git_dependency=False,
-        license_info="MIT",
-        stars=None,
-        forks=None,
-        latest_release_date=None,
+        ctx=_NoteContext(
+            package="pkg",
+            python_version="all",
+            current_version="1.0",
+            latest_version="2.0",
+            is_git_dependency=False,
+        ),
+        metadata=_EnrichmentMetadata(
+            license_info="MIT",
+            stars=None,
+            forks=None,
+            latest_release_date=None,
+        ),
     )
 
     assert "License: MIT" in note
@@ -592,7 +631,7 @@ def test_parse_version_constraint_compatibility_operator() -> None:
     result = _parse_version_constraint_minimum("~=1.4.2")
     # The function uses regex capture which includes the '=' since ~= starts with ~
     # and the ~ prefix handler comes first, leaving =1.4.2
-    assert result == "=1.4.2" or result == "1.4.2"  # Depends on parsing order
+    assert result in {"=1.4.2", "1.4.2"}  # Depends on parsing order
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -774,7 +813,7 @@ def test_generate_entries_multiple_deps_multiple_versions() -> None:
 
     entries = _generate_entries(deps, versions, results)
 
-    assert len(entries) == 6  # 2 deps × 3 versions
+    assert len(entries) == 6  # 2 deps x 3 versions
 
 
 @pytest.mark.os_agnostic
@@ -939,6 +978,7 @@ def test_version_resolver_cache_key_format() -> None:
 def gitlab_repo_metadata() -> RepoMetadata:
     """Resolve GitLab repo metadata for testing."""
     import asyncio
+
     from pyproj_dep_analyze.repo_resolver import PyPIUrlMetadata, RepoResolver
 
     resolver = RepoResolver()
@@ -1088,8 +1128,8 @@ def test_version_sort_key_with_pre_release() -> None:
 @pytest.mark.os_agnostic
 def test_find_version_from_releases_prefers_stable() -> None:
     """Prefers stable releases over pre-releases when both exist."""
-    from pyproj_dep_analyze.version_resolver import _find_version_from_releases
     from pyproj_dep_analyze.schemas import GitHubReleaseSchema
+    from pyproj_dep_analyze.version_resolver import _find_version_from_releases
 
     releases = [
         GitHubReleaseSchema(tag_name="v2.0.0-rc1", prerelease=True, draft=False),
@@ -1104,8 +1144,8 @@ def test_find_version_from_releases_prefers_stable() -> None:
 @pytest.mark.os_agnostic
 def test_find_version_from_releases_falls_back_to_prerelease() -> None:
     """Falls back to pre-release when no stable releases exist."""
-    from pyproj_dep_analyze.version_resolver import _find_version_from_releases
     from pyproj_dep_analyze.schemas import GitHubReleaseSchema
+    from pyproj_dep_analyze.version_resolver import _find_version_from_releases
 
     releases = [
         GitHubReleaseSchema(tag_name="v2.0.0-rc1", prerelease=True, draft=False),
@@ -1128,8 +1168,8 @@ def test_find_version_from_releases_empty() -> None:
 @pytest.mark.os_agnostic
 def test_find_version_from_tags_sorts_by_version() -> None:
     """Returns highest version tag after sorting."""
-    from pyproj_dep_analyze.version_resolver import _find_version_from_tags
     from pyproj_dep_analyze.schemas import GitHubTagSchema
+    from pyproj_dep_analyze.version_resolver import _find_version_from_tags
 
     tags = [
         GitHubTagSchema(name="v1.0.0"),
@@ -1144,8 +1184,8 @@ def test_find_version_from_tags_sorts_by_version() -> None:
 @pytest.mark.os_agnostic
 def test_find_version_from_tags_filters_non_version_tags() -> None:
     """Ignores non-version tags like branch names."""
-    from pyproj_dep_analyze.version_resolver import _find_version_from_tags
     from pyproj_dep_analyze.schemas import GitHubTagSchema
+    from pyproj_dep_analyze.version_resolver import _find_version_from_tags
 
     tags = [
         GitHubTagSchema(name="feature-branch"),
@@ -1260,8 +1300,8 @@ def test_version_resolver_get_headers_github_false_no_auth() -> None:
 @pytest.mark.os_agnostic
 def test_extract_pypi_metadata_minimal() -> None:
     """Extracts metadata from minimal PyPI response without releases."""
-    from pyproj_dep_analyze.version_resolver import _extract_pypi_metadata
     from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
+    from pyproj_dep_analyze.version_resolver import _extract_pypi_metadata
 
     response = PyPIFullResponseSchema.model_validate({"info": {"version": "1.0.0"}, "releases": {}})
 
@@ -1333,8 +1373,8 @@ def test_extract_pypi_metadata_extracts_release_date() -> None:
 @pytest.mark.os_agnostic
 def test_extract_release_dates_empty() -> None:
     """Returns None for both dates when no releases exist."""
-    from pyproj_dep_analyze.version_resolver import _extract_release_dates
     from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
+    from pyproj_dep_analyze.version_resolver import _extract_release_dates
 
     response = PyPIFullResponseSchema.model_validate({"info": {"version": "1.0.0"}, "releases": {}})
 
@@ -1347,8 +1387,8 @@ def test_extract_release_dates_empty() -> None:
 @pytest.mark.os_agnostic
 def test_extract_release_dates_with_dates() -> None:
     """Extracts first and latest release dates from multiple releases."""
-    from pyproj_dep_analyze.version_resolver import _extract_release_dates
     from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
+    from pyproj_dep_analyze.version_resolver import _extract_release_dates
 
     response = PyPIFullResponseSchema.model_validate(
         {
@@ -1375,8 +1415,8 @@ def test_extract_release_dates_with_dates() -> None:
 @pytest.mark.os_agnostic
 def test_find_latest_compatible_version_no_python_version() -> None:
     """Returns latest version when no Python version filter is provided."""
-    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
     from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
+    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
 
     response = PyPIFullResponseSchema.model_validate(
         {
@@ -1393,8 +1433,8 @@ def test_find_latest_compatible_version_no_python_version() -> None:
 @pytest.mark.os_agnostic
 def test_find_latest_compatible_version_with_compatible_latest() -> None:
     """Returns latest version when it is compatible with Python version."""
-    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
     from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
+    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
 
     response = PyPIFullResponseSchema.model_validate(
         {
@@ -1411,8 +1451,8 @@ def test_find_latest_compatible_version_with_compatible_latest() -> None:
 @pytest.mark.os_agnostic
 def test_find_latest_compatible_version_falls_back_to_older() -> None:
     """Falls back to older compatible version when latest is incompatible."""
-    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
     from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
+    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
 
     response = PyPIFullResponseSchema.model_validate(
         {
@@ -1433,8 +1473,8 @@ def test_find_latest_compatible_version_falls_back_to_older() -> None:
 @pytest.mark.os_agnostic
 def test_find_latest_compatible_version_none_compatible() -> None:
     """Returns None when no versions are compatible with Python version."""
-    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
     from pyproj_dep_analyze.schemas import PyPIFullResponseSchema
+    from pyproj_dep_analyze.version_resolver import _find_latest_compatible_version
 
     response = PyPIFullResponseSchema.model_validate(
         {
@@ -1680,8 +1720,8 @@ def test_compute_version_metrics_multiple_releases() -> None:
 @pytest.mark.os_agnostic
 def test_extract_all_release_dates_returns_sorted_dates() -> None:
     """Extract release dates returns sorted list oldest first."""
+    from pyproj_dep_analyze.schemas import PyPIFullInfoSchema, PyPIFullResponseSchema, PyPIReleaseFileSchema
     from pyproj_dep_analyze.version_resolver import _extract_all_release_dates
-    from pyproj_dep_analyze.schemas import PyPIFullResponseSchema, PyPIFullInfoSchema, PyPIReleaseFileSchema
 
     response = PyPIFullResponseSchema(
         info=PyPIFullInfoSchema(name="test", version="2.0.0"),
@@ -1782,7 +1822,7 @@ def test_pypi_metadata_includes_version_metrics() -> None:
 @pytest.mark.os_agnostic
 def test_pypi_metadata_includes_download_stats() -> None:
     """PyPIMetadata model includes download_stats field."""
-    from pyproj_dep_analyze.models import PyPIMetadata, DownloadStats
+    from pyproj_dep_analyze.models import DownloadStats, PyPIMetadata
 
     stats = DownloadStats(last_month_downloads=50000)
     metadata = PyPIMetadata(
@@ -1797,7 +1837,7 @@ def test_pypi_metadata_includes_download_stats() -> None:
 @pytest.mark.os_agnostic
 def test_pypi_metadata_serializes_with_nested_models() -> None:
     """PyPIMetadata serializes nested models to JSON correctly."""
-    from pyproj_dep_analyze.models import PyPIMetadata, VersionMetrics, DownloadStats
+    from pyproj_dep_analyze.models import DownloadStats, PyPIMetadata, VersionMetrics
 
     metadata = PyPIMetadata(
         summary="Test",

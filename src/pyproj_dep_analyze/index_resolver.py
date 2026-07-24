@@ -29,9 +29,12 @@ from enum import Enum
 from pathlib import Path
 
 import httpx2
+import rtoml
 
-from .models import IndexInfo, IndexType, KNOWN_INDEX_PATTERNS, PackageIndexResolutions
+from .models import KNOWN_INDEX_PATTERNS, IndexInfo, IndexType, PackageIndexResolutions
 from .schemas import PyprojectSchema, UVConfigSchema
+
+_HTTP_STATUS_OK = 200  # httpx2.codes.OK is a (code, phrase) tuple, not an int
 
 logger = logging.getLogger(__name__)
 
@@ -186,8 +189,6 @@ def _get_uv_indexes(project_dir: Path) -> list[str]:
         return indexes
 
     try:
-        import rtoml
-
         data = rtoml.load(uv_toml)
 
         config = UVConfigSchema.model_validate(data)
@@ -332,7 +333,7 @@ class IndexResolver:
         try:
             async with httpx2.AsyncClient(timeout=self.timeout) as client:
                 response = await client.head(url)
-                return response.status_code == 200
+                return response.status_code == _HTTP_STATUS_OK
         except Exception:
             return False
 

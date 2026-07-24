@@ -8,8 +8,8 @@ eliminating duplication between module entry (__main__.py) and console script
 
 Contents
 --------
-* :func:`init_logging` – idempotent logging initialization with layered config.
-* :func:`_build_runtime_config` – constructs RuntimeConfig from layered sources.
+* :func:`init_logging` - idempotent logging initialization with layered config.
+* :func:`_build_runtime_config` - constructs RuntimeConfig from layered sources.
 
 System Role
 -----------
@@ -94,7 +94,9 @@ def init_logging() -> None:
         configuration to ensure standard logging uses the same threshold.
     """
     if not lib_log_rich.runtime.is_initialised():
-        global _runtime_config
+        # Deliberate module-level cache (see module docstring); the write happens
+        # exactly once, guarded by is_initialised(), so there is no hidden re-entry.
+        global _runtime_config  # noqa: PLW0603 - single guarded write, documented cache
 
         # Enable .env file discovery and loading before runtime initialization
         # This allows LOG_* variables from .env files to override configuration
