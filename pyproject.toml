@@ -10,8 +10,8 @@ dependencies = [
     # than free-riding on rich-click, which only requires click>=8. The floor is 8.4:
     # ParamType became generic there, and EnumChoice subscripts it (TypeError on click<8.4).
     "click>=8.4.2",
-    "lib_cli_exit_tools>=2.3.3",
-    "lib_log_rich>=6.3.5",
+    "lib_cli_exit_tools>=2.3.4",
+    "lib_log_rich>=6.3.6",
     "lib_layered_config>=5.6.1",
     "httpx2>=2.9.1",
     "pydantic>=2.13.4",
@@ -57,7 +57,7 @@ dev = [
   # 1.5.1 was yanked upstream (unintended breaking changes), so 1.5.0 is the newest usable
   # release; a >=1.5.1 floor has ZERO candidates and makes this extra unresolvable.
   "build>=1.5.0",
-  "twine>=6.2.0",
+  "twine>=7.0.0",
   # codecov-cli is disabled, not dropped: it requires click<8.3.0, which holds click at
   # 8.2.1 (CVE-2026-7246). Worse, bmk requires click>=8.4.2, so uv cannot satisfy both and
   # silently BACKTRACKS bmk to 3.1.7 - this repo stopped receiving bmk updates entirely,
