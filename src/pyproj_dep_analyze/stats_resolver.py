@@ -32,7 +32,7 @@ from pydantic import BaseModel, ConfigDict
 
 from .models import DownloadStats
 
-_HTTP_STATUS_OK = 200  # httpx2.codes.OK is a (code, phrase) tuple, not an int
+_HTTP_STATUS_OK = 200  # ruff PLR2004: name the magic value (httpx2.codes.OK is an IntEnum and compares equal)
 _HTTP_STATUS_NOT_FOUND = 404
 
 logger = logging.getLogger(__name__)

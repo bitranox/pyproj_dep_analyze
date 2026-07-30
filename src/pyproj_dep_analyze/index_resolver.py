@@ -34,7 +34,7 @@ import rtoml
 from .models import KNOWN_INDEX_PATTERNS, IndexInfo, IndexType, PackageIndexResolutions
 from .schemas import PyprojectSchema, UVConfigSchema
 
-_HTTP_STATUS_OK = 200  # httpx2.codes.OK is a (code, phrase) tuple, not an int
+_HTTP_STATUS_OK = 200  # ruff PLR2004: name the magic value (httpx2.codes.OK is an IntEnum and compares equal)
 
 logger = logging.getLogger(__name__)
 
