@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-07-24T15:34:58.994992+00:00",
+  "analyzed_at": "2026-07-31T22:38:39.308061+00:00",
   "pyproject_path": "/media/srv-main-softdev/projects/public/libs/pyproj_dep_analyze/tests/testdata/project_dependencies/pyproject_unslothai_unsloth.toml",
   "python_versions": [
     "3.9",
@@ -91,12 +91,12 @@
         ],
         "version_metrics": {
           "release_count": 21,
-          "latest_release_age_days": 36,
-          "first_release_age_days": 1885,
+          "latest_release_age_days": 44,
+          "first_release_age_days": 1892,
           "avg_days_between_releases": 91.8,
           "min_days_between_releases": 9,
           "max_days_between_releases": 521,
-          "releases_last_year": 6,
+          "releases_last_year": 5,
           "release_dates": [
             "2021-05-26T00:26:25.554734Z",
             "2021-06-04T17:57:46.223680Z",
@@ -253,12 +253,12 @@
         ],
         "version_metrics": {
           "release_count": 33,
-          "latest_release_age_days": 32,
-          "first_release_age_days": 501,
+          "latest_release_age_days": 40,
+          "first_release_age_days": 508,
           "avg_days_between_releases": 14.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 76,
-          "releases_last_year": 14,
+          "releases_last_year": 13,
           "release_dates": [
             "2025-03-10T06:04:00.919325Z",
             "2025-03-10T06:04:51.171224Z",
@@ -465,8 +465,8 @@
         ],
         "version_metrics": {
           "release_count": 83,
-          "latest_release_age_days": 92,
-          "first_release_age_days": 5136,
+          "latest_release_age_days": 100,
+          "first_release_age_days": 5143,
           "avg_days_between_releases": 61.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 437,
@@ -674,8 +674,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 53,
-          "latest_release_age_days": 90,
-          "first_release_age_days": 4340,
+          "latest_release_age_days": 98,
+          "first_release_age_days": 4347,
           "avg_days_between_releases": 81.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 486,
@@ -960,12 +960,12 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 135,
-          "latest_release_age_days": 19,
-          "first_release_age_days": 7174,
+          "latest_release_age_days": 27,
+          "first_release_age_days": 7181,
           "avg_days_between_releases": 52.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 856,
-          "releases_last_year": 15,
+          "releases_last_year": 14,
           "release_dates": [
             "2006-12-02T02:07:43Z",
             "2009-04-06T06:19:25.098717Z",
@@ -1138,9 +1138,9 @@
       "name": "tqdm",
       "requested_version": null,
       "resolved_version": null,
-      "latest_version": "4.69.1",
+      "latest_version": "4.70.0",
       "action": "none",
-      "note": "Package 'tqdm' has no version constraint specified (accepts any version). Latest available version is 4.69.1. Consider pinning to a specific version range for reproducible builds. [License: MPL-2.0 AND MIT | last release: 2026-07-24]",
+      "note": "Package 'tqdm' has no version constraint specified (accepts any version). Latest available version is 4.70.0. Consider pinning to a specific version range for reproducible builds. [License: MPL-2.0 AND MIT | last release: 2026-07-27]",
       "source": "project.optional-dependencies.colab-new",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1313,6 +1313,7 @@
           "4.7.2",
           "4.7.4",
           "4.7.6",
+          "4.70.0",
           "4.8.1",
           "4.8.2",
           "4.8.3",
@@ -1320,7 +1321,7 @@
           "4.9.0"
         ],
         "first_release_date": "2013-10-26T20:06:45.223855Z",
-        "latest_release_date": "2026-07-24T14:22:02.080988Z",
+        "latest_release_date": "2026-07-27T11:33:15.271360Z",
         "requires_python": ">=3.8",
         "requires_dist": [
           "colorama; platform_system == \"Windows\"",
@@ -1333,13 +1334,13 @@
           "ipywidgets>=6; extra == \"notebook\""
         ],
         "version_metrics": {
-          "release_count": 148,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 4653,
-          "avg_days_between_releases": 31.2,
+          "release_count": 149,
+          "latest_release_age_days": 4,
+          "first_release_age_days": 4661,
+          "avg_days_between_releases": 31.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 715,
-          "releases_last_year": 9,
+          "releases_last_year": 10,
           "release_dates": [
             "2013-10-26T20:06:45.223855Z",
             "2015-10-11T20:29:34.738478Z",
@@ -1488,7 +1489,8 @@
             "2026-06-17T07:36:50.132386Z",
             "2026-07-07T09:58:16.256013Z",
             "2026-07-17T18:09:04.172996Z",
-            "2026-07-24T14:22:00.048298Z"
+            "2026-07-24T14:22:00.048298Z",
+            "2026-07-27T11:33:13.167874Z"
           ]
         },
         "download_stats": null
@@ -1717,8 +1719,8 @@
         ],
         "version_metrics": {
           "release_count": 102,
-          "latest_release_age_days": 176,
-          "first_release_age_days": 4682,
+          "latest_release_age_days": 184,
+          "first_release_age_days": 4689,
           "avg_days_between_releases": 44.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 375,
@@ -2098,12 +2100,12 @@
         ],
         "version_metrics": {
           "release_count": 124,
-          "latest_release_age_days": 34,
-          "first_release_age_days": 1387,
+          "latest_release_age_days": 41,
+          "first_release_age_days": 1395,
           "avg_days_between_releases": 10.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 64,
-          "releases_last_year": 32,
+          "releases_last_year": 31,
           "release_dates": [
             "2022-10-05T20:45:57.372402Z",
             "2022-10-06T19:25:07.934064Z",
@@ -2555,8 +2557,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 218,
-          "latest_release_age_days": 14,
-          "first_release_age_days": 6587,
+          "latest_release_age_days": 22,
+          "first_release_age_days": 6595,
           "avg_days_between_releases": 29.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 730,
@@ -2871,8 +2873,8 @@
         ],
         "version_metrics": {
           "release_count": 34,
-          "latest_release_age_days": 12,
-          "first_release_age_days": 3251,
+          "latest_release_age_days": 19,
+          "first_release_age_days": 3259,
           "avg_days_between_releases": 97.7,
           "min_days_between_releases": 7,
           "max_days_between_releases": 539,
@@ -2952,9 +2954,9 @@
       "name": "datasets",
       "requested_version": ">=3.4.1,!=4.0.*,!=4.1.0,<4.4.0",
       "resolved_version": "3.4.1",
-      "latest_version": "5.0.0",
+      "latest_version": "5.0.1",
       "action": "update",
-      "note": "Package 'datasets' can be updated from 3.4.1 to 5.0.0. Review the changelog for breaking changes before updating. [License: Apache 2.0 | last release: 2026-06-05]",
+      "note": "Package 'datasets' can be updated from 3.4.1 to 5.0.1. Review the changelog for breaking changes before updating. [License: Apache 2.0 | last release: 2026-07-28]",
       "source": "project.optional-dependencies.colab-new",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3098,10 +3100,11 @@
           "4.8.3",
           "4.8.4",
           "4.8.5",
-          "5.0.0"
+          "5.0.0",
+          "5.0.1"
         ],
         "first_release_date": "2015-08-18T00:07:40.556725Z",
-        "latest_release_date": "2026-06-05T13:18:26.124451Z",
+        "latest_release_date": "2026-07-28T11:09:12.016223Z",
         "requires_python": ">=3.10.0",
         "requires_dist": [
           "filelock",
@@ -3114,7 +3117,7 @@
           "tqdm>=4.66.3",
           "xxhash",
           "multiprocess<0.70.20",
-          "fsspec[http]<=2026.4.0,>=2023.1.0",
+          "fsspec[http]<=2026.6.0,>=2023.1.0",
           "huggingface-hub<2.0,>=0.25.0",
           "packaging",
           "pyyaml>=5.1",
@@ -3162,7 +3165,7 @@
           "torchcodec>=0.7.0; python_version < \"3.14\" and extra == \"dev\"",
           "nibabel>=5.3.1; extra == \"dev\"",
           "trimesh>=4.10.0; extra == \"dev\"",
-          "teich==0.1.1a76; extra == \"dev\"",
+          "teich==0.1.5; extra == \"dev\"",
           "ruff>=0.3.0; extra == \"dev\"",
           "transformers; extra == \"dev\"",
           "torch; extra == \"dev\"",
@@ -3202,7 +3205,7 @@
           "torchcodec>=0.7.0; python_version < \"3.14\" and extra == \"tests\"",
           "nibabel>=5.3.1; extra == \"tests\"",
           "trimesh>=4.10.0; extra == \"tests\"",
-          "teich==0.1.1a76; extra == \"tests\"",
+          "teich==0.1.5; extra == \"tests\"",
           "numba>=0.56.4; python_version < \"3.14\" and extra == \"tests-numpy2\"",
           "absl-py; extra == \"tests-numpy2\"",
           "decorator; extra == \"tests-numpy2\"",
@@ -3235,7 +3238,7 @@
           "torchcodec>=0.7.0; python_version < \"3.14\" and extra == \"tests-numpy2\"",
           "nibabel>=5.3.1; extra == \"tests-numpy2\"",
           "trimesh>=4.10.0; extra == \"tests-numpy2\"",
-          "teich==0.1.1a76; extra == \"tests-numpy2\"",
+          "teich==0.1.5; extra == \"tests-numpy2\"",
           "ruff>=0.3.0; extra == \"quality\"",
           "tensorflow==2.12.0; extra == \"benchmarks\"",
           "torch==2.0.1; extra == \"benchmarks\"",
@@ -3249,13 +3252,13 @@
           "pyiceberg>=0.7.0; extra == \"iceberg\""
         ],
         "version_metrics": {
-          "release_count": 118,
-          "latest_release_age_days": 49,
-          "first_release_age_days": 3993,
-          "avg_days_between_releases": 33.2,
+          "release_count": 119,
+          "latest_release_age_days": 3,
+          "first_release_age_days": 4000,
+          "avg_days_between_releases": 33.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1850,
-          "releases_last_year": 18,
+          "releases_last_year": 19,
           "release_dates": [
             "2015-08-18T00:07:40.556725Z",
             "2020-09-10T17:43:47.439162Z",
@@ -3374,7 +3377,8 @@
             "2026-03-19T17:43:57.337149Z",
             "2026-03-23T14:21:15.890803Z",
             "2026-04-27T15:43:53.702105Z",
-            "2026-06-05T13:18:24.435738Z"
+            "2026-06-05T13:18:24.435738Z",
+            "2026-07-28T11:09:10.266825Z"
           ]
         },
         "download_stats": null
@@ -3762,8 +3766,8 @@
         ],
         "version_metrics": {
           "release_count": 82,
-          "latest_release_age_days": 43,
-          "first_release_age_days": 2093,
+          "latest_release_age_days": 50,
+          "first_release_age_days": 2100,
           "avg_days_between_releases": 24.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 171,
@@ -3971,9 +3975,9 @@
       "name": "peft",
       "requested_version": ">=0.7.1",
       "resolved_version": "0.7.1",
-      "latest_version": "0.19.1",
+      "latest_version": "0.20.0",
       "action": "update",
-      "note": "Package 'peft' can be updated from 0.7.1 to 0.19.1. Review the changelog for breaking changes before updating. [License: Apache | last release: 2026-04-16]",
+      "note": "Package 'peft' can be updated from 0.7.1 to 0.20.0. Review the changelog for breaking changes before updating. [License: Apache | last release: 2026-07-28]",
       "source": "project.optional-dependencies.colab-no-deps",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4022,6 +4026,7 @@
           "0.19.0",
           "0.19.1",
           "0.2.0",
+          "0.20.0",
           "0.3.0",
           "0.4.0",
           "0.5.0",
@@ -4036,7 +4041,7 @@
           "0.9.0"
         ],
         "first_release_date": "2023-01-19T16:41:25.146082Z",
-        "latest_release_date": "2026-04-16T15:46:45.105998Z",
+        "latest_release_date": "2026-07-28T13:46:01.850741Z",
         "requires_python": ">=3.10.0",
         "requires_dist": [
           "numpy>=1.17",
@@ -4048,25 +4053,21 @@
           "tqdm",
           "accelerate>=0.21.0",
           "safetensors",
-          "huggingface_hub>=0.25.0",
-          "black; extra == \"quality\"",
-          "hf-doc-builder; extra == \"quality\"",
-          "ruff~=0.12.8; extra == \"quality\"",
+          "huggingface-hub>=0.25.0",
+          "black; extra == \"dev\"",
+          "hf-doc-builder; extra == \"dev\"",
+          "ruff~=0.15.12; extra == \"dev\"",
+          "requests; extra == \"dev\"",
           "black; extra == \"docs-specific\"",
           "requests; extra == \"docs-specific\"",
           "hf-doc-builder; extra == \"docs-specific\"",
-          "black; extra == \"dev\"",
-          "hf-doc-builder; extra == \"dev\"",
-          "ruff~=0.12.8; extra == \"dev\"",
-          "black; extra == \"dev\"",
-          "requests; extra == \"dev\"",
-          "hf-doc-builder; extra == \"dev\"",
+          "black; extra == \"quality\"",
+          "hf-doc-builder; extra == \"quality\"",
+          "ruff~=0.15.12; extra == \"quality\"",
           "black; extra == \"test\"",
           "hf-doc-builder; extra == \"test\"",
-          "ruff~=0.12.8; extra == \"test\"",
-          "black; extra == \"test\"",
+          "ruff~=0.15.12; extra == \"test\"",
           "requests; extra == \"test\"",
-          "hf-doc-builder; extra == \"test\"",
           "pytest; extra == \"test\"",
           "pytest-cov; extra == \"test\"",
           "pytest-xdist; extra == \"test\"",
@@ -4080,13 +4081,13 @@
           "torchvision; extra == \"test\""
         ],
         "version_metrics": {
-          "release_count": 35,
-          "latest_release_age_days": 98,
-          "first_release_age_days": 1281,
-          "avg_days_between_releases": 34.3,
+          "release_count": 36,
+          "latest_release_age_days": 3,
+          "first_release_age_days": 1289,
+          "avg_days_between_releases": 36.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 103,
-          "releases_last_year": 7,
+          "releases_last_year": 8,
           "release_dates": [
             "2023-01-19T16:41:25.146082Z",
             "2023-01-19T17:34:29.639482Z",
@@ -4122,7 +4123,8 @@
             "2025-11-13T11:13:03.664194Z",
             "2026-01-09T13:07:55.865058Z",
             "2026-04-14T14:01:51.279893Z",
-            "2026-04-16T15:46:42.886694Z"
+            "2026-04-16T15:46:42.886694Z",
+            "2026-07-28T13:45:59.809156Z"
           ]
         },
         "download_stats": null
@@ -4153,21 +4155,21 @@
         "huggingface_hub"
       ],
       "optional_dependencies": {
-        "quality": [
+        "dev": [
           "black",
           "hf_doc_builder",
-          "ruff~"
+          "ruff~",
+          "requests"
         ],
         "docs-specific": [
           "black",
           "requests",
           "hf_doc_builder"
         ],
-        "dev": [
+        "quality": [
           "black",
           "hf_doc_builder",
-          "ruff~",
-          "requests"
+          "ruff~"
         ],
         "test": [
           "black",
@@ -4196,9 +4198,9 @@
       "name": "huggingface_hub",
       "requested_version": ">=0.34.0",
       "resolved_version": "0.34.0",
-      "latest_version": "1.24.0",
+      "latest_version": "1.26.0",
       "action": "update",
-      "note": "Package 'huggingface_hub' can be updated from 0.34.0 to 1.24.0. Review the changelog for breaking changes before updating. [License: Apache-2.0 | last release: 2026-07-17]",
+      "note": "Package 'huggingface_hub' can be updated from 0.34.0 to 1.26.0. Review the changelog for breaking changes before updating. [License: Apache-2.0 | last release: 2026-07-30]",
       "source": "project.optional-dependencies.colab-new",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4500,6 +4502,13 @@
           "1.24.0rc0",
           "1.24.0rc1",
           "1.24.0rc3",
+          "1.25.0",
+          "1.25.0rc0",
+          "1.25.1",
+          "1.26.0",
+          "1.26.0rc0",
+          "1.26.0rc1",
+          "1.26.0rc2",
           "1.3.0",
           "1.3.0rc0",
           "1.3.1",
@@ -4528,7 +4537,7 @@
           "1.9.2"
         ],
         "first_release_date": "2020-12-23T09:22:13.169215Z",
-        "latest_release_date": "2026-07-17T09:54:01.022937Z",
+        "latest_release_date": "2026-07-30T14:12:04.156448Z",
         "requires_python": ">=3.10.0",
         "requires_dist": [
           "click<9.0.0,>=8.4.2",
@@ -4563,7 +4572,7 @@
           "pytest-xdist; extra == \"testing\"",
           "pytest-vcr; extra == \"testing\"",
           "pytest-asyncio; extra == \"testing\"",
-          "pytest-rerunfailures<16.0; extra == \"testing\"",
+          "pytest-rerunfailures>=16.2; extra == \"testing\"",
           "pytest-mock; extra == \"testing\"",
           "urllib3<2.0; extra == \"testing\"",
           "soundfile; extra == \"testing\"",
@@ -4595,7 +4604,7 @@
           "pytest-xdist; extra == \"all\"",
           "pytest-vcr; extra == \"all\"",
           "pytest-asyncio; extra == \"all\"",
-          "pytest-rerunfailures<16.0; extra == \"all\"",
+          "pytest-rerunfailures>=16.2; extra == \"all\"",
           "pytest-mock; extra == \"all\"",
           "urllib3<2.0; extra == \"all\"",
           "soundfile; extra == \"all\"",
@@ -4625,7 +4634,7 @@
           "pytest-xdist; extra == \"dev\"",
           "pytest-vcr; extra == \"dev\"",
           "pytest-asyncio; extra == \"dev\"",
-          "pytest-rerunfailures<16.0; extra == \"dev\"",
+          "pytest-rerunfailures>=16.2; extra == \"dev\"",
           "pytest-mock; extra == \"dev\"",
           "urllib3<2.0; extra == \"dev\"",
           "soundfile; extra == \"dev\"",
@@ -4645,13 +4654,13 @@
           "types-urllib3; extra == \"dev\""
         ],
         "version_metrics": {
-          "release_count": 302,
-          "latest_release_age_days": 7,
-          "first_release_age_days": 2039,
-          "avg_days_between_releases": 6.3,
+          "release_count": 309,
+          "latest_release_age_days": 1,
+          "first_release_age_days": 2046,
+          "avg_days_between_releases": 6.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 84,
-          "releases_last_year": 112,
+          "releases_last_year": 115,
           "release_dates": [
             "2020-12-23T09:22:13.169215Z",
             "2021-02-12T18:59:55.063525Z",
@@ -4954,7 +4963,14 @@
             "2026-07-17T08:36:10.919870Z",
             "2026-07-17T09:34:47.985648Z",
             "2026-07-17T09:39:26.349241Z",
-            "2026-07-17T09:53:59.106649Z"
+            "2026-07-17T09:53:59.106649Z",
+            "2026-07-27T08:04:48.225977Z",
+            "2026-07-27T08:52:49.697089Z",
+            "2026-07-27T09:24:08.079120Z",
+            "2026-07-30T10:06:01.164384Z",
+            "2026-07-30T11:19:50.496749Z",
+            "2026-07-30T11:23:21.868548Z",
+            "2026-07-30T14:12:01.998593Z"
           ]
         },
         "download_stats": null
@@ -5169,8 +5185,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 12,
-          "latest_release_age_days": 563,
-          "first_release_age_days": 1316,
+          "latest_release_age_days": 570,
+          "first_release_age_days": 1323,
           "avg_days_between_releases": 67.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 221,
@@ -5447,8 +5463,8 @@
         ],
         "version_metrics": {
           "release_count": 98,
-          "latest_release_age_days": 21,
-          "first_release_age_days": 1515,
+          "latest_release_age_days": 28,
+          "first_release_age_days": 1523,
           "avg_days_between_releases": 14.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 87,
@@ -6223,12 +6239,12 @@
         ],
         "version_metrics": {
           "release_count": 237,
-          "latest_release_age_days": 8,
-          "first_release_age_days": 3628,
+          "latest_release_age_days": 15,
+          "first_release_age_days": 3635,
           "avg_days_between_releases": 14.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1135,
-          "releases_last_year": 49,
+          "releases_last_year": 47,
           "release_dates": [
             "2016-08-17T06:13:12.929751Z",
             "2019-09-26T11:49:26.334169Z",
@@ -6794,9 +6810,9 @@
       "name": "trl",
       "requested_version": ">=0.18.2,!=0.19.0,<=0.24.0",
       "resolved_version": "0.18.2",
-      "latest_version": "1.9.0",
+      "latest_version": "1.9.2",
       "action": "update",
-      "note": "Package 'trl' can be updated from 0.18.2 to 1.9.0. Review the changelog for breaking changes before updating. [last release: 2026-07-21]",
+      "note": "Package 'trl' can be updated from 0.18.2 to 1.9.2. Review the changelog for breaking changes before updating. [last release: 2026-07-28]",
       "source": "project.optional-dependencies.colab-no-deps",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -6916,10 +6932,12 @@
           "1.7.0",
           "1.7.1",
           "1.8.0",
-          "1.9.0"
+          "1.9.0",
+          "1.9.1",
+          "1.9.2"
         ],
         "first_release_date": "2020-03-30T16:50:54.322733Z",
-        "latest_release_date": "2026-07-21T20:27:01.794015Z",
+        "latest_release_date": "2026-07-28T10:27:45.042875Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "accelerate>=1.4.0",
@@ -6933,7 +6951,7 @@
           "transformers!=5.1.0; extra == \"deepspeed\"",
           "transformers[kernels]; extra == \"kernels\"",
           "transformers[hub-kernels]; extra == \"kernels\"",
-          "liger-kernel>=0.8.0; extra == \"liger\"",
+          "liger-kernel!=0.8.1,>=0.8.0; extra == \"liger\"",
           "peft>=0.8.0; extra == \"peft\"",
           "pre-commit; extra == \"quality\"",
           "hf-doc-builder; extra == \"quality\"",
@@ -6961,7 +6979,7 @@
           "deepspeed>=0.14.4; extra == \"dev\"",
           "transformers[kernels]; extra == \"dev\"",
           "transformers[hub-kernels]; extra == \"dev\"",
-          "liger-kernel>=0.8.0; extra == \"dev\"",
+          "liger-kernel!=0.8.1,>=0.8.0; extra == \"dev\"",
           "openreward>=0.1.109; python_version >= \"3.11\" and extra == \"dev\"",
           "peft>=0.8.0; extra == \"dev\"",
           "pre-commit; extra == \"dev\"",
@@ -6978,13 +6996,13 @@
           "jmespath; extra == \"dev\""
         ],
         "version_metrics": {
-          "release_count": 95,
-          "latest_release_age_days": 2,
-          "first_release_age_days": 2306,
-          "avg_days_between_releases": 24.0,
+          "release_count": 97,
+          "latest_release_age_days": 3,
+          "first_release_age_days": 2314,
+          "avg_days_between_releases": 23.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 441,
-          "releases_last_year": 32,
+          "releases_last_year": 33,
           "release_dates": [
             "2020-03-30T16:50:54.322733Z",
             "2020-07-17T09:55:06.809991Z",
@@ -7080,7 +7098,9 @@
             "2026-06-25T22:47:19.910831Z",
             "2026-07-04T04:03:08.223612Z",
             "2026-07-09T18:32:17.640762Z",
-            "2026-07-21T20:27:00.216511Z"
+            "2026-07-21T20:27:00.216511Z",
+            "2026-07-26T16:47:01.347868Z",
+            "2026-07-28T10:27:43.654745Z"
           ]
         },
         "download_stats": null
@@ -7193,9 +7213,9 @@
       "name": "unsloth",
       "requested_version": null,
       "resolved_version": null,
-      "latest_version": "2026.7.5",
+      "latest_version": "2026.7.6",
       "action": "none",
-      "note": "Package 'unsloth' has no version constraint specified (accepts any version). Latest available version is 2026.7.5. Consider pinning to a specific version range for reproducible builds. [last release: 2026-07-23]",
+      "note": "Package 'unsloth' has no version constraint specified (accepts any version). Latest available version is 2026.7.6. Consider pinning to a specific version range for reproducible builds. [last release: 2026-07-29]",
       "source": "project.optional-dependencies.amd",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -7437,13 +7457,14 @@
           "2026.7.2",
           "2026.7.3",
           "2026.7.4",
-          "2026.7.5"
+          "2026.7.5",
+          "2026.7.6"
         ],
         "first_release_date": "2024-08-04T18:30:12.985481Z",
-        "latest_release_date": "2026-07-23T10:14:19.341079Z",
+        "latest_release_date": "2026-07-29T15:41:37.859590Z",
         "requires_python": "<3.15,>=3.9",
         "requires_dist": [
-          "unsloth_zoo>=2026.7.6",
+          "unsloth_zoo>=2026.7.7",
           "wheel>=0.42.0",
           "packaging",
           "torch<2.12.0,>=2.4.0",
@@ -7470,9 +7491,34 @@
           "pydantic",
           "pyyaml",
           "nest-asyncio",
+          "structlog>=24.1.0",
+          "click>=8.0",
+          "rich",
+          "typer; extra == \"studio\"",
+          "fastapi; extra == \"studio\"",
+          "uvicorn; extra == \"studio\"",
+          "pydantic; extra == \"studio\"",
+          "packaging; extra == \"studio\"",
+          "matplotlib==3.10.9; extra == \"studio\"",
+          "pandas; extra == \"studio\"",
+          "nest_asyncio; extra == \"studio\"",
+          "datasets==4.3.0; extra == \"studio\"",
+          "pyjwt; extra == \"studio\"",
+          "huggingface-hub==0.36.2; extra == \"studio\"",
+          "structlog>=24.1.0; extra == \"studio\"",
+          "diceware; extra == \"studio\"",
+          "ddgs; extra == \"studio\"",
+          "cryptography>=42.0.0; extra == \"studio\"",
+          "boto3>=1.34.0; extra == \"studio\"",
+          "httpx>=0.27.0; extra == \"studio\"",
+          "fastmcp>=3.0.2; extra == \"studio\"",
+          "sqlite-vec==0.1.9; extra == \"studio\"",
+          "pymupdf==1.27.2.3; extra == \"studio\"",
+          "pymupdf4llm==0.3.4; extra == \"studio\"",
+          "python-docx==1.2.0; extra == \"studio\"",
           "triton>=3.0.0; \"linux\" in sys_platform and extra == \"triton\"",
           "triton-windows; (sys_platform == \"win32\" and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"triton\"",
-          "unsloth_zoo>=2026.7.6; extra == \"huggingface\"",
+          "unsloth_zoo>=2026.7.7; extra == \"huggingface\"",
           "wheel>=0.42.0; extra == \"huggingface\"",
           "packaging; extra == \"huggingface\"",
           "torchvision; extra == \"huggingface\"",
@@ -7495,6 +7541,27 @@
           "pydantic; extra == \"huggingface\"",
           "pyyaml; extra == \"huggingface\"",
           "nest-asyncio; extra == \"huggingface\"",
+          "unsloth_zoo>=2026.7.7; extra == \"huggingfacenotorch\"",
+          "wheel>=0.42.0; extra == \"huggingfacenotorch\"",
+          "packaging; extra == \"huggingfacenotorch\"",
+          "numpy; extra == \"huggingfacenotorch\"",
+          "tqdm; extra == \"huggingfacenotorch\"",
+          "psutil; extra == \"huggingfacenotorch\"",
+          "tyro; extra == \"huggingfacenotorch\"",
+          "protobuf; extra == \"huggingfacenotorch\"",
+          "sentencepiece>=0.2.0; extra == \"huggingfacenotorch\"",
+          "datasets!=4.0.*,!=4.1.0,<4.4.0,>=3.4.1; extra == \"huggingfacenotorch\"",
+          "accelerate>=0.34.1; extra == \"huggingfacenotorch\"",
+          "peft!=0.11.0,>=0.18.0; extra == \"huggingfacenotorch\"",
+          "huggingface_hub>=0.34.0; extra == \"huggingfacenotorch\"",
+          "hf_transfer; extra == \"huggingfacenotorch\"",
+          "diffusers; extra == \"huggingfacenotorch\"",
+          "transformers!=4.52.0,!=4.52.1,!=4.52.2,!=4.52.3,!=4.53.0,!=4.54.0,!=4.55.0,!=4.55.1,!=4.57.0,!=4.57.4,!=4.57.5,!=5.0.0,!=5.1.0,<=5.5.0,>=4.51.3; extra == \"huggingfacenotorch\"",
+          "trl!=0.19.0,<=0.24.0,>=0.18.2; extra == \"huggingfacenotorch\"",
+          "sentence-transformers; extra == \"huggingfacenotorch\"",
+          "unsloth[huggingfacenotorch]; extra == \"amd\"",
+          "bitsandbytes>=0.50.0; (\"linux\" in sys_platform and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\" or platform_machine == \"aarch64\")) and extra == \"amd\"",
+          "bitsandbytes>=0.50.0; (sys_platform == \"win32\" and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"amd\"",
           "unsloth[huggingface]; extra == \"windows\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; sys_platform == \"win32\" and extra == \"windows\"",
           "xformers>=0.0.22.post7; sys_platform == \"win32\" and extra == \"windows\"",
@@ -7516,6 +7583,7 @@
           "xformers==0.0.28.post2; ((\"linux\" in sys_platform or sys_platform == \"win32\") and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"cu121onlytorch250\"",
           "xformers==0.0.28.post2; ((\"linux\" in sys_platform or sys_platform == \"win32\") and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"cu124onlytorch250\"",
           "xformers==0.0.29.post1; ((\"linux\" in sys_platform or sys_platform == \"win32\") and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"cu118onlytorch251\"",
+          "unsloth[cu118onlytorch220]; extra == \"cu118-torch220\"",
           "xformers==0.0.29.post1; ((\"linux\" in sys_platform or sys_platform == \"win32\") and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"cu121onlytorch251\"",
           "xformers==0.0.29.post1; ((\"linux\" in sys_platform or sys_platform == \"win32\") and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"cu124onlytorch251\"",
           "xformers==0.0.29.post3; ((\"linux\" in sys_platform or sys_platform == \"win32\") and (platform_machine == \"AMD64\" or platform_machine == \"x86_64\")) and extra == \"cu118onlytorch260\"",
@@ -7559,7 +7627,6 @@
           "unsloth[cu121onlytorch212]; extra == \"cu121-torch212\"",
           "unsloth[huggingface]; extra == \"cu118-torch220\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu118-torch220\"",
-          "unsloth[cu118onlytorch220]; extra == \"cu118-torch220\"",
           "unsloth[huggingface]; extra == \"cu121-torch220\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu121-torch220\"",
           "unsloth[cu121onlytorch220]; extra == \"cu121-torch220\"",
@@ -7656,12 +7723,15 @@
           "unsloth[huggingface]; extra == \"cu126-torch2100\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu126-torch2100\"",
           "unsloth[cu126onlytorch2100]; extra == \"cu126-torch2100\"",
+          "unsloth[audio-torch210]; extra == \"cu126-torch2100\"",
           "unsloth[huggingface]; extra == \"cu128-torch2100\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu128-torch2100\"",
           "unsloth[cu128onlytorch2100]; extra == \"cu128-torch2100\"",
+          "unsloth[audio-torch210]; extra == \"cu128-torch2100\"",
           "unsloth[huggingface]; extra == \"cu130-torch2100\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu130-torch2100\"",
           "unsloth[cu130onlytorch2100]; extra == \"cu130-torch2100\"",
+          "unsloth[audio-torch210]; extra == \"cu130-torch2100\"",
           "unsloth[huggingface]; extra == \"kaggle\"",
           "unsloth[huggingface]; extra == \"kaggle-new\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"kaggle-new\"",
@@ -7672,6 +7742,9 @@
           "packaging; \"linux\" in sys_platform and extra == \"flashattention\"",
           "ninja; \"linux\" in sys_platform and extra == \"flashattention\"",
           "flash-attn>=2.6.3; \"linux\" in sys_platform and extra == \"flashattention\"",
+          "torchcodec<0.8.0,>=0.6.0; (python_version >= \"3.9\" and (((sys_platform == \"linux\" or sys_platform == \"win32\") and (platform_machine == \"x86_64\" or platform_machine == \"AMD64\")) or (sys_platform == \"darwin\" and platform_machine == \"arm64\"))) and extra == \"audio-torch280\"",
+          "torchcodec<0.10.0,>=0.8.0; (python_version >= \"3.10\" and (((sys_platform == \"linux\" or sys_platform == \"win32\") and (platform_machine == \"x86_64\" or platform_machine == \"AMD64\")) or (sys_platform == \"darwin\" and platform_machine == \"arm64\"))) and extra == \"audio-torch290\"",
+          "torchcodec<0.11.0,>=0.10.0; (python_version >= \"3.10\" and (((sys_platform == \"linux\" or sys_platform == \"win32\") and (platform_machine == \"x86_64\" or platform_machine == \"AMD64\")) or (sys_platform == \"darwin\" and platform_machine == \"arm64\"))) and extra == \"audio-torch210\"",
           "unsloth[huggingface]; extra == \"colab-ampere-torch211\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"colab-ampere-torch211\"",
           "unsloth[cu121onlytorch211]; extra == \"colab-ampere-torch211\"",
@@ -7683,7 +7756,7 @@
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"colab-ampere-torch220\"",
           "unsloth[cu121onlytorch220]; extra == \"colab-ampere-torch220\"",
           "unsloth[flashattention]; extra == \"colab-ampere-torch220\"",
-          "unsloth_zoo>=2026.7.6; extra == \"colab-new\"",
+          "unsloth_zoo>=2026.7.7; extra == \"colab-new\"",
           "packaging; extra == \"colab-new\"",
           "tyro; extra == \"colab-new\"",
           "transformers!=4.52.0,!=4.52.1,!=4.52.2,!=4.52.3,!=4.53.0,!=4.54.0,!=4.55.0,!=4.55.1,!=4.57.0,!=4.57.4,!=4.57.5,!=5.0.0,!=5.1.0,<=5.5.0,>=4.51.3; extra == \"colab-new\"",
@@ -7831,6 +7904,7 @@
           "unsloth[huggingface]; extra == \"cu130-ampere-torch280\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu130-ampere-torch280\"",
           "unsloth[cu130onlytorch280]; extra == \"cu130-ampere-torch280\"",
+          "unsloth[flashattention]; extra == \"cu130-ampere-torch280\"",
           "unsloth[huggingface]; extra == \"cu126-ampere-torch290\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu126-ampere-torch290\"",
           "unsloth[cu126onlytorch290]; extra == \"cu126-ampere-torch290\"",
@@ -7852,21 +7926,24 @@
           "unsloth[huggingface]; extra == \"cu126-ampere-torch2100\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu126-ampere-torch2100\"",
           "unsloth[cu126onlytorch2100]; extra == \"cu126-ampere-torch2100\"",
+          "unsloth[audio-torch210]; extra == \"cu126-ampere-torch2100\"",
           "unsloth[huggingface]; extra == \"cu128-ampere-torch2100\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu128-ampere-torch2100\"",
           "unsloth[cu128onlytorch2100]; extra == \"cu128-ampere-torch2100\"",
+          "unsloth[audio-torch210]; extra == \"cu128-ampere-torch2100\"",
           "unsloth[huggingface]; extra == \"cu130-ampere-torch2100\"",
           "bitsandbytes!=0.46.0,!=0.48.0,>=0.45.5; extra == \"cu130-ampere-torch2100\"",
-          "unsloth[cu130onlytorch2100]; extra == \"cu130-ampere-torch2100\""
+          "unsloth[cu130onlytorch2100]; extra == \"cu130-ampere-torch2100\"",
+          "unsloth[audio-torch210]; extra == \"cu130-ampere-torch2100\""
         ],
         "version_metrics": {
-          "release_count": 215,
-          "latest_release_age_days": 1,
-          "first_release_age_days": 718,
-          "avg_days_between_releases": 2.9,
+          "release_count": 216,
+          "latest_release_age_days": 2,
+          "first_release_age_days": 726,
+          "avg_days_between_releases": 3.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 42,
-          "releases_last_year": 106,
+          "releases_last_year": 105,
           "release_dates": [
             "2024-08-04T18:30:12.985481Z",
             "2024-09-16T00:38:06.728327Z",
@@ -8082,7 +8159,8 @@
             "2026-07-08T14:48:06.744973Z",
             "2026-07-15T18:45:58.752177Z",
             "2026-07-20T14:13:14.101416Z",
-            "2026-07-23T10:14:15.133121Z"
+            "2026-07-23T10:14:15.133121Z",
+            "2026-07-29T15:41:33.316551Z"
           ]
         },
         "download_stats": null
@@ -8127,9 +8205,36 @@
         "typer",
         "pydantic",
         "pyyaml",
-        "nest_asyncio"
+        "nest_asyncio",
+        "structlog",
+        "click",
+        "rich"
       ],
       "optional_dependencies": {
+        "studio": [
+          "typer",
+          "fastapi",
+          "uvicorn",
+          "pydantic",
+          "packaging",
+          "matplotlib",
+          "pandas",
+          "nest_asyncio",
+          "datasets",
+          "pyjwt",
+          "huggingface_hub",
+          "structlog",
+          "diceware",
+          "ddgs",
+          "cryptography",
+          "boto3",
+          "httpx",
+          "fastmcp",
+          "sqlite_vec",
+          "pymupdf",
+          "pymupdf4llm",
+          "python_docx"
+        ],
         "triton": [
           "triton",
           "triton_windows"
@@ -8158,6 +8263,30 @@
           "pydantic",
           "pyyaml",
           "nest_asyncio"
+        ],
+        "huggingfacenotorch": [
+          "unsloth_zoo",
+          "wheel",
+          "packaging",
+          "numpy",
+          "tqdm",
+          "psutil",
+          "tyro",
+          "protobuf",
+          "sentencepiece",
+          "datasets",
+          "accelerate",
+          "peft",
+          "huggingface_hub",
+          "hf_transfer",
+          "diffusers",
+          "transformers",
+          "trl",
+          "sentence_transformers"
+        ],
+        "amd": [
+          "unsloth",
+          "bitsandbytes"
         ],
         "windows": [
           "unsloth",
@@ -8217,6 +8346,10 @@
         ],
         "cu118onlytorch251": [
           "xformers"
+        ],
+        "cu118-torch220": [
+          "unsloth",
+          "bitsandbytes"
         ],
         "cu121onlytorch251": [
           "xformers"
@@ -8308,10 +8441,6 @@
           "bitsandbytes"
         ],
         "cu121-torch212": [
-          "unsloth",
-          "bitsandbytes"
-        ],
-        "cu118-torch220": [
           "unsloth",
           "bitsandbytes"
         ],
@@ -8469,6 +8598,15 @@
           "packaging",
           "ninja",
           "flash_attn"
+        ],
+        "audio-torch280": [
+          "torchcodec"
+        ],
+        "audio-torch290": [
+          "torchcodec"
+        ],
+        "audio-torch210": [
+          "torchcodec"
         ],
         "colab-ampere-torch211": [
           "unsloth",
@@ -8681,9 +8819,9 @@
       "name": "unsloth_zoo",
       "requested_version": null,
       "resolved_version": null,
-      "latest_version": "2026.7.6",
+      "latest_version": "2026.7.7",
       "action": "none",
-      "note": "Package 'unsloth_zoo' has no version constraint specified (accepts any version). Latest available version is 2026.7.6. Consider pinning to a specific version range for reproducible builds. [last release: 2026-07-23]",
+      "note": "Package 'unsloth_zoo' has no version constraint specified (accepts any version). Latest available version is 2026.7.7. Consider pinning to a specific version range for reproducible builds. [last release: 2026-07-29]",
       "source": "project.optional-dependencies.intelgputorch290",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -8880,10 +9018,11 @@
           "2026.7.3",
           "2026.7.4",
           "2026.7.5",
-          "2026.7.6"
+          "2026.7.6",
+          "2026.7.7"
         ],
         "first_release_date": "2024-10-14T05:19:00.010540Z",
-        "latest_release_date": "2026-07-23T09:23:25.038803Z",
+        "latest_release_date": "2026-07-29T15:02:44.118483Z",
         "requires_python": "<3.15,>=3.9",
         "requires_dist": [
           "torch<2.13.0,>=2.4.0; sys_platform != \"darwin\" or platform_machine != \"arm64\"",
@@ -8895,7 +9034,7 @@
           "peft!=0.11.0,>=0.18.0; sys_platform != \"darwin\" or platform_machine != \"arm64\"",
           "cut_cross_entropy; python_version >= \"3.10\" and (sys_platform != \"darwin\" or platform_machine != \"arm64\")",
           "mlx>=0.22.0; sys_platform == \"darwin\" and platform_machine == \"arm64\"",
-          "mlx-lm>=0.22.0; sys_platform == \"darwin\" and platform_machine == \"arm64\"",
+          "mlx-lm>=0.28.3; sys_platform == \"darwin\" and platform_machine == \"arm64\"",
           "mlx-vlm>=0.4.4; sys_platform == \"darwin\" and platform_machine == \"arm64\"",
           "packaging>=24.1",
           "transformers!=4.52.0,!=4.52.1,!=4.52.2,!=4.52.3,!=4.53.0,!=4.54.0,!=4.55.0,!=4.55.1,!=4.57.4,!=4.57.5,!=5.0.0,!=5.1.0,<=5.5.0,>=4.51.3",
@@ -8914,7 +9053,7 @@
           "typing_extensions",
           "filelock",
           "mlx>=0.22.0; extra == \"mlx\"",
-          "mlx-lm>=0.22.0; extra == \"mlx\"",
+          "mlx-lm>=0.28.3; extra == \"mlx\"",
           "mlx-vlm>=0.4.4; extra == \"mlx\"",
           "packaging>=24.1; extra == \"core\"",
           "tyro; extra == \"core\"",
@@ -8945,9 +9084,9 @@
           "unsloth_zoo[core]; extra == \"intelgpu\""
         ],
         "version_metrics": {
-          "release_count": 170,
-          "latest_release_age_days": 1,
-          "first_release_age_days": 648,
+          "release_count": 171,
+          "latest_release_age_days": 2,
+          "first_release_age_days": 655,
           "avg_days_between_releases": 3.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 30,
@@ -9122,7 +9261,8 @@
             "2026-07-15T17:56:16.415329Z",
             "2026-07-20T14:02:41.011324Z",
             "2026-07-23T07:36:51.742764Z",
-            "2026-07-23T09:23:23.348609Z"
+            "2026-07-23T09:23:23.348609Z",
+            "2026-07-29T15:02:42.386589Z"
           ]
         },
         "download_stats": null
@@ -9320,8 +9460,8 @@
         ],
         "version_metrics": {
           "release_count": 60,
-          "latest_release_age_days": 15,
-          "first_release_age_days": 3473,
+          "latest_release_age_days": 23,
+          "first_release_age_days": 3480,
           "avg_days_between_releases": 58.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 309,
@@ -9425,9 +9565,9 @@
       "name": "bitsandbytes",
       "requested_version": "@ https://github.com/bitsandbytes-foundation/bitsandbytes/releases/download/continuous-release_main/bitsandbytes-1.33.7.preview-py3-none-manylinux_2_24_aarch64.whl",
       "resolved_version": null,
-      "latest_version": "0.49.2",
+      "latest_version": "0.50.0",
       "action": "none",
-      "note": "Package 'bitsandbytes' has no version constraint specified (accepts any version). Latest available version is 0.49.2. Consider pinning to a specific version range for reproducible builds. [last release: 2026-02-16]",
+      "note": "Package 'bitsandbytes' has no version constraint specified (accepts any version). Latest available version is 0.50.0. Consider pinning to a specific version range for reproducible builds. [last release: 2026-07-25]",
       "source": "project.optional-dependencies.amd",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -9458,19 +9598,15 @@
         "available_versions": [
           "0.31.8",
           "0.32.0",
-          "0.32.1",
           "0.32.2",
           "0.32.3",
           "0.33.0",
-          "0.33.1",
           "0.34.0",
           "0.35.0",
-          "0.35.1",
           "0.35.2",
           "0.35.3",
           "0.35.4",
           "0.36.0",
-          "0.36.0.post1",
           "0.36.0.post2",
           "0.37.0",
           "0.37.1",
@@ -9503,7 +9639,6 @@
           "0.43.2",
           "0.43.3",
           "0.44.0",
-          "0.44.0rc1",
           "0.44.1",
           "0.45.0",
           "0.45.1",
@@ -9519,13 +9654,14 @@
           "0.48.2",
           "0.49.0",
           "0.49.1",
-          "0.49.2"
+          "0.49.2",
+          "0.50.0"
         ],
         "first_release_date": "2022-08-09T02:58:52.824972Z",
-        "latest_release_date": "2026-02-16T21:26:16.267936Z",
+        "latest_release_date": "2026-07-25T01:34:27.322126Z",
         "requires_python": ">=3.10",
         "requires_dist": [
-          "torch<3,>=2.3",
+          "torch<3,>=2.4",
           "numpy>=1.17",
           "packaging>=20.9",
           "pandas; extra == \"benchmark\"",
@@ -9543,29 +9679,25 @@
           "transformers<5,>=4.30.1; extra == \"test\""
         ],
         "version_metrics": {
-          "release_count": 64,
-          "latest_release_age_days": 157,
-          "first_release_age_days": 1445,
-          "avg_days_between_releases": 20.0,
+          "release_count": 60,
+          "latest_release_age_days": 7,
+          "first_release_age_days": 1452,
+          "avg_days_between_releases": 24.0,
           "min_days_between_releases": 0,
-          "max_days_between_releases": 102,
-          "releases_last_year": 7,
+          "max_days_between_releases": 157,
+          "releases_last_year": 8,
           "release_dates": [
             "2022-08-09T02:58:52.824972Z",
             "2022-08-17T02:58:43.641048Z",
-            "2022-08-17T10:47:24.868881Z",
             "2022-08-23T23:30:22.105286Z",
             "2022-09-08T20:41:29.490069Z",
             "2022-09-11T19:29:14.095010Z",
-            "2022-09-15T00:01:47.604895Z",
             "2022-09-20T04:40:27.133701Z",
             "2022-10-10T03:03:54.479675Z",
-            "2022-10-25T15:24:12.154193Z",
             "2022-10-27T14:35:45.083095Z",
             "2022-10-27T16:17:51.347460Z",
             "2022-11-01T01:34:04.986346Z",
             "2023-01-04T10:39:19.051045Z",
-            "2023-01-04T11:26:31.591196Z",
             "2023-01-04T11:49:42.981353Z",
             "2023-02-02T05:20:11.342042Z",
             "2023-03-12T19:35:42.797257Z",
@@ -9597,7 +9729,6 @@
             "2024-04-11T18:23:49.083859Z",
             "2024-07-23T18:19:58.651045Z",
             "2024-07-30T20:36:16.116477Z",
-            "2024-09-23T21:33:18.695202Z",
             "2024-09-24T02:20:17.432491Z",
             "2024-09-30T16:20:50.417032Z",
             "2024-12-05T16:05:19.724762Z",
@@ -9614,7 +9745,8 @@
             "2025-10-29T21:40:36.389304Z",
             "2025-12-11T20:50:39.645957Z",
             "2026-01-08T14:31:26.134693Z",
-            "2026-02-16T21:26:04.572106Z"
+            "2026-02-16T21:26:04.572106Z",
+            "2026-07-24T19:48:51.724190Z"
           ]
         },
         "download_stats": null
@@ -9779,8 +9911,8 @@
         ],
         "version_metrics": {
           "release_count": 73,
-          "latest_release_age_days": 93,
-          "first_release_age_days": 1738,
+          "latest_release_age_days": 101,
+          "first_release_age_days": 1746,
           "avg_days_between_releases": 22.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 109,
@@ -9941,8 +10073,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 24,
-          "latest_release_age_days": 347,
-          "first_release_age_days": 4188,
+          "latest_release_age_days": 354,
+          "first_release_age_days": 4195,
           "avg_days_between_releases": 166.5,
           "min_days_between_releases": 2,
           "max_days_between_releases": 689,
@@ -10111,12 +10243,12 @@
         ],
         "version_metrics": {
           "release_count": 76,
-          "latest_release_age_days": 43,
-          "first_release_age_days": 1346,
+          "latest_release_age_days": 50,
+          "first_release_age_days": 1354,
           "avg_days_between_releases": 16.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 299,
-          "releases_last_year": 3,
+          "releases_last_year": 2,
           "release_dates": [
             "2022-11-15T22:16:17.679647Z",
             "2022-11-22T10:07:05.090571Z",
@@ -10350,8 +10482,8 @@
         ],
         "version_metrics": {
           "release_count": 49,
-          "latest_release_age_days": 15,
-          "first_release_age_days": 2785,
+          "latest_release_age_days": 23,
+          "first_release_age_days": 2793,
           "avg_days_between_releases": 57.2,
           "min_days_between_releases": 12,
           "max_days_between_releases": 149,
@@ -11177,8 +11309,8 @@
         ],
         "version_metrics": {
           "release_count": 623,
-          "latest_release_age_days": 20,
-          "first_release_age_days": 7377,
+          "latest_release_age_days": 27,
+          "first_release_age_days": 7384,
           "avg_days_between_releases": 11.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1328,
@@ -12049,8 +12181,8 @@
         ],
         "version_metrics": {
           "release_count": 106,
-          "latest_release_age_days": 3,
-          "first_release_age_days": 4168,
+          "latest_release_age_days": 10,
+          "first_release_age_days": 4176,
           "avg_days_between_releases": 39.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 291,
@@ -12317,7 +12449,10 @@
       "typer",
       "pydantic",
       "pyyaml",
-      "nest_asyncio"
+      "nest_asyncio",
+      "structlog",
+      "click",
+      "rich"
     ],
     "unsloth_zoo": [
       "torch",

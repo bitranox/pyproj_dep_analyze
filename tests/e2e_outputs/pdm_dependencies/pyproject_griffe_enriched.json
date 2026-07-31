@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-07-24T15:32:48.634466+00:00",
+  "analyzed_at": "2026-07-31T22:37:20.869887+00:00",
   "pyproject_path": "/media/srv-main-softdev/projects/public/libs/pyproj_dep_analyze/tests/testdata/pdm_dependencies/pyproject_griffe.toml",
   "python_versions": [
     "3.10",
@@ -103,8 +103,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 46,
-          "latest_release_age_days": 1368,
-          "first_release_age_days": 5939,
+          "latest_release_age_days": 1375,
+          "first_release_age_days": 5946,
           "avg_days_between_releases": 101.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 720,
@@ -186,9 +186,9 @@
       "name": "pip",
       "requested_version": ">=24.0",
       "resolved_version": "24.0",
-      "latest_version": "26.1.2",
+      "latest_version": "26.2",
       "action": "update",
-      "note": "Package 'pip' can be updated from 24.0 to 26.1.2. Review the changelog for breaking changes before updating. [last release: 2026-05-31]",
+      "note": "Package 'pip' can be updated from 24.0 to 26.2. Review the changelog for breaking changes before updating. [last release: 2026-07-29]",
       "source": "project.optional-dependencies.pypi",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -346,6 +346,7 @@
           "26.1",
           "26.1.1",
           "26.1.2",
+          "26.2",
           "6.0",
           "6.0.1",
           "6.0.2",
@@ -377,14 +378,14 @@
           "9.0.3"
         ],
         "first_release_date": "2008-10-28T17:22:10Z",
-        "latest_release_date": "2026-05-31T17:33:58.560975Z",
+        "latest_release_date": "2026-07-29T21:57:56.407153Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 157,
-          "latest_release_age_days": 53,
-          "first_release_age_days": 6477,
-          "avg_days_between_releases": 40.7,
+          "release_count": 158,
+          "latest_release_age_days": 2,
+          "first_release_age_days": 6485,
+          "avg_days_between_releases": 40.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 495,
           "releases_last_year": 7,
@@ -545,7 +546,8 @@
             "2026-02-05T02:20:16.416911Z",
             "2026-04-26T21:00:03.194846Z",
             "2026-05-04T19:02:18.900185Z",
-            "2026-05-31T17:33:56.772422Z"
+            "2026-05-31T17:33:56.772422Z",
+            "2026-07-29T21:57:54.763549Z"
           ]
         },
         "download_stats": null
@@ -676,8 +678,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 65,
-          "latest_release_age_days": 3,
-          "first_release_age_days": 1898,
+          "latest_release_age_days": 10,
+          "first_release_age_days": 1905,
           "avg_days_between_releases": 29.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 202,
@@ -899,8 +901,8 @@
         ],
         "version_metrics": {
           "release_count": 83,
-          "latest_release_age_days": 92,
-          "first_release_age_days": 5136,
+          "latest_release_age_days": 100,
+          "first_release_age_days": 5143,
           "avg_days_between_releases": 61.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 437,
@@ -1143,8 +1145,8 @@
         ],
         "version_metrics": {
           "release_count": 81,
-          "latest_release_age_days": 16,
-          "first_release_age_days": 1656,
+          "latest_release_age_days": 23,
+          "first_release_age_days": 1664,
           "avg_days_between_releases": 20.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 346,
@@ -1340,8 +1342,8 @@
         ],
         "version_metrics": {
           "release_count": 38,
-          "latest_release_age_days": 49,
-          "first_release_age_days": 1333,
+          "latest_release_age_days": 56,
+          "first_release_age_days": 1340,
           "avg_days_between_releases": 34.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 165,
@@ -1497,8 +1499,8 @@
         ],
         "version_metrics": {
           "release_count": 36,
-          "latest_release_age_days": 15,
-          "first_release_age_days": 2251,
+          "latest_release_age_days": 22,
+          "first_release_age_days": 2258,
           "avg_days_between_releases": 63.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 299,
@@ -1581,9 +1583,9 @@
       "name": "git_changelog",
       "requested_version": ">=2.5",
       "resolved_version": "2.5",
-      "latest_version": "2.9.4",
+      "latest_version": "2.9.5",
       "action": "update",
-      "note": "Package 'git_changelog' can be updated from 2.5 to 2.9.4. Review the changelog for breaking changes before updating. [last release: 2026-04-29]",
+      "note": "Package 'git_changelog' can be updated from 2.5 to 2.9.5. Review the changelog for breaking changes before updating. [last release: 2026-07-28]",
       "source": "dependency-groups.maintain",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1651,10 +1653,11 @@
           "2.9.1",
           "2.9.2",
           "2.9.3",
-          "2.9.4"
+          "2.9.4",
+          "2.9.5"
         ],
         "first_release_date": "2019-03-06T18:04:42.620844Z",
-        "latest_release_date": "2026-04-29T14:01:39.575363Z",
+        "latest_release_date": "2026-07-28T23:26:20.091570Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "Jinja2>=3.0",
@@ -1665,13 +1668,13 @@
           "typing-extensions>=4.9; python_version < \"3.13\""
         ],
         "version_metrics": {
-          "release_count": 35,
-          "latest_release_age_days": 86,
-          "first_release_age_days": 2696,
-          "avg_days_between_releases": 76.3,
+          "release_count": 36,
+          "latest_release_age_days": 2,
+          "first_release_age_days": 2704,
+          "avg_days_between_releases": 76.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 346,
-          "releases_last_year": 13,
+          "releases_last_year": 14,
           "release_dates": [
             "2019-03-06T18:04:42.620844Z",
             "2019-11-24T18:46:46.045751Z",
@@ -1707,7 +1710,8 @@
             "2026-03-17T13:17:07.059338Z",
             "2026-03-20T12:08:12.840373Z",
             "2026-03-26T15:02:15.891809Z",
-            "2026-04-29T14:01:38.195072Z"
+            "2026-04-29T14:01:38.195072Z",
+            "2026-07-28T23:26:18.681894Z"
           ]
         },
         "download_stats": null
@@ -1740,9 +1744,9 @@
       "name": "twine",
       "requested_version": ">=5.1",
       "resolved_version": "5.1",
-      "latest_version": "6.2.0",
+      "latest_version": "7.0.0",
       "action": "update",
-      "note": "Package 'twine' can be updated from 5.1 to 6.2.0. Review the changelog for breaking changes before updating. [last release: 2025-09-04]",
+      "note": "Package 'twine' can be updated from 5.1 to 7.0.0. Review the changelog for breaking changes before updating. [last release: 2026-07-27]",
       "source": "dependency-groups.maintain",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1830,32 +1834,32 @@
           "6.0.0",
           "6.0.1",
           "6.1.0",
-          "6.2.0"
+          "6.2.0",
+          "7.0.0"
         ],
         "first_release_date": "2013-09-26T12:48:13.055985Z",
-        "latest_release_date": "2025-09-04T15:43:17.255745Z",
-        "requires_python": ">=3.9",
+        "latest_release_date": "2026-07-27T15:59:00.825945Z",
+        "requires_python": ">=3.10",
         "requires_dist": [
           "readme-renderer>=35.0",
           "requests>=2.20",
           "requests-toolbelt!=0.9.0,>=0.8.0",
           "urllib3>=1.26.0",
-          "importlib-metadata>=3.6; python_version < \"3.10\"",
           "keyring>=21.2.0; platform_machine != \"ppc64le\" and platform_machine != \"s390x\"",
           "rfc3986>=1.4.0",
-          "rich>=12.0.0",
-          "packaging>=24.0",
+          "rich>=14.3.3",
+          "packaging>=26.1",
           "id",
           "keyring>=21.2.0; extra == \"keyring\""
         ],
         "version_metrics": {
-          "release_count": 59,
-          "latest_release_age_days": 322,
-          "first_release_age_days": 4684,
-          "avg_days_between_releases": 74.7,
+          "release_count": 60,
+          "latest_release_age_days": 4,
+          "first_release_age_days": 4691,
+          "avg_days_between_releases": 78.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 437,
-          "releases_last_year": 1,
+          "releases_last_year": 2,
           "release_dates": [
             "2013-09-26T12:48:13.055985Z",
             "2013-09-26T13:17:18.121668Z",
@@ -1915,7 +1919,8 @@
             "2024-11-30T15:33:21.761157Z",
             "2024-12-01T01:19:32.213307Z",
             "2025-01-21T18:45:24.584471Z",
-            "2025-09-04T15:43:15.994841Z"
+            "2025-09-04T15:43:15.994841Z",
+            "2026-07-27T15:58:59.260418Z"
           ]
         },
         "download_stats": null
@@ -1938,7 +1943,6 @@
         "requests",
         "requests_toolbelt",
         "urllib3",
-        "importlib_metadata",
         "keyring",
         "rfc3986",
         "rich",
@@ -2019,12 +2023,12 @@
         ],
         "version_metrics": {
           "release_count": 16,
-          "latest_release_age_days": 192,
-          "first_release_age_days": 758,
+          "latest_release_age_days": 199,
+          "first_release_age_days": 765,
           "avg_days_between_releases": 37.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 193,
-          "releases_last_year": 3,
+          "releases_last_year": 2,
           "release_dates": [
             "2024-06-26T09:08:35.882491Z",
             "2024-06-27T13:05:04.805985Z",
@@ -2150,8 +2154,8 @@
         ],
         "version_metrics": {
           "release_count": 33,
-          "latest_release_age_days": 167,
-          "first_release_age_days": 2120,
+          "latest_release_age_days": 174,
+          "first_release_age_days": 2128,
           "avg_days_between_releases": 60.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 566,
@@ -2270,8 +2274,8 @@
         ],
         "version_metrics": {
           "release_count": 7,
-          "latest_release_age_days": 154,
-          "first_release_age_days": 1008,
+          "latest_release_age_days": 161,
+          "first_release_age_days": 1015,
           "avg_days_between_releases": 141.8,
           "min_days_between_releases": 11,
           "max_days_between_releases": 304,
@@ -2484,8 +2488,8 @@
         ],
         "version_metrics": {
           "release_count": 109,
-          "latest_release_age_days": 198,
-          "first_release_age_days": 5317,
+          "latest_release_age_days": 205,
+          "first_release_age_days": 5324,
           "avg_days_between_releases": 47.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 607,
@@ -2706,8 +2710,8 @@
         ],
         "version_metrics": {
           "release_count": 13,
-          "latest_release_age_days": 328,
-          "first_release_age_days": 1169,
+          "latest_release_age_days": 336,
+          "first_release_age_days": 1177,
           "avg_days_between_releases": 69.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 324,
@@ -2811,8 +2815,8 @@
         ],
         "version_metrics": {
           "release_count": 14,
-          "latest_release_age_days": 328,
-          "first_release_age_days": 1333,
+          "latest_release_age_days": 335,
+          "first_release_age_days": 1340,
           "avg_days_between_releases": 76.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 278,
@@ -3113,8 +3117,8 @@
         ],
         "version_metrics": {
           "release_count": 192,
-          "latest_release_age_days": 35,
-          "first_release_age_days": 5719,
+          "latest_release_age_days": 42,
+          "first_release_age_days": 5727,
           "avg_days_between_releases": 29.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 171,
@@ -3460,8 +3464,8 @@
         ],
         "version_metrics": {
           "release_count": 54,
-          "latest_release_age_days": 124,
-          "first_release_age_days": 5934,
+          "latest_release_age_days": 132,
+          "first_release_age_days": 5941,
           "avg_days_between_releases": 109.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 761,
@@ -3606,8 +3610,8 @@
         ],
         "version_metrics": {
           "release_count": 9,
-          "latest_release_age_days": 208,
-          "first_release_age_days": 1134,
+          "latest_release_age_days": 215,
+          "first_release_age_days": 1141,
           "avg_days_between_releases": 115.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 426,
@@ -3726,8 +3730,8 @@
         ],
         "version_metrics": {
           "release_count": 37,
-          "latest_release_age_days": 95,
-          "first_release_age_days": 3752,
+          "latest_release_age_days": 102,
+          "first_release_age_days": 3759,
           "avg_days_between_releases": 101.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 448,
@@ -3914,8 +3918,8 @@
         ],
         "version_metrics": {
           "release_count": 71,
-          "latest_release_age_days": 388,
-          "first_release_age_days": 6030,
+          "latest_release_age_days": 395,
+          "first_release_age_days": 6038,
           "avg_days_between_releases": 80.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 657,
@@ -4223,12 +4227,12 @@
         ],
         "version_metrics": {
           "release_count": 139,
-          "latest_release_age_days": 11,
-          "first_release_age_days": 6161,
+          "latest_release_age_days": 18,
+          "first_release_age_days": 6169,
           "avg_days_between_releases": 44.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 2137,
-          "releases_last_year": 12,
+          "releases_last_year": 11,
           "release_dates": [
             "2009-09-09T17:34:48.968869Z",
             "2009-09-10T16:03:37.813434Z",
@@ -4418,9 +4422,9 @@
       "name": "ruff",
       "requested_version": ">=0.4",
       "resolved_version": "0.4",
-      "latest_version": "0.16.0",
+      "latest_version": "0.16.1",
       "action": "update",
-      "note": "Package 'ruff' can be updated from 0.4 to 0.16.0. Review the changelog for breaking changes before updating. [last release: 2026-07-23]",
+      "note": "Package 'ruff' can be updated from 0.4 to 0.16.1. Review the changelog for breaking changes before updating. [last release: 2026-07-30]",
       "source": "dependency-groups.ci",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4803,6 +4807,7 @@
           "0.15.8",
           "0.15.9",
           "0.16.0",
+          "0.16.1",
           "0.2.0",
           "0.2.1",
           "0.2.2",
@@ -4868,17 +4873,17 @@
           "0.9.9"
         ],
         "first_release_date": "2022-08-27T22:26:24.473977Z",
-        "latest_release_date": "2026-07-23T19:11:30.981418Z",
+        "latest_release_date": "2026-07-30T19:37:01.379812Z",
         "requires_python": ">=3.7",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 416,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 1426,
+          "release_count": 417,
+          "latest_release_age_days": 1,
+          "first_release_age_days": 1434,
           "avg_days_between_releases": 3.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 20,
-          "releases_last_year": 50,
+          "releases_last_year": 49,
           "release_dates": [
             "2022-08-27T22:26:24.473977Z",
             "2022-08-28T00:39:01.226570Z",
@@ -5295,7 +5300,8 @@
             "2026-06-25T17:19:44.702372Z",
             "2026-07-09T20:00:53.998138Z",
             "2026-07-16T15:13:19.452734Z",
-            "2026-07-23T19:10:46.415727Z"
+            "2026-07-23T19:10:46.415727Z",
+            "2026-07-30T19:36:13.697196Z"
           ]
         },
         "download_stats": null
@@ -5434,8 +5440,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 73,
-          "latest_release_age_days": 12,
-          "first_release_age_days": 1997,
+          "latest_release_age_days": 19,
+          "first_release_age_days": 2005,
           "avg_days_between_releases": 27.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 159,
@@ -5644,8 +5650,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 65,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 1997,
+          "latest_release_age_days": 7,
+          "first_release_age_days": 2005,
           "avg_days_between_releases": 30.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 205,
@@ -5786,8 +5792,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 8,
-          "latest_release_age_days": 1292,
-          "first_release_age_days": 2204,
+          "latest_release_age_days": 1299,
+          "first_release_age_days": 2211,
           "avg_days_between_releases": 129.7,
           "min_days_between_releases": 12,
           "max_days_between_releases": 334,
@@ -5871,8 +5877,8 @@
         ],
         "version_metrics": {
           "release_count": 4,
-          "latest_release_age_days": 913,
-          "first_release_age_days": 1908,
+          "latest_release_age_days": 920,
+          "first_release_age_days": 1915,
           "avg_days_between_releases": 331.0,
           "min_days_between_releases": 196,
           "max_days_between_releases": 491,
@@ -5997,8 +6003,8 @@
         ],
         "version_metrics": {
           "release_count": 42,
-          "latest_release_age_days": 17,
-          "first_release_age_days": 1615,
+          "latest_release_age_days": 24,
+          "first_release_age_days": 1623,
           "avg_days_between_releases": 38.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 235,
@@ -6209,8 +6215,8 @@
         ],
         "version_metrics": {
           "release_count": 61,
-          "latest_release_age_days": 693,
-          "first_release_age_days": 4566,
+          "latest_release_age_days": 700,
+          "first_release_age_days": 4574,
           "avg_days_between_releases": 64.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 533,
@@ -6405,8 +6411,8 @@
         ],
         "version_metrics": {
           "release_count": 13,
-          "latest_release_age_days": 316,
-          "first_release_age_days": 1996,
+          "latest_release_age_days": 323,
+          "first_release_age_days": 2004,
           "avg_days_between_releases": 139.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 456,
@@ -6507,8 +6513,8 @@
         ],
         "version_metrics": {
           "release_count": 13,
-          "latest_release_age_days": 129,
-          "first_release_age_days": 2052,
+          "latest_release_age_days": 136,
+          "first_release_age_days": 2059,
           "avg_days_between_releases": 159.7,
           "min_days_between_releases": 4,
           "max_days_between_releases": 940,
@@ -6652,8 +6658,8 @@
         ],
         "version_metrics": {
           "release_count": 56,
-          "latest_release_age_days": 53,
-          "first_release_age_days": 2419,
+          "latest_release_age_days": 60,
+          "first_release_age_days": 2426,
           "avg_days_between_releases": 42.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 243,
@@ -6800,8 +6806,8 @@
         ],
         "version_metrics": {
           "release_count": 7,
-          "latest_release_age_days": 246,
-          "first_release_age_days": 555,
+          "latest_release_age_days": 253,
+          "first_release_age_days": 563,
           "avg_days_between_releases": 51.0,
           "min_days_between_releases": 14,
           "max_days_between_releases": 97,
@@ -7344,12 +7350,12 @@
         ],
         "version_metrics": {
           "release_count": 442,
-          "latest_release_age_days": 6,
-          "first_release_age_days": 3817,
+          "latest_release_age_days": 14,
+          "first_release_age_days": 3825,
           "avg_days_between_releases": 8.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 200,
-          "releases_last_year": 16,
+          "releases_last_year": 15,
           "release_dates": [
             "2016-02-09T22:20:39.090501Z",
             "2016-02-11T11:55:31.456899Z",
@@ -7903,8 +7909,8 @@
         ],
         "version_metrics": {
           "release_count": 18,
-          "latest_release_age_days": 906,
-          "first_release_age_days": 2773,
+          "latest_release_age_days": 914,
+          "first_release_age_days": 2781,
           "avg_days_between_releases": 109.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 367,
@@ -8018,8 +8024,8 @@
         ],
         "version_metrics": {
           "release_count": 18,
-          "latest_release_age_days": 98,
-          "first_release_age_days": 2072,
+          "latest_release_age_days": 106,
+          "first_release_age_days": 2079,
           "avg_days_between_releases": 115.5,
           "min_days_between_releases": 1,
           "max_days_between_releases": 350,
@@ -8130,8 +8136,8 @@
         ],
         "version_metrics": {
           "release_count": 17,
-          "latest_release_age_days": 118,
-          "first_release_age_days": 2669,
+          "latest_release_age_days": 125,
+          "first_release_age_days": 2676,
           "avg_days_between_releases": 158.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 505,
@@ -8312,8 +8318,8 @@
         ],
         "version_metrics": {
           "release_count": 77,
-          "latest_release_age_days": 12,
-          "first_release_age_days": 2415,
+          "latest_release_age_days": 20,
+          "first_release_age_days": 2423,
           "avg_days_between_releases": 31.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 199,
@@ -8598,8 +8604,8 @@
         ],
         "version_metrics": {
           "release_count": 121,
-          "latest_release_age_days": 92,
-          "first_release_age_days": 4234,
+          "latest_release_age_days": 99,
+          "first_release_age_days": 4241,
           "avg_days_between_releases": 34.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 336,
@@ -8820,8 +8826,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 30,
-          "latest_release_age_days": 120,
-          "first_release_age_days": 1883,
+          "latest_release_age_days": 128,
+          "first_release_age_days": 1891,
           "avg_days_between_releases": 60.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 966,
@@ -8919,7 +8925,6 @@
       "requests",
       "requests_toolbelt",
       "urllib3",
-      "importlib_metadata",
       "keyring",
       "rfc3986",
       "rich",
