@@ -50,7 +50,7 @@ import rich_click as click
 from click.core import ParameterSource
 from pydantic import BaseModel, ConfigDict
 
-from . import __init__conf__
+from . import __init__conf__, safe_console
 from .analyzer import run_analysis, run_enriched_analysis, write_enriched_json, write_outdated_json
 from .behaviors import emit_greeting, noop_main, raise_intentional_failure
 from .cli_display import display_analysis_results, report_output_written
@@ -413,7 +413,7 @@ def _traceback_option_requested(ctx: click.Context) -> bool:
 
 def _show_help(ctx: click.Context) -> None:
     """Render the command help to stdout."""
-    click.echo(ctx.get_help())
+    safe_console.echo(ctx.get_help())
 
 
 def _run_cli_via_exit_tools(
@@ -749,23 +749,23 @@ def cli_analyze_enriched(
 
         write_enriched_json(result, output)
 
-        click.echo(f"\nEnriched analysis written to: {output}")
-        click.echo(f"Total packages: {result.summary.total_packages}")
-        click.echo(f"Updates available: {result.summary.updates_available}")
-        click.echo(f"Check manually: {result.summary.check_manually}")
-        click.echo(f"From PyPI: {result.summary.from_pypi}")
-        click.echo(f"From private index: {result.summary.from_private_index}")
+        safe_console.echo(f"\nEnriched analysis written to: {output}")
+        safe_console.echo(f"Total packages: {result.summary.total_packages}")
+        safe_console.echo(f"Updates available: {result.summary.updates_available}")
+        safe_console.echo(f"Check manually: {result.summary.check_manually}")
+        safe_console.echo(f"From PyPI: {result.summary.from_pypi}")
+        safe_console.echo(f"From private index: {result.summary.from_private_index}")
 
 
 def _report_deploy_results(results: list[DeployResult]) -> None:
     """Report deployment results to the user."""
     if results:
-        click.echo("\nConfiguration deployed successfully:")
+        safe_console.echo("\nConfiguration deployed successfully:")
         for result in results:
-            click.echo(f"  ✓ {result.destination}")
+            safe_console.echo(f"  ✓ {result.destination}")
     else:
-        click.echo("\nNo files were created (all target files already exist).")
-        click.echo("Use --force to overwrite existing configuration files.")
+        safe_console.echo("\nNo files were created (all target files already exist).")
+        safe_console.echo("Use --force to overwrite existing configuration files.")
 
 
 def _handle_deploy_error(exc: Exception) -> None:
@@ -777,11 +777,11 @@ def _handle_deploy_error(exc: Exception) -> None:
     """
     if isinstance(exc, PermissionError):
         logger.error("Permission denied when deploying configuration", extra={"error": str(exc)})
-        click.echo(f"\nError: Permission denied. {exc}", err=True)
-        click.echo("Hint: System-wide deployment (--target app/host) may require sudo.", err=True)
+        safe_console.echo(f"\nError: Permission denied. {exc}", err=True)
+        safe_console.echo("Hint: System-wide deployment (--target app/host) may require sudo.", err=True)
     else:
         logger.error("Failed to deploy configuration", extra={"error": str(exc), "error_type": type(exc).__name__})
-        click.echo(f"\nError: Failed to deploy configuration: {exc}", err=True)
+        safe_console.echo(f"\nError: Failed to deploy configuration: {exc}", err=True)
     raise SystemExit(1) from None
 
 

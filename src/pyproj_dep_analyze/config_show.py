@@ -36,8 +36,7 @@ import json
 from collections.abc import Mapping
 from typing import Any, Protocol
 
-import click
-
+from . import safe_console
 from .config import get_config
 from .models import ConfigFormat
 
@@ -93,10 +92,10 @@ def _echo_section_items(section_data: Mapping[str, Any]) -> None:
         section_data: Mapping of configuration keys to values.
 
     Side Effects:
-        Writes formatted key-value pairs to stdout via click.echo().
+        Writes formatted key-value pairs to stdout via safe_console.echo().
     """
     for key, value in section_data.items():
-        click.echo(f"  {key} = {_format_value(value)}")
+        safe_console.echo(f"  {key} = {_format_value(value)}")
 
 
 def _display_section_human(section_name: str, section_data: ConfigValue) -> None:
@@ -107,17 +106,17 @@ def _display_section_human(section_name: str, section_data: ConfigValue) -> None
         section_data: Section value (typically a dict/Mapping or scalar).
 
     Side Effects:
-        Writes formatted section to stdout via click.echo().
+        Writes formatted section to stdout via safe_console.echo().
 
     Note:
         Accepts ConfigValue (which includes Mapping types) from the external
         lib_layered_config library. This boundary handling is intentional.
     """
-    click.echo(f"\n[{section_name}]")
+    safe_console.echo(f"\n[{section_name}]")
     if isinstance(section_data, Mapping):
         _echo_section_items(section_data)
     else:
-        click.echo(f"  {section_data}")
+        safe_console.echo(f"  {section_data}")
 
 
 def _display_json_output(config: ConfigMapping, section: str | None) -> None:
@@ -128,7 +127,7 @@ def _display_json_output(config: ConfigMapping, section: str | None) -> None:
         section: Optional section name to filter output.
 
     Side Effects:
-        Writes JSON to stdout via click.echo().
+        Writes JSON to stdout via safe_console.echo().
         Raises SystemExit(1) if requested section doesn't exist.
 
     Note:
@@ -138,12 +137,12 @@ def _display_json_output(config: ConfigMapping, section: str | None) -> None:
     if section:
         section_data = config.get(section, default={})
         if section_data:
-            click.echo(json.dumps({section: section_data}, indent=2))
+            safe_console.echo(json.dumps({section: section_data}, indent=2))
         else:
-            click.echo(f"Section '{section}' not found or empty", err=True)
+            safe_console.echo(f"Section '{section}' not found or empty", err=True)
             raise SystemExit(1)
     else:
-        click.echo(config.to_json(indent=2))
+        safe_console.echo(config.to_json(indent=2))
 
 
 def _display_human_output(config: ConfigMapping, section: str | None) -> None:
@@ -154,7 +153,7 @@ def _display_human_output(config: ConfigMapping, section: str | None) -> None:
         section: Optional section name to filter output.
 
     Side Effects:
-        Writes formatted configuration to stdout via click.echo().
+        Writes formatted configuration to stdout via safe_console.echo().
         Raises SystemExit(1) if requested section doesn't exist.
 
     Note:
@@ -164,7 +163,7 @@ def _display_human_output(config: ConfigMapping, section: str | None) -> None:
     if section:
         section_data = config.get(section, default={})
         if not section_data:
-            click.echo(f"Section '{section}' not found or empty", err=True)
+            safe_console.echo(f"Section '{section}' not found or empty", err=True)
             raise SystemExit(1)
         _display_section_human(section, section_data)
     else:
@@ -189,7 +188,7 @@ def display_config(*, config_format: ConfigFormat = ConfigFormat.HUMAN, section:
             displays all configuration.
 
     Side Effects:
-        Writes formatted configuration to stdout via click.echo().
+        Writes formatted configuration to stdout via safe_console.echo().
         Raises SystemExit(1) if requested section doesn't exist.
 
     Note:

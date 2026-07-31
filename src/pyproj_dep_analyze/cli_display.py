@@ -23,8 +23,7 @@ from __future__ import annotations
 import json
 from typing import TYPE_CHECKING
 
-import click
-
+from . import safe_console
 from .models import Action, AnalysisResult, OutdatedEntry, OutputFormat
 
 if TYPE_CHECKING:
@@ -43,17 +42,17 @@ def display_summary(result: AnalysisResult) -> None:
         result: The analysis result to summarize.
     """
     separator = "=" * 60
-    click.echo(f"\n{separator}")
-    click.echo("DEPENDENCY ANALYSIS SUMMARY")
-    click.echo(separator)
-    click.echo(f"Python versions analyzed: {', '.join(result.python_versions)}")
-    click.echo(f"Total unique dependencies: {result.total_dependencies}")
-    click.echo(f"Total entries (deps x versions): {len(result.entries)}")
-    click.echo("-" * 60)
-    click.echo(f"  Updates available: {result.update_count}")
-    click.echo(f"  Deletions recommended: {result.delete_count}")
-    click.echo(f"  Manual check required: {result.check_manually_count}")
-    click.echo(separator)
+    safe_console.echo(f"\n{separator}")
+    safe_console.echo("DEPENDENCY ANALYSIS SUMMARY")
+    safe_console.echo(separator)
+    safe_console.echo(f"Python versions analyzed: {', '.join(result.python_versions)}")
+    safe_console.echo(f"Total unique dependencies: {result.total_dependencies}")
+    safe_console.echo(f"Total entries (deps x versions): {len(result.entries)}")
+    safe_console.echo("-" * 60)
+    safe_console.echo(f"  Updates available: {result.update_count}")
+    safe_console.echo(f"  Deletions recommended: {result.delete_count}")
+    safe_console.echo(f"  Manual check required: {result.check_manually_count}")
+    safe_console.echo(separator)
 
 
 def _display_updates_section(updates: list[OutdatedEntry]) -> None:
@@ -64,12 +63,12 @@ def _display_updates_section(updates: list[OutdatedEntry]) -> None:
     """
     if not updates:
         return
-    click.echo("\nUPDATES AVAILABLE:")
-    click.echo("-" * 60)
+    safe_console.echo("\nUPDATES AVAILABLE:")
+    safe_console.echo("-" * 60)
     for entry in updates[:_MAX_UPDATES_DISPLAYED]:
-        click.echo(f"  {entry.package} (py{entry.python_version}): {entry.current_version} -> {entry.latest_version}")
+        safe_console.echo(f"  {entry.package} (py{entry.python_version}): {entry.current_version} -> {entry.latest_version}")
     if len(updates) > _MAX_UPDATES_DISPLAYED:
-        click.echo(f"  ... and {len(updates) - _MAX_UPDATES_DISPLAYED} more")
+        safe_console.echo(f"  ... and {len(updates) - _MAX_UPDATES_DISPLAYED} more")
 
 
 def _display_manual_section(manual: list[OutdatedEntry]) -> None:
@@ -80,12 +79,12 @@ def _display_manual_section(manual: list[OutdatedEntry]) -> None:
     """
     if not manual:
         return
-    click.echo("\nMANUAL CHECK REQUIRED:")
-    click.echo("-" * 60)
+    safe_console.echo("\nMANUAL CHECK REQUIRED:")
+    safe_console.echo("-" * 60)
     for entry in manual[:_MAX_MANUAL_DISPLAYED]:
-        click.echo(f"  {entry.package} (py{entry.python_version})")
+        safe_console.echo(f"  {entry.package} (py{entry.python_version})")
     if len(manual) > _MAX_MANUAL_DISPLAYED:
-        click.echo(f"  ... and {len(manual) - _MAX_MANUAL_DISPLAYED} more")
+        safe_console.echo(f"  ... and {len(manual) - _MAX_MANUAL_DISPLAYED} more")
 
 
 def display_table(result: AnalysisResult) -> None:
@@ -110,7 +109,7 @@ def display_json(result: AnalysisResult) -> None:
         result: The analysis result to display as JSON.
     """
     data = [entry.model_dump() for entry in result.entries]
-    click.echo(json.dumps(data, indent=2))
+    safe_console.echo(json.dumps(data, indent=2))
 
 
 def display_analysis_results(result: AnalysisResult, output_format: OutputFormat) -> None:
@@ -141,7 +140,7 @@ def report_output_written(entries_count: int, output_path: Path) -> None:
         entries_count: Number of entries written.
         output_path: Path where the file was written.
     """
-    click.echo(f"\nWrote {entries_count} entries to {output_path}")
+    safe_console.echo(f"\nWrote {entries_count} entries to {output_path}")
 
 
 __all__ = [
