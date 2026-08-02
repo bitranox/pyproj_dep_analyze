@@ -9,9 +9,9 @@ When starting a new session, read and apply the following system prompt files fr
 
 ### Bash-Specific Guidelines
 When working with Bash scripts:
-- use skill `bitranox:bash-reference` when in doubt of bash features or syntax
+- use skill `bitranox:coding-bash-reference` when in doubt of bash features or syntax
 - `core_programming_solid.md`
-- use skill `bitranox:bash-clean-architecture`
+- use skill `bitranox:coding-bash-clean-architecture`
 - `bash_clean_code.md`
 - `bash_small_functions.md`
 
@@ -19,10 +19,10 @@ When working with Bash scripts:
 When working with Python code:
 - `core_programming_solid.md`
 - `python_solid_architecture_enforcer.md`
-- use skill `bitranox:python-clean-architecture`
+- use skill `bitranox:coding-python-clean-architecture`
 - `python_clean_code.md`
 - `python_small_functions_style.md`
-- use skill `bitranox:python-use-modern-libraries`
+- use skill `bitranox:coding-python-use-modern-libraries`
 - `python_structure_template.md`
 
 ### Additional Guidelines
@@ -195,18 +195,6 @@ models (bottom layer)
 - `.env` files are for local tooling only (CodeCov tokens, etc.)
 - **NEVER** commit secrets to version control
 - Rich logging should sanitize payloads before rendering
-
-## Documentation & Translations
-
-### Web Documentation
-- Update only English docs under `/website/docs`
-- Other languages are translated automatically
-- When in doubt, ask before modifying non-English documentation
-
-### App UI Strings (i18n)
-- Update only `sources/_locales/en` for string changes
-- Other languages are translated automatically
-- When in doubt, ask before modifying non-English locales
 
 ## Commit & Push Policy
 
