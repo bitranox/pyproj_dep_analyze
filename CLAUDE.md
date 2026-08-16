@@ -164,11 +164,3 @@ models (bottom layer)
 - `lib_log_rich` - structured logging with Rich
 - `lib_cli_exit_tools` - CLI exit handling
 
-## Claude Code Workflow
-
-When working on this project:
-1. Read relevant system prompts at session start
-2. Apply appropriate coding guidelines based on file type
-3. Run `make test` before commits
-4. Follow versioning guidelines for releases
-5. Monitor CI after pushing changes
