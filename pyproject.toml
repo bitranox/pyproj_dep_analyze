@@ -9,11 +9,11 @@ dependencies = [
     # click is imported directly (cli.py subclasses click.ParamType), so declare it rather
     # than free-riding on rich-click, which only requires click>=8. The floor is 8.4:
     # ParamType became generic there, and EnumChoice subscripts it (TypeError on click<8.4).
-    "click>=8.4.2",
+    "click>=8.5.0",
     "lib_cli_exit_tools>=2.3.4",
-    "lib_log_rich>=6.3.6",
+    "lib_log_rich>=6.3.7",
     "lib_layered_config>=5.6.2",
-    "httpx2>=2.9.1",
+    "httpx2>=2.12.0",
     "pydantic>=2.13.4",
     "rtoml>=0.13.0",
 ]
@@ -51,7 +51,7 @@ Issues = "https://github.com/bitranox/pyproj_dep_analyze/issues"
 dev = [
   "pytest>=9.1.1",
   "pytest-cov>=7.1.0",
-  "ruff>=0.16.1",
+  "ruff>=0.16.5",
   "pyright[nodejs]>=1.1.411",
   "bandit>=1.9.4",
   # 1.5.1 was yanked upstream (unintended breaking changes), so 1.5.0 is the newest usable
@@ -75,7 +75,7 @@ pyproj_dep_analyze = "pyproj_dep_analyze.cli:main"
 pyproj-dep-analyze = "pyproj_dep_analyze.cli:main"
 
 [build-system]
-requires = ["hatchling>=1.31.0"]
+requires = ["hatchling>=1.32.0"]
 build-backend = "hatchling.build"
 
 
