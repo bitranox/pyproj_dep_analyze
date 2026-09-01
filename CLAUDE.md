@@ -144,10 +144,6 @@ models (bottom layer)
 - **Always run `make test` before pushing** to avoid lint/test breakage
 - Ensure all tests pass and code is properly formatted
 
-### Post-Push Monitoring
-- Monitor GitHub Actions for errors after pushing
-- Attempt to correct any CI/CD errors that appear
-
 ## Python Version & Dependencies
 
 - **Python 3.10+** - supports Python 3.10, 3.11, 3.12, and 3.13
@@ -163,4 +159,3 @@ models (bottom layer)
 - `lib_layered_config` - layered configuration management
 - `lib_log_rich` - structured logging with Rich
 - `lib_cli_exit_tools` - CLI exit handling
-
