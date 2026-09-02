@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-07-31T22:37:31.258624+00:00",
+  "analyzed_at": "2026-09-02T06:52:01.066742+00:00",
   "pyproject_path": "/media/srv-main-softdev/projects/public/libs/pyproj_dep_analyze/tests/testdata/poetry_dependencies/pyproject_strawberry.toml",
   "python_versions": [
     "3.10",
@@ -21,9 +21,9 @@
       "name": "graphql_core",
       "requested_version": ">=3.2.0,<3.4.0",
       "resolved_version": "3.2.0",
-      "latest_version": "3.2.11",
+      "latest_version": "3.2.12",
       "action": "update",
-      "note": "Package 'graphql_core' can be updated from 3.2.0 to 3.2.11. Review the changelog for breaking changes before updating. [License: MIT license | last release: 2026-06-19]",
+      "note": "Package 'graphql_core' can be updated from 3.2.0 to 3.2.12. Review the changelog for breaking changes before updating. [License: MIT license | last release: 2026-08-27]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -132,6 +132,7 @@
           "3.2.1",
           "3.2.10",
           "3.2.11",
+          "3.2.12",
           "3.2.2",
           "3.2.3",
           "3.2.4",
@@ -157,22 +158,23 @@
           "3.3.0b0",
           "3.3.0b1",
           "3.3.0b2",
-          "3.3.0rc0"
+          "3.3.0rc0",
+          "3.3.0rc1"
         ],
         "first_release_date": "2015-10-06T19:23:05.162521Z",
-        "latest_release_date": "2026-06-19T20:40:08.953541Z",
+        "latest_release_date": "2026-08-27T20:27:12.263153Z",
         "requires_python": "<4,>=3.7",
         "requires_dist": [
           "typing-extensions<5,>=4.7; python_version < \"3.10\""
         ],
         "version_metrics": {
-          "release_count": 107,
-          "latest_release_age_days": 42,
-          "first_release_age_days": 3951,
+          "release_count": 109,
+          "latest_release_age_days": 5,
+          "first_release_age_days": 3983,
           "avg_days_between_releases": 36.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 322,
-          "releases_last_year": 14,
+          "releases_last_year": 16,
           "release_dates": [
             "2015-10-06T19:23:05.162521Z",
             "2015-10-07T21:33:07.330822Z",
@@ -280,7 +282,9 @@
             "2026-06-11T21:31:59.800656Z",
             "2026-06-13T12:52:10.112140Z",
             "2026-06-14T16:32:13.680672Z",
-            "2026-06-19T20:40:07.387687Z"
+            "2026-06-19T20:40:07.387687Z",
+            "2026-08-27T20:25:47.234824Z",
+            "2026-08-27T20:27:10.605750Z"
           ]
         },
         "download_stats": null
@@ -401,12 +405,12 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 52,
-          "latest_release_age_days": 29,
-          "first_release_age_days": 3239,
+          "latest_release_age_days": 61,
+          "first_release_age_days": 3271,
           "avg_days_between_releases": 62.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 303,
-          "releases_last_year": 5,
+          "releases_last_year": 3,
           "release_dates": [
             "2017-09-17T12:25:17.911412Z",
             "2017-09-30T08:53:23.924418Z",
@@ -577,8 +581,8 @@
         ],
         "version_metrics": {
           "release_count": 26,
-          "latest_release_age_days": 882,
-          "first_release_age_days": 6568,
+          "latest_release_age_days": 914,
+          "first_release_age_days": 6600,
           "avg_days_between_releases": 227.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 960,
@@ -639,9 +643,9 @@
       "name": "packaging",
       "requested_version": ">=23",
       "resolved_version": "23",
-      "latest_version": "26.2",
+      "latest_version": "26.3",
       "action": "update",
-      "note": "Package 'packaging' can be updated from 23 to 26.2. Review the changelog for breaking changes before updating. [last release: 2026-04-24]",
+      "note": "Package 'packaging' can be updated from 23 to 26.3. Review the changelog for breaking changes before updating. [last release: 2026-08-04]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -721,20 +725,21 @@
           "26.0rc2",
           "26.0rc3",
           "26.1",
-          "26.2"
+          "26.2",
+          "26.3"
         ],
         "first_release_date": "2014-09-05T00:26:05.098753Z",
-        "latest_release_date": "2026-04-24T20:15:23.917886Z",
-        "requires_python": ">=3.8",
+        "latest_release_date": "2026-08-04T18:15:28.737071Z",
+        "requires_python": ">=3.9",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 53,
-          "latest_release_age_days": 98,
-          "first_release_age_days": 4347,
-          "avg_days_between_releases": 81.2,
+          "release_count": 54,
+          "latest_release_age_days": 28,
+          "first_release_age_days": 4380,
+          "avg_days_between_releases": 81.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 486,
-          "releases_last_year": 6,
+          "releases_last_year": 7,
           "release_dates": [
             "2014-09-05T00:26:05.098753Z",
             "2014-09-09T00:53:30.879132Z",
@@ -788,7 +793,8 @@
             "2026-01-15T23:16:37.310297Z",
             "2026-01-21T20:50:37.788453Z",
             "2026-04-14T21:12:47.560722Z",
-            "2026-04-24T20:15:22.081511Z"
+            "2026-04-24T20:15:22.081511Z",
+            "2026-08-04T18:15:27.159957Z"
           ]
         },
         "download_stats": null
@@ -863,12 +869,12 @@
         ],
         "version_metrics": {
           "release_count": 9,
-          "latest_release_age_days": 218,
-          "first_release_age_days": 419,
+          "latest_release_age_days": 250,
+          "first_release_age_days": 451,
           "avg_days_between_releases": 24.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 136,
-          "releases_last_year": 6,
+          "releases_last_year": 2,
           "release_dates": [
             "2025-06-07T17:37:11.249835Z",
             "2025-06-20T18:17:35.683403Z",
@@ -1264,8 +1270,8 @@
         ],
         "version_metrics": {
           "release_count": 312,
-          "latest_release_age_days": 8,
-          "first_release_age_days": 4662,
+          "latest_release_age_days": 41,
+          "first_release_age_days": 4694,
           "avg_days_between_releases": 14.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 368,
@@ -1627,9 +1633,9 @@
       "name": "starlette",
       "requested_version": ">=0.13.6",
       "resolved_version": "0.13.6",
-      "latest_version": "1.3.1",
+      "latest_version": "1.6.0",
       "action": "update",
-      "note": "Package 'starlette' can be updated from 0.13.6 to 1.3.1. Review the changelog for breaking changes before updating. [last release: 2026-06-12]",
+      "note": "Package 'starlette' can be updated from 0.13.6 to 1.6.0. Review the changelog for breaking changes before updating. [last release: 2026-08-08]",
       "source": "dependency-groups.integrations",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1856,10 +1862,15 @@
           "1.2.0",
           "1.2.1",
           "1.3.0",
-          "1.3.1"
+          "1.3.1",
+          "1.4.0",
+          "1.4.1",
+          "1.5.0",
+          "1.5.1",
+          "1.6.0"
         ],
         "first_release_date": "2018-06-25T13:13:07.859399Z",
-        "latest_release_date": "2026-06-12T09:23:11.602344Z",
+        "latest_release_date": "2026-08-08T18:27:57.512594Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "anyio<5,>=3.6.2",
@@ -1872,13 +1883,13 @@
           "pyyaml; extra == \"full\""
         ],
         "version_metrics": {
-          "release_count": 197,
-          "latest_release_age_days": 49,
-          "first_release_age_days": 2958,
-          "avg_days_between_releases": 14.4,
+          "release_count": 202,
+          "latest_release_age_days": 24,
+          "first_release_age_days": 2990,
+          "avg_days_between_releases": 14.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 140,
-          "releases_last_year": 18,
+          "releases_last_year": 22,
           "release_dates": [
             "2018-06-25T13:13:07.859399Z",
             "2018-06-25T13:59:01.516536Z",
@@ -2076,7 +2087,12 @@
             "2026-05-28T11:42:48.801623Z",
             "2026-05-31T01:07:50.090167Z",
             "2026-06-11T06:27:40.444114Z",
-            "2026-06-12T09:23:10.017643Z"
+            "2026-06-12T09:23:10.017643Z",
+            "2026-08-05T09:36:41.944712Z",
+            "2026-08-05T15:17:24.357108Z",
+            "2026-08-08T07:23:14.675424Z",
+            "2026-08-08T17:01:44.414520Z",
+            "2026-08-08T18:27:56.196765Z"
           ]
         },
         "download_stats": null
@@ -2187,8 +2203,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 32,
-          "latest_release_age_days": 57,
-          "first_release_age_days": 4875,
+          "latest_release_age_days": 89,
+          "first_release_age_days": 4908,
           "avg_days_between_releases": 155.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1599,
@@ -2499,8 +2515,8 @@
         ],
         "version_metrics": {
           "release_count": 207,
-          "latest_release_age_days": 110,
-          "first_release_age_days": 2455,
+          "latest_release_age_days": 142,
+          "first_release_age_days": 2487,
           "avg_days_between_releases": 10.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 180,
@@ -2753,7 +2769,7 @@
       "resolved_version": "1.8.2",
       "latest_version": "1.9.0",
       "action": "update",
-      "note": "Package 'libcst' can be updated from 1.8.2 to 1.9.0. Review the changelog for breaking changes before updating. [License: All contributions towards LibCST are MIT licensed.\n        \n        Some Python files have been derived from the standard library and are therefore\n        PSF licensed. Modifications on these files are dual licensed (both MIT and\n        PSF). These files are:\n        \n        - libcst/_parser/base_parser.py\n        - libcst/_parser/parso/utils.py\n        - libcst/_parser/parso/pgen2/generator.py\n        - libcst/_parser/parso/pgen2/grammar_parser.py\n        - libcst/_parser/parso/python/py_token.py\n        - libcst/_parser/parso/python/tokenize.py\n        - libcst/_parser/parso/tests/test_fstring.py\n        - libcst/_parser/parso/tests/test_tokenize.py\n        - libcst/_parser/parso/tests/test_utils.py\n        - native/libcst/src/tokenizer/core/mod.rs\n        - native/libcst/src/tokenizer/core/string_types.rs\n        \n        Some Python files have been taken from dataclasses and are therefore Apache\n        licensed. Modifications on these files are licensed under Apache 2.0 license.\n        These files are:\n        \n        - libcst/_add_slots.py\n        \n        -------------------------------------------------------------------------------\n        \n        MIT License\n        \n        Copyright (c) Meta Platforms, Inc. and affiliates.\n        \n        Permission is hereby granted, free of charge, to any person obtaining a copy\n        of this software and associated documentation files (the \"Software\"), to deal\n        in the Software without restriction, including without limitation the rights\n        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n        copies of the Software, and to permit persons to whom the Software is\n        furnished to do so, subject to the following conditions:\n        \n        The above copyright notice and this permission notice shall be included in all\n        copies or substantial portions of the Software.\n        \n        THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n        SOFTWARE.\n        \n        -------------------------------------------------------------------------------\n        \n        PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2\n        \n        1. This LICENSE AGREEMENT is between the Python Software Foundation\n        (\"PSF\"), and the Individual or Organization (\"Licensee\") accessing and\n        otherwise using this software (\"Python\") in source or binary form and\n        its associated documentation.\n        \n        2. Subject to the terms and conditions of this License Agreement, PSF hereby\n        grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce,\n        analyze, test, perform and/or display publicly, prepare derivative works,\n        distribute, and otherwise use Python alone or in any derivative version,\n        provided, however, that PSF's License Agreement and PSF's notice of copyright,\n        i.e., \"Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,\n        2011, 2012, 2013, 2014, 2015 Python Software Foundation; All Rights Reserved\"\n        are retained in Python alone or in any derivative version prepared by Licensee.\n        \n        3. In the event Licensee prepares a derivative work that is based on\n        or incorporates Python or any part thereof, and wants to make\n        the derivative work available to others as provided herein, then\n        Licensee hereby agrees to include in any such work a brief summary of\n        the changes made to Python.\n        \n        4. PSF is making Python available to Licensee on an \"AS IS\"\n        basis.  PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR\n        IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND\n        DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS\n        FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON WILL NOT\n        INFRINGE ANY THIRD PARTY RIGHTS.\n        \n        5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON\n        FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS\n        A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON,\n        OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.\n        \n        6. This License Agreement will automatically terminate upon a material\n        breach of its terms and conditions.\n        \n        7. Nothing in this License Agreement shall be deemed to create any\n        relationship of agency, partnership, or joint venture between PSF and\n        Licensee.  This License Agreement does not grant permission to use PSF\n        trademarks or trade name in a trademark sense to endorse or promote\n        products or services of Licensee, or any third party.\n        \n        8. By copying, installing or otherwise using Python, Licensee\n        agrees to be bound by the terms and conditions of this License\n        Agreement.\n        \n        -------------------------------------------------------------------------------\n        \n        APACHE LICENSE, VERSION 2.0\n        \n        http://www.apache.org/licenses/LICENSE-2.0\n         | last release: 2026-07-29]",
+      "note": "Package 'libcst' can be updated from 1.8.2 to 1.9.0. Review the changelog for breaking changes before updating. [License: All contributions towards LibCST are MIT licensed.\n        \n        Some Python files have been derived from the standard library and are therefore\n        PSF licensed. Modifications on these files are dual licensed (both MIT and\n        PSF). These files are:\n        \n        - libcst/_parser/base_parser.py\n        - libcst/_parser/parso/utils.py\n        - libcst/_parser/parso/pgen2/generator.py\n        - libcst/_parser/parso/pgen2/grammar_parser.py\n        - libcst/_parser/parso/python/py_token.py\n        - libcst/_parser/parso/python/tokenize.py\n        - libcst/_parser/parso/tests/test_fstring.py\n        - libcst/_parser/parso/tests/test_tokenize.py\n        - libcst/_parser/parso/tests/test_utils.py\n        - native/libcst/src/tokenizer/core/mod.rs\n        - native/libcst/src/tokenizer/core/string_types.rs\n        \n        Some Python files have been taken from dataclasses and are therefore Apache\n        licensed. Modifications on these files are licensed under Apache 2.0 license.\n        These files are:\n        \n        - libcst/_add_slots.py\n        \n        -------------------------------------------------------------------------------\n        \n        MIT License\n        \n        Copyright (c) Meta Platforms, Inc. and affiliates.\n        \n        Permission is hereby granted, free of charge, to any person obtaining a copy\n        of this software and associated documentation files (the \"Software\"), to deal\n        in the Software without restriction, including without limitation the rights\n        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n        copies of the Software, and to permit persons to whom the Software is\n        furnished to do so, subject to the following conditions:\n        \n        The above copyright notice and this permission notice shall be included in all\n        copies or substantial portions of the Software.\n        \n        THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n        SOFTWARE.\n        \n        -------------------------------------------------------------------------------\n        \n        PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2\n        \n        1. This LICENSE AGREEMENT is between the Python Software Foundation\n        (\"PSF\"), and the Individual or Organization (\"Licensee\") accessing and\n        otherwise using this software (\"Python\") in source or binary form and\n        its associated documentation.\n        \n        2. Subject to the terms and conditions of this License Agreement, PSF hereby\n        grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce,\n        analyze, test, perform and/or display publicly, prepare derivative works,\n        distribute, and otherwise use Python alone or in any derivative version,\n        provided, however, that PSF's License Agreement and PSF's notice of copyright,\n        i.e., \"Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010,\n        2011, 2012, 2013, 2014, 2015 Python Software Foundation; All Rights Reserved\"\n        are retained in Python alone or in any derivative version prepared by Licensee.\n        \n        3. In the event Licensee prepares a derivative work that is based on\n        or incorporates Python or any part thereof, and wants to make\n        the derivative work available to others as provided herein, then\n        Licensee hereby agrees to include in any such work a brief summary of\n        the changes made to Python.\n        \n        4. PSF is making Python available to Licensee on an \"AS IS\"\n        basis.  PSF MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR\n        IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PSF MAKES NO AND\n        DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS\n        FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON WILL NOT\n        INFRINGE ANY THIRD PARTY RIGHTS.\n        \n        5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON\n        FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS\n        A RESULT OF MODIFYING, DISTRIBUTING, OR OTHERWISE USING PYTHON,\n        OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF.\n        \n        6. This License Agreement will automatically terminate upon a material\n        breach of its terms and conditions.\n        \n        7. Nothing in this License Agreement shall be deemed to create any\n        relationship of agency, partnership, or joint venture between PSF and\n        Licensee.  This License Agreement does not grant permission to use PSF\n        trademarks or trade name in a trademark sense to endorse or promote\n        products or services of Licensee, or any third party.\n        \n        8. By copying, installing or otherwise using Python, Licensee\n        agrees to be bound by the terms and conditions of this License\n        Agreement.\n        \n        -------------------------------------------------------------------------------\n        \n        APACHE LICENSE, VERSION 2.0\n        \n        http://www.apache.org/licenses/LICENSE-2.0\n         | last release: 2026-08-11]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -2850,7 +2866,7 @@
           "1.9.0"
         ],
         "first_release_date": "2019-08-07T21:18:12.890833Z",
-        "latest_release_date": "2026-07-29T21:28:43.153083Z",
+        "latest_release_date": "2026-08-11T05:54:26.835686Z",
         "requires_python": ">=3.9",
         "requires_dist": [
           "pyyaml>=5.2; python_version < \"3.13\"",
@@ -2860,8 +2876,8 @@
         ],
         "version_metrics": {
           "release_count": 66,
-          "latest_release_age_days": 2,
-          "first_release_age_days": 2550,
+          "latest_release_age_days": 34,
+          "first_release_age_days": 2582,
           "avg_days_between_releases": 38.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 267,
@@ -2965,9 +2981,9 @@
       "name": "uvicorn",
       "requested_version": ">=0.11.6",
       "resolved_version": "0.11.6",
-      "latest_version": "0.52.0",
+      "latest_version": "0.52.4",
       "action": "update",
-      "note": "Package 'uvicorn' can be updated from 0.11.6 to 0.52.0. Review the changelog for breaking changes before updating. [last release: 2026-07-29]",
+      "note": "Package 'uvicorn' can be updated from 0.11.6 to 0.52.4. Review the changelog for breaking changes before updating. [last release: 2026-08-19]",
       "source": "dependency-groups.integrations",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3178,6 +3194,10 @@
           "0.50.2",
           "0.51.0",
           "0.52.0",
+          "0.52.1",
+          "0.52.2",
+          "0.52.3",
+          "0.52.4",
           "0.6.0",
           "0.6.1",
           "0.7.0",
@@ -3197,7 +3217,7 @@
           "0.9.1"
         ],
         "first_release_date": "2017-06-05T11:32:15.069863Z",
-        "latest_release_date": "2026-07-29T08:45:34.065616Z",
+        "latest_release_date": "2026-08-19T06:27:41.821170Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "click>=7.0",
@@ -3211,13 +3231,13 @@
           "websockets>=13.0; extra == \"standard\""
         ],
         "version_metrics": {
-          "release_count": 198,
-          "latest_release_age_days": 2,
-          "first_release_age_days": 3343,
-          "avg_days_between_releases": 16.5,
+          "release_count": 202,
+          "latest_release_age_days": 14,
+          "first_release_age_days": 3375,
+          "avg_days_between_releases": 16.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 240,
-          "releases_last_year": 20,
+          "releases_last_year": 24,
           "release_dates": [
             "2017-06-05T11:32:15.069863Z",
             "2017-06-05T13:54:44.905903Z",
@@ -3416,7 +3436,11 @@
             "2026-07-06T07:52:23.620277Z",
             "2026-07-06T10:38:30.543587Z",
             "2026-07-08T10:59:04.440650Z",
-            "2026-07-29T08:45:32.492472Z"
+            "2026-07-29T08:45:32.492472Z",
+            "2026-08-01T18:19:29.294787Z",
+            "2026-08-13T07:03:55.658749Z",
+            "2026-08-13T16:50:01.323465Z",
+            "2026-08-19T06:27:40.360546Z"
           ]
         },
         "download_stats": null
@@ -3455,9 +3479,9 @@
       "name": "websockets",
       "requested_version": ">=15.0.1,<16",
       "resolved_version": "15.0.1",
-      "latest_version": "17.0.1",
+      "latest_version": "17.1",
       "action": "update",
-      "note": "Package 'websockets' can be updated from 15.0.1 to 17.0.1. Review the changelog for breaking changes before updating. [last release: 2026-07-31]",
+      "note": "Package 'websockets' can be updated from 15.0.1 to 17.1. Review the changelog for breaking changes before updating. [last release: 2026-08-26]",
       "source": "project.optional-dependencies.cli",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3513,6 +3537,7 @@
           "16.1.1",
           "17.0",
           "17.0.1",
+          "17.1",
           "2.0",
           "2.1",
           "2.2",
@@ -3542,17 +3567,17 @@
           "9.1"
         ],
         "first_release_date": "2013-11-14T16:29:28.649221Z",
-        "latest_release_date": "2026-07-31T11:31:27.665061Z",
+        "latest_release_date": "2026-08-26T17:25:33.063305Z",
         "requires_python": ">=3.11",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 51,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 4642,
-          "avg_days_between_releases": 92.3,
+          "release_count": 52,
+          "latest_release_age_days": 6,
+          "first_release_age_days": 4674,
+          "avg_days_between_releases": 91.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 547,
-          "releases_last_year": 5,
+          "releases_last_year": 6,
           "release_dates": [
             "2013-11-14T16:29:28.649221Z",
             "2014-03-17T20:13:09.854142Z",
@@ -3604,7 +3629,8 @@
             "2026-07-10T06:30:22.983160Z",
             "2026-07-17T22:48:24.032247Z",
             "2026-07-29T18:04:23.164345Z",
-            "2026-07-31T11:29:04.803128Z"
+            "2026-07-31T11:29:04.803128Z",
+            "2026-08-26T14:55:20.747429Z"
           ]
         },
         "download_stats": null
@@ -3632,9 +3658,9 @@
       "name": "typer",
       "requested_version": ">=0.12.4",
       "resolved_version": "0.12.4",
-      "latest_version": "0.27.0",
+      "latest_version": "0.27.2",
       "action": "update",
-      "note": "Package 'typer' can be updated from 0.12.4 to 0.27.0. Review the changelog for breaking changes before updating. [last release: 2026-07-15]",
+      "note": "Package 'typer' can be updated from 0.12.4 to 0.27.2. Review the changelog for breaking changes before updating. [last release: 2026-08-28]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3737,6 +3763,8 @@
           "0.26.7",
           "0.26.8",
           "0.27.0",
+          "0.27.1",
+          "0.27.2",
           "0.3.0",
           "0.3.1",
           "0.3.2",
@@ -3755,7 +3783,7 @@
           "0.9.4"
         ],
         "first_release_date": "2019-12-20T15:37:05.802053Z",
-        "latest_release_date": "2026-07-15T19:21:07.007636Z",
+        "latest_release_date": "2026-08-28T10:26:55.046862Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "shellingham>=1.3.0",
@@ -3764,13 +3792,13 @@
           "colorama; platform_system == \"Windows\""
         ],
         "version_metrics": {
-          "release_count": 88,
-          "latest_release_age_days": 16,
-          "first_release_age_days": 2415,
-          "avg_days_between_releases": 27.2,
+          "release_count": 90,
+          "latest_release_age_days": 4,
+          "first_release_age_days": 2447,
+          "avg_days_between_releases": 27.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 378,
-          "releases_last_year": 35,
+          "releases_last_year": 32,
           "release_dates": [
             "2019-12-20T15:37:05.802053Z",
             "2019-12-24T16:33:08.077401Z",
@@ -3859,7 +3887,9 @@
             "2026-06-02T13:47:50.536130Z",
             "2026-06-03T07:18:05.732696Z",
             "2026-06-26T09:22:44.720500Z",
-            "2026-07-15T19:21:05.553825Z"
+            "2026-07-15T19:21:05.553825Z",
+            "2026-08-03T14:41:03.438481Z",
+            "2026-08-28T10:26:53.752947Z"
           ]
         },
         "download_stats": null
@@ -3890,9 +3920,9 @@
       "name": "pygments",
       "requested_version": ">=2.3,<3.0",
       "resolved_version": "2.3",
-      "latest_version": "2.20.0",
+      "latest_version": "2.21.0",
       "action": "update",
-      "note": "Package 'pygments' can be updated from 2.3 to 2.20.0. Review the changelog for breaking changes before updating. [last release: 2026-03-29]",
+      "note": "Package 'pygments' can be updated from 2.3 to 2.21.0. Review the changelog for breaking changes before updating. [last release: 2026-08-17]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3974,6 +4004,7 @@
           "2.19.2",
           "2.2.0",
           "2.20.0",
+          "2.21.0",
           "2.3.0",
           "2.3.1",
           "2.4.0",
@@ -3993,19 +4024,19 @@
           "2.9.0"
         ],
         "first_release_date": "2006-10-30T10:24:29Z",
-        "latest_release_date": "2026-03-29T13:29:33.898791Z",
+        "latest_release_date": "2026-08-17T08:02:48.824391Z",
         "requires_python": ">=3.9",
         "requires_dist": [
           "colorama>=0.4.6; extra == \"windows-terminal\""
         ],
         "version_metrics": {
-          "release_count": 68,
-          "latest_release_age_days": 124,
-          "first_release_age_days": 7214,
-          "avg_days_between_releases": 105.3,
+          "release_count": 69,
+          "latest_release_age_days": 15,
+          "first_release_age_days": 7246,
+          "avg_days_between_releases": 105.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 671,
-          "releases_last_year": 1,
+          "releases_last_year": 2,
           "release_dates": [
             "2006-10-30T10:24:29Z",
             "2006-10-30T16:09:46Z",
@@ -4074,7 +4105,8 @@
             "2025-01-05T14:11:12.158477Z",
             "2025-01-06T17:26:25.553040Z",
             "2025-06-21T13:39:07.939730Z",
-            "2026-03-29T13:29:30.038266Z"
+            "2026-03-29T13:29:30.038266Z",
+            "2026-08-17T08:02:44.912148Z"
           ]
         },
         "download_stats": null
@@ -4107,9 +4139,9 @@
       "name": "django",
       "requested_version": ">=3.2",
       "resolved_version": "3.2",
-      "latest_version": "6.0.7",
+      "latest_version": "6.1",
       "action": "update",
-      "note": "Package 'django' can be updated from 3.2 to 6.0.7. Review the changelog for breaking changes before updating. [last release: 2026-07-22]",
+      "note": "Package 'django' can be updated from 3.2 to 6.1. Review the changelog for breaking changes before updating. [last release: 2026-08-05]",
       "source": "dependency-groups.integrations",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4554,6 +4586,7 @@
           "5.2.14",
           "5.2.15",
           "5.2.16",
+          "5.2.17",
           "5.2.2",
           "5.2.3",
           "5.2.4",
@@ -4573,15 +4606,17 @@
           "6.0.5",
           "6.0.6",
           "6.0.7",
+          "6.0.8",
           "6.0a1",
           "6.0b1",
           "6.0rc1",
+          "6.1",
           "6.1a1",
           "6.1b1",
           "6.1rc1"
         ],
         "first_release_date": "2010-05-17T20:04:28.174094Z",
-        "latest_release_date": "2026-07-22T20:07:51.603498Z",
+        "latest_release_date": "2026-08-05T19:21:53.789229Z",
         "requires_python": ">=3.12",
         "requires_dist": [
           "asgiref>=3.9.1",
@@ -4591,13 +4626,13 @@
           "bcrypt>=4.1.1; extra == \"bcrypt\""
         ],
         "version_metrics": {
-          "release_count": 431,
-          "latest_release_age_days": 9,
-          "first_release_age_days": 5919,
-          "avg_days_between_releases": 13.5,
+          "release_count": 434,
+          "latest_release_age_days": 27,
+          "first_release_age_days": 5951,
+          "avg_days_between_releases": 13.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 194,
-          "releases_last_year": 37,
+          "releases_last_year": 39,
           "release_dates": [
             "2010-05-17T20:04:28.174094Z",
             "2010-05-24T21:19:28.440044Z",
@@ -5029,7 +5064,10 @@
             "2026-06-24T17:34:04.435675Z",
             "2026-07-07T13:51:20.007807Z",
             "2026-07-07T13:52:11.223969Z",
-            "2026-07-22T20:07:43.766076Z"
+            "2026-07-22T20:07:43.766076Z",
+            "2026-08-04T15:03:35.138697Z",
+            "2026-08-04T15:03:59.100926Z",
+            "2026-08-05T19:21:47.285453Z"
           ]
         },
         "download_stats": null
@@ -5184,8 +5222,8 @@
         ],
         "version_metrics": {
           "release_count": 72,
-          "latest_release_age_days": 17,
-          "first_release_age_days": 3862,
+          "latest_release_age_days": 49,
+          "first_release_age_days": 3895,
           "avg_days_between_releases": 53.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 467,
@@ -5422,12 +5460,12 @@
         ],
         "version_metrics": {
           "release_count": 73,
-          "latest_release_age_days": 253,
-          "first_release_age_days": 4064,
+          "latest_release_age_days": 285,
+          "first_release_age_days": 4096,
           "avg_days_between_releases": 52.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 535,
-          "releases_last_year": 2,
+          "releases_last_year": 1,
           "release_dates": [
             "2015-06-15T07:21:44.095884Z",
             "2015-06-15T07:45:45.636122Z",
@@ -5659,12 +5697,12 @@
         ],
         "version_metrics": {
           "release_count": 64,
-          "latest_release_age_days": 162,
-          "first_release_age_days": 5950,
+          "latest_release_age_days": 195,
+          "first_release_age_days": 5982,
           "avg_days_between_releases": 91.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1080,
-          "releases_last_year": 2,
+          "releases_last_year": 1,
           "release_dates": [
             "2010-04-16T14:29:37.458396Z",
             "2010-05-12T01:31:26.850453Z",
@@ -5772,9 +5810,9 @@
       "name": "quart",
       "requested_version": ">=0.19.3",
       "resolved_version": "0.19.3",
-      "latest_version": "0.21.0",
+      "latest_version": "0.23.1",
       "action": "update",
-      "note": "Package 'quart' can be updated from 0.19.3 to 0.21.0. Review the changelog for breaking changes before updating. [last release: 2026-07-23]",
+      "note": "Package 'quart' can be updated from 0.19.3 to 0.23.1. Review the changelog for breaking changes before updating. [last release: 2026-08-29]",
       "source": "dependency-groups.integrations",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -5843,6 +5881,9 @@
           "0.2.0",
           "0.20.0",
           "0.21.0",
+          "0.22.0",
+          "0.23.0",
+          "0.23.1",
           "0.3.0",
           "0.3.1",
           "0.4.0",
@@ -5873,8 +5914,8 @@
           "0.9.1"
         ],
         "first_release_date": "2017-05-21T18:01:29.448367Z",
-        "latest_release_date": "2026-07-23T20:11:36.585342Z",
-        "requires_python": ">=3.11",
+        "latest_release_date": "2026-08-29T15:58:35.767708Z",
+        "requires_python": ">=3.13",
         "requires_dist": [
           "aiofiles",
           "blinker>=1.6",
@@ -5888,13 +5929,13 @@
           "python-dotenv; extra == \"dotenv\""
         ],
         "version_metrics": {
-          "release_count": 66,
-          "latest_release_age_days": 8,
-          "first_release_age_days": 3358,
-          "avg_days_between_releases": 51.1,
+          "release_count": 69,
+          "latest_release_age_days": 3,
+          "first_release_age_days": 3390,
+          "avg_days_between_releases": 49.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 577,
-          "releases_last_year": 1,
+          "releases_last_year": 4,
           "release_dates": [
             "2017-05-21T18:01:29.448367Z",
             "2017-07-22T10:23:38.473862Z",
@@ -5961,7 +6002,10 @@
             "2024-10-25T22:39:44.030062Z",
             "2024-11-14T16:52:59.604325Z",
             "2024-12-23T13:53:02.842205Z",
-            "2026-07-23T20:11:35.162328Z"
+            "2026-07-23T20:11:35.162328Z",
+            "2026-08-19T19:53:28.961377Z",
+            "2026-08-29T10:57:43.093791Z",
+            "2026-08-29T15:58:34.147437Z"
           ]
         },
         "download_stats": null
@@ -6124,8 +6168,8 @@
         ],
         "version_metrics": {
           "release_count": 84,
-          "latest_release_age_days": 15,
-          "first_release_age_days": 2495,
+          "latest_release_age_days": 47,
+          "first_release_age_days": 2528,
           "avg_days_between_releases": 29.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 83,
@@ -6369,8 +6413,8 @@
         ],
         "version_metrics": {
           "release_count": 83,
-          "latest_release_age_days": 15,
-          "first_release_age_days": 2495,
+          "latest_release_age_days": 47,
+          "first_release_age_days": 2528,
           "avg_days_between_releases": 29.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 83,
@@ -6492,9 +6536,9 @@
       "name": "pydantic",
       "requested_version": ">=2.0",
       "resolved_version": "2.0",
-      "latest_version": "2.13.4",
+      "latest_version": "2.13.5",
       "action": "update",
-      "note": "Package 'pydantic' can be updated from 2.0 to 2.13.4. Review the changelog for breaking changes before updating. [last release: 2026-05-22]",
+      "note": "Package 'pydantic' can be updated from 2.0 to 2.13.5. Review the changelog for breaking changes before updating. [last release: 2026-08-28]",
       "source": "dependency-groups.integrations",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -6695,7 +6739,9 @@
           "2.13.2",
           "2.13.3",
           "2.13.4",
+          "2.13.5",
           "2.14.0a1",
+          "2.14.0b1",
           "2.2.0",
           "2.2.1",
           "2.3.0",
@@ -6730,24 +6776,24 @@
           "2.9.2"
         ],
         "first_release_date": "2017-05-03T20:58:44.335432Z",
-        "latest_release_date": "2026-05-22T13:23:43.109343Z",
+        "latest_release_date": "2026-08-28T14:04:00.916255Z",
         "requires_python": ">=3.9",
         "requires_dist": [
           "annotated-types>=0.6.0",
-          "pydantic-core==2.46.4",
+          "pydantic-core==2.46.5",
           "typing-extensions>=4.14.1",
           "typing-inspection>=0.4.2",
           "email-validator>=2.0.0; extra == \"email\"",
           "tzdata; (python_version >= \"3.9\" and platform_system == \"Windows\") and extra == \"timezone\""
         ],
         "version_metrics": {
-          "release_count": 203,
-          "latest_release_age_days": 70,
-          "first_release_age_days": 3376,
-          "avg_days_between_releases": 15.9,
+          "release_count": 205,
+          "latest_release_age_days": 4,
+          "first_release_age_days": 3408,
+          "avg_days_between_releases": 16.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 221,
-          "releases_last_year": 23,
+          "releases_last_year": 25,
           "release_dates": [
             "2017-05-03T20:58:44.335432Z",
             "2017-05-06T14:53:18.249584Z",
@@ -6951,7 +6997,9 @@
             "2026-04-17T09:31:57.541199Z",
             "2026-04-20T14:46:41.402738Z",
             "2026-05-06T13:43:02.641507Z",
-            "2026-05-22T13:23:40.570634Z"
+            "2026-05-22T13:23:40.570634Z",
+            "2026-08-06T14:29:28.507991Z",
+            "2026-08-28T14:03:59.136157Z"
           ]
         },
         "download_stats": null
@@ -7205,8 +7253,8 @@
         ],
         "version_metrics": {
           "release_count": 84,
-          "latest_release_age_days": 61,
-          "first_release_age_days": 3575,
+          "latest_release_age_days": 93,
+          "first_release_age_days": 3608,
           "avg_days_between_releases": 41.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 274,
@@ -7817,8 +7865,8 @@
         ],
         "version_metrics": {
           "release_count": 317,
-          "latest_release_age_days": 2,
-          "first_release_age_days": 2792,
+          "latest_release_age_days": 34,
+          "first_release_age_days": 2824,
           "avg_days_between_releases": 8.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 137,
@@ -8354,8 +8402,8 @@
         ],
         "version_metrics": {
           "release_count": 96,
-          "latest_release_age_days": 85,
-          "first_release_age_days": 3672,
+          "latest_release_age_days": 117,
+          "first_release_age_days": 3704,
           "avg_days_between_releases": 37.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 343,
@@ -8685,12 +8733,12 @@
         ],
         "version_metrics": {
           "release_count": 65,
-          "latest_release_age_days": 50,
-          "first_release_age_days": 1217,
+          "latest_release_age_days": 82,
+          "first_release_age_days": 1249,
           "avg_days_between_releases": 17.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 98,
-          "releases_last_year": 9,
+          "releases_last_year": 8,
           "release_dates": [
             "2023-04-01T10:24:34.772196Z",
             "2023-04-07T17:38:44.598016Z",
@@ -9001,12 +9049,12 @@
         ],
         "version_metrics": {
           "release_count": 56,
-          "latest_release_age_days": 2,
-          "first_release_age_days": 4438,
+          "latest_release_age_days": 34,
+          "first_release_age_days": 4470,
           "avg_days_between_releases": 80.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1025,
-          "releases_last_year": 4,
+          "releases_last_year": 2,
           "release_dates": [
             "2014-06-06T19:33:26.467240Z",
             "2014-06-30T18:21:54.578402Z",
@@ -9224,8 +9272,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 65,
-          "latest_release_age_days": 69,
-          "first_release_age_days": 2366,
+          "latest_release_age_days": 101,
+          "first_release_age_days": 2398,
           "avg_days_between_releases": 35.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 254,
@@ -9323,9 +9371,9 @@
       "name": "ruff",
       "requested_version": ">=0.14.1,<0.15.0",
       "resolved_version": "0.14.1",
-      "latest_version": "0.16.1",
+      "latest_version": "0.16.5",
       "action": "update",
-      "note": "Package 'ruff' can be updated from 0.14.1 to 0.16.1. Review the changelog for breaking changes before updating. [last release: 2026-07-30]",
+      "note": "Package 'ruff' can be updated from 0.14.1 to 0.16.5. Review the changelog for breaking changes before updating. [last release: 2026-08-27]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -9709,6 +9757,10 @@
           "0.15.9",
           "0.16.0",
           "0.16.1",
+          "0.16.2",
+          "0.16.3",
+          "0.16.4",
+          "0.16.5",
           "0.2.0",
           "0.2.1",
           "0.2.2",
@@ -9774,13 +9826,13 @@
           "0.9.9"
         ],
         "first_release_date": "2022-08-27T22:26:24.473977Z",
-        "latest_release_date": "2026-07-30T19:37:01.379812Z",
+        "latest_release_date": "2026-08-27T16:34:18.258895Z",
         "requires_python": ">=3.7",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 417,
-          "latest_release_age_days": 1,
-          "first_release_age_days": 1434,
+          "release_count": 421,
+          "latest_release_age_days": 5,
+          "first_release_age_days": 1466,
           "avg_days_between_releases": 3.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 20,
@@ -10202,7 +10254,11 @@
             "2026-07-09T20:00:53.998138Z",
             "2026-07-16T15:13:19.452734Z",
             "2026-07-23T19:10:46.415727Z",
-            "2026-07-30T19:36:13.697196Z"
+            "2026-07-30T19:36:13.697196Z",
+            "2026-08-07T13:30:14.468262Z",
+            "2026-08-13T15:16:27.382358Z",
+            "2026-08-20T17:43:16.888576Z",
+            "2026-08-27T16:33:41.287711Z"
           ]
         },
         "download_stats": null
@@ -10299,12 +10355,12 @@
         ],
         "version_metrics": {
           "release_count": 32,
-          "latest_release_age_days": 339,
-          "first_release_age_days": 4119,
+          "latest_release_age_days": 371,
+          "first_release_age_days": 4151,
           "avg_days_between_releases": 121.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 597,
-          "releases_last_year": 1,
+          "releases_last_year": 0,
           "release_dates": [
             "2015-04-21T14:28:44.637302Z",
             "2015-04-29T21:12:27.137724Z",
@@ -10476,12 +10532,12 @@
         ],
         "version_metrics": {
           "release_count": 68,
-          "latest_release_age_days": 356,
-          "first_release_age_days": 4980,
+          "latest_release_age_days": 388,
+          "first_release_age_days": 5013,
           "avg_days_between_releases": 68.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 478,
-          "releases_last_year": 1,
+          "releases_last_year": 0,
           "release_dates": [
             "2012-12-11T05:26:55.269111Z",
             "2012-12-11T15:54:10.751569Z",
@@ -10653,8 +10709,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 35,
-          "latest_release_age_days": 307,
-          "first_release_age_days": 5883,
+          "latest_release_age_days": 339,
+          "first_release_age_days": 5915,
           "avg_days_between_releases": 163.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1034,
@@ -10723,9 +10779,9 @@
       "name": "nox",
       "requested_version": ">=2024.4.15,<2025.0.0",
       "resolved_version": "2024.4.15",
-      "latest_version": "2026.7.11",
+      "latest_version": "2026.8.17",
       "action": "update",
-      "note": "Package 'nox' can be updated from 2024.4.15 to 2026.7.11. Review the changelog for breaking changes before updating. [last release: 2026-07-12]",
+      "note": "Package 'nox' can be updated from 2024.4.15 to 2026.8.17. Review the changelog for breaking changes before updating. [last release: 2026-08-18]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10784,33 +10840,38 @@
           "2025.5.1",
           "2026.2.9",
           "2026.4.10",
-          "2026.7.11"
+          "2026.7.11",
+          "2026.8.10",
+          "2026.8.17"
         ],
         "first_release_date": "2018-08-24T03:32:47.452926Z",
-        "latest_release_date": "2026-07-12T00:32:19.859182Z",
+        "latest_release_date": "2026-08-18T03:09:57.078816Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "argcomplete<4,>=1.9.4",
           "attrs>=24.1",
-          "colorlog<7,>=2.6.1",
+          "colorlog<7,>=6.6",
           "dependency-groups>=1.1",
           "humanize>=4",
           "packaging>=22",
+          "platformdirs>=2",
+          "python-discovery>=1",
           "tomli>=1.1; python_version < \"3.11\"",
-          "virtualenv>=20.15",
+          "virtualenv>=20.15; python_version < \"3.15\"",
+          "virtualenv>=21; python_version >= \"3.15\"",
           "pbs-installer[all]>=2025.1.6; extra == \"pbs\"",
           "jinja2; extra == \"tox-to-nox\"",
           "tox>=4; extra == \"tox-to-nox\"",
           "uv>=0.1.6; extra == \"uv\""
         ],
         "version_metrics": {
-          "release_count": 30,
-          "latest_release_age_days": 19,
-          "first_release_age_days": 2898,
-          "avg_days_between_releases": 98.7,
+          "release_count": 32,
+          "latest_release_age_days": 15,
+          "first_release_age_days": 2931,
+          "avg_days_between_releases": 93.5,
           "min_days_between_releases": 1,
           "max_days_between_releases": 315,
-          "releases_last_year": 6,
+          "releases_last_year": 8,
           "release_dates": [
             "2018-08-24T03:32:47.452926Z",
             "2018-09-14T20:22:01.505757Z",
@@ -10841,7 +10902,9 @@
             "2025-11-12T18:39:01.575878Z",
             "2026-02-10T04:38:57.266569Z",
             "2026-04-10T17:42:40.664366Z",
-            "2026-07-12T00:32:18.070783Z"
+            "2026-07-12T00:32:18.070783Z",
+            "2026-08-10T21:53:16.477196Z",
+            "2026-08-18T03:09:55.684784Z"
           ]
         },
         "download_stats": null
@@ -10866,7 +10929,10 @@
         "dependency_groups",
         "humanize",
         "packaging",
+        "platformdirs",
+        "python_discovery",
         "tomli",
+        "virtualenv",
         "virtualenv"
       ],
       "optional_dependencies": {
@@ -10955,8 +11021,8 @@
         ],
         "version_metrics": {
           "release_count": 22,
-          "latest_release_age_days": 521,
-          "first_release_age_days": 2262,
+          "latest_release_age_days": 553,
+          "first_release_age_days": 2295,
           "avg_days_between_releases": 82.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 560,
@@ -11262,8 +11328,8 @@
         ],
         "version_metrics": {
           "release_count": 192,
-          "latest_release_age_days": 42,
-          "first_release_age_days": 5727,
+          "latest_release_age_days": 74,
+          "first_release_age_days": 5759,
           "avg_days_between_releases": 29.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 171,
@@ -11641,8 +11707,8 @@
         ],
         "version_metrics": {
           "release_count": 76,
-          "latest_release_age_days": 66,
-          "first_release_age_days": 4129,
+          "latest_release_age_days": 98,
+          "first_release_age_days": 4161,
           "avg_days_between_releases": 53.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 468,
@@ -11852,8 +11918,8 @@
         ],
         "version_metrics": {
           "release_count": 42,
-          "latest_release_age_days": 70,
-          "first_release_age_days": 1364,
+          "latest_release_age_days": 102,
+          "first_release_age_days": 1396,
           "avg_days_between_releases": 31.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 213,
@@ -12035,8 +12101,8 @@
         ],
         "version_metrics": {
           "release_count": 54,
-          "latest_release_age_days": 132,
-          "first_release_age_days": 5941,
+          "latest_release_age_days": 164,
+          "first_release_age_days": 5974,
           "avg_days_between_releases": 109.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 761,
@@ -12171,8 +12237,8 @@
         ],
         "version_metrics": {
           "release_count": 2,
-          "latest_release_age_days": 2719,
-          "first_release_age_days": 3626,
+          "latest_release_age_days": 2751,
+          "first_release_age_days": 3658,
           "avg_days_between_releases": 906.0,
           "min_days_between_releases": 906,
           "max_days_between_releases": 906,
@@ -12318,8 +12384,8 @@
         ],
         "version_metrics": {
           "release_count": 66,
-          "latest_release_age_days": 318,
-          "first_release_age_days": 4397,
+          "latest_release_age_days": 350,
+          "first_release_age_days": 4430,
           "avg_days_between_releases": 62.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 430,
@@ -12477,8 +12543,8 @@
         ],
         "version_metrics": {
           "release_count": 15,
-          "latest_release_age_days": 1560,
-          "first_release_age_days": 2325,
+          "latest_release_age_days": 1592,
+          "first_release_age_days": 2357,
           "avg_days_between_releases": 54.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 171,
@@ -12643,8 +12709,8 @@
         ],
         "version_metrics": {
           "release_count": 71,
-          "latest_release_age_days": 395,
-          "first_release_age_days": 6038,
+          "latest_release_age_days": 427,
+          "first_release_age_days": 6070,
           "avg_days_between_releases": 80.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 657,
@@ -12828,8 +12894,8 @@
         ],
         "version_metrics": {
           "release_count": 27,
-          "latest_release_age_days": 761,
-          "first_release_age_days": 2019,
+          "latest_release_age_days": 793,
+          "first_release_age_days": 2051,
           "avg_days_between_releases": 48.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 182,
@@ -12999,12 +13065,12 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 63,
-          "latest_release_age_days": 74,
-          "first_release_age_days": 2005,
+          "latest_release_age_days": 107,
+          "first_release_age_days": 2037,
           "avg_days_between_releases": 30.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 179,
-          "releases_last_year": 8,
+          "releases_last_year": 5,
           "release_dates": [
             "2021-02-02T20:53:02.061422Z",
             "2021-02-28T06:19:04.686895Z",
@@ -13144,8 +13210,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 10,
-          "latest_release_age_days": 1513,
-          "first_release_age_days": 2006,
+          "latest_release_age_days": 1545,
+          "first_release_age_days": 2038,
           "avg_days_between_releases": 54.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 134,
@@ -13248,8 +13314,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 22,
-          "latest_release_age_days": 1178,
-          "first_release_age_days": 2005,
+          "latest_release_age_days": 1210,
+          "first_release_age_days": 2037,
           "avg_days_between_releases": 38.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 113,
@@ -13358,8 +13424,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 16,
-          "latest_release_age_days": 1513,
-          "first_release_age_days": 2005,
+          "latest_release_age_days": 1545,
+          "first_release_age_days": 2037,
           "avg_days_between_releases": 32.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 130,
@@ -13406,9 +13472,9 @@
       "name": "types_python_dateutil",
       "requested_version": ">=2.8.19,<3.0.0",
       "resolved_version": "2.8.19",
-      "latest_version": "2.9.0.20260716",
+      "latest_version": "2.9.0.20260807",
       "action": "update",
-      "note": "Package 'types_python_dateutil' can be updated from 2.8.19 to 2.9.0.20260716. Review the changelog for breaking changes before updating. [last release: 2026-07-16]",
+      "note": "Package 'types_python_dateutil' can be updated from 2.8.19 to 2.9.0.20260807. Review the changelog for breaking changes before updating. [last release: 2026-08-07]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -13503,20 +13569,21 @@
           "2.9.0.20260408",
           "2.9.0.20260508",
           "2.9.0.20260518",
-          "2.9.0.20260716"
+          "2.9.0.20260716",
+          "2.9.0.20260807"
         ],
         "first_release_date": "2021-02-02T20:53:12.603149Z",
-        "latest_release_date": "2026-07-16T04:48:06.604194Z",
+        "latest_release_date": "2026-08-07T04:17:13.491179Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 65,
-          "latest_release_age_days": 15,
-          "first_release_age_days": 2005,
-          "avg_days_between_releases": 30.6,
+          "release_count": 66,
+          "latest_release_age_days": 26,
+          "first_release_age_days": 2037,
+          "avg_days_between_releases": 30.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 169,
-          "releases_last_year": 14,
+          "releases_last_year": 13,
           "release_dates": [
             "2021-02-02T20:53:12.603149Z",
             "2021-02-23T21:15:27.665015Z",
@@ -13582,7 +13649,8 @@
             "2026-04-08T04:28:10.095150Z",
             "2026-05-08T04:47:07.207370Z",
             "2026-05-18T06:05:23.641132Z",
-            "2026-07-16T04:48:05.793561Z"
+            "2026-07-16T04:48:05.793561Z",
+            "2026-08-07T04:17:12.504516Z"
           ]
         },
         "download_stats": null
@@ -13674,8 +13742,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 26,
-          "latest_release_age_days": 74,
-          "first_release_age_days": 2012,
+          "latest_release_age_days": 107,
+          "first_release_age_days": 2044,
           "avg_days_between_releases": 77.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 759,
@@ -13794,8 +13862,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 22,
-          "latest_release_age_days": 1122,
-          "first_release_age_days": 2012,
+          "latest_release_age_days": 1154,
+          "first_release_age_days": 2044,
           "avg_days_between_releases": 42.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 134,
@@ -13910,12 +13978,12 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 22,
-          "latest_release_age_days": 343,
-          "first_release_age_days": 2005,
+          "latest_release_age_days": 376,
+          "first_release_age_days": 2037,
           "avg_days_between_releases": 78.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 315,
-          "releases_last_year": 1,
+          "releases_last_year": 0,
           "release_dates": [
             "2021-02-02T20:53:20.669793Z",
             "2021-06-17T15:03:00.148126Z",
@@ -13964,9 +14032,9 @@
       "name": "types_protobuf",
       "requested_version": ">=5.29.1.20250403,<6.0.0.0",
       "resolved_version": "5.29.1.20250403",
-      "latest_version": "7.34.1.20260518",
+      "latest_version": "7.35.1.20260827",
       "action": "update",
-      "note": "Package 'types_protobuf' can be updated from 5.29.1.20250403 to 7.34.1.20260518. Review the changelog for breaking changes before updating. [last release: 2026-05-18]",
+      "note": "Package 'types_protobuf' can be updated from 5.29.1.20250403 to 7.35.1.20260827. Review the changelog for breaking changes before updating. [last release: 2026-08-27]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -14114,20 +14182,28 @@
           "7.34.1.20260408",
           "7.34.1.20260503",
           "7.34.1.20260508",
-          "7.34.1.20260518"
+          "7.34.1.20260518",
+          "7.34.1.20260816",
+          "7.35.1.20260821",
+          "7.35.1.20260822",
+          "7.35.1.20260823",
+          "7.35.1.20260824",
+          "7.35.1.20260825",
+          "7.35.1.20260826",
+          "7.35.1.20260827"
         ],
         "first_release_date": "2021-02-02T20:53:10.825222Z",
-        "latest_release_date": "2026-05-18T06:01:47.332799Z",
+        "latest_release_date": "2026-08-27T12:06:04.930614Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 118,
-          "latest_release_age_days": 74,
-          "first_release_age_days": 2005,
-          "avg_days_between_releases": 16.1,
+          "release_count": 126,
+          "latest_release_age_days": 5,
+          "first_release_age_days": 2037,
+          "avg_days_between_releases": 15.8,
           "min_days_between_releases": 0,
-          "max_days_between_releases": 80,
-          "releases_last_year": 13,
+          "max_days_between_releases": 89,
+          "releases_last_year": 19,
           "release_dates": [
             "2021-02-02T20:53:10.825222Z",
             "2021-02-04T15:15:47.310378Z",
@@ -14246,7 +14322,15 @@
             "2026-04-08T04:26:42.566612Z",
             "2026-05-03T05:19:49.486320Z",
             "2026-05-08T04:46:16.422578Z",
-            "2026-05-18T06:01:45.696538Z"
+            "2026-05-18T06:01:45.696538Z",
+            "2026-08-16T02:49:59.807624Z",
+            "2026-08-21T02:52:33.016624Z",
+            "2026-08-22T02:43:47.529473Z",
+            "2026-08-23T02:52:28.543891Z",
+            "2026-08-24T02:53:14.982471Z",
+            "2026-08-25T02:48:30.975534Z",
+            "2026-08-26T02:54:38.673012Z",
+            "2026-08-27T12:06:03.826632Z"
           ]
         },
         "download_stats": null
@@ -14335,8 +14419,8 @@
         ],
         "version_metrics": {
           "release_count": 22,
-          "latest_release_age_days": 194,
-          "first_release_age_days": 1578,
+          "latest_release_age_days": 226,
+          "first_release_age_days": 1610,
           "avg_days_between_releases": 65.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 370,
@@ -14546,8 +14630,8 @@
         ],
         "version_metrics": {
           "release_count": 104,
-          "latest_release_age_days": 85,
-          "first_release_age_days": 6076,
+          "latest_release_age_days": 117,
+          "first_release_age_days": 6108,
           "avg_days_between_releases": 57.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 667,
@@ -14696,9 +14780,9 @@
       "name": "inline_snapshot",
       "requested_version": ">=0.10.1,<0.11.0",
       "resolved_version": "0.10.1",
-      "latest_version": "0.35.3",
+      "latest_version": "0.35.4",
       "action": "update",
-      "note": "Package 'inline_snapshot' can be updated from 0.10.1 to 0.35.3. Review the changelog for breaking changes before updating. [last release: 2026-07-27]",
+      "note": "Package 'inline_snapshot' can be updated from 0.10.1 to 0.35.4. Review the changelog for breaking changes before updating. [last release: 2026-08-11]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -14822,6 +14906,7 @@
           "0.35.1",
           "0.35.2",
           "0.35.3",
+          "0.35.4",
           "0.4.0",
           "0.5.0",
           "0.5.1",
@@ -14835,7 +14920,7 @@
           "0.9.0"
         ],
         "first_release_date": "2022-07-25T21:26:05.096076Z",
-        "latest_release_date": "2026-07-27T11:34:46.846099Z",
+        "latest_release_date": "2026-08-11T07:07:56.213021Z",
         "requires_python": ">=3.9",
         "requires_dist": [
           "asttokens>=2.0.5",
@@ -14848,13 +14933,13 @@
           "dirty-equals>=0.9.0; extra == \"dirty-equals\""
         ],
         "version_metrics": {
-          "release_count": 102,
-          "latest_release_age_days": 4,
-          "first_release_age_days": 1467,
+          "release_count": 103,
+          "latest_release_age_days": 21,
+          "first_release_age_days": 1499,
           "avg_days_between_releases": 13.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 191,
-          "releases_last_year": 29,
+          "releases_last_year": 26,
           "release_dates": [
             "2022-07-25T21:26:05.096076Z",
             "2022-12-08T06:08:00.191535Z",
@@ -14957,7 +15042,8 @@
             "2026-07-15T17:37:09.016729Z",
             "2026-07-16T05:31:54.611655Z",
             "2026-07-16T10:51:57.457174Z",
-            "2026-07-27T11:34:45.234938Z"
+            "2026-07-27T11:34:45.234938Z",
+            "2026-08-11T07:07:54.240171Z"
           ]
         },
         "download_stats": null
@@ -15067,8 +15153,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 30,
-          "latest_release_age_days": 3,
-          "first_release_age_days": 2005,
+          "latest_release_age_days": 36,
+          "first_release_age_days": 2037,
           "avg_days_between_releases": 68.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 251,
@@ -15227,8 +15313,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 58,
-          "latest_release_age_days": 7,
-          "first_release_age_days": 2012,
+          "latest_release_age_days": 40,
+          "first_release_age_days": 2044,
           "avg_days_between_releases": 34.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 181,
@@ -15317,9 +15403,9 @@
       "name": "types_pyyaml",
       "requested_version": ">=6.0.12.20240917,<7.0.0.0",
       "resolved_version": "6.0.12.20240917",
-      "latest_version": "6.0.12.20260724",
+      "latest_version": "6.0.12.20260815",
       "action": "update",
-      "note": "Package 'types_pyyaml' can be updated from 6.0.12.20240917 to 6.0.12.20260724. Review the changelog for breaking changes before updating. [last release: 2026-07-24]",
+      "note": "Package 'types_pyyaml' can be updated from 6.0.12.20240917 to 6.0.12.20260815. Review the changelog for breaking changes before updating. [last release: 2026-08-15]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -15400,6 +15486,7 @@
           "6.0.12.20260510",
           "6.0.12.20260518",
           "6.0.12.20260724",
+          "6.0.12.20260815",
           "6.0.12.3",
           "6.0.12.4",
           "6.0.12.5",
@@ -15417,17 +15504,17 @@
           "6.0.9"
         ],
         "first_release_date": "2021-02-02T20:27:23.855279Z",
-        "latest_release_date": "2026-07-24T04:58:43.453528Z",
+        "latest_release_date": "2026-08-15T02:41:51.532651Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 65,
-          "latest_release_age_days": 7,
-          "first_release_age_days": 2005,
-          "avg_days_between_releases": 30.8,
+          "release_count": 66,
+          "latest_release_age_days": 18,
+          "first_release_age_days": 2037,
+          "avg_days_between_releases": 30.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 205,
-          "releases_last_year": 8,
+          "releases_last_year": 7,
           "release_dates": [
             "2021-02-02T20:27:23.855279Z",
             "2021-02-02T20:35:43.983861Z",
@@ -15493,7 +15580,8 @@
             "2026-05-08T04:48:27.822580Z",
             "2026-05-10T05:26:26.981273Z",
             "2026-05-18T06:01:57.368294Z",
-            "2026-07-24T04:58:42.486182Z"
+            "2026-07-24T04:58:42.486182Z",
+            "2026-08-15T02:41:50.555959Z"
           ]
         },
         "download_stats": null
@@ -15519,9 +15607,9 @@
       "name": "mypy",
       "requested_version": ">=1.15.0,<2.0.0",
       "resolved_version": "1.15.0",
-      "latest_version": "2.3.0",
+      "latest_version": "2.3.1",
       "action": "update",
-      "note": "Package 'mypy' can be updated from 1.15.0 to 2.3.0. Review the changelog for breaking changes before updating. [last release: 2026-07-13]",
+      "note": "Package 'mypy' can be updated from 1.15.0 to 2.3.1. Review the changelog for breaking changes before updating. [last release: 2026-08-15]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -15691,10 +15779,11 @@
           "2.0.0",
           "2.1.0",
           "2.2.0",
-          "2.3.0"
+          "2.3.0",
+          "2.3.1"
         ],
         "first_release_date": "2009-09-09T17:34:48.968869Z",
-        "latest_release_date": "2026-07-13T11:34:53.387133Z",
+        "latest_release_date": "2026-08-15T03:03:38.549479Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "typing_extensions>=4.6.0; python_version < \"3.15\"",
@@ -15711,13 +15800,13 @@
           "orjson; extra == \"faster-cache\""
         ],
         "version_metrics": {
-          "release_count": 139,
+          "release_count": 140,
           "latest_release_age_days": 18,
-          "first_release_age_days": 6169,
-          "avg_days_between_releases": 44.1,
+          "first_release_age_days": 6201,
+          "avg_days_between_releases": 44.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 2137,
-          "releases_last_year": 11,
+          "releases_last_year": 12,
           "release_dates": [
             "2009-09-09T17:34:48.968869Z",
             "2009-09-10T16:03:37.813434Z",
@@ -15857,7 +15946,8 @@
             "2026-05-06T19:20:12.846809Z",
             "2026-05-11T18:31:18.070625Z",
             "2026-07-08T01:33:21.852767Z",
-            "2026-07-13T11:27:37.018666Z"
+            "2026-07-13T11:27:37.018666Z",
+            "2026-08-15T03:01:23.577672Z"
           ]
         },
         "download_stats": null
@@ -16158,12 +16248,12 @@
         ],
         "version_metrics": {
           "release_count": 206,
-          "latest_release_age_days": 36,
-          "first_release_age_days": 1867,
+          "latest_release_age_days": 69,
+          "first_release_age_days": 1899,
           "avg_days_between_releases": 8.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 105,
-          "releases_last_year": 8,
+          "releases_last_year": 7,
           "release_dates": [
             "2021-06-20T14:50:29.861684Z",
             "2021-07-02T12:03:58.467998Z",
@@ -16600,12 +16690,12 @@
         ],
         "version_metrics": {
           "release_count": 114,
-          "latest_release_age_days": 62,
-          "first_release_age_days": 930,
+          "latest_release_age_days": 94,
+          "first_release_age_days": 963,
           "avg_days_between_releases": 7.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 58,
-          "releases_last_year": 28,
+          "releases_last_year": 22,
           "release_dates": [
             "2024-01-13T01:32:43.816174Z",
             "2024-01-16T04:29:55.992344Z",
@@ -16774,9 +16864,9 @@
       "name": "pre_commit",
       "requested_version": null,
       "resolved_version": null,
-      "latest_version": "4.6.1",
+      "latest_version": "4.6.2",
       "action": "none",
-      "note": "Package 'pre_commit' has no version constraint specified (accepts any version). Latest available version is 4.6.1. Consider pinning to a specific version range for reproducible builds. [License: MIT | last release: 2026-07-21]",
+      "note": "Package 'pre_commit' has no version constraint specified (accepts any version). Latest available version is 4.6.2. Consider pinning to a specific version range for reproducible builds. [License: MIT | last release: 2026-08-10]",
       "source": "dependency-groups.dev",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -17005,10 +17095,11 @@
           "4.5.0",
           "4.5.1",
           "4.6.0",
-          "4.6.1"
+          "4.6.1",
+          "4.6.2"
         ],
         "first_release_date": "2014-06-17T17:04:14.683086Z",
-        "latest_release_date": "2026-07-21T20:56:58.225199Z",
+        "latest_release_date": "2026-08-10T22:07:18.421719Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "cfgv>=2.0.0",
@@ -17018,10 +17109,10 @@
           "virtualenv>=20.10.0"
         ],
         "version_metrics": {
-          "release_count": 203,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 4427,
-          "avg_days_between_releases": 21.4,
+          "release_count": 204,
+          "latest_release_age_days": 22,
+          "first_release_age_days": 4459,
+          "avg_days_between_releases": 21.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 167,
           "releases_last_year": 6,
@@ -17228,7 +17319,8 @@
             "2025-11-22T21:02:40.836520Z",
             "2025-12-16T21:14:32.409297Z",
             "2026-04-21T20:31:40.092989Z",
-            "2026-07-21T20:56:57.064358Z"
+            "2026-07-21T20:56:57.064358Z",
+            "2026-08-10T22:07:16.942290Z"
           ]
         },
         "download_stats": null
@@ -17319,8 +17411,8 @@
         ],
         "version_metrics": {
           "release_count": 15,
-          "latest_release_age_days": 53,
-          "first_release_age_days": 3661,
+          "latest_release_age_days": 86,
+          "first_release_age_days": 3693,
           "avg_days_between_releases": 257.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1506,
@@ -17375,9 +17467,9 @@
       "name": "pytest_django",
       "requested_version": ">=4.5,<5.0",
       "resolved_version": "4.5",
-      "latest_version": "4.12.0",
+      "latest_version": "4.14.0",
       "action": "update",
-      "note": "Package 'pytest_django' can be updated from 4.5 to 4.12.0. Review the changelog for breaking changes before updating. [License: pytest-django is released under the BSD (3-clause) license\n        ----------------------------------------------------------\n        Copyright (c) 2015-2018, pytest-django authors (see AUTHORS file)\n        All rights reserved.\n        \n        Redistribution and use in source and binary forms, with or without\n        modification, are permitted provided that the following conditions are met:\n        \n         * Redistributions of source code must retain the above copyright notice, this\n           list of conditions and the following disclaimer.\n         * Redistributions in binary form must reproduce the above copyright notice,\n           this list of conditions and the following disclaimer in the documentation\n           and/or other materials provided with the distribution.\n         * The names of its contributors may not be used to endorse or promote products\n           derived from this software without specific prior written permission.\n        \n        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\n        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR\n        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\n        ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n        \n        \n        This version of pytest-django is a fork of pytest_django created by Ben Firshman.\n        ---------------------------------------------------------------------------------\n        Copyright (c) 2009, Ben Firshman\n        All rights reserved.\n        \n        Redistribution and use in source and binary forms, with or without\n        modification, are permitted provided that the following conditions are met:\n        \n         * Redistributions of source code must retain the above copyright notice, this\n           list of conditions and the following disclaimer.\n         * Redistributions in binary form must reproduce the above copyright notice,\n           this list of conditions and the following disclaimer in the documentation\n           and/or other materials provided with the distribution.\n         * The names of its contributors may not be used to endorse or promote products\n           derived from this software without specific prior written permission.\n        \n        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\n        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR\n        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\n        ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n         | last release: 2026-02-14]",
+      "note": "Package 'pytest_django' can be updated from 4.5 to 4.14.0. Review the changelog for breaking changes before updating. [License: pytest-django is released under the BSD (3-clause) license\n        ----------------------------------------------------------\n        Copyright (c) 2015-2018, pytest-django authors (see AUTHORS file)\n        All rights reserved.\n        \n        Redistribution and use in source and binary forms, with or without\n        modification, are permitted provided that the following conditions are met:\n        \n         * Redistributions of source code must retain the above copyright notice, this\n           list of conditions and the following disclaimer.\n         * Redistributions in binary form must reproduce the above copyright notice,\n           this list of conditions and the following disclaimer in the documentation\n           and/or other materials provided with the distribution.\n         * The names of its contributors may not be used to endorse or promote products\n           derived from this software without specific prior written permission.\n        \n        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\n        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR\n        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\n        ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n        \n        \n        This version of pytest-django is a fork of pytest_django created by Ben Firshman.\n        ---------------------------------------------------------------------------------\n        Copyright (c) 2009, Ben Firshman\n        All rights reserved.\n        \n        Redistribution and use in source and binary forms, with or without\n        modification, are permitted provided that the following conditions are met:\n        \n         * Redistributions of source code must retain the above copyright notice, this\n           list of conditions and the following disclaimer.\n         * Redistributions in binary form must reproduce the above copyright notice,\n           this list of conditions and the following disclaimer in the documentation\n           and/or other materials provided with the distribution.\n         * The names of its contributors may not be used to endorse or promote products\n           derived from this software without specific prior written permission.\n        \n        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND\n        ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n        WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR\n        ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n        (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n        LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON\n        ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n        (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n         | last release: 2026-08-10]",
       "source": "dependency-groups.integrations",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -17464,6 +17556,8 @@
           "4.11.0",
           "4.11.1",
           "4.12.0",
+          "4.13.0",
+          "4.14.0",
           "4.2.0",
           "4.3.0",
           "4.4.0",
@@ -17476,19 +17570,22 @@
           "4.9.0"
         ],
         "first_release_date": "2012-04-30T17:23:14.341617Z",
-        "latest_release_date": "2026-02-14T18:40:49.235453Z",
+        "latest_release_date": "2026-08-10T14:13:08.319803Z",
         "requires_python": ">=3.10",
         "requires_dist": [
-          "pytest>=7.0.0"
+          "pytest>=7.0.0",
+          "django>=5.2; extra == \"django\"",
+          "sphinx; extra == \"docs\"",
+          "sphinx-rtd-theme; extra == \"docs\""
         ],
         "version_metrics": {
-          "release_count": 68,
-          "latest_release_age_days": 167,
-          "first_release_age_days": 5205,
-          "avg_days_between_releases": 74.7,
+          "release_count": 70,
+          "latest_release_age_days": 22,
+          "first_release_age_days": 5237,
+          "avg_days_between_releases": 75.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 691,
-          "releases_last_year": 1,
+          "releases_last_year": 3,
           "release_dates": [
             "2012-04-30T17:23:14.341617Z",
             "2012-05-01T17:08:18.676970Z",
@@ -17557,7 +17654,9 @@
             "2025-02-10T14:52:55.325319Z",
             "2025-04-01T18:18:52.177289Z",
             "2025-04-03T18:56:07.678648Z",
-            "2026-02-14T18:40:47.381029Z"
+            "2026-02-14T18:40:47.381029Z",
+            "2026-08-05T21:36:21.763259Z",
+            "2026-08-10T14:13:06.998552Z"
           ]
         },
         "download_stats": null
@@ -17578,7 +17677,15 @@
       "direct_dependencies": [
         "pytest"
       ],
-      "optional_dependencies": {},
+      "optional_dependencies": {
+        "django": [
+          "django"
+        ],
+        "docs": [
+          "sphinx",
+          "sphinx_rtd_theme"
+        ]
+      },
       "required_by": []
     },
     {
@@ -17703,8 +17810,8 @@
         ],
         "version_metrics": {
           "release_count": 64,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 3825,
+          "latest_release_age_days": 42,
+          "first_release_age_days": 3857,
           "avg_days_between_releases": 60.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 504,
@@ -17969,7 +18076,10 @@
       "dependency_groups",
       "humanize",
       "packaging",
+      "platformdirs",
+      "python_discovery",
       "tomli",
+      "virtualenv",
       "virtualenv"
     ],
     "nox_poetry": [

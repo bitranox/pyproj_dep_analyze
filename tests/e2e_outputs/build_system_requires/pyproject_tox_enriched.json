@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-07-31T22:34:16.430772+00:00",
+  "analyzed_at": "2026-09-02T06:47:50.162245+00:00",
   "pyproject_path": "/media/srv-main-softdev/projects/public/libs/pyproj_dep_analyze/tests/testdata/build_system_requires/pyproject_tox.toml",
   "python_versions": [
     "3.10",
@@ -21,9 +21,9 @@
       "name": "cachetools",
       "requested_version": ">=6.2",
       "resolved_version": "6.2",
-      "latest_version": "7.1.6",
+      "latest_version": "7.1.8",
       "action": "update",
-      "note": "Package 'cachetools' can be updated from 6.2 to 7.1.6. Review the changelog for breaking changes before updating. [last release: 2026-07-23]",
+      "note": "Package 'cachetools' can be updated from 6.2 to 7.1.8. Review the changelog for breaking changes before updating. [2,775 stars | 205 forks | last release: 2026-08-31]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -128,20 +128,22 @@
           "7.1.3",
           "7.1.4",
           "7.1.5",
-          "7.1.6"
+          "7.1.6",
+          "7.1.7",
+          "7.1.8"
         ],
         "first_release_date": "2014-03-22T12:06:53.796768Z",
-        "latest_release_date": "2026-07-23T22:47:53.737240Z",
+        "latest_release_date": "2026-08-31T19:02:53.985499Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 74,
-          "latest_release_age_days": 7,
-          "first_release_age_days": 4514,
-          "avg_days_between_releases": 61.2,
+          "release_count": 76,
+          "latest_release_age_days": 1,
+          "first_release_age_days": 4546,
+          "avg_days_between_releases": 60.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 312,
-          "releases_last_year": 21,
+          "releases_last_year": 22,
           "release_dates": [
             "2014-03-22T12:06:53.796768Z",
             "2014-03-27T05:17:58.953563Z",
@@ -216,23 +218,25 @@
             "2026-05-18T18:21:02.386229Z",
             "2026-05-21T22:40:41.845574Z",
             "2026-07-22T23:51:30.279523Z",
-            "2026-07-23T22:47:52.397337Z"
+            "2026-07-23T22:47:52.397337Z",
+            "2026-08-01T21:20:38.977353Z",
+            "2026-08-31T19:02:52.554686Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tkem/cachetools",
         "owner": "tkem",
         "name": "cachetools",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 2775,
+        "forks": 205,
+        "open_issues": 2,
+        "default_branch": "master",
+        "last_commit_date": "2026-09-01T11:33:08Z",
+        "created_at": "2014-03-22T10:15:14Z",
+        "description": "Extensible memoizing collections and decorators"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -242,9 +246,9 @@
       "name": "chardet",
       "requested_version": ">=5.2",
       "resolved_version": "5.2",
-      "latest_version": "7.4.3",
+      "latest_version": "7.6.0",
       "action": "update",
-      "note": "Package 'chardet' can be updated from 5.2 to 7.4.3. Review the changelog for breaking changes before updating. [last release: 2026-04-13]",
+      "note": "Package 'chardet' can be updated from 5.2 to 7.6.0. Review the changelog for breaking changes before updating. [2,666 stars | 306 forks | last release: 2026-08-14]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -302,20 +306,23 @@
           "7.4.0.post2",
           "7.4.1",
           "7.4.2",
-          "7.4.3"
+          "7.4.3",
+          "7.5.0",
+          "7.5.1",
+          "7.6.0"
         ],
         "first_release_date": "2006-12-23T17:39:10Z",
-        "latest_release_date": "2026-04-13T21:33:39.803008Z",
+        "latest_release_date": "2026-08-14T21:04:31.390972Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 28,
-          "latest_release_age_days": 109,
-          "first_release_age_days": 7160,
-          "avg_days_between_releases": 260.6,
+          "release_count": 31,
+          "latest_release_age_days": 18,
+          "first_release_age_days": 7192,
+          "avg_days_between_releases": 238.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1559,
-          "releases_last_year": 13,
+          "releases_last_year": 16,
           "release_dates": [
             "2006-12-23T17:39:10Z",
             "2008-04-19T11:33:39Z",
@@ -344,23 +351,26 @@
             "2026-03-29T18:06:32.775757Z",
             "2026-04-07T20:24:23.521726Z",
             "2026-04-13T01:37:24.587286Z",
-            "2026-04-13T21:32:47.065440Z"
+            "2026-04-13T21:32:47.065440Z",
+            "2026-08-06T03:10:39.274586Z",
+            "2026-08-06T05:01:14.135830Z",
+            "2026-08-14T20:36:07.451224Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/chardet/chardet",
         "owner": "chardet",
         "name": "chardet",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 2666,
+        "forks": 306,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-30T15:35:35Z",
+        "created_at": "2012-07-26T20:30:54Z",
+        "description": "Python character encoding detector"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -374,7 +384,7 @@
       "resolved_version": "0.4.6",
       "latest_version": "0.4.6",
       "action": "none",
-      "note": "Package 'colorama' is up to date at version 0.4.6 (latest: 0.4.6) for Python all. [last release: 2022-10-25]",
+      "note": "Package 'colorama' is up to date at version 0.4.6 (latest: 0.4.6) for Python all. [3,795 stars | 282 forks | last release: 2022-10-25]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -454,8 +464,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 46,
-          "latest_release_age_days": 1375,
-          "first_release_age_days": 5946,
+          "latest_release_age_days": 1408,
+          "first_release_age_days": 5979,
           "avg_days_between_releases": 101.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 720,
@@ -513,16 +523,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tartley/colorama",
         "owner": "tartley",
         "name": "colorama",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 3795,
+        "forks": 282,
+        "open_issues": 141,
+        "default_branch": "master",
+        "last_commit_date": "2026-05-13T18:21:46Z",
+        "created_at": "2014-04-17T20:18:25Z",
+        "description": "Simple cross-platform colored terminal text in Python"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -536,9 +546,9 @@
       "name": "filelock",
       "requested_version": ">=3.20",
       "resolved_version": "3.20",
-      "latest_version": "3.32.2",
+      "latest_version": "3.32.5",
       "action": "update",
-      "note": "Package 'filelock' can be updated from 3.20 to 3.32.2. Review the changelog for breaking changes before updating. [last release: 2026-07-29]",
+      "note": "Package 'filelock' can be updated from 3.20 to 3.32.5. Review the changelog for breaking changes before updating. [last release: 2026-08-31]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -667,6 +677,9 @@
           "3.31.2",
           "3.32.0",
           "3.32.2",
+          "3.32.3",
+          "3.32.4",
+          "3.32.5",
           "3.4.0",
           "3.4.1",
           "3.4.2",
@@ -682,17 +695,17 @@
           "3.9.1"
         ],
         "first_release_date": "2014-07-06T10:37:55.868859Z",
-        "latest_release_date": "2026-07-29T22:46:04.895806Z",
+        "latest_release_date": "2026-08-31T18:56:34.729632Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 112,
+          "release_count": 115,
           "latest_release_age_days": 1,
-          "first_release_age_days": 4408,
-          "avg_days_between_releases": 39.3,
+          "first_release_age_days": 4440,
+          "avg_days_between_releases": 38.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 862,
-          "releases_last_year": 36,
+          "releases_last_year": 38,
           "release_dates": [
             "2014-07-06T10:37:55.868859Z",
             "2015-03-25T10:26:42.323784Z",
@@ -805,7 +818,10 @@
             "2026-07-20T03:14:31.307276Z",
             "2026-07-21T04:04:44.903928Z",
             "2026-07-21T13:17:41.550913Z",
-            "2026-07-29T22:46:03.520503Z"
+            "2026-07-29T22:46:03.520503Z",
+            "2026-08-13T16:00:03.974131Z",
+            "2026-08-23T17:37:53.913430Z",
+            "2026-08-31T18:56:33.078422Z"
           ]
         },
         "download_stats": null
@@ -834,9 +850,9 @@
       "name": "packaging",
       "requested_version": ">=25",
       "resolved_version": "25",
-      "latest_version": "26.2",
+      "latest_version": "26.3",
       "action": "update",
-      "note": "Package 'packaging' can be updated from 25 to 26.2. Review the changelog for breaking changes before updating. [last release: 2026-04-24]",
+      "note": "Package 'packaging' can be updated from 25 to 26.3. Review the changelog for breaking changes before updating. [748 stars | 316 forks | last release: 2026-08-04]",
       "source": "dependency-groups.release",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -916,20 +932,21 @@
           "26.0rc2",
           "26.0rc3",
           "26.1",
-          "26.2"
+          "26.2",
+          "26.3"
         ],
         "first_release_date": "2014-09-05T00:26:05.098753Z",
-        "latest_release_date": "2026-04-24T20:15:23.917886Z",
-        "requires_python": ">=3.8",
+        "latest_release_date": "2026-08-04T18:15:28.737071Z",
+        "requires_python": ">=3.9",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 53,
-          "latest_release_age_days": 98,
-          "first_release_age_days": 4347,
-          "avg_days_between_releases": 81.2,
+          "release_count": 54,
+          "latest_release_age_days": 28,
+          "first_release_age_days": 4380,
+          "avg_days_between_releases": 81.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 486,
-          "releases_last_year": 6,
+          "releases_last_year": 7,
           "release_dates": [
             "2014-09-05T00:26:05.098753Z",
             "2014-09-09T00:53:30.879132Z",
@@ -983,23 +1000,24 @@
             "2026-01-15T23:16:37.310297Z",
             "2026-01-21T20:50:37.788453Z",
             "2026-04-14T21:12:47.560722Z",
-            "2026-04-24T20:15:22.081511Z"
+            "2026-04-24T20:15:22.081511Z",
+            "2026-08-04T18:15:27.159957Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/packaging",
         "owner": "pypa",
         "name": "packaging",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 748,
+        "forks": 316,
+        "open_issues": 99,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-02T04:19:39Z",
+        "created_at": "2014-05-15T22:49:43Z",
+        "description": "Core utilities for Python packages"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -1018,9 +1036,9 @@
       "name": "platformdirs",
       "requested_version": ">=4.5",
       "resolved_version": "4.5",
-      "latest_version": "4.11.0",
+      "latest_version": "4.11.7",
       "action": "update",
-      "note": "Package 'platformdirs' can be updated from 4.5 to 4.11.0. Review the changelog for breaking changes before updating. [last release: 2026-07-21]",
+      "note": "Package 'platformdirs' can be updated from 4.5 to 4.11.7. Review the changelog for breaking changes before updating. [980 stars | 87 forks | last release: 2026-09-01]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1092,6 +1110,13 @@
           "4.10.0",
           "4.10.1",
           "4.11.0",
+          "4.11.1",
+          "4.11.2",
+          "4.11.3",
+          "4.11.4",
+          "4.11.5",
+          "4.11.6",
+          "4.11.7",
           "4.2.0",
           "4.2.1",
           "4.2.2",
@@ -1118,17 +1143,17 @@
           "4.9.6"
         ],
         "first_release_date": "2021-05-13T11:43:36.553886Z",
-        "latest_release_date": "2026-07-21T13:09:36.565916Z",
+        "latest_release_date": "2026-09-01T13:35:10.502011Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 65,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 1905,
-          "avg_days_between_releases": 29.2,
+          "release_count": 72,
+          "latest_release_age_days": 0,
+          "first_release_age_days": 1937,
+          "avg_days_between_releases": 26.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 202,
-          "releases_last_year": 15,
+          "releases_last_year": 21,
           "release_dates": [
             "2021-05-13T11:43:36.553886Z",
             "2021-05-13T11:53:11.790608Z",
@@ -1194,23 +1219,30 @@
             "2026-04-09T00:04:09.463329Z",
             "2026-05-28T03:32:52.175593Z",
             "2026-07-18T03:53:42.576354Z",
-            "2026-07-21T13:09:35.422952Z"
+            "2026-07-21T13:09:35.422952Z",
+            "2026-08-07T23:06:47.219338Z",
+            "2026-08-10T15:48:04.855867Z",
+            "2026-08-13T22:43:26.121545Z",
+            "2026-08-24T14:53:48.406471Z",
+            "2026-08-27T21:36:36.227169Z",
+            "2026-09-01T04:40:58.977235Z",
+            "2026-09-01T13:35:09.020379Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tox-dev/platformdirs",
         "owner": "tox-dev",
         "name": "platformdirs",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 980,
+        "forks": 87,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-01T13:34:33Z",
+        "created_at": "2021-05-13T11:48:19Z",
+        "description": " A Python package for determining platform-specific directories (e.g. user data, config, cache, logs). Handles the differences between macOS, Windows, Linux/Unix, and Android so you don't have to."
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -1286,8 +1318,8 @@
         ],
         "version_metrics": {
           "release_count": 24,
-          "latest_release_age_days": 442,
-          "first_release_age_days": 4103,
+          "latest_release_age_days": 474,
+          "first_release_age_days": 4135,
           "avg_days_between_releases": 158.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 662,
@@ -1347,7 +1379,7 @@
       "resolved_version": "1.9.1",
       "latest_version": "1.11.0",
       "action": "update",
-      "note": "Package 'pyproject_api' can be updated from 1.9.1 to 1.11.0. Review the changelog for breaking changes before updating. [last release: 2026-07-21]",
+      "note": "Package 'pyproject_api' can be updated from 1.9.1 to 1.11.0. Review the changelog for breaking changes before updating. [25 stars | 13 forks | last release: 2026-07-21]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1413,8 +1445,8 @@
         ],
         "version_metrics": {
           "release_count": 26,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 1739,
+          "latest_release_age_days": 42,
+          "first_release_age_days": 1772,
           "avg_days_between_releases": 68.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 297,
@@ -1452,16 +1484,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tox-dev/pyproject-api",
         "owner": "tox-dev",
         "name": "pyproject-api",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 25,
+        "forks": 13,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T17:51:28Z",
+        "created_at": "2021-10-22T07:11:07Z",
+        "description": "API to interact with the python pyproject.toml based projects"
       },
       "direct_dependencies": [
         "packaging",
@@ -1476,7 +1508,7 @@
       "resolved_version": "2.3",
       "latest_version": "2.4.1",
       "action": "update",
-      "note": "Package 'tomli' can be updated from 2.3 to 2.4.1. Review the changelog for breaking changes before updating. [last release: 2026-03-25]",
+      "note": "Package 'tomli' can be updated from 2.3 to 2.4.1. Review the changelog for breaking changes before updating. [571 stars | 60 forks | last release: 2026-03-25]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1541,8 +1573,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 30,
-          "latest_release_age_days": 128,
-          "first_release_age_days": 1891,
+          "latest_release_age_days": 160,
+          "first_release_age_days": 1923,
           "avg_days_between_releases": 60.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 966,
@@ -1584,16 +1616,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/hukkin/tomli",
         "owner": "hukkin",
         "name": "tomli",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 571,
+        "forks": 60,
+        "open_issues": 11,
+        "default_branch": "master",
+        "last_commit_date": "2026-08-31T17:48:19Z",
+        "created_at": "2021-05-25T08:17:13Z",
+        "description": "A lil' TOML parser"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -1613,7 +1645,7 @@
       "resolved_version": "4.15",
       "latest_version": "4.16.0",
       "action": "update",
-      "note": "Package 'typing_extensions' can be updated from 4.15 to 4.16.0. Review the changelog for breaking changes before updating. [last release: 2026-07-02]",
+      "note": "Package 'typing_extensions' can be updated from 4.15 to 4.16.0. Review the changelog for breaking changes before updating. [583 stars | 143 forks | last release: 2026-07-02]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1704,12 +1736,12 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 52,
-          "latest_release_age_days": 29,
-          "first_release_age_days": 3239,
+          "latest_release_age_days": 61,
+          "first_release_age_days": 3271,
           "avg_days_between_releases": 62.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 303,
-          "releases_last_year": 5,
+          "releases_last_year": 3,
           "release_dates": [
             "2017-09-17T12:25:17.911412Z",
             "2017-09-30T08:53:23.924418Z",
@@ -1769,16 +1801,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/python/typing_extensions",
         "owner": "python",
         "name": "typing_extensions",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 583,
+        "forks": 143,
+        "open_issues": 18,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T21:04:17Z",
+        "created_at": "2022-05-19T13:12:25Z",
+        "description": "Backported and experimental type hints for Python"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -1794,9 +1826,9 @@
       "name": "virtualenv",
       "requested_version": ">=20.34",
       "resolved_version": "20.34",
-      "latest_version": "21.7.1",
+      "latest_version": "21.7.8",
       "action": "update",
-      "note": "Package 'virtualenv' can be updated from 20.34 to 21.7.1. Review the changelog for breaking changes before updating. [last release: 2026-07-30]",
+      "note": "Package 'virtualenv' can be updated from 20.34 to 21.7.8. Review the changelog for breaking changes before updating. [5,042 stars | 1,114 forks | last release: 2026-09-01]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -2096,27 +2128,34 @@
           "21.6.0",
           "21.6.1",
           "21.7.0",
-          "21.7.1"
+          "21.7.1",
+          "21.7.2",
+          "21.7.3",
+          "21.7.4",
+          "21.7.5",
+          "21.7.6",
+          "21.7.7",
+          "21.7.8"
         ],
         "first_release_date": "2007-09-14T23:32:10Z",
-        "latest_release_date": "2026-07-30T15:40:36.360035Z",
+        "latest_release_date": "2026-09-01T13:36:13.894885Z",
         "requires_python": ">=3.9",
         "requires_dist": [
           "distlib<1,>=0.3.7",
           "filelock<4,>=3.24.2; python_version >= \"3.10\"",
           "filelock<=3.19.1,>=3.16.1; python_version < \"3.10\"",
           "platformdirs<5,>=3.9.1",
-          "python-discovery>=1.4.2",
+          "python-discovery>=1.6",
           "typing-extensions>=4.13.2; python_version < \"3.11\""
         ],
         "version_metrics": {
-          "release_count": 271,
-          "latest_release_age_days": 1,
-          "first_release_age_days": 6894,
-          "avg_days_between_releases": 25.0,
+          "release_count": 278,
+          "latest_release_age_days": 0,
+          "first_release_age_days": 6927,
+          "avg_days_between_releases": 24.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 490,
-          "releases_last_year": 35,
+          "releases_last_year": 39,
           "release_dates": [
             "2007-09-14T23:32:10Z",
             "2007-09-15T04:34:21Z",
@@ -2388,23 +2427,30 @@
             "2026-07-06T22:49:54.941601Z",
             "2026-07-10T19:33:51.629569Z",
             "2026-07-21T13:12:12.136616Z",
-            "2026-07-30T15:40:34.512679Z"
+            "2026-07-30T15:40:34.512679Z",
+            "2026-08-07T22:56:12.832470Z",
+            "2026-08-08T14:43:18.570044Z",
+            "2026-08-10T22:54:31.515567Z",
+            "2026-08-25T05:39:14.229247Z",
+            "2026-08-28T16:17:49.993043Z",
+            "2026-08-28T18:59:48.056129Z",
+            "2026-09-01T13:36:11.248688Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/virtualenv",
         "owner": "pypa",
         "name": "virtualenv",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 5042,
+        "forks": 1114,
+        "open_issues": 2,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-01T16:17:51Z",
+        "created_at": "2011-03-06T14:33:27Z",
+        "description": "Virtual Python Environment builder"
       },
       "direct_dependencies": [
         "distlib",
@@ -2423,7 +2469,7 @@
       "resolved_version": "0.5",
       "latest_version": "0.5.0",
       "action": "update",
-      "note": "Package 'hatch_vcs' can be updated from 0.5 to 0.5.0. Review the changelog for breaking changes before updating. [last release: 2025-05-27]",
+      "note": "Package 'hatch_vcs' can be updated from 0.5 to 0.5.0. Review the changelog for breaking changes before updating. [189 stars | 23 forks | last release: 2025-05-27]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -2470,8 +2516,8 @@
         ],
         "version_metrics": {
           "release_count": 7,
-          "latest_release_age_days": 430,
-          "first_release_age_days": 1654,
+          "latest_release_age_days": 463,
+          "first_release_age_days": 1687,
           "avg_days_between_releases": 203.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 567,
@@ -2490,16 +2536,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/ofek/hatch-vcs",
         "owner": "ofek",
         "name": "hatch-vcs",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 189,
+        "forks": 23,
+        "open_issues": 42,
+        "default_branch": "master",
+        "last_commit_date": "2025-05-27T05:15:29Z",
+        "created_at": "2022-01-19T00:20:23Z",
+        "description": "Hatch plugin for versioning with your preferred VCS"
       },
       "direct_dependencies": [
         "hatchling",
@@ -2512,9 +2558,9 @@
       "name": "hatchling",
       "requested_version": ">=1.27",
       "resolved_version": "1.27",
-      "latest_version": "1.31.0",
+      "latest_version": "1.32.0",
       "action": "update",
-      "note": "Package 'hatchling' can be updated from 1.27 to 1.31.0. Review the changelog for breaking changes before updating. [last release: 2026-07-08]",
+      "note": "Package 'hatchling' can be updated from 1.27 to 1.32.0. Review the changelog for breaking changes before updating. [7,231 stars | 454 forks | last release: 2026-08-11]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -2617,6 +2663,7 @@
           "1.30.0",
           "1.30.1",
           "1.31.0",
+          "1.32.0",
           "1.4.0",
           "1.4.1",
           "1.5.0",
@@ -2628,23 +2675,24 @@
           "1.9.0"
         ],
         "first_release_date": "2022-01-09T18:32:54.944644Z",
-        "latest_release_date": "2026-07-08T01:48:32.237659Z",
+        "latest_release_date": "2026-08-11T05:03:44.114701Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "packaging>=24.2",
           "pathspec>=0.10.1",
           "pluggy>=1.0.0",
           "tomli>=1.2.2; python_version < \"3.11\"",
+          "tomlkit>=0.11.1",
           "trove-classifiers"
         ],
         "version_metrics": {
-          "release_count": 81,
-          "latest_release_age_days": 23,
-          "first_release_age_days": 1664,
-          "avg_days_between_releases": 20.0,
+          "release_count": 82,
+          "latest_release_age_days": 22,
+          "first_release_age_days": 1696,
+          "avg_days_between_releases": 20.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 346,
-          "releases_last_year": 5,
+          "releases_last_year": 6,
           "release_dates": [
             "2022-01-09T18:32:54.944644Z",
             "2022-01-14T23:14:55.469473Z",
@@ -2726,29 +2774,31 @@
             "2026-02-23T19:42:05.197639Z",
             "2026-06-01T00:16:15.884480Z",
             "2026-06-02T00:09:40.139448Z",
-            "2026-07-08T01:48:31.024633Z"
+            "2026-07-08T01:48:31.024633Z",
+            "2026-08-11T05:03:42.644966Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/hatch",
         "owner": "pypa",
         "name": "hatch",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 7231,
+        "forks": 454,
+        "open_issues": 442,
+        "default_branch": "master",
+        "last_commit_date": "2026-09-01T14:20:52Z",
+        "created_at": "2017-05-31T23:37:53Z",
+        "description": "Modern, extensible Python project management"
       },
       "direct_dependencies": [
         "packaging",
         "pathspec",
         "pluggy",
         "tomli",
+        "tomlkit",
         "trove_classifiers"
       ],
       "optional_dependencies": {},
@@ -2760,9 +2810,9 @@
       "name": "build",
       "requested_version": ">=1.3",
       "resolved_version": "1.3",
-      "latest_version": "1.5.0",
+      "latest_version": "1.6.0",
       "action": "update",
-      "note": "Package 'build' can be updated from 1.3 to 1.5.0. Review the changelog for breaking changes before updating. [last release: 2026-07-09]",
+      "note": "Package 'build' can be updated from 1.3 to 1.6.0. Review the changelog for breaking changes before updating. [854 stars | 166 forks | last release: 2026-08-27]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -2827,10 +2877,11 @@
           "1.4.3",
           "1.4.4",
           "1.5.0",
-          "1.5.1"
+          "1.5.1",
+          "1.6.0"
         ],
         "first_release_date": "2020-05-25T01:17:25.842015Z",
-        "latest_release_date": "2026-07-09T06:21:59.632916Z",
+        "latest_release_date": "2026-08-27T21:01:16.458736Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "packaging>=24.0",
@@ -2840,14 +2891,13 @@
           "tomli>=1.1.0; python_version < \"3.11\"",
           "keyring; extra == \"keyring\"",
           "uv>=0.1.18; extra == \"uv\"",
-          "virtualenv>=20.17; extra == \"virtualenv\" and (python_version >= \"3.10\" and python_version < \"3.14\")",
-          "virtualenv>=20.31; extra == \"virtualenv\" and python_version >= \"3.14\""
+          "virtualenv>=20.36.1; extra == \"virtualenv\""
         ],
         "version_metrics": {
-          "release_count": 36,
-          "latest_release_age_days": 22,
-          "first_release_age_days": 2258,
-          "avg_days_between_releases": 63.4,
+          "release_count": 37,
+          "latest_release_age_days": 5,
+          "first_release_age_days": 2291,
+          "avg_days_between_releases": 63.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 299,
           "releases_last_year": 8,
@@ -2887,23 +2937,24 @@
             "2026-04-10T21:25:39.671068Z",
             "2026-04-22T20:53:43.251190Z",
             "2026-04-30T03:18:23.644906Z",
-            "2026-07-09T06:21:58.551430Z"
+            "2026-07-09T06:21:58.551430Z",
+            "2026-08-27T21:01:14.957317Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/build",
         "owner": "pypa",
         "name": "build",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 854,
+        "forks": 166,
+        "open_issues": 4,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-01T13:51:44Z",
+        "created_at": "2020-05-10T16:20:46Z",
+        "description": "A simple, correct Python build frontend"
       },
       "direct_dependencies": [
         "packaging",
@@ -2931,7 +2982,7 @@
       "resolved_version": "2.3",
       "latest_version": "2.3.0",
       "action": "update",
-      "note": "Package 'covdefaults' can be updated from 2.3 to 2.3.0. Review the changelog for breaking changes before updating. [License: MIT | last release: 2023-03-05]",
+      "note": "Package 'covdefaults' can be updated from 2.3 to 2.3.0. Review the changelog for breaking changes before updating. [License: MIT | 88 stars | 7 forks | last release: 2023-03-05]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -2977,8 +3028,8 @@
         ],
         "version_metrics": {
           "release_count": 10,
-          "latest_release_age_days": 1244,
-          "first_release_age_days": 2344,
+          "latest_release_age_days": 1276,
+          "first_release_age_days": 2376,
           "avg_days_between_releases": 121.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 388,
@@ -3000,16 +3051,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/asottile/covdefaults",
         "owner": "asottile",
         "name": "covdefaults",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 88,
+        "forks": 7,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-17T23:35:29Z",
+        "created_at": "2020-02-29T21:10:47Z",
+        "description": "A coverage plugin to provide sensible default settings"
       },
       "direct_dependencies": [
         "coverage"
@@ -3021,9 +3072,9 @@
       "name": "coverage",
       "requested_version": ">=7.10.7",
       "resolved_version": "7.10.7",
-      "latest_version": "7.15.2",
+      "latest_version": "7.16.0",
       "action": "update",
-      "note": "Package 'coverage' can be updated from 7.10.7 to 7.15.2. Review the changelog for breaking changes before updating. [License: Apache-2.0 | last release: 2026-07-15]",
+      "note": "Package 'coverage' can be updated from 7.10.7 to 7.16.0. Review the changelog for breaking changes before updating. [License: Apache-2.0 | 3,411 stars | 520 forks | last release: 2026-08-28]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3043,14 +3094,14 @@
         "license": "Apache-2.0",
         "home_page": "https://github.com/coveragepy/coveragepy",
         "project_urls": {
-          "Documentation": "https://coverage.readthedocs.io/en/7.15.2",
+          "Documentation": "https://coverage.readthedocs.io/en/7.16.0",
           "Funding": "https://tidelift.com/subscription/pkg/pypi-coverage?utm_source=pypi-coverage&utm_medium=referral&utm_campaign=pypi",
           "Homepage": "https://github.com/coveragepy/coveragepy",
           "Issues": "https://github.com/coveragepy/coveragepy/issues",
           "Mastodon": "https://hachyderm.io/@coveragepy",
           "Mastodon (nedbat)": "https://hachyderm.io/@nedbat"
         },
-        "author": "Ned Batchelder and 261 others",
+        "author": "Ned Batchelder and 263 others",
         "author_email": "ned@nedbatchelder.com",
         "maintainer": null,
         "maintainer_email": null,
@@ -3203,6 +3254,9 @@
           "7.15.0",
           "7.15.1",
           "7.15.2",
+          "7.15.3",
+          "7.15.4",
+          "7.16.0",
           "7.2.0",
           "7.2.1",
           "7.2.2",
@@ -3249,19 +3303,19 @@
           "7.9.2"
         ],
         "first_release_date": "2009-05-16T21:03:17.044537Z",
-        "latest_release_date": "2026-07-15T18:56:19.558594Z",
+        "latest_release_date": "2026-08-28T21:54:37.740597Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "tomli; python_full_version <= \"3.11.0a6\" and extra == \"toml\""
         ],
         "version_metrics": {
-          "release_count": 183,
-          "latest_release_age_days": 16,
-          "first_release_age_days": 6285,
-          "avg_days_between_releases": 33.9,
+          "release_count": 186,
+          "latest_release_age_days": 4,
+          "first_release_age_days": 6317,
+          "avg_days_between_releases": 33.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 288,
-          "releases_last_year": 26,
+          "releases_last_year": 24,
           "release_dates": [
             "2009-05-16T21:03:17.044537Z",
             "2009-06-14T03:36:26.357752Z",
@@ -3445,23 +3499,26 @@
             "2026-06-22T23:07:38.925616Z",
             "2026-07-02T13:08:19.252129Z",
             "2026-07-12T20:55:55.820312Z",
-            "2026-07-15T18:53:29.520952Z"
+            "2026-07-15T18:53:29.520952Z",
+            "2026-08-02T18:47:25.951302Z",
+            "2026-08-06T13:46:55.253092Z",
+            "2026-08-28T21:50:37.361367Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/coveragepy/coveragepy",
         "owner": "coveragepy",
         "name": "coveragepy",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 3411,
+        "forks": 520,
+        "open_issues": 305,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T16:55:35Z",
+        "created_at": "2018-06-23T17:44:53Z",
+        "description": "The code coverage tool for Python"
       },
       "direct_dependencies": [],
       "optional_dependencies": {
@@ -3480,7 +3537,7 @@
       "resolved_version": "1.2",
       "latest_version": "1.2.0",
       "action": "update",
-      "note": "Package 'detect_test_pollution' can be updated from 1.2 to 1.2.0. Review the changelog for breaking changes before updating. [License: MIT | last release: 2023-09-28]",
+      "note": "Package 'detect_test_pollution' can be updated from 1.2 to 1.2.0. Review the changelog for breaking changes before updating. [License: MIT | 205 stars | 10 forks | last release: 2023-09-28]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3518,8 +3575,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 4,
-          "latest_release_age_days": 1037,
-          "first_release_age_days": 1619,
+          "latest_release_age_days": 1069,
+          "first_release_age_days": 1651,
           "avg_days_between_releases": 193.7,
           "min_days_between_releases": 5,
           "max_days_between_releases": 554,
@@ -3535,16 +3592,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/asottile/detect-test-pollution",
         "owner": "asottile",
         "name": "detect-test-pollution",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 205,
+        "forks": 10,
+        "open_issues": 4,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-17T23:35:24Z",
+        "created_at": "2022-02-21T17:37:16Z",
+        "description": "a tool to detect test pollution"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -3556,7 +3613,7 @@
       "resolved_version": "1.0.2",
       "latest_version": "1.2.0",
       "action": "update",
-      "note": "Package 'devpi_process' can be updated from 1.0.2 to 1.2.0. Review the changelog for breaking changes before updating. [last release: 2026-07-21]",
+      "note": "Package 'devpi_process' can be updated from 1.0.2 to 1.2.0. Review the changelog for breaking changes before updating. [10 stars | 1 forks | last release: 2026-07-21]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3606,8 +3663,8 @@
         ],
         "version_metrics": {
           "release_count": 10,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 1870,
+          "latest_release_age_days": 42,
+          "first_release_age_days": 1902,
           "avg_days_between_releases": 206.0,
           "min_days_between_releases": 9,
           "max_days_between_releases": 386,
@@ -3629,15 +3686,15 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tox-dev/devpi-process",
         "owner": "tox-dev",
         "name": "devpi-process",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
+        "stars": 10,
+        "forks": 1,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T17:51:42Z",
+        "created_at": "2021-06-17T07:53:39Z",
         "description": null
       },
       "direct_dependencies": [
@@ -3652,9 +3709,9 @@
       "name": "diff_cover",
       "requested_version": ">=9.7.1",
       "resolved_version": "9.7.1",
-      "latest_version": "10.4.1",
+      "latest_version": "10.5.1",
       "action": "update",
-      "note": "Package 'diff_cover' can be updated from 9.7.1 to 10.4.1. Review the changelog for breaking changes before updating. [License: Apache-2.0 | last release: 2026-07-24]",
+      "note": "Package 'diff_cover' can be updated from 9.7.1 to 10.5.1. Review the changelog for breaking changes before updating. [License: Apache-2.0 | last release: 2026-08-16]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3749,6 +3806,9 @@
           "10.3.0",
           "10.4.0",
           "10.4.1",
+          "10.4.2",
+          "10.5.0",
+          "10.5.1",
           "2.0.0",
           "2.0.1",
           "2.1.0",
@@ -3839,7 +3899,7 @@
           "9.7.2"
         ],
         "first_release_date": "2013-06-28T01:46:43.564779Z",
-        "latest_release_date": "2026-07-24T03:58:08.376741Z",
+        "latest_release_date": "2026-08-16T18:09:19.466078Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "Jinja2>=2.7.1",
@@ -3849,13 +3909,13 @@
           "tomli>=1.2.1; extra == \"toml\""
         ],
         "version_metrics": {
-          "release_count": 154,
-          "latest_release_age_days": 7,
-          "first_release_age_days": 4781,
-          "avg_days_between_releases": 30.7,
+          "release_count": 157,
+          "latest_release_age_days": 16,
+          "first_release_age_days": 4814,
+          "avg_days_between_releases": 30.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 196,
-          "releases_last_year": 10,
+          "releases_last_year": 13,
           "release_dates": [
             "2013-06-28T01:46:43.564779Z",
             "2013-07-18T19:25:16.548027Z",
@@ -4010,7 +4070,10 @@
             "2026-05-23T12:55:05.990590Z",
             "2026-05-30T14:17:12.858447Z",
             "2026-07-22T01:56:33.695776Z",
-            "2026-07-24T03:58:07.163827Z"
+            "2026-07-24T03:58:07.163827Z",
+            "2026-08-07T02:40:44.668568Z",
+            "2026-08-08T17:25:18.337065Z",
+            "2026-08-16T18:09:18.387375Z"
           ]
         },
         "download_stats": null
@@ -4047,7 +4110,7 @@
       "resolved_version": "0.4",
       "latest_version": "0.4.3",
       "action": "update",
-      "note": "Package 'distlib' can be updated from 0.4 to 0.4.3. Review the changelog for breaking changes before updating. [License: PSF-2.0 | last release: 2026-06-12]",
+      "note": "Package 'distlib' can be updated from 0.4 to 0.4.3. Review the changelog for breaking changes before updating. [License: PSF-2.0 | 65 stars | 57 forks | last release: 2026-06-12]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4119,8 +4182,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 35,
-          "latest_release_age_days": 49,
-          "first_release_age_days": 4899,
+          "latest_release_age_days": 81,
+          "first_release_age_days": 4932,
           "avg_days_between_releases": 142.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 335,
@@ -4167,16 +4230,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/distlib",
         "owner": "pypa",
         "name": "distlib",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 65,
+        "forks": 57,
+        "open_issues": 13,
+        "default_branch": "master",
+        "last_commit_date": "2026-06-12T08:12:14Z",
+        "created_at": "2021-12-10T12:23:35Z",
+        "description": "A low-level library which implements some Python packaging  standards (PEPs) and which could be used by third-party packaging tools to achieve interoperability."
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -4190,7 +4253,7 @@
       "resolved_version": "3.8.1",
       "latest_version": "3.8.1",
       "action": "none",
-      "note": "Package 'flaky' is up to date at version 3.8.1 (latest: 3.8.1) for Python all. [License: Apache Software License, Version 2.0, http://www.apache.org/licenses/LICENSE-2.0 | last release: 2024-03-12]",
+      "note": "Package 'flaky' is up to date at version 3.8.1 (latest: 3.8.1) for Python all. [License: Apache Software License, Version 2.0, http://www.apache.org/licenses/LICENSE-2.0 | 398 stars | 57 forks | last release: 2024-03-12]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4262,8 +4325,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 37,
-          "latest_release_age_days": 871,
-          "first_release_age_days": 4501,
+          "latest_release_age_days": 903,
+          "first_release_age_days": 4534,
           "avg_days_between_releases": 100.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1340,
@@ -4312,16 +4375,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/box/flaky",
         "owner": "box",
         "name": "flaky",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 398,
+        "forks": 57,
+        "open_issues": 35,
+        "default_branch": "master",
+        "last_commit_date": "2025-09-08T11:55:57Z",
+        "created_at": "2014-04-07T20:56:37Z",
+        "description": "Plugin for nose or pytest that automatically reruns flaky tests."
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -4333,7 +4396,7 @@
       "resolved_version": "2.4.5",
       "latest_version": "2.4.9",
       "action": "update",
-      "note": "Package 'pdm_backend' can be updated from 2.4.5 to 2.4.9. Review the changelog for breaking changes before updating. [last release: 2026-06-05]",
+      "note": "Package 'pdm_backend' can be updated from 2.4.5 to 2.4.9. Review the changelog for breaking changes before updating. [89 stars | 49 forks | last release: 2026-06-05]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4409,8 +4472,8 @@
         ],
         "version_metrics": {
           "release_count": 38,
-          "latest_release_age_days": 56,
-          "first_release_age_days": 1340,
+          "latest_release_age_days": 88,
+          "first_release_age_days": 1372,
           "avg_days_between_releases": 34.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 165,
@@ -4460,16 +4523,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pdm-project/pdm-backend",
         "owner": "pdm-project",
         "name": "pdm-backend",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 89,
+        "forks": 49,
+        "open_issues": 8,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-15T03:55:45Z",
+        "created_at": "2020-09-29T02:08:36Z",
+        "description": "The build backend used by PDM that supports latest packaging standards."
       },
       "direct_dependencies": [
         "importlib_metadata"
@@ -4483,7 +4546,7 @@
       "resolved_version": "7.1",
       "latest_version": "7.2.2",
       "action": "update",
-      "note": "Package 'psutil' can be updated from 7.1 to 7.2.2. Review the changelog for breaking changes before updating. [License: BSD-3-Clause | last release: 2026-01-28]",
+      "note": "Package 'psutil' can be updated from 7.1 to 7.2.2. Review the changelog for breaking changes before updating. [License: BSD-3-Clause | 11,274 stars | 1,507 forks | last release: 2026-01-28]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4660,8 +4723,8 @@
         ],
         "version_metrics": {
           "release_count": 102,
-          "latest_release_age_days": 184,
-          "first_release_age_days": 4689,
+          "latest_release_age_days": 216,
+          "first_release_age_days": 4721,
           "avg_days_between_releases": 44.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 375,
@@ -4775,16 +4838,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/giampaolo/psutil",
         "owner": "giampaolo",
         "name": "psutil",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 11274,
+        "forks": 1507,
+        "open_issues": 259,
+        "default_branch": "master",
+        "last_commit_date": "2026-09-01T16:33:39Z",
+        "created_at": "2014-05-23T14:01:48Z",
+        "description": "Cross-platform lib for process and system monitoring in Python"
       },
       "direct_dependencies": [],
       "optional_dependencies": {
@@ -4838,7 +4901,7 @@
       "resolved_version": "8.4.2",
       "latest_version": "9.1.1",
       "action": "update",
-      "note": "Package 'pytest' can be updated from 8.4.2 to 9.1.1. Review the changelog for breaking changes before updating. [last release: 2026-06-19]",
+      "note": "Package 'pytest' can be updated from 8.4.2 to 9.1.1. Review the changelog for breaking changes before updating. [14,468 stars | 3,334 forks | last release: 2026-06-19]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -5084,8 +5147,8 @@
         ],
         "version_metrics": {
           "release_count": 192,
-          "latest_release_age_days": 42,
-          "first_release_age_days": 5727,
+          "latest_release_age_days": 74,
+          "first_release_age_days": 5759,
           "avg_days_between_releases": 29.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 171,
@@ -5289,16 +5352,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pytest-dev/pytest",
         "owner": "pytest-dev",
         "name": "pytest",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 14468,
+        "forks": 3334,
+        "open_issues": 809,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-01T11:50:22Z",
+        "created_at": "2015-06-15T20:28:27Z",
+        "description": "The pytest framework makes it easy to write small tests, yet scales to support complex functional testing"
       },
       "direct_dependencies": [
         "colorama",
@@ -5332,7 +5395,7 @@
       "resolved_version": "7",
       "latest_version": "7.1.0",
       "action": "update",
-      "note": "Package 'pytest_cov' can be updated from 7 to 7.1.0. Review the changelog for breaking changes before updating. [last release: 2026-03-21]",
+      "note": "Package 'pytest_cov' can be updated from 7 to 7.1.0. Review the changelog for breaking changes before updating. [2,059 stars | 244 forks | last release: 2026-03-21]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -5430,8 +5493,8 @@
         ],
         "version_metrics": {
           "release_count": 54,
-          "latest_release_age_days": 132,
-          "first_release_age_days": 5941,
+          "latest_release_age_days": 164,
+          "first_release_age_days": 5974,
           "avg_days_between_releases": 109.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 761,
@@ -5497,16 +5560,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pytest-dev/pytest-cov",
         "owner": "pytest-dev",
         "name": "pytest-cov",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 2059,
+        "forks": 244,
+        "open_issues": 170,
+        "default_branch": "master",
+        "last_commit_date": "2026-04-24T21:33:08Z",
+        "created_at": "2014-04-17T20:01:12Z",
+        "description": "Coverage plugin for pytest."
       },
       "direct_dependencies": [
         "coverage",
@@ -5528,7 +5591,7 @@
       "resolved_version": "3.15.1",
       "latest_version": "3.15.1",
       "action": "none",
-      "note": "Package 'pytest_mock' is up to date at version 3.15.1 (latest: 3.15.1) for Python all. [License: MIT | last release: 2025-09-16]",
+      "note": "Package 'pytest_mock' is up to date at version 3.15.1 (latest: 3.15.1) for Python all. [License: MIT | 2,039 stars | 169 forks | last release: 2025-09-16]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -5637,8 +5700,8 @@
         ],
         "version_metrics": {
           "release_count": 66,
-          "latest_release_age_days": 318,
-          "first_release_age_days": 4397,
+          "latest_release_age_days": 350,
+          "first_release_age_days": 4430,
           "avg_days_between_releases": 62.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 430,
@@ -5716,16 +5779,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pytest-dev/pytest-mock",
         "owner": "pytest-dev",
         "name": "pytest-mock",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 2039,
+        "forks": 169,
+        "open_issues": 10,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-01T04:24:28Z",
+        "created_at": "2014-07-17T00:40:32Z",
+        "description": "Thin-wrapper around the mock package for easier use with pytest"
       },
       "direct_dependencies": [
         "pytest"
@@ -5745,7 +5808,7 @@
       "resolved_version": "3.8",
       "latest_version": "3.8.0",
       "action": "update",
-      "note": "Package 'pytest_xdist' can be updated from 3.8 to 3.8.0. Review the changelog for breaking changes before updating. [last release: 2025-07-01]",
+      "note": "Package 'pytest_xdist' can be updated from 3.8 to 3.8.0. Review the changelog for breaking changes before updating. [1,902 stars | 282 forks | last release: 2025-07-01]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -5860,8 +5923,8 @@
         ],
         "version_metrics": {
           "release_count": 71,
-          "latest_release_age_days": 395,
-          "first_release_age_days": 6038,
+          "latest_release_age_days": 427,
+          "first_release_age_days": 6070,
           "avg_days_between_releases": 80.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 657,
@@ -5944,16 +6007,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pytest-dev/pytest-xdist",
         "owner": "pytest-dev",
         "name": "pytest-xdist",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 1902,
+        "forks": 282,
+        "open_issues": 314,
+        "default_branch": "master",
+        "last_commit_date": "2026-09-01T04:23:59Z",
+        "created_at": "2015-09-01T18:51:45Z",
+        "description": "pytest plugin for distributed testing and loop-on-failures testing modes. "
       },
       "direct_dependencies": [
         "execnet",
@@ -5978,7 +6041,7 @@
       "resolved_version": "1.1",
       "latest_version": "1.1.0",
       "action": "update",
-      "note": "Package 're_assert' can be updated from 1.1 to 1.1.0. Review the changelog for breaking changes before updating. [License: MIT | last release: 2020-02-25]",
+      "note": "Package 're_assert' can be updated from 1.1 to 1.1.0. Review the changelog for breaking changes before updating. [License: MIT | 83 stars | 3 forks | last release: 2020-02-25]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -6017,8 +6080,8 @@
         ],
         "version_metrics": {
           "release_count": 3,
-          "latest_release_age_days": 2348,
-          "first_release_age_days": 2505,
+          "latest_release_age_days": 2381,
+          "first_release_age_days": 2537,
           "avg_days_between_releases": 78.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 156,
@@ -6033,16 +6096,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/asottile/re-assert",
         "owner": "asottile",
         "name": "re-assert",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 83,
+        "forks": 3,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-17T23:34:20Z",
+        "created_at": "2019-09-21T19:57:18Z",
+        "description": "show where your regex match assertion failed!"
       },
       "direct_dependencies": [
         "regex"
@@ -6054,9 +6117,9 @@
       "name": "setuptools",
       "requested_version": ">=80.9",
       "resolved_version": "80.9",
-      "latest_version": "83.0.0",
+      "latest_version": "84.0.0",
       "action": "update",
-      "note": "Package 'setuptools' can be updated from 80.9 to 83.0.0. Review the changelog for breaking changes before updating. [last release: 2026-07-04]",
+      "note": "Package 'setuptools' can be updated from 80.9 to 84.0.0. Review the changelog for breaking changes before updating. [2,858 stars | 1,428 forks | last release: 2026-08-08]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -6706,12 +6769,13 @@
           "82.0.0",
           "82.0.1",
           "83.0.0",
+          "84.0.0",
           "9.0",
           "9.0.1",
           "9.1"
         ],
         "first_release_date": "2006-05-12T22:42:21Z",
-        "latest_release_date": "2026-07-04T15:31:22.699337Z",
+        "latest_release_date": "2026-08-08T18:27:58.365696Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "pytest!=8.1.*,>=6; extra == \"test\"",
@@ -6766,13 +6830,13 @@
           "jaraco.develop>=7.21; sys_platform != \"cygwin\" and extra == \"type\""
         ],
         "version_metrics": {
-          "release_count": 623,
-          "latest_release_age_days": 27,
-          "first_release_age_days": 7384,
+          "release_count": 624,
+          "latest_release_age_days": 24,
+          "first_release_age_days": 7417,
           "avg_days_between_releases": 11.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1328,
-          "releases_last_year": 8,
+          "releases_last_year": 9,
           "release_dates": [
             "2006-05-12T22:42:21Z",
             "2006-06-01T15:45:26Z",
@@ -7396,23 +7460,24 @@
             "2026-02-08T14:12:32.364063Z",
             "2026-02-08T15:08:38.723596Z",
             "2026-03-09T12:47:15.026245Z",
-            "2026-07-04T15:31:20.885481Z"
+            "2026-07-04T15:31:20.885481Z",
+            "2026-08-08T18:27:56.719708Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/setuptools",
         "owner": "pypa",
         "name": "setuptools",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 2858,
+        "forks": 1428,
+        "open_issues": 698,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-09T13:06:58Z",
+        "created_at": "2016-03-29T14:02:33Z",
+        "description": "Official project repository for the Setuptools build system"
       },
       "direct_dependencies": [],
       "optional_dependencies": {
@@ -7486,9 +7551,9 @@
       "name": "time_machine",
       "requested_version": ">=2.19",
       "resolved_version": "2.19",
-      "latest_version": "3.3.0",
+      "latest_version": "3.5.0",
       "action": "update",
-      "note": "Package 'time_machine' can be updated from 2.19 to 3.3.0. Review the changelog for breaking changes before updating. [last release: 2026-07-31]",
+      "note": "Package 'time_machine' can be updated from 2.19 to 3.5.0. Review the changelog for breaking changes before updating. [994 stars | 53 forks | last release: 2026-08-25]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -7557,20 +7622,23 @@
           "3.0.0",
           "3.1.0",
           "3.2.0",
-          "3.3.0"
+          "3.3.0",
+          "3.3.1",
+          "3.4.0",
+          "3.5.0"
         ],
         "first_release_date": "2020-05-04T10:59:18.240610Z",
-        "latest_release_date": "2026-07-31T22:02:48.098620Z",
+        "latest_release_date": "2026-08-25T00:18:32.594291Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "tokenize-rt; extra == \"cli\"",
           "python-dateutil>=2.8.2; extra == \"dateutil\""
         ],
         "version_metrics": {
-          "release_count": 40,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 2279,
-          "avg_days_between_releases": 57.9,
+          "release_count": 43,
+          "latest_release_age_days": 8,
+          "first_release_age_days": 2311,
+          "avg_days_between_releases": 54.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 301,
           "releases_last_year": 7,
@@ -7614,23 +7682,26 @@
             "2025-11-18T16:21:52.389696Z",
             "2025-11-21T13:54:53.273590Z",
             "2025-12-17T23:31:30.181360Z",
-            "2026-07-31T22:01:56.893732Z"
+            "2026-07-31T22:01:56.893732Z",
+            "2026-08-04T08:49:41.884557Z",
+            "2026-08-10T22:24:18.920658Z",
+            "2026-08-25T00:17:24.585838Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/adamchainz/time-machine",
         "owner": "adamchainz",
         "name": "time-machine",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 994,
+        "forks": 53,
+        "open_issues": 8,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-28T21:43:30Z",
+        "created_at": "2020-04-29T06:16:39Z",
+        "description": "Travel through time in your tests."
       },
       "direct_dependencies": [],
       "optional_dependencies": {
@@ -7647,9 +7718,9 @@
       "name": "wheel",
       "requested_version": ">=0.45.1",
       "resolved_version": "0.45.1",
-      "latest_version": "0.47.0",
+      "latest_version": "0.48.0",
       "action": "update",
-      "note": "Package 'wheel' can be updated from 0.45.1 to 0.47.0. Review the changelog for breaking changes before updating. [last release: 2026-04-22]",
+      "note": "Package 'wheel' can be updated from 0.45.1 to 0.48.0. Review the changelog for breaking changes before updating. [572 stars | 188 forks | last release: 2026-08-11]",
       "source": "dependency-groups.test",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -7750,6 +7821,7 @@
           "0.46.2",
           "0.46.3",
           "0.47.0",
+          "0.48.0",
           "0.5",
           "0.6",
           "0.7",
@@ -7764,19 +7836,19 @@
           "0.9.7"
         ],
         "first_release_date": "2012-07-01T07:33:22.549763Z",
-        "latest_release_date": "2026-04-22T15:51:27.727817Z",
+        "latest_release_date": "2026-08-11T22:02:27.327210Z",
         "requires_python": ">=3.9",
         "requires_dist": [
           "packaging>=24.0"
         ],
         "version_metrics": {
-          "release_count": 83,
-          "latest_release_age_days": 100,
-          "first_release_age_days": 5143,
-          "avg_days_between_releases": 61.0,
+          "release_count": 84,
+          "latest_release_age_days": 21,
+          "first_release_age_days": 5175,
+          "avg_days_between_releases": 61.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 437,
-          "releases_last_year": 3,
+          "releases_last_year": 4,
           "release_dates": [
             "2012-07-01T07:33:22.549763Z",
             "2012-07-03T13:17:37.010047Z",
@@ -7860,23 +7932,24 @@
             "2025-04-08T20:55:39.551851Z",
             "2026-01-21T23:55:24.447101Z",
             "2026-01-22T12:39:48.099617Z",
-            "2026-04-22T15:51:26.296257Z"
+            "2026-04-22T15:51:26.296257Z",
+            "2026-08-11T22:02:26.100721Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/wheel",
         "owner": "pypa",
         "name": "wheel",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 572,
+        "forks": 188,
+        "open_issues": 7,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-13T21:09:00Z",
+        "created_at": "2017-07-25T20:24:25Z",
+        "description": "The official binary distribution format for Python"
       },
       "direct_dependencies": [
         "packaging"
@@ -7888,9 +7961,9 @@
       "name": "mypy",
       "requested_version": "==1.18.2",
       "resolved_version": "1.18.2",
-      "latest_version": "2.3.0",
+      "latest_version": "2.3.1",
       "action": "update",
-      "note": "Package 'mypy' can be updated from 1.18.2 to 2.3.0. Review the changelog for breaking changes before updating. [last release: 2026-07-13]",
+      "note": "Package 'mypy' can be updated from 1.18.2 to 2.3.1. Review the changelog for breaking changes before updating. [20,623 stars | 3,284 forks | last release: 2026-08-15]",
       "source": "dependency-groups.type",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -8060,10 +8133,11 @@
           "2.0.0",
           "2.1.0",
           "2.2.0",
-          "2.3.0"
+          "2.3.0",
+          "2.3.1"
         ],
         "first_release_date": "2009-09-09T17:34:48.968869Z",
-        "latest_release_date": "2026-07-13T11:34:53.387133Z",
+        "latest_release_date": "2026-08-15T03:03:38.549479Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "typing_extensions>=4.6.0; python_version < \"3.15\"",
@@ -8080,13 +8154,13 @@
           "orjson; extra == \"faster-cache\""
         ],
         "version_metrics": {
-          "release_count": 139,
+          "release_count": 140,
           "latest_release_age_days": 18,
-          "first_release_age_days": 6169,
-          "avg_days_between_releases": 44.1,
+          "first_release_age_days": 6201,
+          "avg_days_between_releases": 44.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 2137,
-          "releases_last_year": 11,
+          "releases_last_year": 12,
           "release_dates": [
             "2009-09-09T17:34:48.968869Z",
             "2009-09-10T16:03:37.813434Z",
@@ -8226,23 +8300,24 @@
             "2026-05-06T19:20:12.846809Z",
             "2026-05-11T18:31:18.070625Z",
             "2026-07-08T01:33:21.852767Z",
-            "2026-07-13T11:27:37.018666Z"
+            "2026-07-13T11:27:37.018666Z",
+            "2026-08-15T03:01:23.577672Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/python/mypy",
         "owner": "python",
         "name": "mypy",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 20623,
+        "forks": 3284,
+        "open_issues": 3221,
+        "default_branch": "master",
+        "last_commit_date": "2026-09-01T18:18:06Z",
+        "created_at": "2012-12-07T13:30:23Z",
+        "description": "Optional static typing for Python"
       },
       "direct_dependencies": [
         "typing_extensions",
@@ -8278,7 +8353,7 @@
       "resolved_version": "6.2.0.20250827",
       "latest_version": "7.0.0.20260713",
       "action": "update",
-      "note": "Package 'types_cachetools' can be updated from 6.2.0.20250827 to 7.0.0.20260713. Review the changelog for breaking changes before updating. [last release: 2026-07-13]",
+      "note": "Package 'types_cachetools' can be updated from 6.2.0.20250827 to 7.0.0.20260713. Review the changelog for breaking changes before updating. [5,119 stars | 2,079 forks | last release: 2026-07-13]",
       "source": "dependency-groups.type",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -8362,12 +8437,12 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 46,
-          "latest_release_age_days": 18,
-          "first_release_age_days": 2005,
+          "latest_release_age_days": 51,
+          "first_release_age_days": 2037,
           "avg_days_between_releases": 43.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 278,
-          "releases_last_year": 7,
+          "releases_last_year": 6,
           "release_dates": [
             "2021-02-02T20:27:35.392177Z",
             "2021-02-02T20:35:54.110793Z",
@@ -8421,16 +8496,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/python/typeshed",
         "owner": "python",
         "name": "typeshed",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 5119,
+        "forks": 2079,
+        "open_issues": 375,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-02T00:24:04Z",
+        "created_at": "2015-03-05T04:51:28Z",
+        "description": "Collection of library stubs for Python, with static types"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -8442,7 +8517,7 @@
       "resolved_version": "5.0.4.6",
       "latest_version": "5.0.4.6",
       "action": "none",
-      "note": "Package 'types_chardet' is up to date at version 5.0.4.6 (latest: 5.0.4.6) for Python all. [License: Apache-2.0 license | last release: 2023-05-10]",
+      "note": "Package 'types_chardet' is up to date at version 5.0.4.6 (latest: 5.0.4.6) for Python all. [License: Apache-2.0 license | 5,119 stars | 2,079 forks | last release: 2023-05-10]",
       "source": "dependency-groups.type",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -8502,8 +8577,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 22,
-          "latest_release_age_days": 1178,
-          "first_release_age_days": 2005,
+          "latest_release_age_days": 1210,
+          "first_release_age_days": 2037,
           "avg_days_between_releases": 38.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 113,
@@ -8537,16 +8612,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/python/typeshed",
         "owner": "python",
         "name": "typeshed",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 5119,
+        "forks": 2079,
+        "open_issues": 375,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-02T00:24:04Z",
+        "created_at": "2015-03-05T04:51:28Z",
+        "description": "Collection of library stubs for Python, with static types"
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -8558,7 +8633,7 @@
       "resolved_version": "2025.9.25",
       "latest_version": "2025.12.19",
       "action": "update",
-      "note": "Package 'furo' can be updated from 2025.9.25 to 2025.12.19. Review the changelog for breaking changes before updating. [last release: 2025-12-19]",
+      "note": "Package 'furo' can be updated from 2025.9.25 to 2025.12.19. Review the changelog for breaking changes before updating. [3,574 stars | 387 forks | last release: 2025-12-19]",
       "source": "dependency-groups.docs",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -8677,8 +8752,8 @@
         ],
         "version_metrics": {
           "release_count": 79,
-          "latest_release_age_days": 224,
-          "first_release_age_days": 2159,
+          "latest_release_age_days": 256,
+          "first_release_age_days": 2191,
           "avg_days_between_releases": 24.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 347,
@@ -8769,16 +8844,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pradyunsg/furo",
         "owner": "pradyunsg",
         "name": "furo",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 3574,
+        "forks": 387,
+        "open_issues": 51,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T21:26:17Z",
+        "created_at": "2020-09-01T21:08:17Z",
+        "description": "A clean customizable documentation theme for Sphinx"
       },
       "direct_dependencies": [
         "beautifulsoup4",
@@ -8796,7 +8871,7 @@
       "resolved_version": "8.2.3",
       "latest_version": "9.1.0",
       "action": "update",
-      "note": "Package 'sphinx' can be updated from 8.2.3 to 9.1.0. Review the changelog for breaking changes before updating. [last release: 2025-12-31]",
+      "note": "Package 'sphinx' can be updated from 8.2.3 to 9.1.0. Review the changelog for breaking changes before updating. [7,998 stars | 2,550 forks | last release: 2025-12-31]",
       "source": "dependency-groups.docs",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -9094,8 +9169,8 @@
         ],
         "version_metrics": {
           "release_count": 241,
-          "latest_release_age_days": 212,
-          "first_release_age_days": 6706,
+          "latest_release_age_days": 244,
+          "first_release_age_days": 6738,
           "avg_days_between_releases": 26.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 385,
@@ -9348,16 +9423,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/sphinx-doc/sphinx",
         "owner": "sphinx-doc",
         "name": "sphinx",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 7998,
+        "forks": 2550,
+        "open_issues": 1428,
+        "default_branch": "master",
+        "last_commit_date": "2026-08-31T00:47:47Z",
+        "created_at": "2015-01-02T10:53:28Z",
+        "description": "The Sphinx documentation generator"
       },
       "direct_dependencies": [
         "sphinxcontrib_applehelp",
@@ -9392,9 +9467,9 @@
       "name": "sphinx_argparse_cli",
       "requested_version": ">=1.20.1",
       "resolved_version": "1.20.1",
-      "latest_version": "1.22.0",
+      "latest_version": "1.23.0",
       "action": "update",
-      "note": "Package 'sphinx_argparse_cli' can be updated from 1.20.1 to 1.22.0. Review the changelog for breaking changes before updating. [last release: 2026-07-21]",
+      "note": "Package 'sphinx_argparse_cli' can be updated from 1.20.1 to 1.23.0. Review the changelog for breaking changes before updating. [28 stars | 11 forks | last release: 2026-08-27]",
       "source": "dependency-groups.docs",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -9449,6 +9524,8 @@
           "1.21.3",
           "1.21.4",
           "1.22.0",
+          "1.22.1",
+          "1.23.0",
           "1.3.0",
           "1.4.0",
           "1.5.0",
@@ -9463,19 +9540,19 @@
           "1.9.0"
         ],
         "first_release_date": "2021-02-05T11:04:01.192363Z",
-        "latest_release_date": "2026-07-21T13:10:11.313769Z",
+        "latest_release_date": "2026-08-27T16:50:18.361004Z",
         "requires_python": ">=3.11",
         "requires_dist": [
           "sphinx>=9.0.4"
         ],
         "version_metrics": {
-          "release_count": 37,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 2002,
-          "avg_days_between_releases": 54.9,
+          "release_count": 39,
+          "latest_release_age_days": 5,
+          "first_release_age_days": 2034,
+          "avg_days_between_releases": 52.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 302,
-          "releases_last_year": 8,
+          "releases_last_year": 10,
           "release_dates": [
             "2021-02-05T11:04:01.192363Z",
             "2021-02-05T12:08:05.843742Z",
@@ -9513,23 +9590,25 @@
             "2026-03-16T20:20:59.580702Z",
             "2026-03-19T19:53:49.870742Z",
             "2026-07-06T18:43:01.401051Z",
-            "2026-07-21T13:10:10.253284Z"
+            "2026-07-21T13:10:10.253284Z",
+            "2026-08-11T03:52:53.188798Z",
+            "2026-08-27T16:50:17.163294Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tox-dev/sphinx-argparse-cli",
         "owner": "tox-dev",
         "name": "sphinx-argparse-cli",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 28,
+        "forks": 11,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T17:51:38Z",
+        "created_at": "2021-02-05T00:17:52Z",
+        "description": "Render CLI arguments (sub-commands friendly) defined by the argparse module."
       },
       "direct_dependencies": [
         "sphinx"
@@ -9541,9 +9620,9 @@
       "name": "sphinx_autodoc_typehints",
       "requested_version": ">=3.5",
       "resolved_version": "3.5",
-      "latest_version": "3.13.0",
+      "latest_version": "3.13.5",
       "action": "update",
-      "note": "Package 'sphinx_autodoc_typehints' can be updated from 3.5 to 3.13.0. Review the changelog for breaking changes before updating. [last release: 2026-07-21]",
+      "note": "Package 'sphinx_autodoc_typehints' can be updated from 3.5 to 3.13.5. Review the changelog for breaking changes before updating. [589 stars | 113 forks | last release: 2026-09-01]",
       "source": "dependency-groups.docs",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -9677,6 +9756,11 @@
           "3.12.0",
           "3.12.1",
           "3.13.0",
+          "3.13.1",
+          "3.13.2",
+          "3.13.3",
+          "3.13.4",
+          "3.13.5",
           "3.2.0",
           "3.3.0",
           "3.4.0",
@@ -9703,19 +9787,19 @@
           "3.9.9"
         ],
         "first_release_date": "2015-09-21T21:56:19.387674Z",
-        "latest_release_date": "2026-07-21T13:10:44.981609Z",
+        "latest_release_date": "2026-09-01T18:05:47.658202Z",
         "requires_python": ">=3.12",
         "requires_dist": [
           "sphinx>=9.1"
         ],
         "version_metrics": {
-          "release_count": 128,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 3966,
-          "avg_days_between_releases": 30.7,
+          "release_count": 133,
+          "latest_release_age_days": 0,
+          "first_release_age_days": 3998,
+          "avg_days_between_releases": 29.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 261,
-          "releases_last_year": 35,
+          "releases_last_year": 40,
           "release_dates": [
             "2015-09-21T21:56:19.387674Z",
             "2015-09-22T01:32:38.090650Z",
@@ -9844,23 +9928,28 @@
             "2026-06-25T15:44:46.306736Z",
             "2026-07-03T13:52:07.696345Z",
             "2026-07-15T16:30:33.375040Z",
-            "2026-07-21T13:10:43.793524Z"
+            "2026-07-21T13:10:43.793524Z",
+            "2026-08-03T16:43:16.302574Z",
+            "2026-08-03T22:26:00.029722Z",
+            "2026-08-24T14:57:23.605321Z",
+            "2026-08-24T15:37:43.004551Z",
+            "2026-09-01T18:05:46.320896Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tox-dev/sphinx-autodoc-typehints",
         "owner": "tox-dev",
         "name": "sphinx-autodoc-typehints",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 589,
+        "forks": 113,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-01T18:05:11Z",
+        "created_at": "2015-09-21T20:41:41Z",
+        "description": "Type hints support for the Sphinx autodoc extension"
       },
       "direct_dependencies": [
         "sphinx"
@@ -9874,7 +9963,7 @@
       "resolved_version": "0.5.2",
       "latest_version": "0.5.2",
       "action": "none",
-      "note": "Package 'sphinx_copybutton' is up to date at version 0.5.2 (latest: 0.5.2) for Python all. [License: MIT License | last release: 2023-04-14]",
+      "note": "Package 'sphinx_copybutton' is up to date at version 0.5.2 (latest: 0.5.2) for Python all. [License: MIT License | 270 stars | 58 forks | last release: 2023-04-14]",
       "source": "dependency-groups.docs",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -9946,8 +10035,8 @@
         ],
         "version_metrics": {
           "release_count": 30,
-          "latest_release_age_days": 1204,
-          "first_release_age_days": 2946,
+          "latest_release_age_days": 1236,
+          "first_release_age_days": 2979,
           "avg_days_between_releases": 59.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 293,
@@ -9989,16 +10078,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/executablebooks/sphinx-copybutton",
         "owner": "executablebooks",
         "name": "sphinx-copybutton",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 270,
+        "forks": 58,
+        "open_issues": 48,
+        "default_branch": "master",
+        "last_commit_date": "2026-06-03T23:46:16Z",
+        "created_at": "2018-07-06T21:11:09Z",
+        "description": "Add a \"copy\" button to code blocks in Sphinx"
       },
       "direct_dependencies": [
         "sphinx"
@@ -10023,7 +10112,7 @@
       "resolved_version": "2023.4.21",
       "latest_version": "2025.12.21.14",
       "action": "update",
-      "note": "Package 'sphinx_inline_tabs' can be updated from 2023.4.21 to 2025.12.21.14. Review the changelog for breaking changes before updating. [last release: 2025-12-21]",
+      "note": "Package 'sphinx_inline_tabs' can be updated from 2023.4.21 to 2025.12.21.14. Review the changelog for breaking changes before updating. [91 stars | 22 forks | last release: 2025-12-21]",
       "source": "dependency-groups.docs",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10079,8 +10168,8 @@
         ],
         "version_metrics": {
           "release_count": 14,
-          "latest_release_age_days": 222,
-          "first_release_age_days": 2116,
+          "latest_release_age_days": 254,
+          "first_release_age_days": 2148,
           "avg_days_between_releases": 145.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 974,
@@ -10106,16 +10195,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pradyunsg/sphinx-inline-tabs",
         "owner": "pradyunsg",
         "name": "sphinx-inline-tabs",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 91,
+        "forks": 22,
+        "open_issues": 16,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T21:26:26Z",
+        "created_at": "2020-10-14T13:09:18Z",
+        "description": "Add inline tabbed content to your Sphinx documentation. (maintained, though extremely stable as of Jan 2022)"
       },
       "direct_dependencies": [
         "sphinx"
@@ -10139,7 +10228,7 @@
       "resolved_version": "0.2.1a0",
       "latest_version": "0.5.0a0",
       "action": "update",
-      "note": "Package 'sphinxcontrib_towncrier' can be updated from 0.2.1a0 to 0.5.0a0. Review the changelog for breaking changes before updating. [License: BSD 3-Clause License | last release: 2025-02-28]",
+      "note": "Package 'sphinxcontrib_towncrier' can be updated from 0.2.1a0 to 0.5.0a0. Review the changelog for breaking changes before updating. [License: BSD 3-Clause License | 20 stars | 17 forks | last release: 2025-02-28]",
       "source": "dependency-groups.docs",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10191,8 +10280,8 @@
         ],
         "version_metrics": {
           "release_count": 13,
-          "latest_release_age_days": 518,
-          "first_release_age_days": 2091,
+          "latest_release_age_days": 551,
+          "first_release_age_days": 2123,
           "avg_days_between_releases": 130.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 476,
@@ -10217,16 +10306,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/sphinx-contrib/sphinxcontrib-towncrier",
         "owner": "sphinx-contrib",
         "name": "sphinxcontrib-towncrier",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 20,
+        "forks": 17,
+        "open_issues": 12,
+        "default_branch": "master",
+        "last_commit_date": "2026-07-06T21:36:21Z",
+        "created_at": "2020-08-01T14:27:02Z",
+        "description": "An RST directive for injecting a Towncrier-generated changelog draft containing fragments for the unreleased (next) project version. Demo: https://ansible-pylibssh.rtfd.io/changelog. Docs: https://sphinxcontrib-towncrier.rtfd.io"
       },
       "direct_dependencies": [
         "sphinx",
@@ -10241,7 +10330,7 @@
       "resolved_version": "25.8",
       "latest_version": "25.8.0",
       "action": "update",
-      "note": "Package 'towncrier' can be updated from 25.8 to 25.8.0. Review the changelog for breaking changes before updating. [last release: 2025-08-30]",
+      "note": "Package 'towncrier' can be updated from 25.8 to 25.8.0. Review the changelog for breaking changes before updating. [919 stars | 132 forks | last release: 2025-08-30]",
       "source": "dependency-groups.release",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10331,12 +10420,12 @@
         ],
         "version_metrics": {
           "release_count": 38,
-          "latest_release_age_days": 335,
-          "first_release_age_days": 3869,
+          "latest_release_age_days": 367,
+          "first_release_age_days": 3901,
           "avg_days_between_releases": 95.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 550,
-          "releases_last_year": 2,
+          "releases_last_year": 0,
           "release_dates": [
             "2015-12-27T14:36:37.525572Z",
             "2015-12-29T10:58:43.562263Z",
@@ -10382,16 +10471,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/twisted/towncrier",
         "owner": "twisted",
         "name": "towncrier",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 919,
+        "forks": 132,
+        "open_issues": 70,
+        "default_branch": "trunk",
+        "last_commit_date": "2026-08-23T22:01:20Z",
+        "created_at": "2015-12-27T14:23:37Z",
+        "description": "Manage the release notes for your project."
       },
       "direct_dependencies": [
         "click",
@@ -10419,7 +10508,7 @@
       "resolved_version": "4.1.5",
       "latest_version": "4.3.0",
       "action": "update",
-      "note": "Package 'pre_commit_uv' can be updated from 4.1.5 to 4.3.0. Review the changelog for breaking changes before updating. [License: Permission is hereby granted, free of charge, to any person obtaining a\n        copy of this software and associated documentation files (the\n        \"Software\"), to deal in the Software without restriction, including\n        without limitation the rights to use, copy, modify, merge, publish,\n        distribute, sublicense, and/or sell copies of the Software, and to\n        permit persons to whom the Software is furnished to do so, subject to\n        the following conditions:\n        \n        The above copyright notice and this permission notice shall be included\n        in all copies or substantial portions of the Software.\n        \n        THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\n        OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\n        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\n        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\n        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\n        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. | last release: 2026-07-21]",
+      "note": "Package 'pre_commit_uv' can be updated from 4.1.5 to 4.3.0. Review the changelog for breaking changes before updating. [License: Permission is hereby granted, free of charge, to any person obtaining a\n        copy of this software and associated documentation files (the\n        \"Software\"), to deal in the Software without restriction, including\n        without limitation the rights to use, copy, modify, merge, publish,\n        distribute, sublicense, and/or sell copies of the Software, and to\n        permit persons to whom the Software is furnished to do so, subject to\n        the following conditions:\n        \n        The above copyright notice and this permission notice shall be included\n        in all copies or substantial portions of the Software.\n        \n        THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS\n        OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\n        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\n        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\n        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\n        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. | 205 stars | 7 forks | last release: 2026-07-21]",
       "source": "dependency-groups.fix",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10477,12 +10566,12 @@
         ],
         "version_metrics": {
           "release_count": 18,
-          "latest_release_age_days": 10,
-          "first_release_age_days": 882,
+          "latest_release_age_days": 42,
+          "first_release_age_days": 914,
           "avg_days_between_releases": 50.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 301,
-          "releases_last_year": 5,
+          "releases_last_year": 4,
           "release_dates": [
             "2024-03-01T19:13:57.195275Z",
             "2024-03-01T19:26:00.614243Z",
@@ -10508,15 +10597,15 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/tox-dev/pre-commit-uv",
         "owner": "tox-dev",
         "name": "pre-commit-uv",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
+        "stars": 205,
+        "forks": 7,
+        "open_issues": 0,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T17:51:24Z",
+        "created_at": "2024-08-05T17:11:23Z",
         "description": null
       },
       "direct_dependencies": [
@@ -10532,7 +10621,7 @@
       "resolved_version": "0.6.3",
       "latest_version": "0.6.3",
       "action": "none",
-      "note": "Package 'check_wheel_contents' is up to date at version 0.6.3 (latest: 0.6.3) for Python all. [last release: 2025-08-02]",
+      "note": "Package 'check_wheel_contents' is up to date at version 0.6.3 (latest: 0.6.3) for Python all. [168 stars | 8 forks | last release: 2025-08-02]",
       "source": "dependency-groups.pkg-meta",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10588,12 +10677,12 @@
         ],
         "version_metrics": {
           "release_count": 13,
-          "latest_release_age_days": 363,
-          "first_release_age_days": 2311,
+          "latest_release_age_days": 395,
+          "first_release_age_days": 2343,
           "avg_days_between_releases": 161.9,
           "min_days_between_releases": 6,
           "max_days_between_releases": 396,
-          "releases_last_year": 1,
+          "releases_last_year": 0,
           "release_dates": [
             "2020-04-02T19:51:36.666672Z",
             "2020-11-07T21:20:23.032407Z",
@@ -10614,16 +10703,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/jwodder/check-wheel-contents",
         "owner": "jwodder",
         "name": "check-wheel-contents",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 168,
+        "forks": 8,
+        "open_issues": 32,
+        "default_branch": "master",
+        "last_commit_date": "2026-07-20T12:44:47Z",
+        "created_at": "2020-03-24T17:18:51Z",
+        "description": "Check your wheels have the right contents"
       },
       "direct_dependencies": [
         "attrs",
@@ -10643,7 +10732,7 @@
       "resolved_version": "6.2",
       "latest_version": "7.0.0",
       "action": "update",
-      "note": "Package 'twine' can be updated from 6.2 to 7.0.0. Review the changelog for breaking changes before updating. [last release: 2026-07-27]",
+      "note": "Package 'twine' can be updated from 6.2 to 7.0.0. Review the changelog for breaking changes before updating. [1,788 stars | 335 forks | last release: 2026-07-27]",
       "source": "dependency-groups.pkg-meta",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10751,8 +10840,8 @@
         ],
         "version_metrics": {
           "release_count": 60,
-          "latest_release_age_days": 4,
-          "first_release_age_days": 4691,
+          "latest_release_age_days": 36,
+          "first_release_age_days": 4723,
           "avg_days_between_releases": 78.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 437,
@@ -10824,16 +10913,16 @@
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/pypa/twine",
         "owner": "pypa",
         "name": "twine",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 1788,
+        "forks": 335,
+        "open_issues": 53,
+        "default_branch": "main",
+        "last_commit_date": "2026-08-31T19:54:33Z",
+        "created_at": "2013-08-13T15:39:39Z",
+        "description": "Utilities for interacting with PyPI"
       },
       "direct_dependencies": [
         "readme_renderer",
@@ -10857,9 +10946,9 @@
       "name": "uv",
       "requested_version": ">=0.9",
       "resolved_version": "0.9",
-      "latest_version": "0.12.1",
+      "latest_version": "0.12.9",
       "action": "update",
-      "note": "Package 'uv' can be updated from 0.9 to 0.12.1. Review the changelog for breaking changes before updating. [last release: 2026-07-31]",
+      "note": "Package 'uv' can be updated from 0.9 to 0.12.9. Review the changelog for breaking changes before updating. [89,345 stars | 3,531 forks | last release: 2026-09-01]",
       "source": "dependency-groups.pkg-meta",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10987,6 +11076,14 @@
           "0.11.9",
           "0.12.0",
           "0.12.1",
+          "0.12.2",
+          "0.12.3",
+          "0.12.4",
+          "0.12.5",
+          "0.12.6",
+          "0.12.7",
+          "0.12.8",
+          "0.12.9",
           "0.2.0",
           "0.2.1",
           "0.2.10",
@@ -11193,17 +11290,17 @@
           "0.9.9"
         ],
         "first_release_date": "2024-02-15T18:56:14.105999Z",
-        "latest_release_date": "2026-07-31T19:42:35.054162Z",
+        "latest_release_date": "2026-09-01T21:57:47.305791Z",
         "requires_python": ">=3.8",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 300,
+          "release_count": 308,
           "latest_release_age_days": 0,
-          "first_release_age_days": 897,
+          "first_release_age_days": 929,
           "avg_days_between_releases": 2.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 13,
-          "releases_last_year": 100,
+          "releases_last_year": 98,
           "release_dates": [
             "2024-02-15T18:56:14.105999Z",
             "2024-02-15T19:44:47.783250Z",
@@ -11504,23 +11601,31 @@
             "2026-07-23T23:05:06.297619Z",
             "2026-07-28T10:24:12.173432Z",
             "2026-07-28T18:56:27.552370Z",
-            "2026-07-31T19:41:34.827602Z"
+            "2026-07-31T19:41:34.827602Z",
+            "2026-08-05T19:20:52.663855Z",
+            "2026-08-07T16:32:18.631507Z",
+            "2026-08-13T21:13:42.906975Z",
+            "2026-08-14T19:55:51.357651Z",
+            "2026-08-25T19:38:55.356070Z",
+            "2026-08-27T22:12:36.485861Z",
+            "2026-08-31T22:17:24.331162Z",
+            "2026-09-01T21:57:01.443014Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/astral-sh/uv",
         "owner": "astral-sh",
         "name": "uv",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 89345,
+        "forks": 3531,
+        "open_issues": 2867,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-02T00:00:00Z",
+        "created_at": "2023-10-02T20:24:11Z",
+        "description": "An extremely fast Python package and project manager, written in Rust."
       },
       "direct_dependencies": [],
       "optional_dependencies": {},
@@ -11532,9 +11637,9 @@
       "name": "gitpython",
       "requested_version": ">=3.1.45",
       "resolved_version": "3.1.45",
-      "latest_version": "3.1.57",
+      "latest_version": "3.1.61",
       "action": "update",
-      "note": "Package 'gitpython' can be updated from 3.1.45 to 3.1.57. Review the changelog for breaking changes before updating. [License: BSD-3-Clause | last release: 2026-07-26]",
+      "note": "Package 'gitpython' can be updated from 3.1.45 to 3.1.61. Review the changelog for breaking changes before updating. [License: BSD-3-Clause | 5,177 stars | 992 forks | last release: 2026-08-28]",
       "source": "dependency-groups.release",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -11667,13 +11772,17 @@
           "3.1.55",
           "3.1.56",
           "3.1.57",
+          "3.1.58",
+          "3.1.59",
           "3.1.6",
+          "3.1.60",
+          "3.1.61",
           "3.1.7",
           "3.1.8",
           "3.1.9"
         ],
         "first_release_date": "2010-03-21T02:56:30.287083Z",
-        "latest_release_date": "2026-07-26T07:33:26.351341Z",
+        "latest_release_date": "2026-08-28T11:01:13.761889Z",
         "requires_python": ">=3.7",
         "requires_dist": [
           "gitdb<5,>=4.0.1",
@@ -11695,13 +11804,13 @@
           "sphinx-autodoc-typehints; extra == \"doc\""
         ],
         "version_metrics": {
-          "release_count": 109,
-          "latest_release_age_days": 5,
-          "first_release_age_days": 5976,
-          "avg_days_between_releases": 54.8,
+          "release_count": 113,
+          "latest_release_age_days": 4,
+          "first_release_age_days": 6009,
+          "avg_days_between_releases": 53.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1226,
-          "releases_last_year": 12,
+          "releases_last_year": 16,
           "release_dates": [
             "2010-03-21T02:56:30.287083Z",
             "2010-05-25T20:22:52.981217Z",
@@ -11811,23 +11920,27 @@
             "2026-07-22T04:08:50.050852Z",
             "2026-07-23T02:52:41.932445Z",
             "2026-07-25T07:41:41.737433Z",
-            "2026-07-26T07:33:24.838778Z"
+            "2026-07-26T07:33:24.838778Z",
+            "2026-08-04T15:05:48.025952Z",
+            "2026-08-10T12:03:18.804945Z",
+            "2026-08-25T18:33:44.750755Z",
+            "2026-08-28T11:01:12.262613Z"
           ]
         },
         "download_stats": null
       },
       "repo_metadata": {
         "repo_type": "github",
-        "url": null,
+        "url": "https://github.com/gitpython-developers/GitPython",
         "owner": "gitpython-developers",
         "name": "GitPython",
-        "stars": null,
-        "forks": null,
-        "open_issues": null,
-        "default_branch": null,
-        "last_commit_date": null,
-        "created_at": null,
-        "description": null
+        "stars": 5177,
+        "forks": 992,
+        "open_issues": 8,
+        "default_branch": "main",
+        "last_commit_date": "2026-09-02T03:27:10Z",
+        "created_at": "2010-11-30T17:34:03Z",
+        "description": "GitPython is a python library used to interact with Git repositories."
       },
       "direct_dependencies": [
         "gitdb",
@@ -11879,6 +11992,7 @@
       "pathspec",
       "pluggy",
       "tomli",
+      "tomlkit",
       "trove_classifiers"
     ],
     "build": [
