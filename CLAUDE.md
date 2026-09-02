@@ -93,7 +93,7 @@ pyproj_dep_analyze/
 - **Single Source of Truth**: Package version is in `pyproject.toml` (`[project].version`)
 - **Version Bumps**: update `pyproject.toml`, `CHANGELOG.md` and update the constants in `src/pyproj_dep_analyze/__init__conf__.py` according to `pyproject.toml`
     - Automation rewrites `src/pyproj_dep_analyze/__init__conf__.py` from `pyproject.toml`, so runtime code imports generated constants instead of querying `importlib.metadata`.
-    - After updating project metadata (version, summary, URLs, authors) run `make test` (or `python -m scripts.test`) to regenerate the metadata module before committing.
+    - bmk regenerates that metadata module itself - it runs as a stage of `make bump`, and again before every `make commit` / `make push`. `make test` does not regenerate it, and the generated constants are never hand-edited.
 - **Release Tags**: Format is `vX.Y.Z` (push tags for CI to build and publish)
 
 ## Make targets specific to this repo
