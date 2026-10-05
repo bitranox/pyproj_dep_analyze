@@ -13,7 +13,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
   It now runs `cli.main()`, the function the console scripts run.
 
 ### Changed
-- Raised dependency and dev tool floors to their current releases.
+- Raised dependency floors across major versions: lib_layered_config 7.0.1 (was 5.6.2); the test suite passes against them. Also raised the remaining dependency and dev tool floors.
 
 ## [4.0.5] 2026-08-01 00:34:00
 ### Fixed
