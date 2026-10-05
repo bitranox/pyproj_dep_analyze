@@ -125,20 +125,13 @@ stand-in domain.
   or the exit code produced by ``lib_cli_exit_tools``.
 * **Location:** src/pyproj_dep_analyze/cli.py
 
-### __main__._module_main
+### __main__
 
-* **Purpose:** Provide ``python -m`` entry point mirroring the console script.
-* **Input:** None.
-* **Output:** Exit code from ``cli.main`` after restoring traceback state.
-* **Location:** src/pyproj_dep_analyze/__main__.py
-
-### __main__._open_cli_session / _command_to_run / _command_name
-
-* **Purpose:** Describe the session wiring and command selection used by the
-  module entry point so tests and documentation can reason about the
-  composition.
-* **Output:** Context manager yielding the command runner, the Click command
-  itself, and the shell-facing name.
+* **Purpose:** Provide the ``python -m pyproj_dep_analyze`` entry point by
+  running ``cli.main`` directly, so it is the same code path as the console
+  scripts.
+* **Input:** ``sys.argv``.
+* **Output:** ``SystemExit`` carrying the exit code returned by ``cli.main``.
 * **Location:** src/pyproj_dep_analyze/__main__.py
 
 ### __init__conf__.print_info

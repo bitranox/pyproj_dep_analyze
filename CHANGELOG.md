@@ -6,6 +6,15 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 
 ## [Unreleased]
 
+## [4.0.6] 2026-10-05 20:01:30
+### Fixed
+- **`python -m pyproj_dep_analyze` now behaves exactly like the console script.** The module entry
+  ran its own `cli_session`, so a usage error (bad flag, unknown command) exited 1 instead of 2.
+  It now runs `cli.main()`, the function the console scripts run.
+
+### Changed
+- Raised dependency and dev tool floors to their current releases.
+
 ## [4.0.5] 2026-08-01 00:34:00
 ### Fixed
 - **Console output no longer crashes on a legacy codepage.** A Windows console at codepage 1252
