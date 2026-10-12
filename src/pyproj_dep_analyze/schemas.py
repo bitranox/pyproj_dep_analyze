@@ -302,7 +302,9 @@ class AnalyzerConfigSchema(BaseModel):
     Validates analyzer settings loaded from config files or environment.
     """
 
-    model_config = ConfigDict(frozen=True, extra="ignore")
+    # lib_layered_config reads an unquoted all-digit value as an int, and a str field refuses an int.
+    # The conversion is lossless, so turning it back into text restores what the operator wrote.
+    model_config = ConfigDict(frozen=True, extra="ignore", coerce_numbers_to_str=True)
 
     github_token: str = ""
     timeout: float = 30.0

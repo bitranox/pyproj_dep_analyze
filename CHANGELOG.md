@@ -6,6 +6,15 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 
 ## [Unreleased]
 
+### Fixed
+- **A digit-only `.env` value no longer stops the program.** lib_layered_config 7.1 reads an
+  unquoted `.env` or environment value that spells a number losslessly as an int, so
+  `ANALYZER__GITHUB_TOKEN=123456` reached `AnalyzerConfigSchema` as a number and was refused with
+  `Input should be a valid string`. `AnalyzerConfigSchema` and `AnalyzerSettings` now turn such a
+  number back into the text the operator wrote, and the logging setup does the same for
+  `LIB_LOG_RICH__SERVICE` and `LIB_LOG_RICH__ENVIRONMENT`. Numeric settings still read as numbers
+  and a non-numeric concurrency is still refused.
+
 ## [4.0.6] 2026-10-05 20:01:30
 ### Fixed
 - **`python -m pyproj_dep_analyze` now behaves exactly like the console script.** The module entry
