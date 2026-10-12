@@ -6,6 +6,8 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 
 ## [Unreleased]
 
+## [4.0.7] 2026-10-12 19:25:14
+
 ### Fixed
 - **A digit-only `.env` value no longer stops the program.** lib_layered_config 7.1 reads an
   unquoted `.env` or environment value that spells a number losslessly as an int, so

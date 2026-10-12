@@ -1,6 +1,6 @@
 [project]
 name = "pyproj_dep_analyze"
-version = "4.0.6"
+version = "4.0.7"
 description = "Python project dependency analyzer"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -240,3 +240,7 @@ layers = [
 # CVE-2026-25645: requests extract_zipped_paths temp-file reuse; helper unused by us (fixed upstream in 2.33.0)
 # CVE-2026-44405: paramiko allows SHA-1 for RSA keys; NOT a dependency of this project (shared-venv audit noise), no fix available
 ignore-vulns = ["GHSA-4xh5-x5gv-qwph", "PYSEC-2022-42969", "CVE-2025-66418", "CVE-2025-66471", "PYSEC-2022-43012", "PYSEC-2025-49", "CVE-2024-6345", "CVE-2026-25990", "CVE-2026-26007", "CVE-2026-4539", "CVE-2026-25645", "CVE-2026-44405"]
+
+[tool.uv]
+exclude-newer = "1 day"
+exclude-newer-package = {lib-cli-exit-tools = false, lib-layered-config = false, lib-log-rich = false, pydantic = "2026-10-11T18:37:56Z", pydantic-core = "2026-10-11T18:35:45Z", rtoml = "2026-10-12T00:17:16Z"}
