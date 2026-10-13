@@ -23,14 +23,14 @@
 
 When developers build applications rapidly with AI assistance, the focus is on functionality, not supply chain security. Dependencies get added without scrutiny, creating blind spots that attackers exploit:
 
-| Attack Vector | Description |
-|--------------|-------------|
-| **Typosquatting** | Malicious packages with names similar to popular ones (`reqeusts` vs `requests`) |
-| **Dependency Confusion** | Private package names hijacked on public PyPI |
-| **Malicious Updates** | Legitimate packages compromised via maintainer account takeover |
-| **Abandoned Package Takeover** | Unmaintained packages acquired by bad actors |
-| **Protestware / Sabotage** | Maintainers intentionally breaking their own packages |
-| **Hidden Malware** | Obfuscated code in install scripts or deep dependencies |
+| Attack Vector                  | Description                                                                      |
+|--------------------------------|----------------------------------------------------------------------------------|
+| **Typosquatting**              | Malicious packages with names similar to popular ones (`reqeusts` vs `requests`) |
+| **Dependency Confusion**       | Private package names hijacked on public PyPI                                    |
+| **Malicious Updates**          | Legitimate packages compromised via maintainer account takeover                  |
+| **Abandoned Package Takeover** | Unmaintained packages acquired by bad actors                                     |
+| **Protestware / Sabotage**     | Maintainers intentionally breaking their own packages                            |
+| **Hidden Malware**             | Obfuscated code in install scripts or deep dependencies                          |
 
 `pyproj_dep_analyze` provides **visibility into your dependency landscape**, generating structured data that feeds into security workflows:
 
@@ -78,15 +78,15 @@ pyproj_dep_analyze  →  pyproj_dep_security  →  pyproj_dep_update
 
 ### What `pyproj_dep_analyze` Does
 
-| Capability               | Description                                                    |
-|--------------------------|----------------------------------------------------------------|
-| **Parse pyproject.toml** | Extract dependencies from PEP 621, Poetry, PDM, Hatch formats  |
-| **Check for updates**    | Query PyPI/GitHub for latest compatible versions               |
-| **Enrich with metadata** | License, stars, forks, release dates, maintainers              |
-| **Version metrics**      | Release frequency, project age, abandonment indicators         |
-| **Download statistics**  | Popularity metrics from pypistats.org                          |
-| **Index detection**      | Identify which package index serves each dependency            |
-| **Direct dependencies**  | Extract immediate dependencies from `requires_dist`            |
+| Capability               | Description                                                   |
+|--------------------------|---------------------------------------------------------------|
+| **Parse pyproject.toml** | Extract dependencies from PEP 621, Poetry, PDM, Hatch formats |
+| **Check for updates**    | Query PyPI/GitHub for latest compatible versions              |
+| **Enrich with metadata** | License, stars, forks, release dates, maintainers             |
+| **Version metrics**      | Release frequency, project age, abandonment indicators        |
+| **Download statistics**  | Popularity metrics from pypistats.org                         |
+| **Index detection**      | Identify which package index serves each dependency           |
+| **Direct dependencies**  | Extract immediate dependencies from `requires_dist`           |
 
 ### What Belongs in `pyproj_dep_security` (Separate Project)
 
@@ -101,15 +101,15 @@ pyproj_dep_analyze  →  pyproj_dep_security  →  pyproj_dep_update
 
 ### What Belongs in `pyproj_dep_update` (Separate Project)
 
-| Capability                    | Reason                                                |
-|-------------------------------|-------------------------------------------------------|
-| **Update pyproject.toml**     | Modifies project files (write operation)              |
-| **Pin indirect dependencies** | Add transitive deps with CVEs to explicit deps        |
-| **CVE-driven version bumps**  | Requires vulnerability scan results (Bandit/OSV)      |
-| **Generate constraints.txt**  | Create pip constraints for indirect deps              |
-| **Batch update operations**   | Update all / security-only / major/minor/patch        |
-| **Lock file regeneration**    | Update poetry.lock, pdm.lock, uv.lock after changes   |
-| **Update local libraries**    | Bump versions of local/workspace dependencies         |
+| Capability                    | Reason                                              |
+|-------------------------------|-----------------------------------------------------|
+| **Update pyproject.toml**     | Modifies project files (write operation)            |
+| **Pin indirect dependencies** | Add transitive deps with CVEs to explicit deps      |
+| **CVE-driven version bumps**  | Requires vulnerability scan results (Bandit/OSV)    |
+| **Generate constraints.txt**  | Create pip constraints for indirect deps            |
+| **Batch update operations**   | Update all / security-only / major/minor/patch      |
+| **Lock file regeneration**    | Update poetry.lock, pdm.lock, uv.lock after changes |
+| **Update local libraries**    | Bump versions of local/workspace dependencies       |
 
 > **Design Principle:**
 > - `pyproj_dep_analyze` analyzes *declared* dependencies from project files
@@ -136,6 +136,36 @@ pip install pyproj_dep_analyze
 
 Both `pyproj_dep_analyze` and `pyproj-dep-analyze` commands are available after installation.
 
+### Why we recommend uv: supply-chain protection
+
+This repository commits a `uv.lock`. It pins every package the project needs, transitive
+dependencies included, to an exact version and to the hashes of that version's files. The
+`exclude-newer` setting under `[tool.uv]` in `pyproject.toml` adds a cooldown: uv leaves any
+release younger than that out of the lock. CI installs from the lock, so a hijacked release that
+gets pulled again within the cooldown never reaches our builds, and a file whose hash does not
+match is refused.
+
+That protection stays in this repository. The installable package declares only lower bounds
+(`>=`) for its dependencies, so a plain `pip install` takes the newest release of every transitive
+dependency at the moment you run it. If one of them was hijacked an hour earlier, you get the
+hijacked version. `pipx install` and `uv tool install` without options do the same.
+
+To install the command line tool with a cooldown of your own (uv then skips any release younger
+than 7 days, transitive ones included), or to run the exact tree our CI tests:
+
+```bash
+uv tool install --exclude-newer "7 days" pyproj_dep_analyze
+git clone https://github.com/bitranox/pyproj_dep_analyze.git && cd pyproj_dep_analyze && uv sync --locked && uv run pyproj_dep_analyze --help
+```
+
+If you depend on pyproj_dep_analyze in your own project, give that project the same cooldown (7 days here, as
+an example) and commit the `uv.lock` that `uv add pyproj_dep_analyze` writes:
+
+```toml
+[tool.uv]
+exclude-newer = "7 days"
+```
+
 ---
 
 ## Quick Start
@@ -160,11 +190,11 @@ pyproj-dep-analyze info
 
 ### Global Options
 
-| Option                        | Description                         | Default           |
-|-------------------------------|-------------------------------------|-------------------|
-| `--traceback / --no-traceback`| Show full Python traceback on errors| `--no-traceback`  |
-| `-h, --help`                  | Show help message                   | -                 |
-| `--version`                   | Show version and exit               | -                 |
+| Option                         | Description                          | Default          |
+|--------------------------------|--------------------------------------|------------------|
+| `--traceback / --no-traceback` | Show full Python traceback on errors | `--no-traceback` |
+| `-h, --help`                   | Show help message                    | -                |
+| `--version`                    | Show version and exit                | -                |
 
 ---
 
@@ -178,27 +208,27 @@ pyproj-dep-analyze analyze [PYPROJECT_PATH] [OPTIONS]
 
 #### Arguments
 
-| Argument         | Description                  | Default           |
-|------------------|------------------------------|-------------------|
-| `PYPROJECT_PATH` | Path to pyproject.toml file  | `pyproject.toml`  |
+| Argument         | Description                 | Default          |
+|------------------|-----------------------------|------------------|
+| `PYPROJECT_PATH` | Path to pyproject.toml file | `pyproject.toml` |
 
 #### Options
 
-| Option              | Description                        | Env Variable                                           | Default          |
-|---------------------|------------------------------------|--------------------------------------------------------|------------------|
-| `-o, --output`      | Output file path                   | -                                                      | `outdated.json`  |
-| `--github-token`    | GitHub API token                   | `GITHUB_TOKEN`, `PYPROJ_DEP_ANALYZE_GITHUB_TOKEN`      | `None`           |
-| `--timeout`         | Request timeout (seconds)          | `PYPROJ_DEP_ANALYZE_TIMEOUT`                           | `30.0`           |
-| `--concurrency`     | Max concurrent API requests        | `PYPROJ_DEP_ANALYZE_CONCURRENCY`                       | `10`             |
-| `--format`          | Output format                      | -                                                      | `table`          |
+| Option           | Description                 | Env Variable                                      | Default         |
+|------------------|-----------------------------|---------------------------------------------------|-----------------|
+| `-o, --output`   | Output file path            | -                                                 | `outdated.json` |
+| `--github-token` | GitHub API token            | `GITHUB_TOKEN`, `PYPROJ_DEP_ANALYZE_GITHUB_TOKEN` | `None`          |
+| `--timeout`      | Request timeout (seconds)   | `PYPROJ_DEP_ANALYZE_TIMEOUT`                      | `30.0`          |
+| `--concurrency`  | Max concurrent API requests | `PYPROJ_DEP_ANALYZE_CONCURRENCY`                  | `10`            |
+| `--format`       | Output format               | -                                                 | `table`         |
 
 **Format Options:**
 
-| Format    | Description                                              |
-|-----------|----------------------------------------------------------|
-| `table`   | Summary statistics + lists of updates and manual checks  |
-| `summary` | Only summary statistics                                  |
-| `json`    | Full analysis as JSON to stdout                          |
+| Format    | Description                                             |
+|-----------|---------------------------------------------------------|
+| `table`   | Summary statistics + lists of updates and manual checks |
+| `summary` | Only summary statistics                                 |
+| `json`    | Full analysis as JSON to stdout                         |
 
 #### Examples
 
@@ -236,18 +266,18 @@ pyproj-dep-analyze analyze-enriched [PYPROJECT_PATH] [OPTIONS]
 
 #### Arguments
 
-| Argument         | Description                  | Default           |
-|------------------|------------------------------|-------------------|
-| `PYPROJECT_PATH` | Path to pyproject.toml file  | `pyproject.toml`  |
+| Argument         | Description                 | Default          |
+|------------------|-----------------------------|------------------|
+| `PYPROJECT_PATH` | Path to pyproject.toml file | `pyproject.toml` |
 
 #### Options
 
-| Option              | Description                        | Env Variable                                           | Default              |
-|---------------------|------------------------------------|--------------------------------------------------------|----------------------|
-| `-o, --output`      | Output file path                   | -                                                      | `deps_enriched.json` |
-| `--github-token`    | GitHub API token                   | `GITHUB_TOKEN`, `PYPROJ_DEP_ANALYZE_GITHUB_TOKEN`      | `None`               |
-| `--timeout`         | Request timeout (seconds)          | `PYPROJ_DEP_ANALYZE_TIMEOUT`                           | `30.0`               |
-| `--concurrency`     | Max concurrent API requests        | `PYPROJ_DEP_ANALYZE_CONCURRENCY`                       | `10`                 |
+| Option           | Description                 | Env Variable                                      | Default              |
+|------------------|-----------------------------|---------------------------------------------------|----------------------|
+| `-o, --output`   | Output file path            | -                                                 | `deps_enriched.json` |
+| `--github-token` | GitHub API token            | `GITHUB_TOKEN`, `PYPROJ_DEP_ANALYZE_GITHUB_TOKEN` | `None`               |
+| `--timeout`      | Request timeout (seconds)   | `PYPROJ_DEP_ANALYZE_TIMEOUT`                      | `30.0`               |
+| `--concurrency`  | Max concurrent API requests | `PYPROJ_DEP_ANALYZE_CONCURRENCY`                  | `10`                 |
 
 #### Examples
 
@@ -274,10 +304,10 @@ pyproj-dep-analyze config [OPTIONS]
 
 #### Options
 
-| Option      | Description                    | Values              | Default  |
-|-------------|--------------------------------|---------------------|----------|
-| `--format`  | Output format                  | `human`, `json`     | `human`  |
-| `--section` | Show specific section only     | e.g., `analyzer`    | `None`   |
+| Option      | Description                | Values           | Default |
+|-------------|----------------------------|------------------|---------|
+| `--format`  | Output format              | `human`, `json`  | `human` |
+| `--section` | Show specific section only | e.g., `analyzer` | `None`  |
 
 #### Examples
 
@@ -299,18 +329,18 @@ pyproj-dep-analyze config-deploy --target TARGET [OPTIONS]
 
 #### Options
 
-| Option     | Description                              | Values                | Default  |
-|------------|------------------------------------------|-----------------------|----------|
-| `--target` | Target layer(s) - can be repeated        | `app`, `host`, `user` | Required |
-| `--force`  | Overwrite existing files                 | Flag                  | `False`  |
+| Option     | Description                       | Values                | Default  |
+|------------|-----------------------------------|-----------------------|----------|
+| `--target` | Target layer(s) - can be repeated | `app`, `host`, `user` | Required |
+| `--force`  | Overwrite existing files          | Flag                  | `False`  |
 
 #### Target Locations
 
-| Target | Linux                                        | macOS / Windows                      |
-|--------|----------------------------------------------|--------------------------------------|
-| `user` | `~/.config/pyproj-dep-analyze/config.toml`   | Platform-specific user config        |
-| `app`  | `/etc/xdg/pyproj-dep-analyze/config.toml`    | Platform-specific system config      |
-| `host` | `/etc/pyproj-dep-analyze/hosts/{hostname}.toml` | Same as app                       |
+| Target | Linux                                           | macOS / Windows                 |
+|--------|-------------------------------------------------|---------------------------------|
+| `user` | `~/.config/pyproj-dep-analyze/config.toml`      | Platform-specific user config   |
+| `app`  | `/etc/xdg/pyproj-dep-analyze/config.toml`       | Platform-specific system config |
+| `host` | `/etc/pyproj-dep-analyze/hosts/{hostname}.toml` | Same as app                     |
 
 #### Examples
 
@@ -547,62 +577,62 @@ Action.CHECK_MANUALLY  # "check manually" - needs manual verification
 
 Basic analysis entry for a single dependency.
 
-| Field             | Type             | Description                        |
-|-------------------|------------------|------------------------------------|
-| `package`         | `str`            | Package name                       |
-| `python_version`  | `str`            | Python version (e.g., "3.11")      |
-| `current_version` | `str \| None`    | Currently specified version        |
-| `latest_version`  | `str \| None`    | Latest available version           |
-| `action`          | `Action`         | Recommended action                 |
-| `note`            | `str`            | Human/LLM-readable explanation     |
+| Field             | Type          | Description                    |
+|-------------------|---------------|--------------------------------|
+| `package`         | `str`         | Package name                   |
+| `python_version`  | `str`         | Python version (e.g., "3.11")  |
+| `current_version` | `str \| None` | Currently specified version    |
+| `latest_version`  | `str \| None` | Latest available version       |
+| `action`          | `Action`      | Recommended action             |
+| `note`            | `str`         | Human/LLM-readable explanation |
 
 #### `AnalysisResult`
 
 Complete result from basic analysis.
 
-| Field                  | Type                  | Description                    |
-|------------------------|-----------------------|--------------------------------|
-| `entries`              | `list[OutdatedEntry]` | All analysis entries           |
-| `python_versions`      | `list[str]`           | Python versions analyzed       |
-| `total_dependencies`   | `int`                 | Total unique dependencies      |
-| `update_count`         | `int`                 | Dependencies needing updates   |
-| `delete_count`         | `int`                 | Dependencies to delete         |
-| `check_manually_count` | `int`                 | Needs manual check             |
+| Field                  | Type                  | Description                  |
+|------------------------|-----------------------|------------------------------|
+| `entries`              | `list[OutdatedEntry]` | All analysis entries         |
+| `python_versions`      | `list[str]`           | Python versions analyzed     |
+| `total_dependencies`   | `int`                 | Total unique dependencies    |
+| `update_count`         | `int`                 | Dependencies needing updates |
+| `delete_count`         | `int`                 | Dependencies to delete       |
+| `check_manually_count` | `int`                 | Needs manual check           |
 
 #### `EnrichedAnalysisResult`
 
 Complete result from enriched analysis.
 
-| Field                | Type                        | Description                   |
-|----------------------|-----------------------------|-------------------------------|
-| `analyzed_at`        | `str`                       | ISO timestamp                 |
-| `pyproject_path`     | `str`                       | Analyzed file path            |
-| `python_versions`    | `list[str]`                 | Python versions               |
-| `indexes_configured` | `list[IndexInfo]`           | Package indexes               |
-| `packages`           | `list[EnrichedEntry]`       | Enriched entries              |
-| `dependency_graph`   | `dict[str, list[str]]`      | Dependencies                  |
-| `summary`            | `EnrichedSummary`           | Statistics                    |
+| Field                | Type                   | Description        |
+|----------------------|------------------------|--------------------|
+| `analyzed_at`        | `str`                  | ISO timestamp      |
+| `pyproject_path`     | `str`                  | Analyzed file path |
+| `python_versions`    | `list[str]`            | Python versions    |
+| `indexes_configured` | `list[IndexInfo]`      | Package indexes    |
+| `packages`           | `list[EnrichedEntry]`  | Enriched entries   |
+| `dependency_graph`   | `dict[str, list[str]]` | Dependencies       |
+| `summary`            | `EnrichedSummary`      | Statistics         |
 
 #### `EnrichedEntry`
 
 Enriched package entry with full metadata.
 
-| Field                   | Type                                   | Description                              |
-|-------------------------|----------------------------------------|------------------------------------------|
-| `name`                  | `str`                                  | Package name                             |
-| `requested_version`     | `str \| None`                          | Version constraint                       |
-| `resolved_version`      | `str \| None`                          | Resolved version                         |
-| `latest_version`        | `str \| None`                          | Latest version                           |
-| `action`                | `Action`                               | Recommended action                       |
-| `note`                  | `str`                                  | Human/LLM-readable explanation           |
-| `source`                | `str`                                  | Where declared                           |
-| `index_info`            | `IndexInfo \| None`                    | Package index                            |
-| `python_compatibility`  | `dict[str, CompatibilityStatus]`       | Per-version compatibility                |
-| `pypi_metadata`         | `PyPIMetadata \| None`                 | PyPI data                                |
-| `repo_metadata`         | `RepoMetadata \| None`                 | Repository data                          |
-| `direct_dependencies`   | `list[str]`                            | Runtime dependencies only                |
-| `optional_dependencies` | `dict[str, list[str]]`                 | Optional deps grouped by extra (dev, test, docs) |
-| `required_by`           | `list[str]`                            | Reverse dependencies                     |
+| Field                   | Type                             | Description                                      |
+|-------------------------|----------------------------------|--------------------------------------------------|
+| `name`                  | `str`                            | Package name                                     |
+| `requested_version`     | `str \| None`                    | Version constraint                               |
+| `resolved_version`      | `str \| None`                    | Resolved version                                 |
+| `latest_version`        | `str \| None`                    | Latest version                                   |
+| `action`                | `Action`                         | Recommended action                               |
+| `note`                  | `str`                            | Human/LLM-readable explanation                   |
+| `source`                | `str`                            | Where declared                                   |
+| `index_info`            | `IndexInfo \| None`              | Package index                                    |
+| `python_compatibility`  | `dict[str, CompatibilityStatus]` | Per-version compatibility                        |
+| `pypi_metadata`         | `PyPIMetadata \| None`           | PyPI data                                        |
+| `repo_metadata`         | `RepoMetadata \| None`           | Repository data                                  |
+| `direct_dependencies`   | `list[str]`                      | Runtime dependencies only                        |
+| `optional_dependencies` | `dict[str, list[str]]`           | Optional deps grouped by extra (dev, test, docs) |
+| `required_by`           | `list[str]`                      | Reverse dependencies                             |
 
 ---
 
@@ -610,74 +640,74 @@ Enriched package entry with full metadata.
 
 #### `PyPIMetadata`
 
-| Field                 | Type                        | Description                    |
-|-----------------------|-----------------------------|--------------------------------|
-| `summary`             | `str \| None`               | One-line description           |
-| `license`             | `str \| None`               | SPDX license                   |
-| `home_page`           | `str \| None`               | Project URL                    |
-| `project_urls`        | `dict[str, str]`            | Labeled URLs                   |
-| `author`              | `str \| None`               | Author name                    |
-| `author_email`        | `str \| None`               | Author email                   |
-| `maintainer`          | `str \| None`               | Maintainer name                |
-| `maintainer_email`    | `str \| None`               | Maintainer email               |
-| `available_versions`  | `list[str]`                 | All versions                   |
-| `first_release_date`  | `str \| None`               | First release ISO date         |
-| `latest_release_date` | `str \| None`               | Latest release ISO date        |
-| `requires_python`     | `str \| None`               | Python constraint              |
-| `requires_dist`       | `list[str]`                 | Dependency specs               |
-| `version_metrics`     | `VersionMetrics \| None`    | Release pattern metrics        |
-| `download_stats`      | `DownloadStats \| None`     | Download statistics            |
+| Field                 | Type                     | Description             |
+|-----------------------|--------------------------|-------------------------|
+| `summary`             | `str \| None`            | One-line description    |
+| `license`             | `str \| None`            | SPDX license            |
+| `home_page`           | `str \| None`            | Project URL             |
+| `project_urls`        | `dict[str, str]`         | Labeled URLs            |
+| `author`              | `str \| None`            | Author name             |
+| `author_email`        | `str \| None`            | Author email            |
+| `maintainer`          | `str \| None`            | Maintainer name         |
+| `maintainer_email`    | `str \| None`            | Maintainer email        |
+| `available_versions`  | `list[str]`              | All versions            |
+| `first_release_date`  | `str \| None`            | First release ISO date  |
+| `latest_release_date` | `str \| None`            | Latest release ISO date |
+| `requires_python`     | `str \| None`            | Python constraint       |
+| `requires_dist`       | `list[str]`              | Dependency specs        |
+| `version_metrics`     | `VersionMetrics \| None` | Release pattern metrics |
+| `download_stats`      | `DownloadStats \| None`  | Download statistics     |
 
 #### `VersionMetrics`
 
 Computed metrics from version history for quality assessment.
 
-| Field                       | Type            | Description                           |
-|-----------------------------|-----------------|---------------------------------------|
-| `release_count`             | `int`           | Total number of releases              |
-| `latest_release_age_days`   | `int \| None`   | Days since latest release             |
-| `first_release_age_days`    | `int \| None`   | Project age in days                   |
-| `avg_days_between_releases` | `float \| None` | Average release frequency             |
-| `min_days_between_releases` | `int \| None`   | Shortest gap (detect rapid releases)  |
-| `max_days_between_releases` | `int \| None`   | Longest gap (detect abandonment)      |
-| `releases_last_year`        | `int`           | Recent activity indicator             |
-| `release_dates`             | `list[str]`     | All release timestamps                |
+| Field                       | Type            | Description                          |
+|-----------------------------|-----------------|--------------------------------------|
+| `release_count`             | `int`           | Total number of releases             |
+| `latest_release_age_days`   | `int \| None`   | Days since latest release            |
+| `first_release_age_days`    | `int \| None`   | Project age in days                  |
+| `avg_days_between_releases` | `float \| None` | Average release frequency            |
+| `min_days_between_releases` | `int \| None`   | Shortest gap (detect rapid releases) |
+| `max_days_between_releases` | `int \| None`   | Longest gap (detect abandonment)     |
+| `releases_last_year`        | `int`           | Recent activity indicator            |
+| `release_dates`             | `list[str]`     | All release timestamps               |
 
 #### `DownloadStats`
 
 Download statistics from pypistats.org.
 
-| Field                  | Type           | Description              |
-|------------------------|----------------|--------------------------|
-| `total_downloads`      | `int \| None`  | Lifetime downloads       |
-| `last_month_downloads` | `int \| None`  | Last 30 days             |
-| `last_week_downloads`  | `int \| None`  | Last 7 days              |
-| `last_day_downloads`   | `int \| None`  | Last 24 hours            |
-| `fetched_at`           | `str \| None`  | When stats were retrieved|
+| Field                  | Type          | Description               |
+|------------------------|---------------|---------------------------|
+| `total_downloads`      | `int \| None` | Lifetime downloads        |
+| `last_month_downloads` | `int \| None` | Last 30 days              |
+| `last_week_downloads`  | `int \| None` | Last 7 days               |
+| `last_day_downloads`   | `int \| None` | Last 24 hours             |
+| `fetched_at`           | `str \| None` | When stats were retrieved |
 
 #### `RepoMetadata`
 
-| Field              | Type           | Description              |
-|--------------------|----------------|--------------------------|
-| `repo_type`        | `RepoType`     | github, gitlab, etc.     |
-| `url`              | `str \| None`  | Repository URL           |
-| `owner`            | `str \| None`  | Owner/organization       |
-| `name`             | `str \| None`  | Repository name          |
-| `stars`            | `int \| None`  | Star count               |
-| `forks`            | `int \| None`  | Fork count               |
-| `open_issues`      | `int \| None`  | Open issue count         |
-| `default_branch`   | `str \| None`  | Default branch           |
-| `last_commit_date` | `str \| None`  | Last commit ISO date     |
-| `created_at`       | `str \| None`  | Creation ISO date        |
-| `description`      | `str \| None`  | Repository description   |
+| Field              | Type          | Description            |
+|--------------------|---------------|------------------------|
+| `repo_type`        | `RepoType`    | github, gitlab, etc.   |
+| `url`              | `str \| None` | Repository URL         |
+| `owner`            | `str \| None` | Owner/organization     |
+| `name`             | `str \| None` | Repository name        |
+| `stars`            | `int \| None` | Star count             |
+| `forks`            | `int \| None` | Fork count             |
+| `open_issues`      | `int \| None` | Open issue count       |
+| `default_branch`   | `str \| None` | Default branch         |
+| `last_commit_date` | `str \| None` | Last commit ISO date   |
+| `created_at`       | `str \| None` | Creation ISO date      |
+| `description`      | `str \| None` | Repository description |
 
 #### `IndexInfo`
 
-| Field        | Type        | Description                          |
-|--------------|-------------|--------------------------------------|
-| `url`        | `str`       | Index URL                            |
-| `index_type` | `IndexType` | pypi, testpypi, artifactory, etc.    |
-| `is_private` | `bool`      | Whether private/internal             |
+| Field        | Type        | Description                       |
+|--------------|-------------|-----------------------------------|
+| `url`        | `str`       | Index URL                         |
+| `index_type` | `IndexType` | pypi, testpypi, artifactory, etc. |
+| `is_private` | `bool`      | Whether private/internal          |
 
 ---
 
@@ -687,17 +717,17 @@ Download statistics from pypistats.org.
 
 Parsed dependency information.
 
-| Field                 | Type           | Description                |
-|-----------------------|----------------|----------------------------|
-| `name`                | `str`          | Normalized package name    |
-| `raw_spec`            | `str`          | Original specification     |
-| `version_constraints` | `str`          | Version constraints        |
-| `python_markers`      | `str \| None`  | Python version markers     |
-| `extras`              | `list[str]`    | Requested extras           |
-| `source`              | `str`          | Source location            |
-| `is_git_dependency`   | `bool`         | Is git dependency          |
-| `git_url`             | `str \| None`  | Git URL                    |
-| `git_ref`             | `str \| None`  | Git ref (tag/branch/commit)|
+| Field                 | Type          | Description                 |
+|-----------------------|---------------|-----------------------------|
+| `name`                | `str`         | Normalized package name     |
+| `raw_spec`            | `str`         | Original specification      |
+| `version_constraints` | `str`         | Version constraints         |
+| `python_markers`      | `str \| None` | Python version markers      |
+| `extras`              | `list[str]`   | Requested extras            |
+| `source`              | `str`         | Source location             |
+| `is_git_dependency`   | `bool`        | Is git dependency           |
+| `git_url`             | `str \| None` | Git URL                     |
+| `git_ref`             | `str \| None` | Git ref (tag/branch/commit) |
 
 #### `PythonVersion`
 
@@ -730,18 +760,18 @@ pv >= PythonVersion(3, 10)  # True
 
 ### Analyzer Settings
 
-| Setting        | Type    | Default | Environment Variable                 |
-|----------------|---------|---------|--------------------------------------|
-| `github_token` | string  | `""`    | `PYPROJ_DEP_ANALYZE_GITHUB_TOKEN`    |
-| `timeout`      | float   | `30.0`  | `PYPROJ_DEP_ANALYZE_TIMEOUT`         |
-| `concurrency`  | integer | `10`    | `PYPROJ_DEP_ANALYZE_CONCURRENCY`     |
+| Setting        | Type    | Default | Environment Variable              |
+|----------------|---------|---------|-----------------------------------|
+| `github_token` | string  | `""`    | `PYPROJ_DEP_ANALYZE_GITHUB_TOKEN` |
+| `timeout`      | float   | `30.0`  | `PYPROJ_DEP_ANALYZE_TIMEOUT`      |
+| `concurrency`  | integer | `10`    | `PYPROJ_DEP_ANALYZE_CONCURRENCY`  |
 
 ### GitHub Token
 
-| Mode              | Rate Limit         | Notes                            |
-|-------------------|--------------------|----------------------------------|
-| Unauthenticated   | 60 requests/hour   | Easily exhausted                 |
-| Authenticated     | 5,000 requests/hour| Recommended for regular use      |
+| Mode            | Rate Limit          | Notes                       |
+|-----------------|---------------------|-----------------------------|
+| Unauthenticated | 60 requests/hour    | Easily exhausted            |
+| Authenticated   | 5,000 requests/hour | Recommended for regular use |
 
 ### Sample Config File
 
