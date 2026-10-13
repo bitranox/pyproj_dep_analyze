@@ -1,5 +1,5 @@
 {
-  "analyzed_at": "2026-09-02T06:52:13.949723+00:00",
+  "analyzed_at": "2026-10-12T21:39:03.363650+00:00",
   "pyproject_path": "/media/srv-main-softdev/projects/public/libs/pyproj_dep_analyze/tests/testdata/poetry_dependencies/pyproject_poetry.toml",
   "python_versions": [
     "3.9",
@@ -22,9 +22,9 @@
       "name": "poetry_core",
       "requested_version": ">=2.0",
       "resolved_version": "2.0",
-      "latest_version": "2.4.1",
+      "latest_version": "2.5.0",
       "action": "update",
-      "note": "Package 'poetry_core' can be updated from 2.0 to 2.4.1. Review the changelog for breaking changes before updating. [last release: 2026-05-23]",
+      "note": "Package 'poetry_core' can be updated from 2.0 to 2.5.0. Review the changelog for breaking changes before updating. [last release: 2026-09-19]",
       "source": "build-system.requires",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -118,20 +118,21 @@
           "2.3.1",
           "2.3.2",
           "2.4.0",
-          "2.4.1"
+          "2.4.1",
+          "2.5.0"
         ],
         "first_release_date": "2020-02-07T16:25:54.436766Z",
-        "latest_release_date": "2026-05-23T14:30:37.552729Z",
+        "latest_release_date": "2026-09-19T17:47:10.230654Z",
         "requires_python": "<4.0,>=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 65,
-          "latest_release_age_days": 101,
-          "first_release_age_days": 2398,
-          "avg_days_between_releases": 35.4,
+          "release_count": 66,
+          "latest_release_age_days": 23,
+          "first_release_age_days": 2439,
+          "avg_days_between_releases": 36.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 254,
-          "releases_last_year": 7,
+          "releases_last_year": 6,
           "release_dates": [
             "2020-02-07T16:25:54.436766Z",
             "2020-02-16T14:05:25.030155Z",
@@ -197,7 +198,8 @@
             "2026-02-01T13:54:30.416065Z",
             "2026-03-29T07:44:52.143582Z",
             "2026-05-03T13:42:58.720927Z",
-            "2026-05-23T14:30:35.838361Z"
+            "2026-05-23T14:30:35.838361Z",
+            "2026-09-19T17:47:08.728607Z"
           ]
         },
         "download_stats": null
@@ -223,9 +225,9 @@
       "name": "build",
       "requested_version": ">=1.2.1,<2.0.0",
       "resolved_version": "1.2.1",
-      "latest_version": "1.6.0",
+      "latest_version": "1.6.1",
       "action": "update",
-      "note": "Package 'build' can be updated from 1.2.1 to 1.6.0. Review the changelog for breaking changes before updating. [last release: 2026-08-27]",
+      "note": "Package 'build' can be updated from 1.2.1 to 1.6.1. Review the changelog for breaking changes before updating. [last release: 2026-09-10]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -292,10 +294,11 @@
           "1.4.4",
           "1.5.0",
           "1.5.1",
-          "1.6.0"
+          "1.6.0",
+          "1.6.1"
         ],
         "first_release_date": "2020-05-25T01:17:25.842015Z",
-        "latest_release_date": "2026-08-27T21:01:16.458736Z",
+        "latest_release_date": "2026-09-10T07:56:00.417084Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "packaging>=24.0",
@@ -308,13 +311,13 @@
           "virtualenv>=20.36.1; extra == \"virtualenv\""
         ],
         "version_metrics": {
-          "release_count": 37,
-          "latest_release_age_days": 5,
-          "first_release_age_days": 2291,
-          "avg_days_between_releases": 63.0,
+          "release_count": 38,
+          "latest_release_age_days": 32,
+          "first_release_age_days": 2331,
+          "avg_days_between_releases": 61.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 299,
-          "releases_last_year": 8,
+          "releases_last_year": 9,
           "release_dates": [
             "2020-05-25T01:17:25.842015Z",
             "2020-05-29T16:12:33.033338Z",
@@ -352,7 +355,8 @@
             "2026-04-22T20:53:43.251190Z",
             "2026-04-30T03:18:23.644906Z",
             "2026-07-09T06:21:58.551430Z",
-            "2026-08-27T21:01:14.957317Z"
+            "2026-08-27T21:01:14.957317Z",
+            "2026-09-10T07:55:59.148398Z"
           ]
         },
         "download_stats": null
@@ -503,8 +507,8 @@
         ],
         "version_metrics": {
           "release_count": 52,
-          "latest_release_age_days": 292,
-          "first_release_age_days": 4823,
+          "latest_release_age_days": 332,
+          "first_release_age_days": 4864,
           "avg_days_between_releases": 88.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 676,
@@ -689,8 +693,8 @@
         ],
         "version_metrics": {
           "release_count": 35,
-          "latest_release_age_days": 652,
-          "first_release_age_days": 4544,
+          "latest_release_age_days": 693,
+          "first_release_age_days": 4585,
           "avg_days_between_releases": 114.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 425,
@@ -759,9 +763,9 @@
       "name": "dulwich",
       "requested_version": ">=0.24.0,<0.25.0",
       "resolved_version": "0.24.0",
-      "latest_version": "1.2.14",
+      "latest_version": "1.2.17",
       "action": "update",
-      "note": "Package 'dulwich' can be updated from 0.24.0 to 1.2.14. Review the changelog for breaking changes before updating. [last release: 2026-08-29]",
+      "note": "Package 'dulwich' can be updated from 0.24.0 to 1.2.17. Review the changelog for breaking changes before updating. [last release: 2026-10-03]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -961,6 +965,9 @@
           "1.2.12",
           "1.2.13",
           "1.2.14",
+          "1.2.15",
+          "1.2.16",
+          "1.2.17",
           "1.2.2",
           "1.2.3",
           "1.2.4",
@@ -971,7 +978,7 @@
           "1.2.9"
         ],
         "first_release_date": "2013-09-22T20:26:25.737275Z",
-        "latest_release_date": "2026-08-29T00:23:51.443937Z",
+        "latest_release_date": "2026-10-03T23:16:11.641967Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "urllib3>=2.2.2",
@@ -981,8 +988,8 @@
           "gpg; extra == \"pgp\"",
           "paramiko; extra == \"paramiko\"",
           "rich; extra == \"colordiff\"",
-          "ruff==0.16.0; extra == \"dev\"",
-          "mypy==2.3.0; extra == \"dev\"",
+          "ruff==0.16.9; extra == \"dev\"",
+          "mypy==2.3.1; extra == \"dev\"",
           "dissolve>=0.1.1; extra == \"dev\"",
           "codespell==2.4.3; extra == \"dev\"",
           "hypothesis>=6; extra == \"hypothesis\"",
@@ -993,13 +1000,13 @@
           "aiohttp; extra == \"aiohttp\""
         ],
         "version_metrics": {
-          "release_count": 152,
-          "latest_release_age_days": 4,
-          "first_release_age_days": 4727,
-          "avg_days_between_releases": 30.9,
+          "release_count": 155,
+          "latest_release_age_days": 8,
+          "first_release_age_days": 4768,
+          "avg_days_between_releases": 30.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 187,
-          "releases_last_year": 29,
+          "releases_last_year": 31,
           "release_dates": [
             "2013-09-22T20:26:25.737275Z",
             "2013-09-26T22:27:54.639857Z",
@@ -1152,7 +1159,10 @@
             "2026-07-16T14:34:23.802533Z",
             "2026-07-19T11:15:24.827753Z",
             "2026-08-24T12:36:54.287509Z",
-            "2026-08-29T00:22:07.520005Z"
+            "2026-08-29T00:22:07.520005Z",
+            "2026-09-14T21:18:58.174732Z",
+            "2026-10-03T14:43:55.802293Z",
+            "2026-10-03T23:14:24.386915Z"
           ]
         },
         "download_stats": null
@@ -1315,8 +1325,8 @@
         ],
         "version_metrics": {
           "release_count": 48,
-          "latest_release_age_days": 17,
-          "first_release_age_days": 3618,
+          "latest_release_age_days": 58,
+          "first_release_age_days": 3659,
           "avg_days_between_releases": 76.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 475,
@@ -1591,8 +1601,8 @@
         ],
         "version_metrics": {
           "release_count": 130,
-          "latest_release_age_days": 4,
-          "first_release_age_days": 3029,
+          "latest_release_age_days": 45,
+          "first_release_age_days": 3070,
           "avg_days_between_releases": 23.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 237,
@@ -1789,9 +1799,9 @@
       "name": "installer",
       "requested_version": ">=0.7.0,<0.8.0",
       "resolved_version": "0.7.0",
-      "latest_version": "1.0.1",
+      "latest_version": "1.1.0",
       "action": "update",
-      "note": "Package 'installer' can be updated from 0.7.0 to 1.0.1. Review the changelog for breaking changes before updating. [last release: 2026-05-11]",
+      "note": "Package 'installer' can be updated from 0.7.0 to 1.1.0. Review the changelog for breaking changes before updating. [last release: 2026-10-12]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -1833,20 +1843,21 @@
           "0.6.0",
           "0.7.0",
           "1.0.0",
-          "1.0.1"
+          "1.0.1",
+          "1.1.0"
         ],
         "first_release_date": "2018-09-21T05:00:27.704823Z",
-        "latest_release_date": "2026-05-11T18:13:28.158660Z",
+        "latest_release_date": "2026-10-12T19:35:52.851170Z",
         "requires_python": ">=3.10",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 15,
-          "latest_release_age_days": 113,
-          "first_release_age_days": 2903,
-          "avg_days_between_releases": 198.7,
+          "release_count": 16,
+          "latest_release_age_days": 0,
+          "first_release_age_days": 2943,
+          "avg_days_between_releases": 195.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1106,
-          "releases_last_year": 2,
+          "releases_last_year": 3,
           "release_dates": [
             "2018-09-21T05:00:27.704823Z",
             "2018-09-23T04:27:29.895235Z",
@@ -1862,7 +1873,8 @@
             "2022-12-07T02:32:54.706466Z",
             "2023-03-17T20:39:36.219116Z",
             "2026-03-28T15:39:20.345647Z",
-            "2026-05-11T18:13:26.252723Z"
+            "2026-05-11T18:13:26.252723Z",
+            "2026-10-12T19:35:51.096942Z"
           ]
         },
         "download_stats": null
@@ -2153,8 +2165,8 @@
         ],
         "version_metrics": {
           "release_count": 203,
-          "latest_release_age_days": 289,
-          "first_release_age_days": 6220,
+          "latest_release_age_days": 330,
+          "first_release_age_days": 6261,
           "avg_days_between_releases": 28.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 337,
@@ -2520,8 +2532,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 54,
-          "latest_release_age_days": 28,
-          "first_release_age_days": 4380,
+          "latest_release_age_days": 69,
+          "first_release_age_days": 4420,
           "avg_days_between_releases": 81.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 486,
@@ -2602,6 +2614,7 @@
       "optional_dependencies": {},
       "required_by": [
         "build",
+        "virtualenv",
         "findpython",
         "pytest"
       ]
@@ -2704,8 +2717,8 @@
         ],
         "version_metrics": {
           "release_count": 53,
-          "latest_release_age_days": 3,
-          "first_release_age_days": 6353,
+          "latest_release_age_days": 43,
+          "first_release_age_days": 6394,
           "avg_days_between_releases": 121.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 650,
@@ -2783,9 +2796,9 @@
       "name": "platformdirs",
       "requested_version": ">=3.0.0,<5",
       "resolved_version": "3.0.0",
-      "latest_version": "4.11.7",
+      "latest_version": "4.13.0",
       "action": "update",
-      "note": "Package 'platformdirs' can be updated from 3.0.0 to 4.11.7. Review the changelog for breaking changes before updating. [last release: 2026-09-01]",
+      "note": "Package 'platformdirs' can be updated from 3.0.0 to 4.13.0. Review the changelog for breaking changes before updating. [last release: 2026-10-11]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -2859,12 +2872,26 @@
           "4.10.1",
           "4.11.0",
           "4.11.1",
+          "4.11.10",
+          "4.11.11",
+          "4.11.12",
+          "4.11.13",
+          "4.11.14",
+          "4.11.15",
           "4.11.2",
           "4.11.3",
           "4.11.4",
           "4.11.5",
           "4.11.6",
           "4.11.7",
+          "4.11.8",
+          "4.11.9",
+          "4.12.0",
+          "4.12.1",
+          "4.12.2",
+          "4.12.3",
+          "4.12.4",
+          "4.13.0",
           "4.2.0",
           "4.2.1",
           "4.2.2",
@@ -2891,17 +2918,17 @@
           "4.9.6"
         ],
         "first_release_date": "2021-05-13T11:43:36.553886Z",
-        "latest_release_date": "2026-09-01T13:35:10.502011Z",
-        "requires_python": ">=3.10",
+        "latest_release_date": "2026-10-11T02:05:24.109405Z",
+        "requires_python": ">=3.11",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 72,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 1937,
-          "avg_days_between_releases": 26.8,
+          "release_count": 86,
+          "latest_release_age_days": 1,
+          "first_release_age_days": 1978,
+          "avg_days_between_releases": 22.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 202,
-          "releases_last_year": 21,
+          "releases_last_year": 34,
           "release_dates": [
             "2021-05-13T11:43:36.553886Z",
             "2021-05-13T11:53:11.790608Z",
@@ -2974,7 +3001,21 @@
             "2026-08-24T14:53:48.406471Z",
             "2026-08-27T21:36:36.227169Z",
             "2026-09-01T04:40:58.977235Z",
-            "2026-09-01T13:35:09.020379Z"
+            "2026-09-01T13:35:09.020379Z",
+            "2026-09-08T22:20:41.537525Z",
+            "2026-09-16T13:31:44.049253Z",
+            "2026-09-18T01:45:13.878667Z",
+            "2026-09-19T01:18:45.825072Z",
+            "2026-09-22T01:02:35.742825Z",
+            "2026-09-25T04:44:23.975154Z",
+            "2026-09-25T17:23:59.443586Z",
+            "2026-09-26T02:04:56.710064Z",
+            "2026-09-26T15:25:59.496724Z",
+            "2026-09-28T05:05:15.060190Z",
+            "2026-09-29T18:27:54.430499Z",
+            "2026-10-03T23:40:45.104725Z",
+            "2026-10-07T23:30:30.825135Z",
+            "2026-10-11T02:05:22.776713Z"
           ]
         },
         "download_stats": null
@@ -3003,9 +3044,9 @@
       "name": "pyproject_hooks",
       "requested_version": ">=1.0.0,<2.0.0",
       "resolved_version": "1.0.0",
-      "latest_version": "1.2.0",
+      "latest_version": "1.3.3",
       "action": "update",
-      "note": "Package 'pyproject_hooks' can be updated from 1.0.0 to 1.2.0. Review the changelog for breaking changes before updating. [last release: 2024-09-29]",
+      "note": "Package 'pyproject_hooks' can be updated from 1.0.0 to 1.3.3. Review the changelog for breaking changes before updating. [last release: 2026-09-16]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3038,25 +3079,29 @@
           "0.1.0",
           "1.0.0",
           "1.1.0",
-          "1.2.0"
+          "1.2.0",
+          "1.3.0",
+          "1.3.3"
         ],
         "first_release_date": "2021-12-03T13:45:22.992320Z",
-        "latest_release_date": "2024-09-29T09:24:13.293934Z",
-        "requires_python": ">=3.7",
+        "latest_release_date": "2026-09-16T08:58:03.999217Z",
+        "requires_python": ">=3.8",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 4,
-          "latest_release_age_days": 702,
-          "first_release_age_days": 1733,
-          "avg_days_between_releases": 343.0,
-          "min_days_between_releases": 153,
-          "max_days_between_releases": 524,
-          "releases_last_year": 0,
+          "release_count": 6,
+          "latest_release_age_days": 26,
+          "first_release_age_days": 1774,
+          "avg_days_between_releases": 349.0,
+          "min_days_between_releases": 0,
+          "max_days_between_releases": 716,
+          "releases_last_year": 2,
           "release_dates": [
             "2021-12-03T13:45:22.992320Z",
             "2022-11-21T11:52:11.072604Z",
             "2024-04-29T07:28:56.885150Z",
-            "2024-09-29T09:24:11.978642Z"
+            "2024-09-29T09:24:11.978642Z",
+            "2026-09-15T17:43:42.110933Z",
+            "2026-09-16T08:58:02.960279Z"
           ]
         },
         "download_stats": null
@@ -3292,8 +3337,8 @@
         ],
         "version_metrics": {
           "release_count": 160,
-          "latest_release_age_days": 110,
-          "first_release_age_days": 5678,
+          "latest_release_age_days": 151,
+          "first_release_age_days": 5719,
           "avg_days_between_releases": 34.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 376,
@@ -3562,8 +3607,8 @@
         ],
         "version_metrics": {
           "release_count": 20,
-          "latest_release_age_days": 1220,
-          "first_release_age_days": 4609,
+          "latest_release_age_days": 1260,
+          "first_release_age_days": 4649,
           "avg_days_between_releases": 178.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1346,
@@ -3676,8 +3721,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 23,
-          "latest_release_age_days": 1044,
-          "first_release_age_days": 3001,
+          "latest_release_age_days": 1084,
+          "first_release_age_days": 3042,
           "avg_days_between_releases": 88.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 548,
@@ -3731,9 +3776,9 @@
       "name": "tomli",
       "requested_version": ">=2.0.1,<3.0.0",
       "resolved_version": "2.0.1",
-      "latest_version": "2.4.1",
+      "latest_version": "2.5.0",
       "action": "update",
-      "note": "Package 'tomli' can be updated from 2.0.1 to 2.4.1. Review the changelog for breaking changes before updating. [last release: 2026-03-25]",
+      "note": "Package 'tomli' can be updated from 2.0.1 to 2.5.0. Review the changelog for breaking changes before updating. [last release: 2026-10-07]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -3790,21 +3835,23 @@
           "2.2.1",
           "2.3.0",
           "2.3.1",
+          "2.3.2",
           "2.4.0",
-          "2.4.1"
+          "2.4.1",
+          "2.5.0"
         ],
         "first_release_date": "2021-05-27T22:30:12.767785Z",
-        "latest_release_date": "2026-03-25T21:48:31.638761Z",
+        "latest_release_date": "2026-10-07T14:59:53.466807Z",
         "requires_python": ">=3.8",
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 30,
-          "latest_release_age_days": 160,
-          "first_release_age_days": 1923,
-          "avg_days_between_releases": 60.3,
+          "release_count": 32,
+          "latest_release_age_days": 5,
+          "first_release_age_days": 1963,
+          "avg_days_between_releases": 62.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 966,
-          "releases_last_year": 4,
+          "releases_last_year": 5,
           "release_dates": [
             "2021-05-27T22:30:12.767785Z",
             "2021-05-28T14:39:47.386250Z",
@@ -3835,7 +3882,9 @@
             "2025-10-08T22:01:00.137859Z",
             "2026-01-11T11:21:45.270444Z",
             "2026-03-25T20:21:10.473841Z",
-            "2026-03-25T21:47:44.246432Z"
+            "2026-03-25T21:47:44.246432Z",
+            "2026-10-07T12:22:15.601508Z",
+            "2026-10-07T14:58:28.749842Z"
           ]
         },
         "download_stats": null
@@ -3959,8 +4008,8 @@
         "requires_dist": [],
         "version_metrics": {
           "release_count": 56,
-          "latest_release_age_days": 47,
-          "first_release_age_days": 2976,
+          "latest_release_age_days": 87,
+          "first_release_age_days": 3016,
           "avg_days_between_releases": 52.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 294,
@@ -4047,9 +4096,9 @@
       "name": "trove_classifiers",
       "requested_version": ">=2022.5.19",
       "resolved_version": "2022.5.19",
-      "latest_version": "2026.6.1.19",
+      "latest_version": "2026.9.21.13",
       "action": "update",
-      "note": "Package 'trove_classifiers' can be updated from 2022.5.19 to 2026.6.1.19. Review the changelog for breaking changes before updating. [last release: 2026-06-01]",
+      "note": "Package 'trove_classifiers' can be updated from 2022.5.19 to 2026.9.21.13. Review the changelog for breaking changes before updating. [last release: 2026-09-21]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4203,20 +4252,21 @@
           "2026.5.20.19",
           "2026.5.22.10",
           "2026.5.7.17",
-          "2026.6.1.19"
+          "2026.6.1.19",
+          "2026.9.21.13"
         ],
         "first_release_date": "2020-04-03T01:36:36.679062Z",
-        "latest_release_date": "2026-06-01T19:41:34.649417Z",
+        "latest_release_date": "2026-09-21T13:29:07.301512Z",
         "requires_python": null,
         "requires_dist": [],
         "version_metrics": {
-          "release_count": 127,
-          "latest_release_age_days": 92,
-          "first_release_age_days": 2343,
-          "avg_days_between_releases": 17.4,
+          "release_count": 128,
+          "latest_release_age_days": 21,
+          "first_release_age_days": 2383,
+          "avg_days_between_releases": 18.1,
           "min_days_between_releases": 0,
-          "max_days_between_releases": 103,
-          "releases_last_year": 13,
+          "max_days_between_releases": 111,
+          "releases_last_year": 11,
           "release_dates": [
             "2020-04-03T01:36:36.679062Z",
             "2020-04-09T23:58:39.539040Z",
@@ -4344,7 +4394,8 @@
             "2026-05-20T13:50:56.379620Z",
             "2026-05-20T19:17:42.949098Z",
             "2026-05-22T10:17:27.569988Z",
-            "2026-06-01T19:41:33.434069Z"
+            "2026-06-01T19:41:33.434069Z",
+            "2026-09-21T13:29:06.123578Z"
           ]
         },
         "download_stats": null
@@ -4370,9 +4421,9 @@
       "name": "virtualenv",
       "requested_version": ">=20.26.6",
       "resolved_version": "20.26.6",
-      "latest_version": "21.7.8",
+      "latest_version": "21.14.7",
       "action": "update",
-      "note": "Package 'virtualenv' can be updated from 20.26.6 to 21.7.8. Review the changelog for breaking changes before updating. [last release: 2026-09-01]",
+      "note": "Package 'virtualenv' can be updated from 20.26.6 to 21.14.7. Review the changelog for breaking changes before updating. [last release: 2026-10-12]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -4393,10 +4444,14 @@
         "license": null,
         "home_page": null,
         "project_urls": {
+          "Changelog": "https://virtualenv.pypa.io/en/latest/changelog.html",
           "Documentation": "https://virtualenv.pypa.io",
+          "Funding": "https://github.com/sponsors/gaborbernat",
           "Homepage": "https://github.com/pypa/virtualenv",
           "Source": "https://github.com/pypa/virtualenv",
-          "Tracker": "https://github.com/pypa/virtualenv/issues"
+          "Tidelift": "https://tidelift.com/funding/github/pypi/virtualenv",
+          "Tracker": "https://github.com/pypa/virtualenv/issues",
+          "thanks.dev": "https://thanks.dev/u/gh/gaborbernat"
         },
         "author": null,
         "author_email": null,
@@ -4654,6 +4709,20 @@
           "20.9.0",
           "21.0.0",
           "21.1.0",
+          "21.10.0",
+          "21.11.0",
+          "21.11.1",
+          "21.12.0",
+          "21.12.1",
+          "21.13.0",
+          "21.14.0",
+          "21.14.1",
+          "21.14.2",
+          "21.14.3",
+          "21.14.4",
+          "21.14.5",
+          "21.14.6",
+          "21.14.7",
           "21.2.0",
           "21.2.1",
           "21.2.2",
@@ -4674,33 +4743,45 @@
           "21.6.1",
           "21.7.0",
           "21.7.1",
+          "21.7.10",
+          "21.7.11",
+          "21.7.12",
+          "21.7.13",
+          "21.7.14",
+          "21.7.15",
+          "21.7.16",
           "21.7.2",
           "21.7.3",
           "21.7.4",
           "21.7.5",
           "21.7.6",
           "21.7.7",
-          "21.7.8"
+          "21.7.8",
+          "21.7.9",
+          "21.8.1",
+          "21.9.0",
+          "21.9.1"
         ],
         "first_release_date": "2007-09-14T23:32:10Z",
-        "latest_release_date": "2026-09-01T13:36:13.894885Z",
+        "latest_release_date": "2026-10-12T01:27:31.842376Z",
         "requires_python": ">=3.9",
         "requires_dist": [
-          "distlib<1,>=0.3.7",
-          "filelock<4,>=3.24.2; python_version >= \"3.10\"",
-          "filelock<=3.19.1,>=3.16.1; python_version < \"3.10\"",
-          "platformdirs<5,>=3.9.1",
-          "python-discovery>=1.6",
-          "typing-extensions>=4.13.2; python_version < \"3.11\""
+          "distlib<1,>=0.4.3",
+          "filelock<5,>=3.24.2; python_version >= \"3.10\"",
+          "filelock<=3.19.1,>=3.19.1; python_version < \"3.10\"",
+          "packaging>=26.3",
+          "platformdirs<5,>=4.4",
+          "python-discovery>=1.6.1",
+          "typing-extensions>=4.16; python_version < \"3.11\""
         ],
         "version_metrics": {
-          "release_count": 278,
+          "release_count": 303,
           "latest_release_age_days": 0,
-          "first_release_age_days": 6927,
-          "avg_days_between_releases": 24.5,
+          "first_release_age_days": 6967,
+          "avg_days_between_releases": 22.6,
           "min_days_between_releases": 0,
           "max_days_between_releases": 490,
-          "releases_last_year": 39,
+          "releases_last_year": 60,
           "release_dates": [
             "2007-09-14T23:32:10Z",
             "2007-09-15T04:34:21Z",
@@ -4979,7 +5060,32 @@
             "2026-08-25T05:39:14.229247Z",
             "2026-08-28T16:17:49.993043Z",
             "2026-08-28T18:59:48.056129Z",
-            "2026-09-01T13:36:11.248688Z"
+            "2026-09-01T13:36:11.248688Z",
+            "2026-09-09T01:03:26.023946Z",
+            "2026-09-15T23:36:03.751175Z",
+            "2026-09-17T16:31:40.636764Z",
+            "2026-09-18T01:40:41.848207Z",
+            "2026-09-18T04:35:47.194836Z",
+            "2026-09-18T05:24:18.393357Z",
+            "2026-09-18T23:16:19.417610Z",
+            "2026-09-19T06:59:06.096278Z",
+            "2026-09-19T15:56:01.874248Z",
+            "2026-09-20T00:29:18.065797Z",
+            "2026-09-22T01:00:17.425560Z",
+            "2026-09-22T16:19:39.120276Z",
+            "2026-09-23T03:09:30.916749Z",
+            "2026-09-23T15:01:04.935058Z",
+            "2026-09-24T01:27:41.850841Z",
+            "2026-09-24T19:03:45.985818Z",
+            "2026-09-26T16:42:07.106690Z",
+            "2026-09-29T20:25:28.898336Z",
+            "2026-09-29T23:33:32.333093Z",
+            "2026-10-01T06:22:44.560342Z",
+            "2026-10-01T22:55:29.913406Z",
+            "2026-10-02T13:48:58.227434Z",
+            "2026-10-02T17:42:23.380004Z",
+            "2026-10-08T14:49:54.988049Z",
+            "2026-10-12T01:27:29.370747Z"
           ]
         },
         "download_stats": null
@@ -5001,6 +5107,7 @@
         "distlib",
         "filelock",
         "filelock",
+        "packaging",
         "platformdirs",
         "python_discovery",
         "typing_extensions"
@@ -5088,8 +5195,8 @@
         ],
         "version_metrics": {
           "release_count": 32,
-          "latest_release_age_days": 323,
-          "first_release_age_days": 7572,
+          "latest_release_age_days": 363,
+          "first_release_age_days": 7612,
           "avg_days_between_releases": 233.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1296,
@@ -5224,8 +5331,8 @@
         ],
         "version_metrics": {
           "release_count": 26,
-          "latest_release_age_days": 125,
-          "first_release_age_days": 1653,
+          "latest_release_age_days": 165,
+          "first_release_age_days": 1694,
           "avg_days_between_releases": 60.8,
           "min_days_between_releases": 0,
           "max_days_between_releases": 181,
@@ -5285,9 +5392,9 @@
       "name": "pbs_installer",
       "requested_version": ">=2025.6.10",
       "resolved_version": "2025.6.10",
-      "latest_version": "2026.9.1",
+      "latest_version": "2026.10.3",
       "action": "update",
-      "note": "Package 'pbs_installer' can be updated from 2025.6.10 to 2026.9.1. Review the changelog for breaking changes before updating. [License: MIT | last release: 2026-09-01]",
+      "note": "Package 'pbs_installer' can be updated from 2025.6.10 to 2026.10.3. Review the changelog for breaking changes before updating. [License: MIT | last release: 2026-10-04]",
       "source": "project.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -5378,6 +5485,8 @@
           "2026.1.13",
           "2026.1.14",
           "2026.1.27",
+          "2026.10.1",
+          "2026.10.3",
           "2026.2.11",
           "2026.2.3",
           "2026.3.10",
@@ -5397,10 +5506,12 @@
           "2026.8.25",
           "2026.8.5",
           "2026.8.7",
-          "2026.9.1"
+          "2026.9.1",
+          "2026.9.24",
+          "2026.9.29"
         ],
         "first_release_date": "2023-07-13T12:41:58.687139Z",
-        "latest_release_date": "2026-09-01T22:03:06.904276Z",
+        "latest_release_date": "2026-10-04T22:03:02.863278Z",
         "requires_python": ">=3.9",
         "requires_dist": [
           "httpx<1,>=0.27.0; extra == \"download\"",
@@ -5408,10 +5519,10 @@
           "pbs-installer[download,install]; extra == \"all\""
         ],
         "version_metrics": {
-          "release_count": 82,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 1146,
-          "avg_days_between_releases": 13.6,
+          "release_count": 86,
+          "latest_release_age_days": 7,
+          "first_release_age_days": 1187,
+          "avg_days_between_releases": 13.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 91,
           "releases_last_year": 35,
@@ -5497,7 +5608,11 @@
             "2026-08-07T22:02:59.633322Z",
             "2026-08-14T22:03:05.237742Z",
             "2026-08-25T22:03:39.642074Z",
-            "2026-09-01T22:03:05.454609Z"
+            "2026-09-01T22:03:05.454609Z",
+            "2026-09-24T22:03:29.848014Z",
+            "2026-09-29T22:03:15.696610Z",
+            "2026-10-02T22:03:08.819113Z",
+            "2026-10-04T22:03:01.337302Z"
           ]
         },
         "download_stats": null
@@ -5533,9 +5648,9 @@
       "name": "pre_commit",
       "requested_version": ">=2.10",
       "resolved_version": "2.10",
-      "latest_version": "4.6.2",
+      "latest_version": "4.7.0",
       "action": "update",
-      "note": "Package 'pre_commit' can be updated from 2.10 to 4.6.2. Review the changelog for breaking changes before updating. [License: MIT | last release: 2026-08-10]",
+      "note": "Package 'pre_commit' can be updated from 2.10 to 4.7.0. Review the changelog for breaking changes before updating. [License: MIT | last release: 2026-10-12]",
       "source": "tool.poetry.group.dev.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -5766,11 +5881,12 @@
           "4.5.1",
           "4.6.0",
           "4.6.1",
-          "4.6.2"
+          "4.6.2",
+          "4.7.0"
         ],
         "first_release_date": "2014-06-17T17:04:14.683086Z",
-        "latest_release_date": "2026-08-10T22:07:18.421719Z",
-        "requires_python": ">=3.10",
+        "latest_release_date": "2026-10-12T20:45:40.320969Z",
+        "requires_python": ">=3.11",
         "requires_dist": [
           "cfgv>=2.0.0",
           "identify>=1.0.0",
@@ -5779,13 +5895,13 @@
           "virtualenv>=20.10.0"
         ],
         "version_metrics": {
-          "release_count": 204,
-          "latest_release_age_days": 22,
-          "first_release_age_days": 4459,
-          "avg_days_between_releases": 21.3,
+          "release_count": 205,
+          "latest_release_age_days": 0,
+          "first_release_age_days": 4500,
+          "avg_days_between_releases": 21.5,
           "min_days_between_releases": 0,
           "max_days_between_releases": 167,
-          "releases_last_year": 6,
+          "releases_last_year": 7,
           "release_dates": [
             "2014-06-17T17:04:14.683086Z",
             "2014-06-18T17:47:23.466478Z",
@@ -5990,7 +6106,8 @@
             "2025-12-16T21:14:32.409297Z",
             "2026-04-21T20:31:40.092989Z",
             "2026-07-21T20:56:57.064358Z",
-            "2026-08-10T22:07:16.942290Z"
+            "2026-08-10T22:07:16.942290Z",
+            "2026-10-12T20:45:38.858255Z"
           ]
         },
         "download_stats": null
@@ -6737,8 +6854,8 @@
         ],
         "version_metrics": {
           "release_count": 624,
-          "latest_release_age_days": 24,
-          "first_release_age_days": 7417,
+          "latest_release_age_days": 65,
+          "first_release_age_days": 7457,
           "avg_days_between_releases": 11.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 1328,
@@ -7457,9 +7574,9 @@
       "name": "coverage",
       "requested_version": ">=7.2.0",
       "resolved_version": "7.2.0",
-      "latest_version": "7.16.0",
+      "latest_version": "7.16.2",
       "action": "update",
-      "note": "Package 'coverage' can be updated from 7.2.0 to 7.16.0. Review the changelog for breaking changes before updating. [License: Apache-2.0 | last release: 2026-08-28]",
+      "note": "Package 'coverage' can be updated from 7.2.0 to 7.16.2. Review the changelog for breaking changes before updating. [License: Apache-2.0 | last release: 2026-09-27]",
       "source": "tool.poetry.group.test.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -7480,7 +7597,7 @@
         "license": "Apache-2.0",
         "home_page": "https://github.com/coveragepy/coveragepy",
         "project_urls": {
-          "Documentation": "https://coverage.readthedocs.io/en/7.16.0",
+          "Documentation": "https://coverage.readthedocs.io/en/7.16.2",
           "Funding": "https://tidelift.com/subscription/pkg/pypi-coverage?utm_source=pypi-coverage&utm_medium=referral&utm_campaign=pypi",
           "Homepage": "https://github.com/coveragepy/coveragepy",
           "Issues": "https://github.com/coveragepy/coveragepy/issues",
@@ -7643,6 +7760,8 @@
           "7.15.3",
           "7.15.4",
           "7.16.0",
+          "7.16.1",
+          "7.16.2",
           "7.2.0",
           "7.2.1",
           "7.2.2",
@@ -7689,19 +7808,19 @@
           "7.9.2"
         ],
         "first_release_date": "2009-05-16T21:03:17.044537Z",
-        "latest_release_date": "2026-08-28T21:54:37.740597Z",
+        "latest_release_date": "2026-09-27T12:29:01.118768Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "tomli; python_full_version <= \"3.11.0a6\" and extra == \"toml\""
         ],
         "version_metrics": {
-          "release_count": 186,
-          "latest_release_age_days": 4,
-          "first_release_age_days": 6317,
-          "avg_days_between_releases": 33.6,
+          "release_count": 188,
+          "latest_release_age_days": 15,
+          "first_release_age_days": 6358,
+          "avg_days_between_releases": 33.4,
           "min_days_between_releases": 0,
           "max_days_between_releases": 288,
-          "releases_last_year": 24,
+          "releases_last_year": 25,
           "release_dates": [
             "2009-05-16T21:03:17.044537Z",
             "2009-06-14T03:36:26.357752Z",
@@ -7888,7 +8007,9 @@
             "2026-07-15T18:53:29.520952Z",
             "2026-08-02T18:47:25.951302Z",
             "2026-08-06T13:46:55.253092Z",
-            "2026-08-28T21:50:37.361367Z"
+            "2026-08-28T21:50:37.361367Z",
+            "2026-09-13T19:08:21.805318Z",
+            "2026-09-27T12:25:34.675384Z"
           ]
         },
         "download_stats": null
@@ -8085,12 +8206,12 @@
         ],
         "version_metrics": {
           "release_count": 91,
-          "latest_release_age_days": 109,
-          "first_release_age_days": 4357,
+          "latest_release_age_days": 150,
+          "first_release_age_days": 4398,
           "avg_days_between_releases": 46.7,
           "min_days_between_releases": 0,
           "max_days_between_releases": 631,
-          "releases_last_year": 4,
+          "releases_last_year": 3,
           "release_dates": [
             "2014-09-27T20:16:59.836580Z",
             "2014-09-27T20:34:33.456066Z",
@@ -8376,8 +8497,8 @@
         ],
         "version_metrics": {
           "release_count": 65,
-          "latest_release_age_days": 6,
-          "first_release_age_days": 4663,
+          "latest_release_age_days": 47,
+          "first_release_age_days": 4704,
           "avg_days_between_releases": 72.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 547,
@@ -8562,8 +8683,8 @@
         ],
         "version_metrics": {
           "release_count": 20,
-          "latest_release_age_days": 884,
-          "first_release_age_days": 4216,
+          "latest_release_age_days": 925,
+          "first_release_age_days": 4256,
           "avg_days_between_releases": 174.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 506,
@@ -8882,12 +9003,12 @@
         ],
         "version_metrics": {
           "release_count": 192,
-          "latest_release_age_days": 74,
-          "first_release_age_days": 5759,
+          "latest_release_age_days": 115,
+          "first_release_age_days": 5800,
           "avg_days_between_releases": 29.3,
           "min_days_between_releases": 0,
           "max_days_between_releases": 171,
-          "releases_last_year": 7,
+          "releases_last_year": 6,
           "release_dates": [
             "2010-11-25T21:00:27.474482Z",
             "2011-02-07T11:47:14.110775Z",
@@ -9231,12 +9352,12 @@
         ],
         "version_metrics": {
           "release_count": 54,
-          "latest_release_age_days": 164,
-          "first_release_age_days": 5974,
+          "latest_release_age_days": 205,
+          "first_release_age_days": 6014,
           "avg_days_between_releases": 109.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 761,
-          "releases_last_year": 3,
+          "releases_last_year": 1,
           "release_dates": [
             "2010-04-25T03:43:13.053037Z",
             "2010-04-27T15:31:46.479534Z",
@@ -9327,9 +9448,9 @@
       "name": "pytest_mock",
       "requested_version": ">=3.9",
       "resolved_version": "3.9",
-      "latest_version": "3.15.1",
+      "latest_version": "3.16.0",
       "action": "update",
-      "note": "Package 'pytest_mock' can be updated from 3.9 to 3.15.1. Review the changelog for breaking changes before updating. [License: MIT | last release: 2025-09-16]",
+      "note": "Package 'pytest_mock' can be updated from 3.9 to 3.16.0. Review the changelog for breaking changes before updating. [License: MIT | last release: 2026-09-27]",
       "source": "tool.poetry.group.test.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -9414,6 +9535,7 @@
           "3.14.1",
           "3.15.0",
           "3.15.1",
+          "3.16.0",
           "3.2.0",
           "3.3.0",
           "3.3.1",
@@ -9429,8 +9551,8 @@
           "3.9.0"
         ],
         "first_release_date": "2014-07-17T03:17:15.419775Z",
-        "latest_release_date": "2025-09-16T16:37:27.081129Z",
-        "requires_python": ">=3.9",
+        "latest_release_date": "2026-09-27T14:57:55.460263Z",
+        "requires_python": ">=3.10",
         "requires_dist": [
           "pytest>=6.2.5",
           "pre-commit; extra == \"dev\"",
@@ -9438,13 +9560,13 @@
           "tox; extra == \"dev\""
         ],
         "version_metrics": {
-          "release_count": 66,
-          "latest_release_age_days": 350,
-          "first_release_age_days": 4430,
-          "avg_days_between_releases": 62.3,
+          "release_count": 67,
+          "latest_release_age_days": 15,
+          "first_release_age_days": 4470,
+          "avg_days_between_releases": 67.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 430,
-          "releases_last_year": 2,
+          "releases_last_year": 1,
           "release_dates": [
             "2014-07-17T03:17:15.419775Z",
             "2014-07-18T23:52:53.977234Z",
@@ -9511,7 +9633,8 @@
             "2024-03-21T22:14:02.694718Z",
             "2025-05-26T13:58:43.487828Z",
             "2025-09-04T20:57:47.274488Z",
-            "2025-09-16T16:37:25.734966Z"
+            "2025-09-16T16:37:25.734966Z",
+            "2026-09-27T14:57:54.283796Z"
           ]
         },
         "download_stats": null
@@ -9624,12 +9747,12 @@
         ],
         "version_metrics": {
           "release_count": 38,
-          "latest_release_age_days": 0,
-          "first_release_age_days": 3791,
+          "latest_release_age_days": 40,
+          "first_release_age_days": 3832,
           "avg_days_between_releases": 101.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 448,
-          "releases_last_year": 4,
+          "releases_last_year": 2,
           "release_dates": [
             "2016-04-15T15:03:53.902618Z",
             "2016-09-12T22:25:59.033250Z",
@@ -9814,8 +9937,8 @@
         ],
         "version_metrics": {
           "release_count": 71,
-          "latest_release_age_days": 427,
-          "first_release_age_days": 6070,
+          "latest_release_age_days": 468,
+          "first_release_age_days": 6111,
           "avg_days_between_releases": 80.1,
           "min_days_between_releases": 0,
           "max_days_between_releases": 657,
@@ -9930,9 +10053,9 @@
       "name": "mypy",
       "requested_version": ">=1.8.0",
       "resolved_version": "1.8.0",
-      "latest_version": "2.3.1",
+      "latest_version": "2.4.0",
       "action": "update",
-      "note": "Package 'mypy' can be updated from 1.8.0 to 2.3.1. Review the changelog for breaking changes before updating. [last release: 2026-08-15]",
+      "note": "Package 'mypy' can be updated from 1.8.0 to 2.4.0. Review the changelog for breaking changes before updating. [last release: 2026-10-01]",
       "source": "tool.poetry.group.typing.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10104,10 +10227,11 @@
           "2.1.0",
           "2.2.0",
           "2.3.0",
-          "2.3.1"
+          "2.3.1",
+          "2.4.0"
         ],
         "first_release_date": "2009-09-09T17:34:48.968869Z",
-        "latest_release_date": "2026-08-15T03:03:38.549479Z",
+        "latest_release_date": "2026-10-01T20:40:39.229391Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "typing_extensions>=4.6.0; python_version < \"3.15\"",
@@ -10115,8 +10239,8 @@
           "mypy_extensions>=1.0.0",
           "pathspec>=1.0.0",
           "tomli>=1.1.0; python_version < \"3.11\"",
-          "librt>=0.13.0; platform_python_implementation != \"PyPy\"",
-          "ast-serialize<1.0.0,>=0.6.0",
+          "librt>=0.16.0; platform_python_implementation != \"PyPy\"",
+          "ast-serialize<1.0.0,>=0.11.2",
           "psutil>=4.0; extra == \"dmypy\"",
           "setuptools>=50; extra == \"mypyc\"",
           "lxml; extra == \"reports\"",
@@ -10124,13 +10248,13 @@
           "orjson; extra == \"faster-cache\""
         ],
         "version_metrics": {
-          "release_count": 140,
-          "latest_release_age_days": 18,
-          "first_release_age_days": 6201,
+          "release_count": 141,
+          "latest_release_age_days": 11,
+          "first_release_age_days": 6242,
           "avg_days_between_releases": 44.0,
           "min_days_between_releases": 0,
           "max_days_between_releases": 2137,
-          "releases_last_year": 12,
+          "releases_last_year": 11,
           "release_dates": [
             "2009-09-09T17:34:48.968869Z",
             "2009-09-10T16:03:37.813434Z",
@@ -10271,7 +10395,8 @@
             "2026-05-11T18:31:18.070625Z",
             "2026-07-08T01:33:21.852767Z",
             "2026-07-13T11:27:37.018666Z",
-            "2026-08-15T03:01:23.577672Z"
+            "2026-08-15T03:01:23.577672Z",
+            "2026-10-01T20:38:41.545255Z"
           ]
         },
         "download_stats": null
@@ -10321,9 +10446,9 @@
       "name": "types_requests",
       "requested_version": ">=2.28.8",
       "resolved_version": "2.28.8",
-      "latest_version": "2.33.0.20260712",
+      "latest_version": "2.33.0.20261006",
       "action": "update",
-      "note": "Package 'types_requests' can be updated from 2.28.8 to 2.33.0.20260712. Review the changelog for breaking changes before updating. [last release: 2026-07-12]",
+      "note": "Package 'types_requests' can be updated from 2.28.8 to 2.33.0.20261006. Review the changelog for breaking changes before updating. [last release: 2026-10-06]",
       "source": "tool.poetry.group.typing.dependencies",
       "index_info": {
         "url": "https://pypi.org/simple",
@@ -10495,22 +10620,24 @@
           "2.33.0.20260508",
           "2.33.0.20260513",
           "2.33.0.20260518",
-          "2.33.0.20260712"
+          "2.33.0.20260712",
+          "2.33.0.20260906",
+          "2.33.0.20261006"
         ],
         "first_release_date": "2021-02-02T20:52:30.645184Z",
-        "latest_release_date": "2026-07-12T05:14:20.455253Z",
+        "latest_release_date": "2026-10-06T08:15:57.782362Z",
         "requires_python": ">=3.10",
         "requires_dist": [
           "urllib3>=2"
         ],
         "version_metrics": {
-          "release_count": 141,
-          "latest_release_age_days": 52,
-          "first_release_age_days": 2037,
-          "avg_days_between_releases": 13.8,
+          "release_count": 143,
+          "latest_release_age_days": 6,
+          "first_release_age_days": 2078,
+          "avg_days_between_releases": 14.2,
           "min_days_between_releases": 0,
           "max_days_between_releases": 136,
-          "releases_last_year": 11,
+          "releases_last_year": 12,
           "release_dates": [
             "2021-02-02T20:52:30.645184Z",
             "2021-02-05T15:15:32.934942Z",
@@ -10652,7 +10779,9 @@
             "2026-05-08T04:50:55.548236Z",
             "2026-05-13T05:39:22.262396Z",
             "2026-05-18T06:07:37.044561Z",
-            "2026-07-12T05:14:19.616908Z"
+            "2026-07-12T05:14:19.616908Z",
+            "2026-09-06T06:35:45.856407Z",
+            "2026-10-06T08:15:56.658980Z"
           ]
         },
         "download_stats": null
@@ -10743,8 +10872,8 @@
         ],
         "version_metrics": {
           "release_count": 22,
-          "latest_release_age_days": 74,
-          "first_release_age_days": 2307,
+          "latest_release_age_days": 115,
+          "first_release_age_days": 2348,
           "avg_days_between_releases": 105.9,
           "min_days_between_releases": 0,
           "max_days_between_releases": 624,
@@ -10841,6 +10970,7 @@
       "distlib",
       "filelock",
       "filelock",
+      "packaging",
       "platformdirs",
       "python_discovery",
       "typing_extensions"
