@@ -6,6 +6,8 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 
 ## [Unreleased]
 
+## [4.0.8] 2026-10-13 15:40:15
+
 ### Added
 - Python 3.14 and 3.15 are supported versions: declared in the classifiers, so CI and `make test-all` run them.
 - `uv.lock` is committed, and `[tool.uv] exclude-newer` sets a cooldown that keeps releases younger

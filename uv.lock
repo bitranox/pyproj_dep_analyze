@@ -1544,7 +1544,7 @@ wheels = [
 
 [[package]]
 name = "pyproj-dep-analyze"
-version = "4.0.7"
+version = "4.0.8"
 source = { editable = "." }
 dependencies = [
     { name = "click" },
