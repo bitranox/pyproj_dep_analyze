@@ -27,12 +27,16 @@ import re
 from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
+from typing import TYPE_CHECKING
 
 import httpx2
 import rtoml
 
 from .models import KNOWN_INDEX_PATTERNS, IndexInfo, IndexType, PackageIndexResolutions
 from .schemas import PyprojectSchema, UVConfigSchema
+
+if TYPE_CHECKING:
+    from collections.abc import Iterator
 
 _HTTP_STATUS_OK = 200  # ruff PLR2004: name the magic value (httpx2.codes.OK is an IntEnum and compares equal)
 
@@ -204,6 +208,43 @@ def _get_uv_indexes(project_dir: Path) -> list[str]:
     return indexes
 
 
+def _iter_configured_index_urls(
+    pyproject_data: PyprojectSchema | None,
+    project_dir: Path | None,
+) -> Iterator[str]:
+    """Yield every configured index URL in precedence order, duplicates included.
+
+    Each source is read only when the previous one is exhausted, so the
+    sources are consulted in the same order a caller sees the URLs.
+
+    Args:
+        pyproject_data: Validated pyproject schema, if any.
+        project_dir: Project directory for uv.toml discovery, if any.
+
+    Yields:
+        Raw index URLs: default PyPI, pip config files, environment
+        variables, Poetry and PDM sources, then uv.toml.
+    """
+    # 1. Default PyPI (always available as fallback)
+    yield DEFAULT_PYPI_INDEX
+
+    # 2. pip config files
+    for config_path in _get_pip_config_paths():
+        yield from _parse_pip_config(config_path)
+
+    # 3. Environment variables
+    yield from _get_env_indexes()
+
+    # 4. pyproject.toml sources
+    if pyproject_data:
+        yield from _get_poetry_sources_from_schema(pyproject_data)
+        yield from _get_pdm_sources_from_schema(pyproject_data)
+
+    # 5. uv.toml
+    if project_dir:
+        yield from _get_uv_indexes(project_dir)
+
+
 def detect_configured_indexes(
     pyproject_data: PyprojectSchema | None = None,
     project_dir: Path | None = None,
@@ -226,38 +267,11 @@ def detect_configured_indexes(
     """
     seen_urls: set[str] = set()
     indexes: list[IndexInfo] = []
-
-    def add_index(url: str) -> None:
-        """Add index if not already seen."""
+    for url in _iter_configured_index_urls(pyproject_data, project_dir):
         normalized = _RE_TRAILING_SLASH.sub("", url)
         if normalized not in seen_urls:
             seen_urls.add(normalized)
             indexes.append(identify_index(normalized))
-
-    # 1. Default PyPI (always available as fallback)
-    add_index(DEFAULT_PYPI_INDEX)
-
-    # 2. pip config files
-    for config_path in _get_pip_config_paths():
-        for url in _parse_pip_config(config_path):
-            add_index(url)
-
-    # 3. Environment variables
-    for url in _get_env_indexes():
-        add_index(url)
-
-    # 4. pyproject.toml sources
-    if pyproject_data:
-        for url in _get_poetry_sources_from_schema(pyproject_data):
-            add_index(url)
-        for url in _get_pdm_sources_from_schema(pyproject_data):
-            add_index(url)
-
-    # 5. uv.toml
-    if project_dir:
-        for url in _get_uv_indexes(project_dir):
-            add_index(url)
-
     return indexes
 
 
