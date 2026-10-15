@@ -251,7 +251,8 @@ def detect_configured_indexes(
 ) -> list[IndexInfo]:
     """Detect all configured package indexes.
 
-    Checks in order (later sources override earlier):
+    Collects index URLs from these sources, in this order, and keeps each URL
+    once (trailing slash ignored) at the position where it first appears:
     1. Default PyPI
     2. pip config files
     3. Environment variables
