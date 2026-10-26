@@ -11,7 +11,7 @@ dependencies = [
     # ParamType became generic there, and EnumChoice subscripts it (TypeError on click<8.4).
     "click>=8.5.0",
     "lib_cli_exit_tools>=2.4.1",
-    "lib_log_rich>=6.5.7",
+    "lib_log_rich>=7.0.1",
     "lib_layered_config>=7.3.0",
     "httpx2>=2.14.0",
     "pydantic>=2.14.1",
@@ -162,6 +162,7 @@ runtime-evaluated-base-classes = ["pydantic.BaseModel"]
 typeCheckingMode = "strict"
 extraPaths = [
   "src",
+  "tests",
 ]
 exclude = [
   "scripts/menu.py",
@@ -170,11 +171,12 @@ exclude = [
   ".venv-bmk",
   ".venv*",
 ]
+executionEnvironments = [{root = "tests"}]
 
 [tool.pytest.ini_options]
 addopts = ["--doctest-modules", "-m", "not slow"]
 doctest_optionflags = ["ELLIPSIS", "NORMALIZE_WHITESPACE"]
-pythonpath = ["src"]
+pythonpath = ["src", "tests"]
 markers = [
   "os_agnostic: test runs on every supported operating system",
   "os_windows: test exercises Windows-only behavior",
@@ -184,6 +186,7 @@ markers = [
   "slow: marks tests as slow (deselect with '-m \"not slow\"')",
   "e2e: end-to-end tests with real API calls (implies slow)",
 ]
+testpaths = ["src", "tests"]
 
 [tool.coverage.run]
 branch = true
