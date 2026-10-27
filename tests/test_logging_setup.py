@@ -46,6 +46,13 @@ def test_init_logging_is_idempotent(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.setattr(setup_mod.lib_log_rich.runtime, "init", counting_init)
     monkeypatch.setattr(setup_mod.lib_log_rich.runtime, "is_initialised", mock_is_initialised)
 
+    # The stand-in init starts no runtime, and the real attach_std_logging needs one. It only
+    # passed when an earlier test in the same process had left a live runtime behind.
+    def no_std_logging_bridge(*args: Any, **kwargs: Any) -> None:
+        return None
+
+    monkeypatch.setattr(setup_mod.lib_log_rich.runtime, "attach_std_logging", no_std_logging_bridge)
+
     init_logging()
     init_logging()
 
