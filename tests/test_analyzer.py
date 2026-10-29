@@ -515,7 +515,7 @@ def test_extract_dependencies_identifies_git_dependencies() -> None:
     deps = extract_dependencies(data)
 
     assert deps[0].is_git_dependency is True
-    assert "github.com" in (deps[0].git_url or "")
+    assert deps[0].git_url == "git+https://github.com/user/repo.git"
 
 
 # ════════════════════════════════════════════════════════════════════════════

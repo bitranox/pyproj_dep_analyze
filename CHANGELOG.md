@@ -23,6 +23,8 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
   `tests` (which keeps the root `conftest.py` out of doctest collection), adds `tests` to `pythonpath`
   and pyright's `extraPaths`, and gives pyright an execution environment rooted at `tests/`. A test
   checks that every doctest collected from `src/` gets both redirects.
+- The git-dependency extraction test compares the extracted `git_url` exactly instead of checking
+  that `github.com` appears somewhere in it, so a wrong host such as `xgithub.com` now fails it.
 
 ## [4.0.9] 2026-10-15 17:26:49
 
