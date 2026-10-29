@@ -32,7 +32,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
   compares the hostname exactly (`pypi.org`, `www.pypi.org`, any case); `test.pypi.org` is queried on
   its own JSON API rather than on pypi.org's.
 
-## [4.0.9] 2026-10-15 17:26:49
+## [4.0.9] - 2026-10-15
 
 ### Fixed
 
@@ -53,7 +53,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
   (`pytest_runtest_setup` in `tests/conftest.py`); registered in `pyproject.toml` alone they skipped
   nothing, so a test trusting its marker ran everywhere. `tests/test_platform_markers.py` pins it.
 
-## [4.0.8] 2026-10-13 15:40:15
+## [4.0.8] - 2026-10-13
 
 ### Added
 - Python 3.14 and 3.15 are supported versions: declared in the classifiers, so CI and `make test-all` run them.
@@ -65,7 +65,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 - The install section explains why installing with uv protects against supply-chain attacks and why
   a plain `pip install` from PyPI does not.
 
-## [4.0.7] 2026-10-12 19:25:14
+## [4.0.7] - 2026-10-12
 
 ### Fixed
 - **A digit-only `.env` value no longer stops the program.** lib_layered_config 7.1 reads an
@@ -76,7 +76,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
   `LIB_LOG_RICH__SERVICE` and `LIB_LOG_RICH__ENVIRONMENT`. Numeric settings still read as numbers
   and a non-numeric concurrency is still refused.
 
-## [4.0.6] 2026-10-05 20:01:30
+## [4.0.6] - 2026-10-05
 ### Fixed
 - **`python -m pyproj_dep_analyze` now behaves exactly like the console script.** The module entry
   ran its own `cli_session`, so a usage error (bad flag, unknown command) exited 1 instead of 2.
@@ -85,7 +85,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 ### Changed
 - Raised dependency floors across major versions: lib_layered_config 7.0.1 (was 5.6.2); the test suite passes against them. Also raised the remaining dependency and dev tool floors.
 
-## [4.0.5] 2026-08-01 00:34:00
+## [4.0.5] - 2026-08-01
 ### Fixed
 - **Console output no longer crashes on a legacy codepage.** A Windows console at codepage 1252
   hands Python an `errors="strict"` stream, so writing a non-ASCII character such as a check mark
@@ -97,7 +97,7 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
   module reaches for `click.echo` or builds an unwrapped `Console(file=sys.stdout)` again.
 
 
-## [4.0.4] 2026-07-24 17:05:10
+## [4.0.4] - 2026-07-24
 
 ### Fixed
 - Fixed CI going red under a newer `ruff` release: this repo had no explicit `[tool.ruff.lint].select`, so ruff 0.16's widened default rule set (~920 rules) suddenly applied in full. Pinned the curated bitranox rule selection instead of chasing the default set, then fixed the real violations it surfaced at the root (no rule was added to `ignore` to silence it):
@@ -115,13 +115,13 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
 ### Changed
 - Added `[tool.ruff.lint].select` (the curated bitranox rule set) plus `[tool.ruff.lint.flake8-type-checking].runtime-evaluated-base-classes = ["pydantic.BaseModel"]` (this project's Pydantic models resolve field annotations at runtime) and two targeted per-file-ignores: `PLR0913` on `cli.py` (Click commands legitimately need many options) and `PERF203` added to the existing `tests/*.py` ignore list (two tests loop over ~100 real-world pyproject.toml fixtures and skip invalid ones per item).
 
-## [4.0.3] 2026-06-14
+## [4.0.3] - 2026-06-14
 
 ### Changed
 - Added a `typed_click.py` facade wrapping rich-click's `option` / `version_option` / `argument` decorators behind explicit, fully-known signatures, keeping the CLI strict-clean under pyright (`reportUnknownMemberType`) without disabling the rule (ignore isolated to the facade).
 - Bumped internal dependency floors: `lib_cli_exit_tools>=2.3.2`, `lib_log_rich>=6.3.5`, `lib_layered_config>=5.5.2`.
 
-## [4.0.2] 2026-06-01 16:39:42
+## [4.0.2] - 2026-06-01
 
 ### Changed
 - Replaced `httpx` with `httpx2` (the Pydantic-maintained successor to httpx) as the async HTTP client for PyPI/GitHub API calls. This is an internal implementation change - the public API of resolver classes and models is unchanged.
