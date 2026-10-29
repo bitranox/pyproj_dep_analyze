@@ -25,6 +25,12 @@ the [Keep a Changelog](https://keepachangelog.com/) format.
   checks that every doctest collected from `src/` gets both redirects.
 - The git-dependency extraction test compares the extracted `git_url` exactly instead of checking
   that `github.com` appears somewhere in it, so a wrong host such as `xgithub.com` now fails it.
+- A private index whose URL merely contains `pypi.org` (for example `https://mypypi.org.internal/simple`
+  or `https://pypi.org.mirror.example/simple`) is now queried itself when resolving which index a
+  package comes from. The resolver compared the URL as a substring and sent the lookup to public
+  pypi.org instead, leaking the private package name and answering from the wrong index. It now
+  compares the hostname exactly (`pypi.org`, `www.pypi.org`, any case); `test.pypi.org` is queried on
+  its own JSON API rather than on pypi.org's.
 
 ## [4.0.9] 2026-10-15 17:26:49
 

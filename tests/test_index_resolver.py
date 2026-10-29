@@ -399,6 +399,51 @@ def test_index_resolver_json_api_url_for_custom() -> None:
     assert url == "https://custom.company.com/pypi/mypackage/json"
 
 
+def _queried_urls_for_index(index_url: str, package: str) -> list[str]:
+    """Resolve ``package`` against one index and return every URL the resolver sent a HEAD to."""
+    from pyproj_dep_analyze.models import IndexType
+
+    index = IndexInfo(url=index_url, index_type=IndexType.CUSTOM, is_private=True)
+    resolver = IndexResolver(indexes=[index])
+
+    mock_response = MagicMock()
+    mock_response.status_code = 404
+
+    with patch("httpx2.AsyncClient") as mock_client:
+        mock_instance = AsyncMock()
+        mock_instance.head.return_value = mock_response
+        mock_instance.__aenter__.return_value = mock_instance
+        mock_instance.__aexit__.return_value = None
+        mock_client.return_value = mock_instance
+
+        asyncio.run(resolver.resolve_package_index_async(package))
+
+    return [str(call.args[0]) for call in mock_instance.head.call_args_list]
+
+
+@pytest.mark.os_agnostic
+@pytest.mark.parametrize(
+    ("index_url", "expected_url"),
+    [
+        ("https://mypypi.org.internal/simple", "https://mypypi.org.internal/pypi/internal-pkg/json"),
+        ("https://pypi.org.mirror.example/simple", "https://pypi.org.mirror.example/pypi/internal-pkg/json"),
+        ("https://mirror.example/pypi.org/simple", "https://mirror.example/pypi.org/pypi/internal-pkg/json"),
+        ("https://test.pypi.org/simple", "https://test.pypi.org/pypi/internal-pkg/json"),
+    ],
+)
+def test_index_resolver_queries_a_near_miss_pypi_host_itself_not_pypi_org(index_url: str, expected_url: str) -> None:
+    assert _queried_urls_for_index(index_url, "internal-pkg") == [expected_url]
+
+
+@pytest.mark.os_agnostic
+@pytest.mark.parametrize(
+    "index_url",
+    ["https://pypi.org/simple", "https://PyPI.org/simple/", "https://www.pypi.org/simple"],
+)
+def test_index_resolver_queries_the_pypi_org_json_api_for_a_pypi_index(index_url: str) -> None:
+    assert _queried_urls_for_index(index_url, "requests") == ["https://pypi.org/pypi/requests/json"]
+
+
 @pytest.mark.os_agnostic
 def test_index_resolver_package_exists_returns_true_on_200() -> None:
     from pyproj_dep_analyze.models import IndexType

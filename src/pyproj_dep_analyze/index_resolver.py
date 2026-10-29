@@ -28,6 +28,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
 from typing import TYPE_CHECKING
+from urllib.parse import urlsplit
 
 import httpx2
 import rtoml
@@ -69,6 +70,9 @@ class PipEnvVar(str, Enum):
 # Default PyPI index URL constants (templates, not identifiers)
 DEFAULT_PYPI_INDEX = "https://pypi.org/simple"
 DEFAULT_PYPI_JSON_API = "https://pypi.org/pypi/{package}/json"
+
+# Hosts whose index is public PyPI itself, so DEFAULT_PYPI_JSON_API answers for them
+_PYPI_JSON_API_HOSTS = frozenset({"pypi.org", "www.pypi.org"})
 
 # Regex patterns for index URL normalization
 _RE_TRAILING_SLASH = re.compile(r"/+$")
@@ -313,9 +317,11 @@ class IndexResolver:
         """Convert simple index URL to JSON API URL."""
         base_url = _RE_SIMPLE_SUFFIX.sub("", index.url)
 
-        # PyPI-specific JSON API
-        if "pypi.org" in index.url:
-            return f"https://pypi.org/pypi/{package}/json"
+        # Exact hostname, never a substring: a private index such as mypypi.org.internal must be queried
+        # itself, or its package names leak to public PyPI and the answer comes from the wrong index.
+        # test.pypi.org is deliberately absent - it serves its own JSON API, which the generic path builds.
+        if urlsplit(index.url).hostname in _PYPI_JSON_API_HOSTS:
+            return DEFAULT_PYPI_JSON_API.format(package=package)
 
         # Generic: try /pypi/{package}/json pattern
         return f"{base_url}/pypi/{package}/json"
