@@ -12,7 +12,7 @@ dependencies = [
     "click>=8.5.0",
     "lib_cli_exit_tools>=2.4.1",
     "lib_log_rich>=8.1.2",
-    "lib_layered_config>=7.4.1",
+    "lib_layered_config>=7.5.0",
     "httpx2>=2.14.0",
     "pydantic>=2.14.1",
     "rtoml>=0.14.0",
@@ -268,5 +268,5 @@ layers = [
 ignore-vulns = ["GHSA-4xh5-x5gv-qwph", "PYSEC-2022-42969", "CVE-2025-66418", "CVE-2025-66471", "PYSEC-2022-43012", "PYSEC-2025-49", "CVE-2024-6345", "CVE-2026-25990", "CVE-2026-26007", "CVE-2026-4539", "CVE-2026-25645", "CVE-2026-44405"]
 
 [tool.uv]
-exclude-newer = "1 day"
-exclude-newer-package = {lib-cli-exit-tools = false, lib-layered-config = false, lib-log-rich = false}
+exclude-newer = "7 days"
+exclude-newer-package = {lib-cli-exit-tools = false, lib-layered-config = false, lib-log-rich = false, certifi = "2026-10-23T11:36:17Z", hatchling = "2026-10-28T02:27:31Z", pytest = "2026-10-27T21:30:21Z", ruff = "2026-10-27T00:34:06Z"}
