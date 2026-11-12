@@ -11,7 +11,7 @@ dependencies = [
     # ParamType became generic there, and EnumChoice subscripts it (TypeError on click<8.4).
     "click>=8.5.0",
     "lib_cli_exit_tools>=2.4.1",
-    "lib_log_rich>=8.1.2",
+    "lib_log_rich>=8.2.0",
     "lib_layered_config>=7.7.0",
     "httpx2>=2.14.0",
     "pydantic>=2.14.3",
