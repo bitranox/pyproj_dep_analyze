@@ -12,7 +12,7 @@ from typing import TYPE_CHECKING, Any
 import lib_cli_exit_tools
 import lib_log_rich.runtime
 import pytest
-from lib_layered_config.examples.deploy import DeployAction, DeployResult
+from lib_layered_config import DeployAction, DeployResult
 
 from pyproj_dep_analyze import __init__conf__
 from pyproj_dep_analyze import cli as cli_mod

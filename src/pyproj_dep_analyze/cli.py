@@ -64,7 +64,7 @@ from .typed_click import argument, option, version_option
 if TYPE_CHECKING:
     from collections.abc import Sequence
 
-    from lib_layered_config.examples.deploy import DeployResult
+    from lib_layered_config import DeployResult
 
 
 class CliCommand(str, Enum):

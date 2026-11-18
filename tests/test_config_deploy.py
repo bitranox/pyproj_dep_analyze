@@ -11,7 +11,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, Any
 
 import pytest
-from lib_layered_config.examples.deploy import DeployAction, DeployResult
+from lib_layered_config import DeployAction, DeployResult
 
 from pyproj_dep_analyze import config_deploy as deploy_mod
 from pyproj_dep_analyze.config_deploy import deploy_configuration

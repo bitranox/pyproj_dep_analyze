@@ -29,7 +29,7 @@ from .config import get_default_config_path
 if TYPE_CHECKING:
     from collections.abc import Sequence
 
-    from lib_layered_config.examples.deploy import DeployResult
+    from lib_layered_config import DeployResult
 
     from .models import DeploymentTarget
 
